@@ -24,6 +24,12 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H -p ${{ secrets.SSH_PORT }} ${{ secrets.SERVER_IP }} >> ~/.ssh/known_hosts
 
+      - name: Debug Secrets
+        run: |
+          echo "SSH_USER=${{ secrets.SSH_USER }}"
+          echo "SERVER_IP=${{ secrets.SERVER_IP }}"
+          echo "SSH_PORT=${{ secrets.SSH_PORT }}"
+
       - name: Deploy to production
         run: |
           ssh -o StrictHostKeyChecking=no -p ${{ secrets.SSH_PORT }} ${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }} << 'EOF'
