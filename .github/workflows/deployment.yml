@@ -23,9 +23,19 @@ jobs:
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H -p ${{ secrets.SSH_PORT }} ${{ secrets.SERVER_IP }} >> ~/.ssh/known_hosts
+<<<<<<< HEAD
+=======
+
+      - name: Debug Secrets
+        run: |
+          echo "SSH_USER=${{ secrets.SSH_USER }}"
+          echo "SERVER_IP=${{ secrets.SERVER_IP }}"
+          echo "SSH_PORT=${{ secrets.SSH_PORT }}"
+>>>>>>> 0f6c1e4a278c6f7d09ad61a2488a3f745f6e26ad
 
       - name: Prepare Database
         run: |
+<<<<<<< HEAD
           sudo service mysql start
           mysql -e "CREATE DATABASE IF NOT EXISTS your_test_database;"
           mysql -e "CREATE USER IF NOT EXISTS 'your_database_user'@'localhost' IDENTIFIED BY 'your_database_password';"
@@ -34,3 +44,14 @@ jobs:
 
       - name: Run Migrations
         run: php artisan migrate --env=testing --force
+=======
+          ssh -o StrictHostKeyChecking=no -p ${{ secrets.SSH_PORT }} ${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }} << 'EOF'
+          cd /home/u409910673/domains/dev.hrplatformensrv.com/public_html
+          git pull origin main
+          composer install --no-dev --optimize-autoloader
+          php artisan migrate --force
+          php artisan config:cache
+          php artisan route:cache
+          php artisan view:cache
+          EOF
+>>>>>>> 0f6c1e4a278c6f7d09ad61a2488a3f745f6e26ad
