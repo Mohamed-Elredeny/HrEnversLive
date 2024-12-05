@@ -22,16 +22,15 @@ jobs:
           mkdir -p ~/.ssh
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -H ${{ secrets.SERVER_IP }} >> ~/.ssh/known_hosts
+          ssh-keyscan -H -p ${{ secrets.SSH_PORT }} ${{ secrets.SERVER_IP }} >> ~/.ssh/known_hosts
 
-      - name: Deploy to production
+      - name: Prepare Database
         run: |
-          ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }} << 'EOF'
-          cd /home/u409910673/domains/dev.hrplatformensrv.com/public_html
-          git pull origin main
-          composer install --no-dev --optimize-autoloader
-          php artisan migrate --force
-          php artisan config:cache
-          php artisan route:cache
-          php artisan view:cache
-          EOF
+          sudo service mysql start
+          mysql -e "CREATE DATABASE IF NOT EXISTS your_test_database;"
+          mysql -e "CREATE USER IF NOT EXISTS 'your_database_user'@'localhost' IDENTIFIED BY 'your_database_password';"
+          mysql -e "GRANT ALL PRIVILEGES ON your_test_database.* TO 'your_database_user'@'localhost';"
+          mysql -e "FLUSH PRIVILEGES;"
+
+      - name: Run Migrations
+        run: php artisan migrate --env=testing --force
