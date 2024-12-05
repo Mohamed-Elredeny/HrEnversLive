@@ -3,7 +3,7 @@ name: Deploy Laravel Project
 on:
   push:
     branches:
-      - main  # Trigger deployment on push to main branch
+      - main
 
 jobs:
   deploy:
@@ -17,14 +17,17 @@ jobs:
         with:
           php-version: '8.1'
 
-      - name: Install dependencies
+      - name: Add SSH Key and Configure Known Hosts
         run: |
-          composer install --prefer-dist --no-interaction
-          
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H ${{ secrets.SERVER_IP }} >> ~/.ssh/known_hosts
+
       - name: Deploy to production
         run: |
           ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }} << 'EOF'
-          cd /home/u409910673/domains/dev.hrplatformensrv.com/public_html/
+          cd /home/u409910673/domains/dev.hrplatformensrv.com/public_html
           git pull origin main
           composer install --no-dev --optimize-autoloader
           php artisan migrate --force
