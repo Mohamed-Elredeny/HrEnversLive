@@ -1,0 +1,1424 @@
+:root{
+    /* color */
+    --main-color: #0F3464;
+    --main-light-color: #5C96FE;
+    --main-blue-color: #1758ad;
+    --main-extra-light-color: #e7faff;
+    --danger-color: #EB0C0C;
+    --success-color: #61F899 ;
+    --success-dark-color:#42b26b ;
+    --yellow-color:#ffe37c ;
+    --yellow-dark-color:#FFD748 ;
+    --orange-color: #e1322d;
+    --orange-light-color: #f06561;
+    --gray-color: #696969;
+    --gray-light-color: #f4f0f0;
+    --gray-text-color: #999999;
+    --gray-ExtraLight-color: #adb5bd;
+    --white-text-color: #D9D9D9;
+    --white-color: #fff;
+    --dark-color: #181818;
+
+    /* radius */
+    --radius-full: 50%;
+    --radius-border: 50rem;
+}
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Syne", sans-serif;
+}
+li{
+    list-style: none;
+}
+a,
+img,
+time,
+span,
+input,
+button,
+textarea,
+ion-icon{
+    display: block;
+}
+img{
+    height: auto;
+}
+input,
+button,
+textarea{
+    font-family: inherit;
+    background: none;
+    border: none;
+}
+button{
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+html{
+    font-size: 10px;
+    scroll-behavior: smooth;
+    background-color: var(--gray-light-color);
+
+}
+body{
+    height: 100%; 
+    max-width: 100% ;
+    overflow-x: hidden;
+}
+
+/********************************************/
+
+/* table_section */
+.Button_section{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-top: 15px;
+}
+.activeClose{
+    display: none !important;
+}
+.activeOpen{
+    display: inline !important;
+}
+.Button_section .btnPlus{
+    display: grid;
+    place-content: center;
+    background-color: var(--main-light-color);
+    color: var(--white-color);
+    border-radius: 50% !important;
+    margin-inline: 10px;
+    padding: 10px;
+    font-size: 25px;
+}
+.Button_section .print_button{
+    background-color: var(--main-light-color);
+    color: var(--white-color);
+    font-size: 26px;
+    padding: 5px 15px;
+    border-radius: 10px;
+    transition: all .3s ease-in-out;
+}
+.Button_section .print_button a{
+    text-decoration: none;
+    color: var(--white-color);
+}
+.Button_section .print_button:hover,
+.Button_section .btnPlus:hover{
+    color: var(--white-color);
+    background-color: var(--main-color);
+}
+.Button_section .btnPolicy{
+    background-color: var(--success-color);
+    color: var(--white-color);
+    font-size: 18px;
+    padding: 10px 15px ;
+    border-radius: 10px;
+    margin-inline: 10px;
+}
+.Button_section .btnPolicy:hover{
+    background-color: var(--success-dark-color);
+    color: var(--white-color);
+}
+.overlayPopupOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+}
+.overlayPopupOverlay .popupPolicy {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    max-width: 500px;
+    max-height: 800px;
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+}
+.overlayPopupOverlay .popupPolicy h2{
+    position: relative;
+    text-decoration: solid;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 27px;
+    width: fit-content;
+    margin-block-end: 25px;
+    color: var(--main-color);
+}
+.overlayPopupOverlay .popupPolicy h2::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--main-color);
+}
+.overlayPopupOverlay .popupPolicy .textSection .titlePolicy{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 27px;
+    color: var(--main-color);
+}
+.overlayPopupOverlay .popupPolicy .textSection .textPolicy{
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 17px;
+    width: 100%;
+    color: var(--gray-color);
+}
+.hidden {
+    display: none;
+}
+.overlayPopupOverlay .popupPolicy .btn {
+    padding: 10px 20px;
+    background: var(--orange-light-color);
+    color: var(--white-color);
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.overlayPopupOverlay .popupPolicy .btn:hover {
+    background: var(--orange-color);
+}
+
+/* table_section */
+
+/* filter_section */
+.filter_section form input[type="text"],
+.table_section .inputTableLeave{
+    position: relative;
+    padding: 10px;
+    width: 100%;
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    border-radius: 10px;
+}
+.filter_section form input::placeholder,
+.table_section input[type="text"]::placeholder{
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--main-color);
+}
+/* filter_section */
+
+/* table_section */
+@media (max-width: 767px) {
+    .table_section .inputTableLeave{
+        width: 75% !important;
+        margin-inline: auto !important;
+    }
+    .table_section .inputTableLeave input[type="text"]{
+        width: 100% !important;
+        padding-inline:  10px !important;
+    }
+}
+.table_section .inputTableLeave{
+    width: 100%;
+    margin-inline: auto ;
+}
+.table_section .inputTableLeave input:focus{
+    outline: none;
+}
+.table_section .inputTableLeave input[type="text"]{
+    padding-inline:  10px 30px;
+    width: 100%;
+}
+.table_section .iconTableLeave{
+    padding: 3px ;
+    background-color: white;
+    top:50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+.table_section thead tr th {
+    font-family: "Poppins";
+    color: var(--main-color);
+    font-size: 16px;
+    padding: 20px;
+    font-weight: 500;
+}
+.table_section thead tr th p{
+    line-height: 18px;
+    margin-bottom: 0;
+}
+button.btnTra{
+    padding: 8px;
+    font-size: 12px;
+    border-radius: 10px;
+    background-color: var(--gray-light-color);
+    color: var(--main-light-color);
+}
+button.activeHeader{
+    background-color: var(--main-light-color);
+    color: var(--white-text-color);
+}
+button.btnTra:hover{
+    background-color: var(--main-blue-color);
+    color: var(--white-text-color);
+}
+button.btnTra a{
+    color: var(--white-text-color);
+    text-decoration: none;
+}
+.table_section tbody tr td button.btnTra{
+    padding: 10px 10px;
+    font-size: 12px;
+    border-radius: 15px;
+    background-color: var(--main-light-color);
+}
+.table_section tbody tr td button.btnTra:hover{
+    background-color: var(--main-blue-color);
+}
+/* table_section */
+/* info_section_tap */
+.info_section_tap{
+    padding: 20px ;
+    border: 1px solid var(--success-dark-color);
+    background-color: var(--white-color);
+    border-radius: 10px;
+}
+.info_section_tap_spi{
+    padding: 5px ;
+    border: 1px solid var(--success-dark-color);
+    background-color: var(--white-color);
+    border-radius: 10px;
+}
+.info_section_tap .image .img-fluid img{
+    width: 150px;
+    height: auto;
+    margin-inline: auto;
+    border-radius: 15px;
+}
+.info_section_tap .info_section_text{
+    padding-inline: 20px;
+}
+.info_section_tap .info_section_text h2{
+    position: relative;
+    width: fit-content;
+    margin-inline: auto ;
+    text-align: center;
+    margin-block: 20px ;
+    font-family: "Syne";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 13px;
+    color: var(--success-dark-color);
+}
+.info_section_tap .info_section_text h2 span{
+    color: var(--gray-text-color);
+}
+.info_section_tap .info_section_text h2::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 2px;
+    background-color: var(--gray-text-color);
+}
+.info_section_tap .info_section_text .manager .btnInfo{
+    padding: 5px 8px ;
+    background-color: var(--main-color);
+    color: var(--white-color);
+    border: none;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.info_section_tap .info_section_text .manager .icon{
+    margin-inline: 15px;
+    font-size: 24px;
+    color: var(--main-color);
+}
+.info_section_tap .info_section_text .btnInfo:hover{
+    background-color: var(--main-blue-color);
+}
+.info_section_tap .info_section_text p{
+    font-family: "Syne";
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 0px;
+    line-height: 13px;
+}
+.info_section_tap .info_section_text p.nameEmployee{
+    background-color: var(--main-color);
+    color: var(--white-color);
+    border-radius: 5px;
+    padding: 5px 8px ;
+
+}
+.info_section_tap .info_section_text p span{
+    color: var(--gray-text-color);
+}
+.info_section_tap .title{
+    margin-bottom: 25px;
+}
+.info_section_tap .title p{
+    position: relative;
+    width: fit-content;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 13px;
+    color: var(--success-dark-color);
+}
+.info_section_tap .title p::after{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--gray-text-color);
+}
+.info_section_tap .infolist h2{
+    color: var(--gray-text-color);
+}
+.info_section_tap .infolist p{
+    color: var(--gray-color);
+}
+.info_section_tap .infolist h2,
+.info_section_tap .infolist p{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 13px;
+}
+@media (max-width: 1199px) {
+    .info_section_tap .info_section_text h2 {
+        font-size: 14px;
+    }
+    .info_section_tap .info_section_text p {
+        font-size: 12px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .info_section_tap .info_section_text {
+        padding-inline: 10px;
+    }
+    .info_section_tap .info_section_text h2 {
+        font-size: 10px;
+    }
+    .info_section_tap .info_section_text p {
+        font-size: 10px;
+    }
+    .info_section_tap .title {
+        margin-bottom: 15px;
+    }
+    .info_section_tap .title p {
+        font-size: 12px;
+    }
+    .info_section_tap .infolist h2, .info_section_tap .infolist p {
+        font-size: 10px;
+    }
+}
+/* info_section_tap */
+
+/* LeaveTap_section */
+.LeaveTap_section {
+    margin-top: 20px;
+}
+.spicalItem{
+    border: 3px solid var(--danger-color) !important;
+}
+.LeaveTap_section .accordion {
+    width: 100%;
+    border-radius: 15px;
+}
+.LeaveTap_section .accordion .accordion-item  {
+    border-radius: 15px;
+    margin-block: 5px ;
+    transition: all 0.3s ease-in-out;
+}
+.LeaveTap_section .accordion .accordion-item:has(.leaveReqPadd)  {
+    border: 1px solid var(--main-blue-color);
+}
+.LeaveTap_section .accordion .accordion-item  .accordion-header {
+    width: 100%;
+    background-color: var(--white-color) ;
+    color: var(--main-blue-color);
+    border-radius: 10px;
+    padding: 15px ;
+    font-family: "Syne";
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+.LeaveTap_section .accordion .accordion-item:has(.leaveReq){
+    background-color: transparent;
+    border: none;
+}
+.LeaveTap_section .accordion .accordion-item .accordion-header span{
+    color: var(--white-color) !important;
+    display: none;
+}
+.LeaveTap_section .accordion .accordion-item.accordion-item-green .accordion-header span{
+    display: block;
+}
+.LeaveTap_section .accordion .accordion-item  .accordion-content .add-approval-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--main-blue-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.LeaveTap_section .accordion .accordion-item  .accordion-content .add-approval-btn .icon {
+    display: grid;
+    place-content: center;
+    font-size: 32px;
+    padding: 13px 13px 15px;
+    width: 10px;
+    height: 10px;
+    border: 1px solid var(--white-color);
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+}
+.accordion-item  .accordion-content .titleAccordion .icon {
+    display: grid;
+    place-content: center;
+    font-size: 22px;
+    padding: 10px;
+    background-color: var(--main-blue-color);
+    color: var(--white-color);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.LeaveTap_section .accordion .accordion-item  .accordion-content .add-approval-btn .icon.active {
+    transform: rotate(-45deg);
+}
+.LeaveTap_section .accordion .accordion-item  .accordion-content .approval-section {
+    margin-top: 20px;
+    border: 0px solid var(--main-blue-color);
+    border-radius: 10px;
+    padding: 0px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+.LeaveTap_section .accordion .accordion-item  .accordion-content .approval-section.active{
+    border: 1px solid var(--main-blue-color);
+    padding: 15px;
+    max-height: 400px;
+    transition: all 0.3s ease-in-out;
+}
+.LeaveTap_section .accordion .accordion-item  .accordion-content .add-approval-btn:hover{
+    background-color: var(--main-color);
+}
+.LeaveTap_section .accordion .accordion-item  .accordion-content .select-approval {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.LeaveTap_section .accordion .accordion-item  .accordion-content .approval-section .approval-section-p {
+    font-weight: bold;
+    border: 1px solid var(--dark-color);
+    font-size: 12px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: fit-content;
+    transition: all 0.3s ease-in-out;
+}
+.LeaveTap_section .accordion .accordion-item  .accordion-content .select-approval span {
+    font-weight: bold;
+    border: 1px solid var(--dark-color);
+    font-size: 12px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: fit-content;
+    transition: all 0.3s ease-in-out;
+}
+.LeaveTap_section .accordion .accordion-item  .accordion-content .approval-section.outsideSearch .select-approval  span {
+    border: none;
+}
+.LeaveTap_section .accordion .accordion-item  .accordion-content .select-approval span.spanCenter{
+    width: 100%;
+    text-align: center;
+}
+.LeaveTap_section .accordion .accordion-item  .accordion-content .select-approval .icon{
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 8px;
+    background-color: var(--orange-light-color);
+    color: var(--white-color);
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+}
+.LeaveTap_section .accordion .accordion-item  .accordion-content .search {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 45%;
+    margin-right: 10px;
+}
+.LeaveTap_section .accordion .accordion-item  .accordion-content .search.w90 {
+    width: 90%;
+    margin-right: 10px;
+}
+.LeaveTap_section .accordion .accordion-item  .accordion-content .search input {
+    padding: 8px;
+    padding-right: 30px;
+    border: 1px solid var(--dark-color);
+    color: var(--dark-color);
+    width: 100%;
+    border-radius: 10px;
+    font-size: 14px;
+}
+.LeaveTap_section .accordion .accordion-item .accordion-content .approval-section.outsideSearch{
+    margin-top: 0px;
+}
+.LeaveTap_section .accordion .accordion-item .accordion-content .approval-section.outsideSearch.active{
+    border: none;
+    padding: 0px;
+    background-color: var(--white-color);
+}
+.LeaveTap_section .accordion .accordion-item .accordion-content .approval-section.outsideSearch .search {
+    width: 90%;
+    margin-right: 0px;
+}
+.LeaveTap_section .accordion .accordion-item .accordion-content .approval-section.outsideSearch .search input {
+    margin-right:0px;
+    padding-right: 8px
+}
+.LeaveTap_section .accordion .accordion-item  .accordion-content .search p{
+    padding: 8px;
+    padding-right: 30px;
+    border: 1px solid var(--dark-color);
+    color: var(--dark-color);
+    width: 100%;
+    border-radius: 10px;
+    font-size: 14px;
+}
+.LeaveTap_section .accordion .accordion-item  .accordion-content .search input::placeholder {
+    font-size: 14px;
+    color: var(--dark-color);
+}
+.LeaveTap_section .accordion .accordion-item  .accordion-content .search button {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    padding: 5px;
+    font-size: 15px;
+    cursor: pointer;
+
+}
+.LeaveTap_section .accordion .accordion-item  .accordion-content .approval-options {
+    border: 0px solid var(--main-blue-color) ;
+    margin-top: 0px;
+    max-height: 0px;
+    overflow: hidden;
+    padding: 0px;
+    border-radius: 0px;
+    background-color: var(--gray-light-color);
+    transition: all 0.3s ease-in-out;
+}
+.LeaveTap_section .accordion .accordion-item  .accordion-content .approval-options.active {
+    border: 1px solid var(--main-blue-color) ;
+    margin-top: 20px;
+    max-height: 600px;
+    padding: 15px;
+    border-radius: 15px;
+    transition: all 0.3s ease-in-out;
+}
+.LeaveTap_section .accordion .accordion-item  .accordion-content .approval-options.approvalOptionsinside.active {
+    margin-block: 10px !important;
+}
+.LeaveTap_section .accordion .accordion-item  .accordion-content.leaveReq .approval-options.active {
+    margin-block: 0px;
+    padding: 15px;
+}
+.LeaveTap_section .accordion .accordion-item  .accordion-content .approval-options .spanTitle{
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--main-color);  
+    background-color: var(--white-color);
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 15px;
+}
+.LeaveTap_section .accordion .accordion-item  .accordion-content .options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+.LeaveTap_section .accordion .accordion-item  .accordion-content .options.options1fr {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+.LeaveTap_section .accordion .accordion-item  .accordion-content .options.options1frSta {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+.LeaveTap_section .accordion .accordion-item  .accordion-content .options label {
+    background-color: var(--white-color);
+    border-radius: 15px;
+    font-size: 14px;
+    padding: 10px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.LeaveTap_section .accordion .accordion-item  .accordion-content .approval-options .options label.active{
+    background-color: var(--main-blue-color);
+    color: var(--white-color);
+    transition: all 0.3s ease-in-out;
+}
+.LeaveTap_section .accordion .accordion-item  .accordion-content .approval-options .options label.active .img-fluid img{
+    filter: saturate(100%);
+}
+.LeaveTap_section .accordion .accordion-item  .accordion-content .options label .img-fluid img{
+    width: 20px;
+    filter: saturate(0%);
+    transition: all 0.3s ease-in-out;
+}
+.LeaveTap_section .accordion .accordion-item  .accordion-content .options label .img-fluid img.active{
+    filter: saturate(100%);
+    transition: all 0.3s ease-in-out;
+}
+.LeaveTap_section .accordion .accordion-item  .accordion-content .options input {
+    margin-right: 10px;
+}
+.LeaveTap_section .accordion .accordion-item  .accordion-content .warning {
+    color: var(--orange-color);
+    font-size: 12px;
+    margin-top: 20px;
+    text-align: center;
+    border: 1px solid var(--orange-color);
+    border-radius: 10px;
+    padding: 5px;
+    background-color: var(--white-color);
+}
+.LeaveTap_section .accordion .accordion-item.accordion-item-green  .accordion-header {
+    background-color: var(--success-dark-color) ;
+    color: var(--white-color);
+    transition: all 0.3s ease-in-out;
+}
+.LeaveTap_section .accordion .accordion-item-static  .accordion-header-static {
+    width: 100%;
+    background-color: var(--main-blue-color) ;
+    color: var(--white-color) ;
+    border-radius: 10px;
+    padding: 20px ;
+    margin-block: 30px 5px;
+    margin-inline: auto ;
+    font-family: "Syne";
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    border: 5px solid var(--success-dark-color);
+    outline: none;
+}
+.LeaveTap_section .accordion .accordion-item  .accordion-content {
+    max-height: 0px;
+    background-color: var(--white-color);
+    padding: 0px;
+    border: 0px solid var(--success-dark-color);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+.LeaveTap_section .accordion .accordion-item .accordion-content.open {
+    padding: 15px;
+    border: 1px solid var(--success-dark-color);
+    max-height: 1400px;
+}
+.LeaveTap_section .accordion .accordion-item .accordion-content.leaveReq.open {
+    padding: 0px;
+    border: none ;
+}
+.LeaveTap_section .accordion .accordion-item .accordion-content.leaveReqPadd.open {
+    border: none ;
+    background-color: transparent;
+}
+.LeaveTap_section .accordion .accordion-item .accordion-content.leaveReqPadd.open .approval-section.active {
+    padding: 10px;
+    margin-bottom: 20px;
+
+}
+
+
+.LeaveTap_section .accordion .accordion-item .accordion-content .review-section{
+    background-color: var(--gray-light-color);
+    border: 1px solid var(--success-dark-color);
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+.LeaveTap_section .accordion .accordion-item .accordion-content .review-section.review-section-gray{
+    background-color: var(--white-color);
+    border: 1px solid var(--gray-color);
+    margin-bottom: 10px;
+}
+.LeaveTap_section .accordion .accordion-item .accordion-content .review-section.review-section-border{
+    border: 1px solid var(--gray-color);
+    margin-bottom: 10px;
+}
+.LeaveTap_section .accordion .accordion-item .accordion-content .review-section.review-section-red{
+    background-color: var(--white-color);
+    border: 1px solid var(--orange-color);
+}
+.LeaveTap_section .accordion .accordion-item .accordion-content .review-section.review-section-red label{
+    font-size: 22px;
+    color: var(--orange-color) !important;
+}
+.LeaveTap_section .accordion .accordion-item .accordion-content h3{
+    color: var(--main-blue-color);
+    font-size: 18px;
+    font-weight: 600;
+    margin-block-end: 20px;
+}
+.LeaveTap_section .accordion .accordion-item .accordion-content .review-section label{
+    color: var(--dark-color);
+    font-size: 14px;
+}
+.LeaveTap_section .accordion .accordion-item .accordion-content .DownloadAtt .iconDownload{
+    border: 1px solid var(--success-dark-color) ;
+    border-radius: 10px;
+    background-color: var(--gray-light-color);
+    padding: 15px;
+    font-size: 25px;
+    color: var(--main-color);
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+}
+.LeaveTap_section .accordion .accordion-item .accordion-content .review-section .buttons{
+    background-color: var(--gray-ExtraLight-color);
+    padding: 5px 15px;
+    border-radius: 500px;
+}
+.LeaveTap_section .accordion .accordion-item .accordion-content .review-section .buttons .radio-label{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 50px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.nontEvent{
+    pointer-events: none !important;
+}
+.LeaveTap_section .accordion .accordion-item .accordion-content .review-section .buttons .radio-label input {
+    appearance: none; 
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--white-color, #fff);
+    border-radius: 50%;
+    background-color: var(--gray-ExtraLight-color);
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+.LeaveTap_section .accordion .accordion-item .accordion-content .review-section .buttons .radio-label input:hover {
+    background-color: var(--gray-light-color);
+    border:1px solid var(--main-blue-color);
+}
+.LeaveTap_section .accordion .accordion-item .accordion-content .review-section .buttons .radio-label span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 10px;
+    font-weight: bold;
+    color: var(--white-color);
+    pointer-events: none;
+    transition: all .3s ease-in-out;
+}
+.LeaveTap_section .accordion .accordion-item .accordion-content .review-section .buttons .radio-label span:hover{
+    color: var(--main-blue-color);
+}
+.LeaveTap_section .accordion .accordion-item .accordion-content .review-section .buttons .radio-label .no:checked {
+    background-color: var(--orange-color);
+    border-color: var(--orange-color);
+}
+.LeaveTap_section .accordion .accordion-item .accordion-content .review-section .buttons .radio-label .no.active {
+    background-color: var(--orange-color);
+    border-color: var(--orange-color);
+}
+.LeaveTap_section .accordion .accordion-item .accordion-content .review-section .buttons .radio-label .no:checked + span {
+    background-color: var(--orange-color);
+}
+.LeaveTap_section .accordion .accordion-item .accordion-content .review-section .buttons .radio-label .na:checked {
+    background-color: var(--gray-text-color);
+    border-color: var(--gray-text-color);
+}
+.LeaveTap_section .accordion .accordion-item .accordion-content .review-section .buttons .radio-label .na.active{
+    background-color: var(--gray-text-color);
+    border-color: var(--gray-text-color);
+}
+.LeaveTap_section .accordion .accordion-item .accordion-content .review-section .buttons .radio-label .na:checked + span {
+    background-color: var(--gray-text-color);
+    
+}
+.LeaveTap_section .accordion .accordion-item .accordion-content .review-section .buttons .radio-label .yes:checked {
+    background-color: var(--success-dark-color);
+    border-color: var(--success-dark-color);
+}
+.LeaveTap_section .accordion .accordion-item .accordion-content .review-section .buttons .radio-label .yes.active {
+    background-color: var(--success-dark-color);
+    border-color: var(--success-dark-color);
+}
+.LeaveTap_section .accordion .accordion-item .accordion-content .review-section .buttons .radio-label .yes:checked + span {
+    background-color: var(--success-dark-color);
+}
+.LeaveTap_section .accordion .accordion-item .accordion-content .review-section .buttons .radio-label span:hover {
+    color: var(--dark-color); 
+}
+.no:checked, .na:checked, .yes:checked {
+    background-color: transparent; 
+    border-color: transparent;
+}
+.LeaveTap_section .accordion .accordion-item .accordion-content .review-section .buttons .radio-label input:checked + span {
+    font-weight: bold; 
+}
+.LeaveTap_section .accordion .accordion-item .accordion-content .comments-section {
+    margin-bottom: 20px;
+}
+.LeaveTap_section .accordion .accordion-item .accordion-content .comments-section label{
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--main-color);
+} 
+.LeaveTap_section .accordion .accordion-item .accordion-content .comments-section .signature-upload-title{
+    border: 1px solid var(--main-blue-color);
+    padding: 10px !important;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 700;
+} 
+.LeaveTap_section .accordion .accordion-item .accordion-content .comments-section .signature-upload-title span{
+    color: var(--dark-color);
+    font-size: 10px;
+}
+.LeaveTap_section .accordion .accordion-item .accordion-content .comments-section .comments{
+    width: 100%;
+    padding: 5px;
+    font-size: 12px;
+    border: 1px solid var(--main-blue-color);
+    border-radius: 5px;
+}
+.LeaveTap_section .accordion .accordion-item .accordion-content .comments-section .comments-section-span{
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    font-size: 12px;
+    border: 1px solid var(--main-blue-color);
+    border-radius: 5px;
+}
+.LeaveTap_section .accordion .accordion-item .accordion-content .button-Approval{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 10px 20px;
+} 
+.LeaveTap_section .accordion .accordion-item .accordion-content .button-Approval .btnApproval{
+    color: var(--white-color);
+    background-color: var(--gray-ExtraLight-color);
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 500px;
+    margin-inline: 15px ;
+    padding: 8px 15px;
+    transition: all .3 ease-in-out;
+}
+.LeaveTap_section .accordion .accordion-item .accordion-content .button-Approval .btnApproval.btnApprove.active{
+    background-color: var(--success-dark-color);
+}
+.LeaveTap_section .accordion .accordion-item .accordion-content .button-Approval .btnApproval.btnReturn.active{
+    padding: 8px 30px;
+    background-color: var(--yellow-dark-color);
+}
+.LeaveTap_section .accordion .accordion-item .accordion-content .button-Approval .btnApproval.btnReject.active{
+    background-color: var(--orange-light-color);
+}
+.LeaveTap_section .accordion .accordion-item .accordion-content .button-Approval .btnApproval.btnApproval:hover{
+    background-color: var(--success-color);
+}
+.LeaveTap_section .accordion .accordion-item .accordion-content .button-Approval .btnApproval.btnReturn:hover{
+    background-color: var(--yellow-color);
+}
+.LeaveTap_section .accordion .accordion-item .accordion-content .button-Approval .btnApproval.btnReject:hover{
+    background-color: var(--orange-color);
+}
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    padding: 20px;
+    z-index: 1000;
+    width: 400px;
+}
+.popup-content {
+    text-align: center;
+}
+.d-none {
+    display: none;
+}
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+.overlayPopupOverlay .popupPolicy.popupApprove,
+.overlayPopupOverlay .popupPolicy.popupReturn{
+    height: fit-content;
+}
+.overlayPopupOverlay .popupPolicy.popupApprove h2{
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--dark-color);
+}
+.overlayPopupOverlay .popupPolicy.popupApprove h2::after{
+    width: 0%;
+    height: 0%;
+}
+.overlayPopupOverlay .popupPolicy .btn.btnYes:hover {
+    background: var(--success-color);
+}
+.overlayPopupOverlay .popupPolicy .btn.btnYes {
+    background: var(--success-dark-color);
+}
+.overlayPopupOverlay .popupPolicy .btn.btnReturn:hover {
+    background: var(--yellow-color);
+}
+.overlayPopupOverlay .popupPolicy .btn.btnReturn {
+    background: var(--yellow-dark-color);
+    opacity: .8;
+    pointer-events: none;
+    transition: all .3s ease-in-out;
+}
+.overlayPopupOverlay .popupPolicy .btn.btnReturn.active {
+    opacity: 1;
+    pointer-events: painted;
+    transition: all .3s ease-in-out;
+}
+.overlayPopupOverlay .popupPolicy .btn.btnReject:hover {
+    background: var(--orange-color);
+}
+.overlayPopupOverlay .popupPolicy .btn.btnReject {
+    background: var(--orange-light-color);
+    opacity: .8;
+    pointer-events: none;
+    transition: all .3s ease-in-out;
+}
+.overlayPopupOverlay .popupPolicy .btn.btnReject.active {
+    opacity: 1;
+    pointer-events: painted;
+    transition: all .3s ease-in-out;
+}
+#return-popup .popupReturn .FormboxReturnDan .form-group,
+#Reject-popup .popupReturn .FormboxReturnDan .form-group{
+    display: flex;
+    align-items: center;
+    margin-block: 20px;
+}
+#return-popup .popupReturn .FormboxReturnDan .form-group input,
+#Reject-popup .popupReturn .FormboxReturnDan .form-group input {
+    width: 25px;
+    height: 25px;
+    margin-inline-end: 10px;
+}
+#return-popup .popupReturn .FormboxReturnDan .form-group label,
+#Reject-popup .popupReturn .FormboxReturnDan .form-group label {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 17px;
+    width: 100%;
+    color: var(--gray-color);
+}
+#return-popup .popupReturn  .reasonSpecify .titleSpecify p,
+#Reject-popup .popupReturn  .reasonSpecify .titleSpecify p {
+    color: var(--main-color);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 27px;
+}
+#return-popup .popupReturn  .reasonSpecify textarea,
+#Reject-popup .popupReturn  .reasonSpecify textarea {
+    position: relative;
+    width: 100%;
+    padding: 15px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--dark-color);
+    border: 1px solid var(--main-color);
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+#return-popup .popupReturn .reasonSpecify .titleSpecify p span,
+#Reject-popup .popupReturn .reasonSpecify .titleSpecify p span {
+    display: inline;
+}
+.toggle-container .toggle-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: fit-content;
+    border: 1px solid var(--success-dark-color);
+    padding: 10px 10px;
+    margin-block: 15px;
+    background-color: var(--gray-light-color);
+    border-radius: 15px;
+}
+
+.toggle-container .toggle-item span {
+    font-size: 10px;
+    color: var(--dark-color);
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+    margin-inline-start: 10px ;
+}
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid var(--gray-color);
+    border-radius: 50px;
+    transition: 0.4s;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 5px;
+    bottom: -50%;
+    transform: translateY(-100%);
+    background-color: var(--gray-color);
+    border-radius: 50%;
+    transition: all 0.4s;
+}
+input:checked + .slider {
+    border: 1px solid var(--main-blue-color);
+}
+input:checked + .slider:before {
+    background-color: var(--main-blue-color);
+    left: 55%;
+}
+.slider.toggle {
+    border: 1px solid var(--main-blue-color);
+}
+.slider.toggle:before {
+    background-color: var(--main-blue-color);
+    left: 55%;
+}
+.staInfoPosition {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--gray-color);
+    border-radius: 15px;
+    padding: 10px 20px;
+    margin-block-end: 10px;
+    color: var(--dark-color);
+}
+.staInfoPosition h2{
+    font-size: 12px;
+}
+.staInfoPosition .boxInfoName{
+    border: 1px solid var(--gray-color);
+    border-radius: 10px;
+    padding: 10px ;
+}
+.staInfoPosition .boxInfoName.boxSearshName{
+    border: 1px solid var(--success-dark-color);
+    width: 50%;
+}
+.staInfoPosition .boxInfoName.boxSearshName input{
+    width: 100%;
+}
+.accordion .accordion-item .counter {
+}
+.accordion .accordion-item .counter span{
+    text-align: center;
+    color: var(--main-blue-color);
+    font-size: 8px;
+}
+.accordion .accordion-item .counter .boxCounter{
+    border-radius: 10px;
+    font-size: 12px;
+    padding: 10px;
+    display: grid;
+    place-content: center;
+    background-color: var(--main-color);
+    color: var(--success-dark-color);
+    
+}
+.accordion .accordion-item .counter .boxCounter p{
+    margin-bottom: 0;
+}
+.staInfoPosition .boxInfoName.boxSearshName input:focus{
+    border: none;
+    outline: none;
+}
+.staInfoPosition .boxInfoName p{
+    margin-bottom: 0;
+}
+.form-text{
+    margin-top: 0px !important;
+}
+.accordion .accordion-item .accordion-content .confirm input{
+    width: 22px;
+    height: 22px;
+}
+.accordion .accordion-item .accordion-content .confirm{
+    background-color: var(--gray-light-color);
+    color: var(--dark-color);
+    font-size: 12px;
+    padding: 10px 10px 10px 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.LeaveTap_section .boxConfirmSubmit{
+    text-align: center;
+    margin-top: 0px;
+    opacity: 0;
+    max-height: 0px;
+    border-radius: 15px;
+    background-color: var(--main-color);
+    color: var(--white-color);
+    padding: 0px ;
+    font-size: 16px;
+    width: 100%;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+.LeaveTap_section .boxConfirmSubmit.active{
+    max-height: 400px;
+    padding: 15px ;
+    margin-top: 30px;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+.LeaveTap_section .boxConfirmSubmit .btnSubmit{
+    color: var(--white-color);
+    background-color: var(--main-blue-color);
+    font-size: 16px;
+    padding: 10px 50px;
+    margin-top: 20px;
+    border-radius: 55px;
+}
+
+@media (max-width: 991px) {
+    .info_section_text .manager {
+        flex-direction: column;
+    }
+    .LeaveTap_section .accordion .accordion-item .accordion-content .options label{
+        font-size: 12px;
+    }
+    .info_section_tap .info_section_text .manager .btnInfo{
+        margin-bottom: 5px;
+    }
+    .LeaveTap_section .accordion .accordion-item .accordion-content .warning {
+        font-size: 10px;
+    }
+    .LeaveTap_section .accordion .accordion-item .accordion-content .review-section{
+        flex-direction: column;
+    }
+    .LeaveTap_section .accordion .accordion-item .accordion-content .review-section label{
+        margin-block-end: 5px;
+    }
+    .LeaveTap_section .accordion .accordion-item .accordion-content .select-approval{
+        flex-direction: column;
+    }
+    .LeaveTap_section .accordion .accordion-item .accordion-content .select-approval span{
+        width: 100% !important;
+    }
+    .LeaveTap_section .accordion .accordion-item .accordion-content .search {
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin-top: 10px;
+        width: 100%;
+        margin-right: 0px !important; 
+    }
+    .LeaveTap_section .accordion .accordion-item  .accordion-content .options.options1fr {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+}
+@media (max-width: 768px) {
+    .info_section_text .manager {
+        flex-direction: row;
+    }
+    .info_section_tap .info_section_text .manager .btnInfo{
+        margin-bottom: 0px;
+    }
+    .LeaveTap_section .accordion .accordion-item .accordion-content .review-section{
+        flex-direction: row;
+    }
+    .LeaveTap_section .accordion .accordion-item .accordion-content .review-section label{
+        margin-block-end: 0px;
+    }
+    .LeaveTap_section .accordion .accordion-item .accordion-header{
+        font-size: 14px;
+    }
+
+    .LeaveTap_section .accordion .accordion-item-static .accordion-header-static{
+        font-size: 16px;
+    }
+    .LeaveTap_section .accordion .accordion-item .accordion-content .button-Approval .btnApproval {
+        font-size: 14px;
+        margin-inline: 10px;
+        padding: 8px 10px;
+    }
+
+}
+@media (max-width: 575px) {
+    .LeaveTap_section .accordion .accordion-item  .accordion-content .options.options1fr {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+}
+@media (max-width: 375px) {
+    .info_section_tap .info_section_text h2 {
+        font-size: 11px;
+    }
+    .info_section_text .manager {
+        flex-direction: column;
+    }
+    .DownloadAtt {
+        flex-direction: column;
+    }
+    .iconDownload{
+        margin-top: 10px;
+        margin-left: 0 !important;
+    }
+    .LeaveTap_section .accordion .accordion-item .accordion-content .review-section{
+        flex-direction: column;
+    }
+    .LeaveTap_section .accordion .accordion-item .accordion-content .review-section label{
+        margin-block-end: 5px;
+    }
+    .info_section_tap .info_section_text .manager .btnInfo{
+        margin-bottom: 5px;
+    }
+    .LeaveTap_section .accordion .accordion-item-static .accordion-header-static{
+        font-size: 12px;
+    }
+    .LeaveTap_section .accordion .accordion-item .accordion-header{
+        font-size: 10px;
+    }
+    .LeaveTap_section .accordion .accordion-item .accordion-content .options {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .LeaveTap_section .accordion .accordion-item .accordion-content .button-Approval {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .LeaveTap_section .accordion .accordion-item .accordion-content .button-Approval .btnApproval {
+        width: 80%;
+    }
+}
+/* LeaveTap_section */
+/* statistics_Content */
+.statistics_Content .table_wrapper .table thead{
+    margin-block-start: 15px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: var(--main-color);
+    color: var(--white-color);
+}
+.statistics_Content .table_wrapper .table thead th{
+    font-family: "Syne";
+    padding:15px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 12px;
+}
+.statistics_Content{
+    max-height: 0px;
+    opacity: 0;
+    z-index: -1;
+    visibility: hidden;
+    transition: all .5s ease-in-out;
+}
+.statistics_Content.active{
+    max-height: 10000px;
+    opacity: 1;
+    z-index: 2;
+    visibility: visible;
+    transition: all .5s ease-in-out;
+}
+.table {
+    margin-bottom: 0rem !important;
+}
+/* statistics_Content */
+

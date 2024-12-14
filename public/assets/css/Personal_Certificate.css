@@ -1,0 +1,917 @@
+:root{
+    /* color */
+    --main-color: #0F3464;
+    --main-light-color: #5C96FE;
+    --main-blue-color: #1758ad;
+    --main-extra-light-color: #e7faff;
+    --danger-color: #EB0C0C;
+    --success-color: #61F899 ;
+    --success-dark-color:#42b26b ;
+    --orange-color: #e1322d;
+    --orange-light-color: #f06561;
+    --gray-color: #696969;
+    --gray-light-color: #f4f0f0;
+    --gray-text-color: #999999;
+    --white-text-color: #D9D9D9;
+    --white-color: #fff;
+    --dark-color: #181818;
+
+    /* radius */
+    --radius-full: 50%;
+    --radius-border: 50rem;
+}
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Syne", sans-serif;
+}
+li{
+    list-style: none;
+}
+a,
+img,
+time,
+span,
+input,
+button,
+textarea,
+ion-icon{
+    display: block;
+}
+img{
+    height: auto;
+}
+input,
+button,
+textarea{
+    font-family: inherit;
+    background: none;
+    border: none;
+}
+button{
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+html{
+    font-size: 10px;
+    scroll-behavior: smooth;
+    background-color: var(--gray-light-color);
+
+}
+body{
+    height: 100%;
+    max-width: 100% ;
+    overflow-x: hidden;
+}
+
+
+/* dashboard_kpi */
+
+.dashboard_kpi .card .textCard.Certificates {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.dashboard_kpi .card .textCard.Certificates .textContent{
+    width: 90%;
+}
+/* dashboard_kpi */
+
+/* ************************************************************** */
+
+/* name_page */
+.name_page{
+    color: var(--main-color);
+    background-color: var(--white-color);
+    padding: 10px;
+    margin-block: 10px -5px;
+    border-radius: 10px;
+}
+.name_page p{
+    margin-bottom: 0;
+    font-size: 12px;
+    font-weight: 700;
+}
+/* name_page */
+
+/* ************************************************************** */
+
+/* table_Certificate */
+.table_Certificate tbody tr td a{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+.table_Certificate tbody tr td a button{
+    padding: 4px 10px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 10px;
+    color: var(--white-text-color);
+}
+.table_Certificate tbody tr td a button:hover{
+    color: var(--dark-color);
+}
+.table_Certificate tbody .Approval_Certificate td a button{
+    background-color: var(--success-dark-color) ;
+}
+.table_Certificate tbody .Pending_Certificate td a button{
+    background-color: var(--main-light-color) ;
+}
+.table_Certificate tbody .Returned_Certificate td a button{
+    background-color: var(--orange-color) ;
+}
+/* table_Certificate */
+
+/* ************************************************************** */
+
+/* Certificate_Type */
+.Certificate_Type{
+    padding: 20px;
+    border: 1px solid var(--success-dark-color);
+    background-color: var(--white-color);
+    border-radius: 10px;
+
+
+    flex-wrap: wrap; /* Allows items to wrap to the next row if needed */
+     /* Adjust this value for spacing between items */
+    /*justify-content: flex-start;*/
+}
+.Certificate_Type .title_Type{
+    color: var(--main-color);
+    padding-inline-start: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.Certificate_Type .item_type{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 20px;
+    flex: 1 1 auto;
+    color: var(--main-color);
+    background-color: var(--white-color);
+    /*border: 1px solid var(--white-color);*/
+    border: 1px solid var(--main-color);
+    cursor: pointer;
+    padding: 10px;
+    margin-right: 30px;
+
+
+    border-radius: 10px;
+    width: fit-content;
+    transition: all .5s ease-in-out;
+}
+.Certificate_Type .item_type:hover{
+    border: 1px solid var(--main-color);
+}
+.Certificate_Type .item_type.active{
+    border: 1px solid var(--main-color);
+    background-color: var(--main-color);
+    transition: all .5s ease-in-out;
+}
+.Certificate_Type .item_type.active .name_item_type p,
+.Certificate_Type .item_type.active .name_item_type span{
+    color: var(--white-color) !important;
+    transition: all .5s ease-in-out;
+}
+.Certificate_Type .item_type .name_item_type p{
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--main-color);
+    transition: all .5s ease-in-out;
+}
+.Certificate_Type .embassy_name{
+    border: 1px solid var(--dark-color);
+    border-radius: 10px;
+    padding: 20px 15px;
+    margin-block-end: 20px;
+    opacity: 0;
+    z-index: -1;
+    visibility: hidden;
+    transition: all .5s ease-in-out;
+}
+.Certificate_Type .embassy_name.active{
+    opacity: 1;
+    z-index: 1;
+    visibility: visible;
+    transition: all .5s ease-in-out;
+}
+.Certificate_Type .embassy_name h5{
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--main-color);
+    padding-block-end: 15px;
+}
+.Certificate_Type .embassy_name p{
+    font-size: 12px;
+    font-weight: 500;
+    padding-inline-start: 10px;
+    color: var(--orange-color);
+    padding-block-end: 5px;
+}
+.Certificate_Type .embassy_name select{
+    font-size: 14px;
+    font-weight: 500;
+    outline: none;
+    padding: 10px;
+    border-radius: 10px;
+    width: 50%;
+    border: 2px solid var(--main-color);
+}
+.form-select:focus {
+    box-shadow: 0 0 0 .25rem rgb(15 52 100 / 42%);
+}
+.Certificate_Type .item_type .name_item_type span{
+    font-family: "Syne";
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 17px;
+    color: var(--main-blue-color);
+    transition: all .5s ease-in-out;
+}
+.Certificate_Type .item_type .image .img-fluid{
+    /* background-color: var(--white-color); */
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    border-radius: 50%;
+    margin-inline-start: 10px;
+}
+.Certificate_Type .item_type .image .img-fluid img {
+    width: 20px;
+    margin-inline: auto;
+    margin-block: 0px 1px;
+    transition: all .5s ease-in-out;
+}
+.Certificate_Type .item_type .image img.gray_Evaluated{
+    filter: saturate(0%);
+    transition: all .5s ease-in-out;
+}
+.Certificate_Type .RemarkCertificate.upMargin{
+    margin-block-start: -180px;
+    transition: all .5s ease-in-out;
+}
+.Certificate_Type .RemarkCertificate p{
+    margin-block-start: 0px;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--main-color);
+    transition: all .5s ease-in-out;
+}
+.Certificate_Type .RemarkCertificate textarea{
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--main-color);
+    width: 100%;
+    font-size: 12px;
+    font-weight: 700;
+}
+/* Certificate_Type */
+
+/* ************************************************************** */
+
+/* button_Certificate */
+.button_Certificate{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button_Certificate .submitCertificate{
+    margin-block-start: 10px;
+    font-size: 16px;
+    margin-inline: 20px;
+    padding: 10px 20px;
+    opacity: .8;
+    color: var(--white-color);
+    background-color: var(--main-light-color);
+    border-radius: 10px;
+    pointer-events: none;
+    opacity: .8;
+    transition: all .3s ease-in-out;
+}
+.button_Certificate .submitCertificate.active{
+    pointer-events: painted;
+    opacity: 1;
+    color: var(--white-color);
+    background-color: var(--main-blue-color);
+    transition: all .3s ease-in-out;
+}
+.button_Certificate .submitCertificate.active:hover{
+    padding: 10px 30px
+}
+/* button_Certificate */
+
+/* ************************************************************** */
+
+/* btnCertificateReasons */
+.head.ReturnReasons{
+    display: flex;
+    justify-content: end !important;
+    align-items: center;
+
+}
+.head.ReturnReasons .buttonReturnCert {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-inline-end: 10px;
+}
+.head.ReturnReasons .buttonReturnCert .buttonRCert .btnCertificateReasons{
+    width: fit-content;
+    color: var(--white-color);
+    background-color: var(--orange-light-color);
+    border: 1px solid var(--orange-light-color);
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 12px ;
+    transition: all .3s ease-in-out;
+}
+.head.ReturnReasons .buttonReturnCert .buttonRCert .btnCertificateReasons:hover{
+    background-color: var(--orange-color);
+    border: 1px solid var(--orange-color);
+
+}
+.head.ReturnReasons .buttonReturnCert .buttonRCert .print_button{
+    background-color: var(--main-light-color);
+    color: var(--white-color);
+    font-size: 26px;
+    padding: 5px 15px;
+    border-radius: 10px;
+    transition: all .3s ease-in-out;
+}
+.head.ReturnReasons .buttonReturnCert .buttonRCert .print_button:hover{
+    background-color: var(--main-color);
+}
+
+/* btnCertificateReasons */
+
+/* ************************************************************** */
+
+/* boxCertificateReasons */
+.boxCertificateReasons{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    width: 40%;
+    height: 70%;
+    padding: 25px 35px;
+    background-color: var(--white-color);
+    opacity: 0;
+    z-index: -1;
+    transition: all .3s ease-in-out;
+}
+.boxCertificateReasons.active{
+    opacity: 1;
+    z-index: 18;
+    transition: all .3s ease-in-out;
+}
+.boxCertificateReasons .titleBox h2{
+    position: relative;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 27px;
+    width: fit-content;
+    margin-block-end: 25px;
+    color: var(--main-color);
+}
+.boxCertificateReasons .titleBox h2::after{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--main-color);
+}
+.boxCertificateReasons .suptitleBox p{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 27px;
+    margin-bottom: 25px;
+    color: var(--main-color);
+}
+.boxCertificateReasons .FormboxReturnDan{
+    width: 95%;
+}
+.boxCertificateReasons .FormboxReturnDan .form-group{
+    display: flex;
+    align-items: center;
+    margin-block: 20px;
+}
+.boxCertificateReasons .FormboxReturnDan .form-group input{
+    width: 25px;
+    height: 25px;
+    margin-inline-end: 10px;
+}
+.boxCertificateReasons .FormboxReturnsta .form-group input{
+    pointer-events: none;
+}
+.boxCertificateReasons .FormboxReturnDan .form-group label{
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 17px;
+    width: 100%;
+    color: var(--gray-color);
+}
+.boxCertificateReasons .reasonSpecify .titleSpecify p{
+    color: var(--main-color);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 27px;
+}
+.boxCertificateReasons .reasonSpecify .titleSpecify p span{
+    font-weight: 600;
+    display: inline;
+}
+.boxCertificateReasons .reasonSpecify textarea{
+    position: relative;
+    width: 100%;
+    padding: 15px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--dark-color);
+    border: 1px solid var(--main-color);
+    border-radius: 10px;
+}
+.boxCertificateReasons .reasonSpecify .textareaPra{
+    position: relative;
+    width: 100%;
+    padding: 15px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--dark-color);
+    border: 1px solid var(--main-color);
+    border-radius: 10px;
+}
+.boxCertificateReasons .reasonSpecify textarea:focus-visible{
+    outline: 1px solid var(--main-color) !important;
+}
+.boxCertificateReasons .buttonReason{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-block-start: 35px;
+}
+.boxCertificateReasons .buttonReason .Return{
+    background-color: var(--orange-color);
+    color: var(--white-color);
+    font-size: 18px;
+    font-weight: 700;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    pointer-events: none;
+    opacity: .7;
+    transition: all .5s ease-in-out;
+}
+.boxCertificateReasons .buttonReason .Return.active{
+    pointer-events: painted;
+    opacity: 1;
+    transition: all .5s ease-in-out;
+}
+.boxCertificateReasons .buttonReason .ReasonBtnsta.active{
+    pointer-events: none;
+    opacity: 1;
+    transition: all .5s ease-in-out;
+}
+/* boxCertificateReasons */
+
+/* ************************************************************** */
+
+/* overlayCertificate */
+.overlayCertificate{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: -2;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+}
+.overlayCertificate.active{
+    z-index: 10;
+    opacity: 1;
+    transition: all .3s ease-in-out;
+}
+/* overlayCertificate */
+
+/* ************************************************************** */
+
+/* a4_section */
+.a4_section {
+    width: 210mm;
+    height: 267mm;
+    background-color: var(--white-color);
+    border: 1px solid var(--main-color);
+    border-radius: 10px;
+    margin-inline: auto;
+    margin-block-start: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+.a4_section .image{
+    margin: -12px;
+}
+.a4_section .image.footer{
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    margin: 0px;
+    padding: 0px 8px;
+}
+.a4_section .image .img-fluid img{
+    width: 100%;
+}
+.a4_section .content_certificate{
+    margin-block-start: 30px;
+}
+.a4_section .content_certificate h5{
+    color: var(--dark-color);
+    font-family: "Syne";
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 22px;
+    padding-block: 2px;
+}
+.a4_section .content_certificate .header_certificate h5 span{
+    color: var(--orange-color);
+    display: inline;
+}
+.a4_section .content_certificate p{
+    color: var(--dark-color);
+    font-family: "Syne";
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+}
+.a4_section .content_certificate .body_certificate{
+    padding-block: 15px;
+}
+.a4_section .content_certificate .body_certificate p span{
+    color: var(--orange-color);
+    display: inline;
+}
+.a4_section .content_certificate .Footer_certificate .Footer_certificate_photo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.a4_section .content_certificate .Footer_certificate .Footer_certificate_photo .image {
+    position: relative;
+}
+.a4_section .content_certificate .Footer_certificate .Footer_certificate_photo .image .img-fluid img{
+    width: 250px;
+}
+.a4_section .content_certificate .Footer_certificate .Footer_certificate_photo .image .img-fluid.company img.tragsEng{
+    width: 170px;
+}
+.a4_section .content_certificate .Footer_certificate .Footer_certificate_photo .image .img-fluid.company img.trags{
+    width: 650px;
+}
+.a4_section .content_certificate .Footer_certificate .Footer_certificate_photo .image .img-fluid.company img.Medgulf{
+    width: 500px;
+}
+.a4_section .content_certificate .Footer_certificate .Footer_certificate_photo .image .img-fluid.company:has(.tragsEng) {
+    position: absolute;
+    top: -100px;
+    right: 200px;
+}
+.a4_section .content_certificate .Footer_certificate .Footer_certificate_photo .image .img-fluid.company{
+    position: absolute;
+    top: -120px;
+    right: 500px;
+}
+.a4_section .content_certificate .Footer_certificate .Footer_certificate_content{
+    padding-block-start: 5px;
+}
+.buttonForEmployee .buttonFor .btnFor.btnForCertificate {
+    font-size: 18px;
+}
+.boxConfirmDanCertificate {
+    height: fit-content !important;
+}
+.boxConfirmDanCertificate .titleCertificate h2{
+    color: var(--gray-color) !important;
+}
+.boxConfirmDanCertificate .titleCertificate h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0 !important;
+    left: 105% !important;
+    width: 2px !important;
+    height: 100% !important;
+    background-color: var(--gray-text-color) !important;
+}
+.boxConfirmDanCertificate .suptitleCertificate p{
+    color: var(--gray-text-color) !important;
+}
+.boxConfirmDanCertificate .buttonCertificate {
+    justify-content: end !important;
+    margin-block-start: 15px !important;
+}
+.boxConfirmDanCertificate .buttonCertificate .BtnFirstCertificate {
+    background-color: var(--success-dark-color) !important;
+    transition: background-color .3s ease-in-out ;
+}
+.boxConfirmDanCertificate .buttonCertificate .BtnFirstCertificate:hover {
+    background-color: var(--success-color) ;
+}
+
+.boxReturnDan {
+    width: 60%;
+    height: 80% !important;
+}
+
+
+
+
+@media (max-width: 1399px) {
+    .boxReturnDan {
+        width: 70%;
+        height: 85% !important;
+    }
+}
+
+@media print {
+    .print-button {
+        display: none;
+    }
+}
+/* a4_section */
+
+
+/*  Info Card  */
+
+.statistics_Content .info{
+    display: flex;
+    align-items: center;
+    margin-block: 5px;
+    padding: 20px 15px;
+    border-radius: 10px;
+    background-color: var(--white-color) !important;
+    border: 2px solid var(--main-blue-color);
+}
+.statistics_Content .info .image img{
+    width: 120px;
+    border-radius: var(--radius-full);
+    margin-inline-end: 30px;
+}
+.statistics_Content .info .content_Info .title{
+    font-size: 12px;
+    color: var(--dark-color);
+    margin-bottom: 25px;
+}
+.statistics_Content .info .content_Info .title p{
+    position: relative;
+    width: fit-content;
+}
+.statistics_Content .info .content_Info .title span{
+    display: inline;
+    color: var(--main-color);
+}
+.statistics_Content .info .content_Info .title p::after{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--dark-color);
+}
+.statistics_Content .info .content_Info .infolist{
+    font-size: 12px;
+    font-weight: 500;
+}
+.statistics_Content .info .content_Info .infolist h2{
+    font-size: 12px;
+    color: var(--gray-color);
+    margin-bottom: 0;
+}
+.statistics_Content .info .content_Info .infolist p{
+    color: var(--dark-color);
+}
+
+/*  Info Card  */
+
+/* ************************************************************** */
+
+
+@media (max-width: 1199px) {
+    .Certificate_Type .RemarkCertificate.upMargin {
+        margin-block-start: -200px;
+        transition: all .5s ease-in-out;
+    }
+}
+@media (max-width: 991px) {
+    .Certificate_Type .embassy_name select {
+        width: 80%;
+    }
+    .a4_section {
+        width: 80vw;
+        height: calc(80vw * 1.414);
+    }
+    .a4_section .content_certificate h5{
+        font-size: 10px;
+        padding-block: 0px;
+    }
+    .a4_section .content_certificate p{
+        font-size: 8px;
+    }
+    .a4_section .content_certificate .Footer_certificate .Footer_certificate_photo .image .img-fluid.company:has(.Medgulf) {
+        top: -60px;
+        right: 200px;
+    }
+    .a4_section .content_certificate .Footer_certificate .Footer_certificate_photo .image .img-fluid.company:has(.tragsEng) {
+        top: -60px;
+        right: 200px;
+    }
+    .a4_section .content_certificate .Footer_certificate .Footer_certificate_photo .image .img-fluid.company:has(.trags) {
+        position: absolute;
+        top: -90px;
+        right: 300px;
+    }
+    .a4_section .content_certificate .Footer_certificate .Footer_certificate_photo .image .img-fluid img{
+        width: 125px;
+    }
+    .a4_section .content_certificate .Footer_certificate .Footer_certificate_photo .image .img-fluid.company img.tragsEng {
+        width: 70px;
+    }
+    .a4_section .content_certificate .Footer_certificate .Footer_certificate_photo .image .img-fluid.company img.Medgulf{
+        width: 240px;
+    }
+    .a4_section .content_certificate .Footer_certificate .Footer_certificate_content{
+        padding-block-start: 10px;
+    }
+    .a4_section .content_certificate .Footer_certificate .Footer_certificate_photo .image .img-fluid.company img.trags {
+        width: 300px;
+    }
+    .buttonForEmployee .buttonFor .btnFor.btnForCertificate {
+        font-size: 14px;
+    }
+}
+@media (max-width: 567px) {
+    .Certificate_Type .title_Type {
+        color: var(--main-color);
+        padding-inline-start: 0px;
+        font-size: 15px;
+    }
+    .Certificate_Type .item_type .name_item_type p {
+        margin-bottom: 0;
+        font-size: 12px;
+        font-weight: 500;
+    }
+    .Certificate_Type .item_type .image img {
+        width: 16px;
+        margin-inline-start: 10px;
+        transition: all .5s ease-in-out;
+    }
+    .Certificate_Type .RemarkCertificate.upMargin {
+        margin-block-start: -220px;
+        transition: all .5s ease-in-out;
+    }
+    .Certificate_Type .embassy_name p {
+        font-size: 11px;
+        padding-inline-start: 0px;
+    }
+    .Certificate_Type .embassy_name select {
+        font-size: 12px;
+        width: 100%;
+    }
+    .a4_section {
+        width: 90vw;
+        height: 90vh;
+    }
+    .a4_section .content_certificate .body_certificate {
+        padding-block: 0px;
+    }
+    .a4_section .content_certificate h5{
+        font-size: 10px;
+        padding-block: 0px;
+    }
+    .a4_section .content_certificate p{
+        font-size: 9px;
+    }
+    .a4_section .content_certificate .Footer_certificate .Footer_certificate_photo .image .img-fluid.company:has(.Medgulf) {
+        top: -60px;
+        right: 120px;
+    }
+    .a4_section .content_certificate .Footer_certificate .Footer_certificate_photo .image .img-fluid.company:has(.tragsEng) {
+        right: 100px;
+    }
+    .a4_section .content_certificate .Footer_certificate .Footer_certificate_photo .image .img-fluid.company:has(.trags) {
+        top: -60px;
+        right: 160px;
+    }
+    .a4_section .content_certificate .Footer_certificate .Footer_certificate_photo .image .img-fluid img{
+        width: 100px;
+    }
+    .a4_section .content_certificate .Footer_certificate .Footer_certificate_photo .image .img-fluid.company img.tragsEng {
+        width: 60px;
+    }
+    .a4_section .content_certificate .Footer_certificate .Footer_certificate_photo .image .img-fluid.company img.trags {
+        width: 200px;
+    }
+    .a4_section .content_certificate .Footer_certificate .Footer_certificate_photo .image .img-fluid.company img.Medgulf{
+        width: 180px;
+    }
+    .a4_section .content_certificate .Footer_certificate .Footer_certificate_content{
+        padding-block-start: 5px;
+    }
+}
+@media (max-width: 375px) {
+    .head .title {
+        font-size: 11px;
+    }
+    .Certificate_Type .embassy_name p {
+        font-size: 10px;
+    }
+    .Certificate_Type .embassy_name select {
+        font-size: 10px;
+        width: 105%;
+        margin-inline: -5px;
+    }
+    .a4_section .content_certificate h5{
+        font-size: 12px;
+        padding-block: 0px 5px;
+        line-height: 20px;
+
+    }
+    .a4_section .content_certificate p{
+        font-size: 10px;
+        line-height: 15px;
+
+    }
+    .a4_section .content_certificate .Footer_certificate .Footer_certificate_photo .image .img-fluid.company:has(.Medgulf) {
+        top: -20px;
+        right: 120px;
+    }
+    .a4_section .content_certificate .Footer_certificate .Footer_certificate_photo .image .img-fluid.company:has(.tragsEng) {
+        top: -20px;
+    }
+    .a4_section .content_certificate .Footer_certificate .Footer_certificate_photo .image .img-fluid.company:has(.trags) {
+        top: -30px;
+    }
+    .a4_section .content_certificate .Footer_certificate .Footer_certificate_photo .image .img-fluid img{
+        width: 100px;
+    }
+    .a4_section .content_certificate .Footer_certificate .Footer_certificate_photo .image .img-fluid.company img.tragsEng {
+        width: 60px;
+    }
+    .a4_section .content_certificate .Footer_certificate .Footer_certificate_photo .image .img-fluid.company img.trags {
+        width: 200px;
+    }
+    .a4_section .content_certificate .Footer_certificate .Footer_certificate_photo .image .img-fluid.company img.Medgulf{
+        width: 180px;
+    }
+    .a4_section .content_certificate .Footer_certificate .Footer_certificate_content{
+        padding-block-start: 15px;
+    }
+}
+@media (max-width: 320px) {
+    .head .title {
+        font-size: 12px;
+    }
+    .Certificate_Type .RemarkCertificate.upMargin {
+        margin-block-start: -250px;
+        transition: all .5s ease-in-out;
+    }
+    .a4_section .content_certificate h5{
+        font-size: 10px;
+        line-height: 16px;
+    }
+    .a4_section .content_certificate p{
+        font-size: 9px;
+    }
+    .a4_section .content_certificate .Footer_certificate .Footer_certificate_photo .image .img-fluid.company:has(.Medgulf) {
+        top: -40px;
+        right: 120px;
+    }
+    .a4_section .content_certificate .Footer_certificate .Footer_certificate_photo .image .img-fluid.company:has(.tragsEng) {
+        top: -25px;
+    }
+    .boxReturnDan .FormboxReturnDan .form-group label {
+        font-size: 9px !important;
+        line-height: 16px !important;
+    }
+}
+
+
+/********************************************/
