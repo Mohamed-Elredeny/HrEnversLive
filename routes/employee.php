@@ -107,7 +107,7 @@ Route::group([
             return view('Dashboard.employee.Personal_Certificate.Approval_Certificates.ar.Family_Residency_visa_request', [ 'certificate' => $certificate, 'employee' => $employee,'currentuserid'=>$idd]);
 
         }
-        elseif ($certificate->type == "QID LOST") {
+        elseif ($certificate->ref == "QID LOST") {
 
             return view('Dashboard.employee.Personal_Certificate.Approval_Certificates.ar.QID_Lost', [ 'certificate' => $certificate, 'employee' => $employee,'currentuserid'=>$idd]);
         }
@@ -162,7 +162,7 @@ Route::group([
             return view('Dashboard.employee.Personal_Certificate.Approval_Approval_Certificates.ar.Family_Residency_visa_request', [ 'certificate' => $certificate, 'employee' => $employee,'currentuserid'=>$idd]);
 
         }
-        elseif ($certificate->type == "QID LOST") {
+        elseif ($certificate->ref == "QID LOST") {
 
             return view('Dashboard.employee.Personal_Certificate.Approval_Approval_Certificates.ar.QID_Lost', [ 'certificate' => $certificate, 'employee' => $employee,'currentuserid'=>$idd]);
         }
@@ -329,7 +329,7 @@ $employee=\App\Models\Employee::find($certificate->Emp_id ?? "");
             return view('Dashboard.employee.Personal_Certificate.Return_Certificates.ar.Family_Residency_visa_request', [ 'certificate' => $certificate, 'employee' => $employee,'currentuserid'=>$id]);
 
         }
-        elseif ($certificate->type == "QID LOST") {
+        elseif ($certificate->ref == "QID LOST") {
 
             return view('Dashboard.employee.Personal_Certificate.Return_Certificates.ar.QID_Lost', [ 'certificate' => $certificate, 'employee' => $employee,'currentuserid'=>$id]);
         }

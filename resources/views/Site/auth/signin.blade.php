@@ -171,12 +171,13 @@
                                 <img src="{{asset("assets/images/logos/MEDGULF-logo.png")}}" alt="logo medgulf">
                             </div>
                         </div>
+
                         <div class="content">
                             <div class="error1 error">
-                                <p>
-                                    *Invalid Email or Password, or you may <br>
-                                    not have selected your company logo correctly
-                                </p>
+                                    <p>
+                                       <br>
+
+                                    </p>
                             </div>
 
                             <form class="formlogo1 formlogo" method="Post" action="{{route('signinpageMedgulf')}}"
@@ -232,8 +233,8 @@
                         <div class="content">
                             <div class="error2 error">
                                 <p>
-                                    *Invalid Email or Password, or you may <br>
-                                    not have selected your company logo correctly
+                                    <br>
+
                                 </p>
                             </div>
                             <form class="formlogo2 formlogo" method="Post" action="{{route('signinpageTrags')}}"
@@ -289,8 +290,8 @@
                         <div class="content">
                             <div class="error3 error">
                                 <p>
-                                    *Invalid Email or Password, or you may <br>
-                                    not have selected your company logo correctly
+                                     <br>
+
                                 </p>
                             </div>
                             {{--                            <form class="formlogo3 formlogo">--}}

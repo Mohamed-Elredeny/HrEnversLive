@@ -14,7 +14,7 @@
             <div class="text-right" dir="rtl">
                 <h5>
                     السيد مديرادارة الجوازات وشؤون
-                    <p style="word-spacing: 20px;">الوافدين المحترم</p>
+                    <p style="word-spacing: 10px;">الوافدين المحترم</p>
                     <br>
                     السلام عليكم ورحمة الله وبركاته
                     <br>
@@ -22,7 +22,7 @@
                     <br>
                     <br>
                 </h5>
-                <h2 class="text-center font-weight-bold"> <b style="font-weight: bolder;display: inline; text-decoration: underline; text-underline-offset: 5px;"><u>الموضوع : بلاغ فقدان بطاقة شخصية</u></b></h2>
+                <h3 class="text-center font-weight-bold"> <b style="font-weight: bolder;display: inline; text-decoration: underline; text-underline-offset: 5px;"><u>الموضوع : بلاغ فقدان بطاقة شخصية</u></b></h3>
                 <br><br><h4>
                     نحيطكم علماً بأن
                     @if($emp->sex=="Male")السيد/ @else السيدة/ @endif

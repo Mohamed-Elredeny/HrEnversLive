@@ -3,14 +3,16 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Http\Middleware\Authenticate;
 use App\Models\Employee;
+
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
-    use AuthenticatesUsers;
+//    use AuthenticatesUsers;
     public function index()
     {
         //
@@ -48,7 +50,7 @@ class LoginController extends Controller
 
         if (Auth::guard('employee')->attempt(['emailWork' => $request['emailMedgulf'], 'password' => $request['PasswordMedgulf'],'company_id'=>'medgulf'])) {
 
-//            $user = Auth::guard('employee')->user();
+            $user = Auth::guard('employee')->user();
             return redirect()->intended('dashboard');
         }
 
