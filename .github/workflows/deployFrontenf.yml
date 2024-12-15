@@ -3,7 +3,7 @@ name: Auto Deploy Magdy FrontEnd Work
 on:
   push:
     branches:
-      - main
+      - magdy-frontend
 
 jobs:
   deploy:
