@@ -25,7 +25,7 @@ jobs:
     # Step 3: Deploy code via SSH
     - name: Deploy to Server
       run: |
-        ssh -o StrictHostKeyChecking=no u544504040@195.35.39.222 << 'EOF'
+        ssh -p 65002 -o StrictHostKeyChecking=no u544504040@195.35.39.222 << 'EOF'
           cd /public_html/dev/backend/menna/HrEnversLive/
           git pull origin main
           composer install --no-dev --optimize-autoloader
