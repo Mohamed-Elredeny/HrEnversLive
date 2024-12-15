@@ -26,7 +26,7 @@ jobs:
     - name: Deploy to Server
       run: |
         ssh -p 65002 -o StrictHostKeyChecking=no u544504040@195.35.39.222 << 'EOF'
-          cd public_html/dev/frontend/
+          cd public_html/dev/frontend/magdy/
           git pull origin main
       
         EOF
