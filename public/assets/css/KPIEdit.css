@@ -1,0 +1,88 @@
+:root{
+    /* color */
+    --main-color: #0F3464;
+    --main-light-color: #5C96FE;
+    --main-blue-color: #1758ad;
+    --main-extra-light-color: #e7faff;
+    --danger-color: #EB0C0C;
+    --success-color: #61F899 ;
+    --success-dark-color:#42b26b ;
+    --orange-color: #e1322d;
+    --orange-light-color: #f06561;
+    --gray-color: #696969;
+    --gray-light-color: #f4f0f0;
+    --gray-text-color: #999999;
+    --white-text-color: #D9D9D9;
+    --white-color: #fff;
+    --dark-color: #181818;
+
+    /* radius */
+    --radius-full: 50%;
+    --radius-border: 50rem;
+}
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Syne", sans-serif;
+}
+li{
+    list-style: none;
+}
+a,
+img,
+time,
+span,
+input,
+button,
+textarea,
+ion-icon{
+    display: block;
+}
+img{
+    height: auto;
+}
+input,
+button,
+textarea{
+    font-family: inherit;
+    background: none;
+    border: none;
+}
+button{
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+html{
+    font-size: 10px;
+    scroll-behavior: smooth;
+    background-color: var(--gray-light-color);
+
+}
+body{
+    height: 100%;
+    max-width: 100% ;
+    overflow-x: hidden;
+}
+
+.dashboard_kpi .titleKPI h2{
+    position: relative;
+    color: var(--main-color);
+    width: fit-content;
+    margin-left: 20px;
+    margin-block: 15px -5px ;
+}
+.dashboard_kpi .titleKPI h2::after{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--main-color);
+}

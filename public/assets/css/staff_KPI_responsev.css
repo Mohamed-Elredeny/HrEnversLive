@@ -1,0 +1,36 @@
+@media (max-width: 1399px){
+    
+}
+@media (max-width: 1199px){
+
+}
+@media (max-width: 991px){
+    
+}
+@media (max-width: 767px){
+    
+}
+@media (max-width: 575px){
+    .FirstApprovalReview.FirstAResponsev.upMargin {
+        margin-block-start: -1426px !important;
+    }
+    .buttonForEmployee.buttonForFirstApproval.buttonForEResponsev.upMarginOnMargin {
+        margin-block-start: -1835px;
+    }
+}
+@media (max-width: 375px){
+    .FirstApprovalReview.FirstAResponsev.upMargin {
+        margin-block-start: -1485px !important;
+    }
+    .buttonForEmployee.buttonForFirstApproval.buttonForEResponsev.upMarginOnMargin {
+        margin-block-start: -1890px;
+    }
+}
+@media (max-width: 320px){
+    .FirstApprovalReview.FirstAResponsev.upMargin {
+        margin-block-start: -1680px !important;
+    }
+    .buttonForEmployee.buttonForFirstApproval.buttonForEResponsev.upMarginOnMargin {
+        margin-block-start: -2005px;
+    }
+}

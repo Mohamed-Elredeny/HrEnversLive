@@ -1,0 +1,78 @@
+.FirstApprovalReview.FirstApprovalResponsev.upMargin {
+    transform: translateY(0px);
+    margin-block-start: -1315px;
+    transition: all .5s ease-in-out;
+}
+.SecondApprovalReview.SecondApprovalResponsev.upMarginButton {
+    transform: translateY(0px);
+    margin-block-start: -1730px;
+    transition: all .5s ease-in-out;
+}
+.buttonForEmployee.buttonForFirstApproval.buttonForEResponsev.upMarginButton {
+    transform: translateY(0px);
+    margin-block-start: -385px;
+    transition: all .5s ease-in-out;
+}
+@media (max-width: 1399px){
+    
+}
+@media (max-width: 1199px){
+    .FirstApprovalReview.FirstApprovalResponsev.upMargin {
+        margin-block-start: -1225px;
+    }
+    .SecondApprovalReview.SecondApprovalResponsev.upMarginButton {
+        margin-block-start: -1620px;
+    }
+    .buttonForEmployee.buttonForFirstApproval.buttonForEResponsev.upMarginButton {
+        margin-block-start: -375px !important;
+    }
+}
+@media (max-width: 991px){
+    .FirstApprovalReview.FirstApprovalResponsev.upMargin {
+        margin-block-start: -1260px;
+    }
+    .SecondApprovalReview.SecondApprovalResponsev.upMarginButton {
+        margin-block-start: -1745px;
+    }
+    .buttonForEmployee.buttonForFirstApproval.buttonForEResponsev.upMarginButton {
+        margin-block-start: -375px;
+    }
+}
+@media (max-width: 767px){
+    .FirstApprovalReview.FirstApprovalResponsev.upMargin {
+        margin-block-start: -1285px;
+    }
+    .SecondApprovalReview.SecondApprovalResponsev.upMarginButton {
+        margin-block-start: -1765px;
+    }
+}
+@media (max-width: 575px){
+    .FirstApprovalReview.FirstApprovalResponsev.upMargin {
+        margin-block-start: -1425px;
+    }
+    .SecondApprovalReview.SecondApprovalResponsev.upMarginButton {
+        margin-block-start: -1825px;
+    }
+    .buttonForEmployee.buttonForFirstApproval.buttonForEResponsev.upMarginButton {
+        margin-block-start: -370px !important;
+    }
+}
+@media (max-width: 375px){
+    .FirstApprovalReview.FirstApprovalResponsev.upMargin {
+        margin-block-start: -1485px;
+    }
+    .SecondApprovalReview.SecondApprovalResponsev.upMarginButton {
+        margin-block-start: -1885px;
+    }
+}
+@media (max-width: 320px){
+    .FirstApprovalReview.FirstApprovalResponsev.upMargin {
+        margin-block-start: -1680px;
+    }
+    .SecondApprovalReview.SecondApprovalResponsev.upMarginButton {
+        margin-block-start: -1985px;
+    }
+    .buttonForEmployee.buttonForFirstApproval.buttonForEResponsev.upMarginButton {
+        margin-block-start: -395px !important;
+    }
+}
