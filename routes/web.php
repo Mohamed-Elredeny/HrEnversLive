@@ -24,7 +24,7 @@ Route::get('/dashboard', function () {
     return view('Dashboard.Dashboard');
 })->name('dashboard');});
 
-Route::get('/SignUp', function () {
+Route::get('SignUp', function () {
     return view('site.auth.Register');
 })->name('signup');
 
