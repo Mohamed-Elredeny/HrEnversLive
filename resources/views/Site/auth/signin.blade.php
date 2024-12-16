@@ -473,7 +473,7 @@
                                         </label>
                                         <label for="radio-card-2" class="radio-card col-md-4" onclick="logvisable2()">
                                             <input style="display: none" type="radio"
-                                                   @if($entity==2) checked @endif
+{{--                                                   @if($entity==2) checked @endif--}}
                                                    name="company_id" value="medgulf" id="radio-card-2"/>
                                             <div class="col-4 d-flex justify-content-center">
                                                 <div class="image active logoscom">
@@ -486,7 +486,7 @@
                                         </label>
                                         <label for="radio-card-3" class="radio-card col-md-4" onclick="logvisable3()">
                                             <input type="radio" style="display: none"
-                                                   @if($entity==3) checked @endif
+{{--                                                   @if($entity==3) checked @endif--}}
                                                    name="company_id" value="trags" id="radio-card-3"/>
                                             <div class="col-4 d-flex justify-content-center">
                                                 <div class="image active logoscom">
