@@ -28,7 +28,6 @@ jobs:
         ssh -p 65002 -o StrictHostKeyChecking=no u544504040@195.35.39.222 << 'EOF'
           cd public_html/dev/backend/menna/HrEnversLive/
           git pull origin main
-          composer2 install --no-dev --optimize-autoloader
           composer2 update
           php artisan migrate --force
           php artisan config:cache
