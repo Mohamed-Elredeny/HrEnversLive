@@ -608,9 +608,9 @@
 
     function logvisable2() {
         document.getElementById('logform').style.display = 'block';
-        <?php
-//            $entity =2;
-        ?>
+{{--        <?php--}}
+{{--//            $entity =2;--}}
+{{--        ?>--}}
         document.getElementById('join').innerHTML = `<p class="text-left">
 {{--                                                    You have <img class="img-fluid d-inline" style="width: 70px" src="{{asset("assets/images/hr360.png")}}"> Platform Account? <a class="" href=""> Log In now</a>--}}
                                                 </p>
@@ -621,9 +621,7 @@
 
     function logvisable3() {
         document.getElementById('logform').style.display = 'block';
-        <?php
-{{--//            $entity =3;--}}
-{{--        ?>--}}
+
         document.getElementById('join').innerHTML = `<p class="text-left">
                                                     You have <img class="img-fluid d-inline" style="width: 70px" src="{{asset("assets/images/hr360.png")}}"> Platform Account? <a class="" href=""> Log In now</a>
                                                 </p>
