@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $entity = 0;
-    return view('Site.Auth.signin',compact('entity'));
+    return view('Site.auth.signin',compact('entity'));
 });
 Route::middleware('auth:employee')->group(function () {
 Route::get('/dashboard', function () {
