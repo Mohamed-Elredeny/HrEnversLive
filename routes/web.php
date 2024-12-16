@@ -4,17 +4,15 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use Illuminate\Support\Facades\Route;
 
-
-
 Route::get('/', function () {
     $entity = 0;
     return view('Site.auth.signin',compact('entity'));
 });
-Route::middleware('auth:employee')->group(function () {
+//Route::middleware('auth:employee')->group(function () {
 Route::get('/dashboard', function () {
     return view('Dashboard.Dashboard');
 })->name('dashboard');
-});
+//});
 
 Route::get('SignUp', function () {
     return view('Site.auth.signin');
