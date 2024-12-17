@@ -33,6 +33,11 @@
         </div>
     </div>
 @endif
+@if (session('error'))
+    <div class="alert alert-danger">
+        {{ session('error') }}
+    </div>
+@endif
 <header>
     <div class="container">
         <div class="img-fluid">
@@ -119,6 +124,9 @@
                         </p>
                         <div class="card-list">
                             <div class="card" onclick="medgulfSignIn()">
+{{--                            <label for="radio-card-5"  >--}}
+{{--                                <input type="radio" style="display: none"--}}
+{{--                                       name="company_name" value="medgulf" id="radio-card-5"/></label>--}}
                                 <div class="image">
                                     <img src="{{asset("assets/images/logos/MEDGULF-logo.png")}}" alt="logo medgulf">
                                 </div>
@@ -129,6 +137,9 @@
                                 </div>
                             </div>
                             <div class="card" onclick="TragsSignIn()">
+{{--                                <label for="radio-card-6"  >--}}
+{{--                                    <input type="radio" style="display: none"--}}
+{{--                                           name="company_name" value="trags" id="radio-card-6"/></label>--}}
                                 <div class="image">
                                     <img src="{{asset("assets/images/logos/Trags.png")}}" alt="logo Trags">
                                 </div>
@@ -138,7 +149,9 @@
                                     </p>
                                 </div>
                             </div>
+
                             <div class="card" onclick="EngineeringSignIn()">
+
                                 <div class="image">
                                     <img src="{{asset("assets/images/logos/tragsentity2.png")}}"
                                          alt="logo Trags Engineering">
@@ -240,7 +253,6 @@
                             <form class="formlogo2 formlogo" method="Post" action="{{route('signinpageTrags')}}"
                                   id="signintrags">
                                 @csrf
-                                {{--                            <form class="formlogo2 formlogo">--}}
                                 <input type="email" placeholder="Work Email" class="form-control" name="emailTrags"
                                        id="emailTrags">
                                 <div class="password">
