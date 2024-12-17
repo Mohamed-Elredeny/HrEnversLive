@@ -311,8 +311,6 @@
                     </div>
                    @yield('certificate_content_approval')
 
-
-
                     <div class="image footer">
                         <div class="img-fluid">
                             @foreach($employee as $emp)

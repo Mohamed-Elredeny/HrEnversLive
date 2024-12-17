@@ -39,7 +39,6 @@ class CertificateController extends Controller
         $id= Auth::guard('employee')->user()->id??null;
         $currentdate = now();
 //$employee=Employee::find($id);
-
         try {
             Certificates::create([
                 'ref' => $request->input('item_id'),
