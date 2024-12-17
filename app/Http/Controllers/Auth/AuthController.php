@@ -107,6 +107,7 @@ class AuthController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
+     * khj
      * @param int $id
      * @return \Illuminate\Http\Response
      */
