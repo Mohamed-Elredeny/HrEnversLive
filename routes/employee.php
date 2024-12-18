@@ -16,7 +16,7 @@ Route::group([
     Route::get('index', function () {
         $idd = Auth::guard('employee')->user()->id ;
 
-        $userpermission = DB::table('user_permissions')->where('employee_id', '=', $idd)->get();
+        $userpermission = DB::table('user_permissions')->where('employee_id', '=', $idd)->get()??null;
 
         return view('Dashboard.employee.Personal_Certificate.index', ['userpermission' => $userpermission,]);
     })->name('index');
