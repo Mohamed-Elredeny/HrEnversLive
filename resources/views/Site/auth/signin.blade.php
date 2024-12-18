@@ -454,7 +454,7 @@
                                         Procced
                                     </div>
                                     <div class="img-fluid">
-                                        <img src="../../assets/images/sign-in/Double_Up@3x.png" alt="arrow">
+                                        <img src="{{asset('assets/images/sign-in/Double_Up@3x.png')}}" alt="arrow">
                                     </div>
                                 </button>
                             </div>
