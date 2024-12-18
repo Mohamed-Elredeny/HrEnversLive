@@ -1,0 +1,2572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENSRV</title>
+
+    <!-- custom style -->
+    <link rel="stylesheet" href="../../../assets/css/Leave_Requests.css">
+    <link rel="stylesheet" href="../../../assets/css/dashboard.css">
+
+    <!-- google font Syne-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
+
+    <!-- google font Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- google font Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="../../../assets/css/bootstrap.min.css">
+
+</head>
+<body>
+
+<div id="sideBar" class="sidebar">
+    <ul>
+        <li >
+            <a href="#">
+                <div class="image-dark home-dark active image">
+                    <img src="../../../assets/images/sign-in/Home@3x.png" alt="icon">
+                </div>
+                <div class="image-light home-light  image">
+                    <img src="../../../assets/images/sign-in/Home-light@3x-3.png" alt="icon">
+                </div>
+            </a>
+            <span>Home</span>
+        </li>
+        <li class="open">
+            <a href="#">
+                <div class="image-dark employee-dark  image">
+                    <img src="../../../assets/images/sign-in/Home@3x-5.png" alt="icon">
+                </div>
+                <div class="image-light employee-light active image">
+                    <img src="../../../assets/images/sign-in/Home-light@3x-2.png" alt="icon">
+                </div>
+            </a>
+            <span>Requests</span>
+        </li>
+        <li>
+            <a href="#">
+                <div class="image-dark hrStaff-dark  active image">
+                    <img src="../../../assets/images/sign-in/Home@3x-1.png" alt="icon">
+                </div>
+                <div class="image-light  hrStaff-light image">
+                    <img src="../../../assets/images/sign-in/Home-light@3x-4.png" alt="icon">
+                </div>
+            </a>
+            <span>HR Staff</span>
+        </li>
+        <li>
+            <a href="#">
+                <div class="image-dark calendar-dark active image">
+                    <img src="../../../assets/images/sign-in/Home@3x-4.png" alt="icon">
+                </div>
+                <div class="image-light  calendar-light image">
+                    <img src="../../../assets/images/sign-in/Home-light@3x-1.png" alt="icon">
+                </div>
+            </a>
+            <span>Calendar</span>
+        </li>
+        <li>
+            <a href="#">
+                <div class="image-dark settings-dark active image">
+                    <img src="../../../assets/images/sign-in/Home@3x-2.png" alt="icon">
+                </div>
+                <div class="image-light  settings-light image">
+                    <img src="../../../assets/images/sign-in/Home-light@3x-5.png" alt="icon">
+                </div>
+            </a>
+            <span>Settings</span>
+        </li>
+
+    </ul>
+</div>
+<div id="openslider" class="openslider">
+    <div id="home" class="home  sectionslider">
+        <div class="title">
+            <h2 class="order-2 order-md-1">
+                Home
+            </h2>
+            <div class="image order-1 order-md-2">
+                <img src="../../../assets/images/sign-in/Home-light@3x-3.png" alt="icon">
+            </div>
+        </div>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <div id="employee" class="employee open sectionslider">
+        <div class="title">
+            <h2 class="order-2 order-md-1">
+                Requests
+            </h2>
+            <div class="image order-1 order-md-2">
+                <img src="../../../assets/images/sign-in/Home-light@3x-2.png" alt="icon">
+            </div>
+        </div>
+        <ul>
+            <li><a href="../KPI/index.html">KPI <span>12</span> </a></li>
+            <li><a href="index.html">Personal Certificate <span>1</span> </a></li>
+            <li><a class="open" href="#">Leave Requests <span>6</span> </a></li>
+            <li><a href="#">HR Expenses From <span>9</span> </a></li>
+            <li><a href="#">Jop Description <span>18</span> </a></li>
+        </ul>
+    </div>
+    <div id="hrStaff" class="hrStaff sectionslider">
+        <div class="title">
+            <h2 class="order-2 order-md-1" style="padding-inline-start: 15px;">
+                HR Staff
+            </h2>
+            <div class="image order-1 order-md-2">
+                <img src="../../../assets/images/sign-in/Home-light@3x-1.png" alt="icon">
+            </div>
+        </div>
+        <ul>
+            <li><a href="#">Welcome Note <span>2</span> </a></li>
+            <li><a href="#">Separation Letter </a></li>
+            <li><a href="#">Confirmation Letter <span>12</span> </a></li>
+        </ul>
+    </div>
+    <div id="calendar"  class="calendar sectionslider">
+        <div class="title">
+            <h2 class="order-2 order-md-1">
+                Calendar
+            </h2>
+            <div class="image order-1 order-md-2">
+                <img src="../../../assets/images/sign-in/Home-light@3x-4.png" alt="icon">
+            </div>
+        </div>
+        <ul>
+            <li><a href="#">Welcome Note <span>2</span> </a></li>
+            <li><a href="#">Separation Letter </a></li>
+            <li><a href="#">Confirmation Letter <span>12</span> </a></li>
+        </ul>
+    </div>
+    <div id="settings" class="settings sectionslider">
+        <div class="title">
+            <h2 class="order-2 order-md-1">
+                Settings
+            </h2>
+            <div class="image order-1 order-md-2">
+                <img src="../../../assets/images/sign-in/Home-light@3x-5.png" alt="icon">
+            </div>
+        </div>
+        <ul>
+            <li>
+                <a href="#" id="edit" >
+                    <div class="iconSetting" id="editicon" >
+                        <i class="fa-solid fa-camera-retro"></i>
+                    </div>
+                    <p id="editphoto" >
+                        Edit Photo
+                    </p>
+                </a>
+            </li>
+            <li>
+                <a href="#" id="log" >
+                    <div class="iconSetting" id="iconlog" >
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                    </div>
+                    <p id="logout" >
+                        Log out
+                    </p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<button id="openBtn" class="open-btn active" onclick="openSidebar()">
+    <i class="fa-solid fa-bars-staggered"></i>
+</button>
+<button id="closeBtn" class="close-btn " onclick="closeSidebar()">
+    <i class="fa-solid fa-arrow-left"></i>
+</button>
+<div class="overlayOpenSlider" id="overlayOpenSlider" onclick="closeSidebar()"></div>
+
+
+<div id="mainContent" class="content ">
+    <header>
+        <div class="logo">
+            <div class="img-fluid">
+                <img src="../../../assets/images/sign-in/Logos@3x.png" alt="logos">
+            </div>
+            <div class="titleLogo">
+                <p>Medgulf Construction Company WLL</p>
+            </div>
+        </div>
+        <div class="account">
+            <div class="image">
+                <div class="ima-fluid">
+                    <img src="../../../assets/images/sign-in/Picture1.png" alt="Personal photo">
+                </div>
+            </div>
+            <div class="name">
+                <p>Ahmed Elsayed</p>
+                <span>HR Supervisor</span>
+            </div>
+            <div class="arrow">
+                <div class="ima-fluid">
+                    <img onclick="openEdit()" src="../../../assets/images/sign-in/Arrow@3x-1.png" alt="arrow-dowm">
+                </div>
+            </div>
+            <div class="settingAccount">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <div class="iconAccount">
+                                <i class="fa-solid fa-camera-retro"></i>
+                            </div>
+                            <p>
+                                Edit Photo
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="iconAccount" style="color: #EB0C0C ;">
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                            </div>
+                            <p>
+                                Log out
+                            </p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <article class="container">
+            <section class="head">
+                <div class="title">
+
+                    <a href="index.html">
+                        <span>Employee Leave Request</span>
+                    </a>
+                    <a>
+                        <p>Manage Requests</p>
+                    </a>
+                    <span>|</span>
+                </div>
+                <div class="endHead Button_section">
+                    <button class="print_button Print_Requests me-3" >
+                        <i class="fa-solid fa-print"></i>
+                    </button>
+                    <a href="index.html" class="image">
+                        <div class="img-fluid">
+                            <img src="../../../assets/images/sign-in/Back@3x.png" alt="back arrow">
+                        </div>
+                    </a>
+
+                </div>
+            </section>
+            <section class="info_section mx-3 mt-5">
+                <div class="row g-5 ">
+
+                    <div class="content_Info col-12 ">
+                        <div class="row g-3">
+                            <div class="info_section_tap p-4  col-12">
+                                <div class="info_section_content d-flex flex-column  align-item-center">
+                                    <div class="row">
+
+                                        <div class="infolist ">
+
+                                            <div class="row">
+                                                <div class="title textTitleEs">
+                                                    <p>
+                                                        Employee details
+                                                    </p>
+                                                </div>
+                                                <div class="image d-flex align-items-center flex-column justify-content-center col-4 col-md-2">
+                                                    <div class="img-fluid ">
+                                                        <img src="../../../assets/images/sign-in/Picture1.png" alt="Personal photo">
+                                                    </div>
+                                                    <div class=" mx-auto  mt-2  ">
+                                                        <div class="text-center nameEmployee">
+                                                            <h2>
+                                                                <span class="d-block ">Leave Application</span>
+                                                                Mohamed Mahrous
+                                                            </h2>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-8 col-md-10">
+                                                    <div class="row">
+                                                        <div class="col-6 col-md-2">
+                                                            <h2>
+                                                                Emp No
+                                                            </h2>
+                                                            <p>
+                                                                101121
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-6 col-md-2">
+                                                            <h2>
+                                                                Designation No
+                                                            </h2>
+                                                            <p>
+                                                                HR Department
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-6 col-md-2">
+                                                            <h2>
+                                                                Department
+                                                            </h2>
+                                                            <p>
+                                                                HR Department
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-6 col-md-2">
+                                                            <h2>
+                                                                Year Of Evaluation
+                                                            </h2>
+                                                            <p>
+                                                                2023
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-6 col-md-2">
+                                                            <h2>
+                                                                Project Number
+                                                            </h2>
+                                                            <p>
+                                                                1103
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-6 col-md-2">
+                                                            <h2>
+                                                                Project Number
+                                                            </h2>
+                                                            <p>
+                                                                1103
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="infolist mt-1">
+                                        <div class="row">
+                                            <div class="title textTitleEs">
+                                                <p>
+                                                    Leave details
+                                                </p>
+                                            </div>
+                                            <div class="col-12 col-md-4 ">
+                                                <div class="row mx-auto info_section_tap_spi">
+                                                    <div class="col-4 col-lg-3">
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <h2>
+                                                                    Leave Type
+                                                                </h2>
+                                                                <p>
+                                                                    Long leave
+                                                                </p>
+                                                            </div>
+                                                            <div class="col-12 mt-1">
+                                                                <div class="counter text-start">
+                                                                        <span class="text-start text-black">
+                                                                            Total Days
+                                                                        </span>
+                                                                    <div class="boxCounter tableboxCounter">
+                                                                        <p class="mb-0 text-white">30</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-8 col-lg-9">
+                                                        <div class=" mx-auto  ">
+                                                            <div class="text-center  d-flex flex-column">
+
+                                                                <p class="titelForPrintRequest">Your request is pending with</p>
+                                                                <div class="manager  d-flex justify-content-center flex-column align-items-center">
+                                                                    <button class="btn btnInfo titelForPrintRequest">
+                                                                        Head Of Department Comments
+                                                                    </button>
+                                                                    <div class="icon">
+                                                                        <i class="fa-regular fa-clock"></i>
+                                                                    </div>
+                                                                    <p class="nameEmployee managernameEmployee titelForPrintRequest">
+                                                                        Ahmed Muhammed Elsayed
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-8 mt-2 mt-md-0 ">
+                                                <div class="row">
+                                                    <div class="col-6 col-md-3 col-lg-3">
+                                                        <h2>
+                                                            Visa Expiry
+                                                        </h2>
+                                                        <p>
+                                                            19-12-2024
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-6 col-md-3 col-lg-3">
+                                                        <h2>
+                                                            Travel Date:
+                                                        </h2>
+                                                        <p>
+                                                            19-12-2024
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-6 col-md-3 col-lg-3">
+                                                        <h2>
+                                                            Arrival Date
+                                                        </h2>
+                                                        <p>
+                                                            19-12-2024
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-6 col-md-3 col-lg-3">
+                                                        <h2>
+                                                            Submission Date
+                                                        </h2>
+                                                        <p>
+                                                            19-12-2024
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-6 col-md-3 col-lg-3">
+                                                        <h2>
+                                                            Phone Number
+                                                        </h2>
+                                                        <p>
+                                                            0111233346
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-6 col-md-3 col-lg-3">
+                                                        <h2>
+                                                            Reasons
+                                                        </h2>
+                                                        <p>
+                                                            Leave Type
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-6 col-md-3 col-lg-3">
+                                                        <h2>
+                                                            Last Resumption Date
+                                                        </h2>
+                                                        <p>
+                                                            19-12-2024
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <section class="LeaveTap_section">
+                <div class="accordion">
+                    <div class="accordion-item" onclick="toggleAccordionHeader(this)">
+                        <button class="accordion-header d-flex justify-content-center align-items-center" onclick="toggleAccordion(this)">
+                                <span>
+                                    Action here
+                                </span>
+                            <div class="d-flex justify-content-center align-items-center mx-3" >
+                                <img src="../../../assets/images/sign-in/Evaluated@3x.png" style="display: none; width: 25px ;" alt="Evaluated">
+                                <img src="../../../assets/images/sign-in/Pending@3x.png" style="display: none; width: 25px ;" alt="Pending">
+                                <img src="../../../assets/images/sign-in/Returned@3x.png" style="display: none; width: 25px ;" alt="Returned">
+                            </div>
+                            <div class="manager d-flex justify-content-center align-items-center">
+                                HANDOVER STAGE
+                                <div class="mx-3 icon">
+                                    <i class="fa-regular fa-clock"></i>
+                                </div>
+                                <p class="mb-0 nameEmployee">
+                                    Ahmed Muhammed Elsayed
+                                </p>
+                            </div>
+                            <div class="iconArrowDown">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </div>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="comments-section mt-2 mt-md-0">
+                                        <label class="mb-0 titelForPrintLabel" for="comments" >Next Approval</label>
+                                        <div class="approval-group ">
+                                            <div class="approval-section mt-0 approvalSection active" >
+                                                <div class="select-approval flex-column flex-md-row ">
+                                                    <span class="approvalBtn">
+                                                        Select Approval
+                                                        <div class="iconArrowDown d-inline ms-1">
+                                                            <i style="transform: rotate(90deg);" class="fa-solid fa-arrow-right"></i>
+                                                        </div>
+                                                    </span>
+                                                    <div class="search">
+                                                        <input type="text" placeholder="Search for employee">
+                                                        <button class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="approval-options approvalOptions " >
+                                                    <span class="spanTitle">
+                                                        Choose Next Approval
+                                                        <p class="mb-0" >
+                                                            "Please note that you will select the name of the next approver, who will then select the subsequent approver."
+                                                        </p>
+                                                        <p>
+                                                            For positions of Managers and above, approval must be obtained from the General Manager.
+                                                        </p>
+
+                                                    </span>
+                                                <div class="options ">
+                                                    <div class="row">
+                                                        <label class="col-6 col-md-4">
+                                                            Direct Supervisor Approval
+                                                            <div class="img-fluid"><img class="gray_Evaluated" src="../../../assets/images/sign-in/Evaluated@3x.png" alt="Evaluated"></div>
+                                                        </label>
+                                                        <label class="col-6 col-md-4">
+                                                            Manager Approval
+                                                            <div class="img-fluid"><img class="gray_Evaluated" src="../../../assets/images/sign-in/Evaluated@3x.png" alt="Evaluated"></div>
+                                                        </label>
+                                                        <label class="col-6 col-md-4">
+                                                            Head Of Department Approval
+                                                            <div class="img-fluid"><img class="gray_Evaluated" src="../../../assets/images/sign-in/Evaluated@3x.png" alt="Evaluated"></div>
+                                                        </label>
+                                                        <label class="col-6 col-md-4">
+                                                            Business Unit Approval
+                                                            <div class="img-fluid"><img class="gray_Evaluated" src="../../../assets/images/sign-in/Evaluated@3x.png" alt="Evaluated"></div>
+                                                        </label>
+                                                        <label class="col-6 col-md-4">
+                                                            General Manager Approval
+                                                            <div class="img-fluid"><img class="gray_Evaluated" src="../../../assets/images/sign-in/Evaluated@3x.png" alt="Evaluated"></div>
+                                                        </label>
+                                                        <label class="col-6 col-md-4">
+                                                            N/A
+                                                            <div class="img-fluid"><img class="gray_Evaluated" src="../../../assets/images/sign-in/Evaluated@3x.png" alt="Evaluated"></div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6"">
+                                <div class="DownloadAtt mb-4 d-flex justify-content-between align-items-center">
+                                    <div class="review-section flex-grow-1 d-flex justify-content-between align-items-center">
+                                        <label for="work-handover">Work Handover Reviewed</label>
+                                        <div class="buttons buttonsPrint d-flex justify-content-center align-items-center">
+                                            <label class="radio-label">
+                                                <input type="radio" name="handover1" class="no" value="no">
+                                                <span>NO</span>
+                                            </label>
+                                            <label class="radio-label">
+                                                <input type="radio" name="handover1" class="yes" value="yes">
+                                                <span>YES</span>
+                                            </label>
+                                            <label class="radio-label">
+                                                <input type="radio" name="handover1" class="na" value="na">
+                                                <span>N/A</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="iconDownload ms-0 ms-sm-4 ">
+                                        <i class="fa-solid fa-download"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 ">
+                                <div class="comments-section">
+
+                                    <textarea class="comments" placeholder="Comments"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button-Approval " >
+                            <div class="btn btnApproval btnApprove" >
+                                Approve
+                            </div>
+                            <div class="btn btnApproval btnReturn" >
+                                Return
+                            </div>
+                            <div class="btn btnApproval btnReject" >
+                                Reject
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item-static">
+                    <div class="accordion-header-static">
+                        Department approval
+                    </div>
+                </div>
+                <div class="accordion-item" onclick="toggleAccordionHeader(this)">
+                    <button class="accordion-header d-flex justify-content-center align-items-center" onclick="toggleAccordion(this)">
+                                <span>
+                                    Action here
+                                </span>
+                        <div class="d-flex justify-content-center align-items-center mx-3" >
+                            <img src="../../../assets/images/sign-in/Evaluated@3x.png" style="display: none; width: 25px ;" alt="Evaluated">
+                            <img src="../../../assets/images/sign-in/Pending@3x.png" style="display: none; width: 25px ;" alt="Pending">
+                            <img src="../../../assets/images/sign-in/Returned@3x.png" style="display: none; width: 25px ;" alt="Returned">
+                        </div>
+
+                        <div class="manager d-flex justify-content-center align-items-center">
+                            direct supervisor approval
+                            <div class="mx-3 icon">
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
+                            <p class="mb-0 nameEmployee">
+                                Ahmed Muhammed Elsayed
+                            </p>
+                        </div>
+                        <div class="iconArrowDown">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </button>
+
+                    <div class="accordion-content">
+
+                        <div class="row">
+
+
+                            <div class="col-12 col-md-4">
+                                <div class="review-section review-section-gray mb-2 review-section-gray-row d-flex flex-row justify-content-between align-items-center">
+                                    <label for="work-handover">Proceed For Leave</label>
+                                    <div class="buttons buttonsPrint d-flex justify-content-center align-items-center">
+
+                                        <label class="radio-label">
+                                            <input type="radio" name="handover624" class="yes" value="yes">
+                                            <span>YES</span>
+                                        </label>
+                                        <label class="radio-label">
+                                            <input type="radio" name="handover624" class="no" value="no">
+                                            <span>NO</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="review-section review-section-gray mb-2 review-section-gray-row d-flex flex-row justify-content-between align-items-center">
+                                    <label for="work-handover">Required Back To Same Allocation</label>
+                                    <div class="buttons buttonsPrint d-flex justify-content-center align-items-center">
+
+                                        <label class="radio-label">
+                                            <input type="radio" name="handover625" class="yes" value="yes">
+                                            <span>YES</span>
+                                        </label>
+                                        <label class="radio-label">
+                                            <input type="radio" name="handover625" class="na" value="na">
+                                            <span>N/A</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="review-section review-section-gray mb-2 review-section-gray-row d-flex flex-row justify-content-between align-items-center">
+                                    <label for="work-handover">Replacement Requirement</label>
+                                    <div class="buttons buttonsPrint d-flex justify-content-center align-items-center">
+
+                                        <label class="radio-label">
+                                            <input type="radio" name="handover626" class="yes" value="yes">
+                                            <span>YES</span>
+                                        </label>
+                                        <label class="radio-label">
+                                            <input type="radio" name="handover626" class="na" value="na">
+                                            <span>N/A</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="comments-section mt-2 mt-md-0">
+                                    <label class="mb-0 titelForPrintLabel" for="comments">Next Approval</label>
+                                    <div class="approval-group ">
+                                        <div class="approval-section mt-0 approvalSection active" >
+                                            <div class="select-approval flex-column flex-md-row">
+                                                    <span class="approvalBtn">
+                                                        Select Approval
+                                                        <div class="iconArrowDown d-inline ms-1">
+                                                            <i style="transform: rotate(90deg);" class="fa-solid fa-arrow-right"></i>
+                                                        </div>
+                                                    </span>
+                                                <div class="search">
+                                                    <input type="text" placeholder="Search for employee">
+                                                    <button class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="approval-options approvalOptions " >
+                                                <span class="spanTitle">
+                                                    Choose Next Approval
+                                                    <p class="mb-0" >
+                                                        "Please note that you will select the name of the next approver, who will then select the subsequent approver."
+                                                    </p>
+                                                    <p>
+                                                        For positions of Managers and above, approval must be obtained from the General Manager.
+                                                    </p>
+
+                                                </span>
+                                            <div class="options ">
+                                                <div class="row">
+                                                    <label class="col-6 col-md-4">
+                                                        Direct Supervisor Approval
+                                                        <div class="img-fluid">
+                                                            <img class="gray_Evaluated" src="../../../assets/images/sign-in/Evaluated@3x.png" alt="Evaluated">
+                                                        </div>
+                                                    </label>
+                                                    <label class="col-6 col-md-4">
+                                                        Manager Approval
+                                                        <div class="img-fluid"><img class="gray_Evaluated" src="../../../assets/images/sign-in/Evaluated@3x.png" alt="Evaluated"></div>
+                                                    </label>
+                                                    <label class="col-6 col-md-4">
+                                                        Head Of Department Approval
+                                                        <div class="img-fluid"><img class="gray_Evaluated" src="../../../assets/images/sign-in/Evaluated@3x.png" alt="Evaluated"></div>
+                                                    </label>
+                                                    <label class="col-6 col-md-4">
+                                                        Business Unit Approval
+                                                        <div class="img-fluid"><img class="gray_Evaluated" src="../../../assets/images/sign-in/Evaluated@3x.png" alt="Evaluated"></div>
+                                                    </label>
+                                                    <label class="col-6 col-md-4">
+                                                        General Manager Approval
+                                                        <div class="img-fluid"><img class="gray_Evaluated" src="../../../assets/images/sign-in/Evaluated@3x.png" alt="Evaluated"></div>
+                                                    </label>
+                                                    <label class="col-6 col-md-4">
+                                                        N/A
+                                                        <div class="img-fluid"><img class="gray_Evaluated" src="../../../assets/images/sign-in/Evaluated@3x.png" alt="Evaluated"></div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="comments-section mt-2 mt-md-0 mb-0">
+                                    <textarea class="comments" placeholder="Direct Supervisor Comments"></textarea>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="button-Approval" >
+                            <div class="btn btnApproval btnApprove">
+                                Approve
+                            </div>
+                            <div class="btn btnApproval btnReturn">
+                                Return
+                            </div>
+                            <div class="btn btnApproval btnReject">
+                                Reject
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item itemNA" style="display:block" onclick="toggleAccordionHeader(this)">
+                    <button class="accordion-header d-flex justify-content-center align-items-center" onclick="toggleAccordion(this)">
+                                <span>
+                                    Action here
+                                </span>
+                        <div class="d-flex justify-content-center align-items-center mx-3" >
+                            <img src="../../../assets/images/sign-in/Evaluated@3x.png" style="display: none; width: 25px ;" alt="Evaluated">
+                            <img src="../../../assets/images/sign-in/Pending@3x.png" style="display: none; width: 25px ;" alt="Pending">
+                            <img src="../../../assets/images/sign-in/Returned@3x.png" style="display: none; width: 25px ;" alt="Returned">
+                        </div>
+                        <div class="manager d-flex justify-content-center align-items-center">
+                            Manager approval
+                            <div class="mx-3 icon">
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
+                            <p class="mb-0 nameEmployee">
+                                Ahmed Muhammed Elsayed
+                            </p>
+                        </div>
+                        <div class="iconArrowDown">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </button>
+
+                    <div class="accordion-content">
+
+                        <div class="row">
+                            <div class="col-12 col-md-4 col-lg-3">
+                                <div class="review-section review-section-gray mb-2 review-section-gray-row d-flex flex-row justify-content-between align-items-center">
+                                    <label for="work-handover">Proceed For Leave</label>
+                                    <div class="buttons buttonsPrint d-flex justify-content-center align-items-center">
+
+                                        <label class="radio-label">
+                                            <input type="radio" name="handover6232" class="yes" value="yes">
+                                            <span>YES</span>
+                                        </label>
+                                        <label class="radio-label">
+                                            <input type="radio" name="handover6232" class="no" value="no">
+                                            <span>NO</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-8 col-lg-6">
+                                <div class="comments-section mt-2 mt-md-0">
+                                    <label class="mb-0 titelForPrintLabel" for="comments">Next Approval</label>
+                                    <div class="approval-group ">
+                                        <div class="approval-section mt-0 approvalSection active" >
+
+                                            <div class="select-approval flex-column flex-md-row">
+                                                            <span class="approvalBtn">
+                                                                Select Approval
+                                                                <div class="iconArrowDown d-inline ms-1">
+                                                                    <i style="transform: rotate(90deg);" class="fa-solid fa-arrow-right"></i>
+                                                                </div>
+                                                            </span>
+                                                <div class="search">
+                                                    <input type="text" placeholder="Search for employee">
+                                                    <button class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                                </div>
+                                            </div>
+                                            <div class="approval-options approvalOptions " >
+                                                        <span class="spanTitle">
+                                                            Choose Next Approval
+                                                            <p class="mb-0" >
+                                                                "Please note that you will select the name of the next approver, who will then select the subsequent approver."
+                                                            </p>
+                                                            <p>
+                                                                For positions of Managers and above, approval must be obtained from the General Manager.
+                                                            </p>
+
+                                                        </span>
+                                                <div class="options ">
+                                                    <div class="row">
+                                                        <label class="col-6 col-md-4">
+                                                            Direct Supervisor Approval
+                                                            <div class="img-fluid">
+                                                                <img class="gray_Evaluated" src="../../../assets/images/sign-in/Evaluated@3x.png" alt="Evaluated">
+                                                            </div>
+                                                        </label>
+                                                        <label class="col-6 col-md-4">
+                                                            Manager Approval
+                                                            <div class="img-fluid"><img class="gray_Evaluated" src="../../../assets/images/sign-in/Evaluated@3x.png" alt="Evaluated"></div>
+                                                        </label>
+                                                        <label class="col-6 col-md-4">
+                                                            Head Of Department Approval
+                                                            <div class="img-fluid"><img class="gray_Evaluated" src="../../../assets/images/sign-in/Evaluated@3x.png" alt="Evaluated"></div>
+                                                        </label>
+                                                        <label class="col-6 col-md-4">
+                                                            Business Unit Approval
+                                                            <div class="img-fluid"><img class="gray_Evaluated" src="../../../assets/images/sign-in/Evaluated@3x.png" alt="Evaluated"></div>
+                                                        </label>
+                                                        <label class="col-6 col-md-4">
+                                                            General Manager Approval
+                                                            <div class="img-fluid"><img class="gray_Evaluated" src="../../../assets/images/sign-in/Evaluated@3x.png" alt="Evaluated"></div>
+                                                        </label>
+                                                        <label class="col-6 col-md-4">
+                                                            N/A
+                                                            <div class="img-fluid"><img class="gray_Evaluated" src="../../../assets/images/sign-in/Evaluated@3x.png" alt="Evaluated"></div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-3">
+                                <div class="comments-section mb-0">
+                                    <textarea class="comments" placeholder="Manager Approval Comments"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button-Approval" >
+                            <div class="btn btnApproval btnApprove">
+                                Approve
+                            </div>
+                            <div class="btn btnApproval btnReturn">
+                                Return
+                            </div>
+                            <div class="btn btnApproval btnReject">
+                                Reject
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item itemNA" style="display:block" onclick="toggleAccordionHeader(this)">
+                    <button class="accordion-header d-flex justify-content-center align-items-center" onclick="toggleAccordion(this)">
+                                <span>
+                                    Action here
+                                </span>
+                        <div class="d-flex justify-content-center align-items-center mx-3" >
+                            <img src="../../../assets/images/sign-in/Evaluated@3x.png" style="display: none; width: 25px ;" alt="Evaluated">
+                            <img src="../../../assets/images/sign-in/Pending@3x.png" style="display: none; width: 25px ;" alt="Pending">
+                            <img src="../../../assets/images/sign-in/Returned@3x.png" style="display: none; width: 25px ;" alt="Returned">
+                        </div>
+                        <div class="manager d-flex justify-content-center align-items-center">
+                            Head Of Department approval
+                            <div class="mx-3 icon">
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
+                            <p class="mb-0 nameEmployee">
+                                Ahmed Muhammed Elsayed
+                            </p>
+                        </div>
+                        <div class="iconArrowDown">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </button>
+                    <div class="accordion-content">
+
+                        <div class="row">
+
+                            <div class="col-12 col-md-4 col-lg-3">
+                                <div class="review-section review-section-gray mb-2 review-section-gray-row d-flex flex-row justify-content-between align-items-center">
+                                    <label for="work-handover">Proceed For Leave</label>
+                                    <div class="buttons buttonsPrint d-flex justify-content-center align-items-center">
+
+                                        <label class="radio-label">
+                                            <input type="radio" name="handover623" class="yes" value="yes">
+                                            <span>YES</span>
+                                        </label>
+                                        <label class="radio-label">
+                                            <input type="radio" name="handover623" class="no" value="no">
+                                            <span>NO</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-8 col-lg-6">
+                                <div class="comments-section mt-2 mt-md-0">
+                                    <label class="mb-0 titelForPrintLabel" for="comments">Next Approval</label>
+                                    <div class="approval-group ">
+                                        <div class="approval-section mt-0 approvalSection active" >
+                                            <div class="select-approval flex-column flex-md-row">
+                                                        <span class="approvalBtn">
+                                                            Select Approval
+                                                            <div class="iconArrowDown d-inline ms-1">
+                                                                <i style="transform: rotate(90deg);" class="fa-solid fa-arrow-right"></i>
+                                                            </div>
+                                                        </span>
+                                                <div class="search">
+                                                    <input type="text" placeholder="Search for employee">
+                                                    <button class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="approval-options approvalOptions " >
+                                                <span class="spanTitle">
+                                                    Choose Next Approval
+                                                    <p class="mb-0" >
+                                                        "Please note that you will select the name of the next approver, who will then select the subsequent approver."
+                                                    </p>
+                                                    <p>
+                                                        For positions of Managers and above, approval must be obtained from the General Manager.
+                                                    </p>
+
+                                                </span>
+                                            <div class="options ">
+                                                <div class="row">
+                                                    <label class="col-6 col-md-4">
+                                                        Direct Supervisor Approval
+                                                        <div class="img-fluid">
+                                                            <img class="gray_Evaluated" src="../../../assets/images/sign-in/Evaluated@3x.png" alt="Evaluated">
+                                                        </div>
+                                                    </label>
+                                                    <label class="col-6 col-md-4">
+                                                        Manager Approval
+                                                        <div class="img-fluid"><img class="gray_Evaluated" src="../../../assets/images/sign-in/Evaluated@3x.png" alt="Evaluated"></div>
+                                                    </label>
+                                                    <label class="col-6 col-md-4">
+                                                        Head Of Department Approval
+                                                        <div class="img-fluid"><img class="gray_Evaluated" src="../../../assets/images/sign-in/Evaluated@3x.png" alt="Evaluated"></div>
+                                                    </label>
+                                                    <label class="col-6 col-md-4">
+                                                        Business Unit Approval
+                                                        <div class="img-fluid"><img class="gray_Evaluated" src="../../../assets/images/sign-in/Evaluated@3x.png" alt="Evaluated"></div>
+                                                    </label>
+                                                    <label class="col-6 col-md-4">
+                                                        General Manager Approval
+                                                        <div class="img-fluid"><img class="gray_Evaluated" src="../../../assets/images/sign-in/Evaluated@3x.png" alt="Evaluated"></div>
+                                                    </label>
+                                                    <label class="col-6 col-md-4">
+                                                        N/A
+                                                        <div class="img-fluid"><img class="gray_Evaluated" src="../../../assets/images/sign-in/Evaluated@3x.png" alt="Evaluated"></div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-3">
+                                <div class="comments-section mb-0">
+                                    <textarea class="comments" placeholder="Head Of Department Comments"></textarea>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="button-Approval" >
+                            <div class="btn btnApproval btnApprove">
+                                Approve
+                            </div>
+                            <div class="btn btnApproval btnReturn">
+                                Return
+                            </div>
+                            <div class="btn btnApproval btnReject">
+                                Reject
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item itemNA" style="display:block" onclick="toggleAccordionHeader(this)">
+                    <button class="accordion-header d-flex justify-content-center align-items-center" onclick="toggleAccordion(this)">
+                                <span>
+                                    Action here
+                                </span>
+                        <div class="d-flex justify-content-center align-items-center mx-3" >
+                            <img src="../../../assets/images/sign-in/Evaluated@3x.png" style="display: none; width: 25px ;" alt="Evaluated">
+                            <img src="../../../assets/images/sign-in/Pending@3x.png" style="display: none; width: 25px ;" alt="Pending">
+                            <img src="../../../assets/images/sign-in/Returned@3x.png" style="display: none; width: 25px ;" alt="Returned">
+                        </div>
+                        <div class="manager d-flex justify-content-center align-items-center">
+                            Business Unit approval
+                            <div class="mx-3 icon">
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
+                            <p class="mb-0 nameEmployee">
+                                Ahmed Muhammed Elsayed
+                            </p>
+                        </div>
+                        <div class="iconArrowDown">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </button>
+
+                    <div class="accordion-content">
+
+                        <div class="row">
+
+                            <div class="col-12 col-md-4 col-lg-3">
+                                <div class="review-section review-section-gray mb-2 review-section-gray-row d-flex flex-row justify-content-between align-items-center">
+                                    <label for="work-handover">Proceed For Leave</label>
+                                    <div class="buttons buttonsPrint d-flex justify-content-center align-items-center">
+
+                                        <label class="radio-label">
+                                            <input type="radio" name="handover622" class="yes" value="yes">
+                                            <span>YES</span>
+                                        </label>
+                                        <label class="radio-label">
+                                            <input type="radio" name="handover622" class="no" value="no">
+                                            <span>NO</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-12 col-md-8 col-lg-6">
+                                <div class="comments-section mt-2 mt-md-0">
+                                    <label class="mb-0 titelForPrintLabel" for="comments">Next Approval</label>
+                                    <div class="approval-group ">
+                                        <div class="approval-section mt-0 approvalSection active" >
+                                            <div class="select-approval  flex-column flex-md-row">
+                                                        <span class="approvalBtn">
+                                                            Select Approval
+                                                            <div class="iconArrowDown d-inline ms-1">
+                                                                <i style="transform: rotate(90deg);" class="fa-solid fa-arrow-right"></i>
+                                                            </div>
+                                                        </span>
+                                                <div class="search">
+                                                    <input type="text" placeholder="Search for employee">
+                                                    <button class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="approval-options approvalOptions " >
+                                                    <span class="spanTitle">
+                                                        Choose Next Approval
+                                                        <p class="mb-0" >
+                                                            "Please note that you will select the name of the next approver, who will then select the subsequent approver."
+                                                        </p>
+                                                        <p>
+                                                            For positions of Managers and above, approval must be obtained from the General Manager.
+                                                        </p>
+
+                                                    </span>
+                                            <div class="options ">
+                                                <div class="row">
+                                                    <label class="col-6 col-md-4">
+                                                        Direct Supervisor Approval
+                                                        <div class="img-fluid"><img class="gray_Evaluated" src="../../../assets/images/sign-in/Evaluated@3x.png" alt="Evaluated"></div>
+                                                    </label>
+                                                    <label class="col-6 col-md-4">
+                                                        Manager Approval
+                                                        <div class="img-fluid"><img class="gray_Evaluated" src="../../../assets/images/sign-in/Evaluated@3x.png" alt="Evaluated"></div>
+                                                    </label>
+                                                    <label class="col-6 col-md-4">
+                                                        Head Of Department Approval
+                                                        <div class="img-fluid"><img class="gray_Evaluated" src="../../../assets/images/sign-in/Evaluated@3x.png" alt="Evaluated"></div>
+                                                    </label>
+                                                    <label class="col-6 col-md-4">
+                                                        Business Unit Approval
+                                                        <div class="img-fluid"><img class="gray_Evaluated" src="../../../assets/images/sign-in/Evaluated@3x.png" alt="Evaluated"></div>
+                                                    </label>
+                                                    <label class="col-6 col-md-4">
+                                                        General Manager Approval
+                                                        <div class="img-fluid"><img class="gray_Evaluated" src="../../../assets/images/sign-in/Evaluated@3x.png" alt="Evaluated"></div>
+                                                    </label>
+                                                    <label class="col-6 col-md-4">
+                                                        N/A
+                                                        <div class="img-fluid"><img class="gray_Evaluated" src="../../../assets/images/sign-in/Evaluated@3x.png" alt="Evaluated"></div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-3">
+                                <div class="comments-section mb-0">
+                                    <textarea class="comments" placeholder="Business Unit Approval Comments"></textarea>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="button-Approval" >
+                            <div class="btn btnApproval btnApprove">
+                                Approve
+                            </div>
+                            <div class="btn btnApproval btnReturn">
+                                Return
+                            </div>
+                            <div class="btn btnApproval btnReject">
+                                Reject
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item itemNA" style="display:block" onclick="toggleAccordionHeader(this)">
+                    <button class="accordion-header d-flex justify-content-center align-items-center" onclick="toggleAccordion(this)">
+                                <span>
+                                    Action here
+                                </span>
+                        <div class="d-flex justify-content-center align-items-center mx-3" >
+                            <img src="../../../assets/images/sign-in/Evaluated@3x.png" style="display: none; width: 25px ;" alt="Evaluated">
+                            <img src="../../../assets/images/sign-in/Pending@3x.png" style="display: none; width: 25px ;" alt="Pending">
+                            <img src="../../../assets/images/sign-in/Returned@3x.png" style="display: none; width: 25px ;" alt="Returned">
+                        </div>
+                        <div class="manager d-flex justify-content-center align-items-center">
+                            General Manager approval
+                            <div class="mx-3 icon">
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
+                            <p class="mb-0 nameEmployee">
+                                Ahmed Muhammed Elsayed
+                            </p>
+                        </div>
+                        <div class="iconArrowDown">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </button>
+
+                    <div class="accordion-content">
+
+                        <div class="row">
+
+                            <div class="col-12 col-md-4">
+                                <div class="review-section review-section-gray review-section-gray-row d-flex flex-row justify-content-between align-items-center">
+                                    <label for="work-handover">Proceed For Leave</label>
+                                    <div class="buttons buttonsPrint d-flex justify-content-center align-items-center">
+
+                                        <label class="radio-label">
+                                            <input type="radio" name="handover62" class="yes" value="yes">
+                                            <span>YES</span>
+                                        </label>
+                                        <label class="radio-label">
+                                            <input type="radio" name="handover62" class="no" value="no">
+                                            <span>NO</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-12 col-md-8">
+                                <div class="comments-section">
+                                    <textarea class="comments" placeholder="General Manager Approval Comments"></textarea>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="button-Approval" >
+                            <div class="btn btnApproval btnApprove">
+                                Approve
+                            </div>
+                            <div class="btn btnApproval btnReturn">
+                                Return
+                            </div>
+                            <div class="btn btnApproval btnReject">
+                                Reject
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item-static">
+                    <div class="accordion-header-static">
+                        HR Department approval
+                    </div>
+                </div>
+                <div class="accordion-item" onclick="toggleAccordionHeader(this)">
+                    <button class="accordion-header d-flex justify-content-center align-items-center" onclick="toggleAccordion(this)">
+                                <span>
+                                    Action here
+                                </span>
+                        <div class="d-flex justify-content-center align-items-center mx-3" >
+                            <img src="../../../assets/images/sign-in/Evaluated@3x.png" style="display: none; width: 25px ;" alt="Evaluated">
+                            <img src="../../../assets/images/sign-in/Pending@3x.png" style="display: none; width: 25px ;" alt="Pending">
+                            <img src="../../../assets/images/sign-in/Returned@3x.png" style="display: none; width: 25px ;" alt="Returned">
+                        </div>
+                        <div class="manager d-flex justify-content-center align-items-center">
+                            Employee Relation
+                            <div class="mx-3 icon">
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
+                            <p class="mb-0 nameEmployee">
+                                Ahmed Muhammed Elsayed
+                            </p>
+                        </div>
+                        <div class="iconArrowDown">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </button>
+
+                    <div class="accordion-content">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-4 col-md-2">
+                                        <div class="staInfoPosition d-flex flex-column mx-2 ">
+                                            <h2>
+                                                Last Resumption Date
+                                            </h2>
+                                            <div class="boxInfoName    boxSearshName">
+                                                <input type="date" placeholder="Select Data">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 col-md-2">
+                                        <div class="staInfoPosition d-flex flex-column mx-2 ">
+                                            <h2>
+                                                Number Of Leave Taken Last 1 Year
+                                            </h2>
+                                            <div class="boxInfoName   boxSearshName">
+                                                <input type="text" >
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 col-md-2">
+                                        <div class="staInfoPosition d-flex flex-column mx-2 ">
+                                            <h2>
+                                                Leave Entitlement
+                                            </h2>
+                                            <div class="boxInfoName   boxSearshName">
+                                                <input type="text" >
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 col-md-2">
+                                        <div class="staInfoPosition p-0 border-none d-flex flex-column mx-2 ">
+                                            <h2>
+                                                Project Resumption
+                                            </h2>
+                                            <div class="boxInfoName   boxSearshName">
+                                                <input type="text" >
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 col-md-4">
+                                        <div class="staInfoPosition d-flex flex-column mx-2 ">
+                                            <h2>
+                                                Flight Ticket Sector
+                                            </h2>
+                                            <div class="boxInfoName  boxSearshName">
+                                                <input type="text" placeholder="Your Sector">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-4 col-md-3">
+                                        <div class="review-section mx-2  review-section-gray d-flex justify-content-between align-items-center">
+                                            <label for="work-handover">Work Handover Attached</label>
+                                            <div class="buttons buttonsPrint d-flex justify-content-center align-items-center">
+
+                                                <label class="radio-label">
+                                                    <input type="radio" name="handover43" class="yes" value="yes">
+                                                    <span>YES</span>
+                                                </label>
+                                                <label class="radio-label">
+                                                    <input type="radio" name="handover43" class="na" value="na">
+                                                    <span>N/A</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 col-md-2">
+                                        <div class="review-section mx-2  review-section-gray d-flex justify-content-between align-items-center">
+                                            <label for="work-handover">Exit Permit</label>
+                                            <div class="buttons buttonsPrint d-flex justify-content-center align-items-center">
+
+                                                <label class="radio-label">
+                                                    <input type="radio" name="handover251" class="yes" value="yes">
+                                                    <span>YES</span>
+                                                </label>
+                                                <label class="radio-label">
+                                                    <input type="radio" name="handover251" class="na" value="na">
+                                                    <span>N/A</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 col-md-2">
+                                        <div class="review-section mx-2  review-section-gray d-flex justify-content-between align-items-center">
+                                            <label for="work-handover">Ticket Entitled</label>
+                                            <div class="buttons buttonsPrint d-flex justify-content-center align-items-center">
+
+                                                <label class="radio-label">
+                                                    <input type="radio" name="handover215" class="yes" value="yes">
+                                                    <span>YES</span>
+                                                </label>
+                                                <label class="radio-label">
+                                                    <input type="radio" name="handover215" class="na" value="na">
+                                                    <span>N/A</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 col-md-3">
+                                        <div class="review-section mx-2  review-section-gray d-flex justify-content-between align-items-center">
+                                            <label for="work-handover">Return Quarantine</label>
+                                            <div class="buttons buttonsPrint d-flex justify-content-center align-items-center">
+
+                                                <label class="radio-label">
+                                                    <input type="radio" name="handover2" class="yes" value="yes">
+                                                    <span>YES</span>
+                                                </label>
+                                                <label class="radio-label">
+                                                    <input type="radio" name="handover2" class="na" value="na">
+                                                    <span>N/A</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 col-md-2">
+                                        <div class="review-section mx-2  review-section-gray d-flex justify-content-between align-items-center">
+                                            <label for="work-handover">Vaccinated</label>
+                                            <div class="buttons buttonsPrint d-flex justify-content-center align-items-center">
+
+                                                <label class="radio-label">
+                                                    <input type="radio" name="handover42" class="yes" value="yes">
+                                                    <span>YES</span>
+                                                </label>
+                                                <label class="radio-label">
+                                                    <input type="radio" name="handover42" class="na" value="na">
+                                                    <span>N/A</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="review-section mx-2 review-section-red d-flex flex-md-row flex-column justify-content-between align-items-center">
+                                            <label for="work-handover" class="">Clearance Required</label>
+                                            <div class="buttons buttonsPrint d-flex justify-content-center align-items-center">
+                                                <label class="radio-label">
+                                                    <input type="radio" name="handover3"  class="no" value="no" id="noClearance">
+                                                    <span>N/a</span>
+                                                </label>
+                                                <label class="radio-label">
+                                                    <input type="radio" name="handover3" class="yes" checked="checked" value="yes" id="yesClearance">
+                                                    <span>YES</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="comments-section mt-3 mt-md-0 mx-2">
+
+                                            <textarea class="comments" placeholder="Comments"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="button-Approval" >
+                            <div class="btn btnApproval btnApprove">
+                                Approve
+                            </div>
+                            <div class="btn btnApproval btnReturn">
+                                Return
+                            </div>
+                            <div class="btn btnApproval btnReject">
+                                Reject
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item" onclick="toggleAccordionHeader(this)">
+                    <button class="accordion-header d-flex justify-content-center align-items-center" onclick="toggleAccordion(this)">
+                                <span>
+                                    Action here
+                                </span>
+                        <div class="d-flex justify-content-center align-items-center mx-3" >
+                            <img src="../../../assets/images/sign-in/Evaluated@3x.png" style="display: none; width: 25px ;" alt="Evaluated">
+                            <img src="../../../assets/images/sign-in/Pending@3x.png" style="display: none; width: 25px ;" alt="Pending">
+                            <img src="../../../assets/images/sign-in/Returned@3x.png" style="display: none; width: 25px ;" alt="Returned">
+                        </div>
+
+                        <div class="manager d-flex justify-content-center align-items-center">
+                            HR approval
+                            <div class="mx-3 icon">
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
+                            <p class="mb-0 nameEmployee">
+                                Ahmed Muhammed Elsayed
+                            </p>
+                        </div>
+                        <div class="iconArrowDown">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </button>
+
+                    <div class="accordion-content accordion-content-item">
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class="review-section review-section-gray review-section-gray-row d-flex flex-row justify-content-between align-items-center">
+                                    <label for="work-handover">Proceed For Leave</label>
+                                    <div class="buttons buttonsPrint d-flex justify-content-center align-items-center">
+                                        <label class="radio-label">
+                                            <input type="radio" name="handover62" class="yes" value="yes">
+                                            <span>YES</span>
+                                        </label>
+                                        <label class="radio-label">
+                                            <input type="radio" name="handover62" class="na" value="na">
+                                            <span>N/A</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="comments-section">
+
+                                    <textarea class="comments" placeholder="Comments"></textarea>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="button-Approval" >
+                            <div class="btn btnApproval btnApprove">
+                                Approve
+                            </div>
+                            <div class="btn btnApproval btnReturn">
+                                Return
+                            </div>
+                            <div class="btn btnApproval btnReject">
+                                Reject
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item-static clearanceCheck clearanceCheck-head" style="display: block" >
+                    <div class="accordion-header-static spicalItem">
+                        Clearance
+                    </div>
+                </div>
+                <div class="accordion-item clearanceCheck" style="display: block" onclick="toggleAccordionHeader(this)">
+                    <button class="accordion-header d-flex justify-content-center align-items-center" onclick="toggleAccordion(this)">
+                                <span>
+                                    Action here
+                                </span>
+                        <div class="d-flex justify-content-center align-items-center mx-3" >
+                            <img src="../../../assets/images/sign-in/Evaluated@3x.png" style="display: none; width: 25px ;" alt="Evaluated">
+                            <img src="../../../assets/images/sign-in/Pending@3x.png" style="display: none; width: 25px ;" alt="Pending">
+                            <img src="../../../assets/images/sign-in/Returned@3x.png" style="display: none; width: 25px ;" alt="Returned">
+                        </div>
+                        <div class="manager d-flex justify-content-center align-items-center">
+                            FACILITIES DEPARTMENT
+                            <div class="mx-3 icon">
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
+                            <p class="mb-0 nameEmployee">
+                                Ahmed Muhammed Elsayed
+                            </p>
+                        </div>
+                        <div class="iconArrowDown">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </button>
+
+                    <div class="accordion-content">
+
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class="row">
+                                    <div class="review-section review-section-border col-12 col-md-6 d-flex flex-row flex-md-column justify-content-between align-items-center">
+                                        <label for="work-handover">Accommodation\Room keys returned</label>
+                                        <div class="buttons buttonsPrint d-flex justify-content-center align-items-center">
+                                            <label class="radio-label">
+                                                <input type="radio" name="handover4" class="no" value="no">
+                                                <span>NO</span>
+                                            </label>
+                                            <label class="radio-label">
+                                                <input type="radio" name="handover4" class="yes" value="yes">
+                                                <span>YES</span>
+                                            </label>
+                                            <label class="radio-label">
+                                                <input type="radio" name="handover4" class="na" value="na">
+                                                <span>N/A</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="review-section review-section-border col-12 col-md-6 d-flex flex-row flex-md-column justify-content-between align-items-center">
+                                        <label for="work-handover">Apartment\Room found in good condition</label>
+                                        <div class="buttons buttonsPrint d-flex justify-content-center align-items-center">
+                                            <label class="radio-label">
+                                                <input type="radio" name="handover5" class="no" value="no">
+                                                <span>NO</span>
+                                            </label>
+                                            <label class="radio-label">
+                                                <input type="radio" name="handover5" class="yes" value="yes">
+                                                <span>YES</span>
+                                            </label>
+                                            <label class="radio-label">
+                                                <input type="radio" name="handover5" class="na" value="na">
+                                                <span>N/A</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="comments-section">
+                                    <textarea class="comments" placeholder="Accommodation in Charge Remark"></textarea>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="button-Approval" >
+                            <div class="btn btnApproval btnApprove">
+                                Approve
+                            </div>
+                            <div class="btn btnApproval btnReturn">
+                                Return
+                            </div>
+                            <div class="btn btnApproval btnReject">
+                                Reject
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item clearanceCheck" style="display: block" onclick="toggleAccordionHeader(this)">
+                    <button class="accordion-header d-flex justify-content-center align-items-center" onclick="toggleAccordion(this)">
+                                <span>
+                                    Action here
+                                </span>
+                        <div class="d-flex justify-content-center align-items-center mx-3" >
+                            <img src="../../../assets/images/sign-in/Evaluated@3x.png" style="display: none; width: 25px ;" alt="Evaluated">
+                            <img src="../../../assets/images/sign-in/Pending@3x.png" style="display: none; width: 25px ;" alt="Pending">
+                            <img src="../../../assets/images/sign-in/Returned@3x.png" style="display: none; width: 25px ;" alt="Returned">
+                        </div>
+
+                        <div class="manager d-flex justify-content-center align-items-center">
+                            PLANT DEPARTMENT
+                            <div class="mx-3 icon">
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
+                            <p class="mb-0 nameEmployee">
+                                Ahmed Muhammed Elsayed
+                            </p>
+                        </div>
+                        <div class="iconArrowDown">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </button>
+
+                    <div class="accordion-content">
+
+                        <div class="row">
+                            <div class="col-12 ">
+                                <div class="row">
+                                    <div class="review-section review-section-border col-12 col-md-3 d-flex flex-row flex-md-column justify-content-between align-items-center">
+                                        <label for="work-handover">Company Vehicle returned</label>
+                                        <div class="buttons buttonsPrint d-flex justify-content-center align-items-center">
+                                            <label class="radio-label">
+                                                <input type="radio" name="handover7" class="no" value="no">
+                                                <span>NO</span>
+                                            </label>
+
+                                            <label class="radio-label">
+                                                <input type="radio" name="handover7" class="yes" value="yes">
+                                                <span>YES</span>
+                                            </label>
+                                            <label class="radio-label">
+                                                <input type="radio" name="handover7" class="na" value="na">
+                                                <span>N/A</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="review-section review-section-border col-12 col-md-3 d-flex flex-row flex-md-column justify-content-between align-items-center">
+                                        <label for="work-handover">Equipment handover</label>
+                                        <div class="buttons buttonsPrint d-flex justify-content-center align-items-center">
+                                            <label class="radio-label">
+                                                <input type="radio" name="handover8" class="no" value="no">
+                                                <span>NO</span>
+                                            </label>
+
+                                            <label class="radio-label">
+                                                <input type="radio" name="handover8" class="yes" value="yes">
+                                                <span>YES</span>
+                                            </label>
+                                            <label class="radio-label">
+                                                <input type="radio" name="handover8" class="na" value="na">
+                                                <span>N/A</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="review-section review-section-border col-12 col-md-3 d-flex flex-row flex-md-column justify-content-between align-items-center">
+                                        <label for="work-handover">Fuel card returned</label>
+                                        <div class="buttons buttonsPrint d-flex justify-content-center align-items-center">
+                                            <label class="radio-label">
+                                                <input type="radio" name="handover9" class="no" value="no">
+                                                <span>NO</span>
+                                            </label>
+
+                                            <label class="radio-label">
+                                                <input type="radio" name="handover9" class="yes" value="yes">
+                                                <span>YES</span>
+                                            </label>
+                                            <label class="radio-label">
+                                                <input type="radio" name="handover9" class="na" value="na">
+                                                <span>N/A</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="review-section review-section-border col-12 col-md-3 d-flex flex-row flex-md-column justify-content-between align-items-center">
+                                        <label for="work-handover">Good shape equipment\vehicle</label>
+                                        <div class="buttons buttonsPrint d-flex justify-content-center align-items-center">
+                                            <label class="radio-label">
+                                                <input type="radio" name="handover10" class="no" value="no">
+                                                <span>NO</span>
+                                            </label>
+
+                                            <label class="radio-label">
+                                                <input type="radio" name="handover10" class="yes" value="yes">
+                                                <span>YES</span>
+                                            </label>
+                                            <label class="radio-label">
+                                                <input type="radio" name="handover10" class="na" value="na">
+                                                <span>N/A</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="comments-section">
+
+                                    <textarea class="comments" placeholder="Comments"></textarea>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="button-Approval" >
+                            <div class="btn btnApproval btnApprove">
+                                Approve
+                            </div>
+                            <div class="btn btnApproval btnReturn">
+                                Return
+                            </div>
+                            <div class="btn btnApproval btnReject">
+                                Reject
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item clearanceCheck" style="display: block" onclick="toggleAccordionHeader(this)">
+                    <button class="accordion-header d-flex justify-content-center align-items-center" onclick="toggleAccordion(this)">
+                                <span>
+                                    Action here
+                                </span>
+                        <div class="d-flex justify-content-center align-items-center mx-3" >
+                            <img src="../../../assets/images/sign-in/Evaluated@3x.png" style="display: none; width: 25px ;" alt="Evaluated">
+                            <img src="../../../assets/images/sign-in/Pending@3x.png" style="display: none; width: 25px ;" alt="Pending">
+                            <img src="../../../assets/images/sign-in/Returned@3x.png" style="display: none; width: 25px ;" alt="Returned">
+                        </div>
+
+                        <div class="manager d-flex justify-content-center align-items-center">
+                            MAIN STORE DEPARTMENT
+                            <div class="mx-3 icon">
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
+                            <p class="mb-0 nameEmployee">
+                                Ahmed Muhammed Elsayed
+                            </p>
+                        </div>
+                        <div class="iconArrowDown">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </button>
+                    <div class="accordion-content">
+
+                        <div class="row">
+                            <div class="col-12 col-lg-8">
+                                <div class="row">
+                                    <div class="review-section review-section-border col-12 col-md-4 d-flex flex-row flex-md-column justify-content-between align-items-center">
+                                        <label for="work-handover">PPE Items returned</label>
+                                        <div class="buttons buttonsPrint d-flex justify-content-center align-items-center">
+                                            <label class="radio-label">
+                                                <input type="radio" name="handover14" class="no" value="no">
+                                                <span>NO</span>
+                                            </label>
+
+                                            <label class="radio-label">
+                                                <input type="radio" name="handover14" class="yes" value="yes">
+                                                <span>YES</span>
+                                            </label>
+                                            <label class="radio-label">
+                                                <input type="radio" name="handover14" class="na" value="na">
+                                                <span>N/A</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="review-section review-section-border col-12 col-md-4 d-flex flex-row flex-md-column justify-content-between align-items-center">
+                                        <label for="work-handover">Other store inventory cleared</label>
+                                        <div class="buttons buttonsPrint d-flex justify-content-center align-items-center">
+                                            <label class="radio-label">
+                                                <input type="radio" name="handover15" class="no" value="no">
+                                                <span>NO</span>
+                                            </label>
+
+                                            <label class="radio-label">
+                                                <input type="radio" name="handover15" class="yes" value="yes">
+                                                <span>YES</span>
+                                            </label>
+                                            <label class="radio-label">
+                                                <input type="radio" name="handover15" class="na" value="na">
+                                                <span>N/A</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="review-section review-section-border col-12 col-md-4 d-flex flex-row flex-md-column justify-content-between align-items-center">
+                                        <label for="work-handover">Stores manager remark</label>
+                                        <div class="buttons buttonsPrint d-flex justify-content-center align-items-center">
+                                            <label class="radio-label">
+                                                <input type="radio" name="handover16" class="no" value="no">
+                                                <span>NO</span>
+                                            </label>
+
+                                            <label class="radio-label">
+                                                <input type="radio" name="handover16" class="yes" value="yes">
+                                                <span>YES</span>
+                                            </label>
+                                            <label class="radio-label">
+                                                <input type="radio" name="handover16" class="na" value="na">
+                                                <span>N/A</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-4">
+                                <div class="comments-section">
+
+                                    <textarea class="comments" placeholder="Comments"></textarea>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="button-Approval" >
+                            <div class="btn btnApproval btnApprove">
+                                Approve
+                            </div>
+                            <div class="btn btnApproval btnReturn">
+                                Return
+                            </div>
+                            <div class="btn btnApproval btnReject">
+                                Reject
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item clearanceCheck" style="display: block" onclick="toggleAccordionHeader(this)">
+                    <button class="accordion-header d-flex justify-content-center align-items-center" onclick="toggleAccordion(this)">
+                                <span>
+                                    Action here
+                                </span>
+                        <div class="d-flex justify-content-center align-items-center mx-3" >
+                            <img src="../../../assets/images/sign-in/Evaluated@3x.png" style="display: none; width: 25px ;" alt="Evaluated">
+                            <img src="../../../assets/images/sign-in/Pending@3x.png" style="display: none; width: 25px ;" alt="Pending">
+                            <img src="../../../assets/images/sign-in/Returned@3x.png" style="display: none; width: 25px ;" alt="Returned">
+                        </div>
+
+                        <div class="manager d-flex justify-content-center align-items-center">
+                            SITE STORE DEPARTMENT
+                            <div class="mx-3 icon">
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
+                            <p class="mb-0 nameEmployee">
+                                Ahmed Muhammed Elsayed
+                            </p>
+                        </div>
+                        <div class="iconArrowDown">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </button>
+
+                    <div class="accordion-content">
+
+                        <div class="row">
+                            <div class="col-12  col-lg-8">
+                                <div class="row">
+                                    <div class="review-section review-section-border col-12 col-md-4 d-flex flex-row flex-md-column justify-content-between align-items-center">
+                                        <label for="work-handover">PPE Items returned</label>
+                                        <div class="buttons buttonsPrint d-flex justify-content-center align-items-center">
+                                            <label class="radio-label">
+                                                <input type="radio" name="handover11" class="no" value="no">
+                                                <span>NO</span>
+                                            </label>
+
+                                            <label class="radio-label">
+                                                <input type="radio" name="handover11" class="yes" value="yes">
+                                                <span>YES</span>
+                                            </label>
+                                            <label class="radio-label">
+                                                <input type="radio" name="handover11" class="na" value="na">
+                                                <span>N/A</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="review-section review-section-border col-12 col-md-4 d-flex flex-row flex-md-column  justify-content-between align-items-center">
+                                        <label for="work-handover">Other store inventory cleared</label>
+                                        <div class="buttons buttonsPrint d-flex justify-content-center align-items-center">
+                                            <label class="radio-label">
+                                                <input type="radio" name="handover12" class="no" value="no">
+                                                <span>NO</span>
+                                            </label>
+
+                                            <label class="radio-label">
+                                                <input type="radio" name="handover12" class="yes" value="yes">
+                                                <span>YES</span>
+                                            </label>
+                                            <label class="radio-label">
+                                                <input type="radio" name="handover12" class="na" value="na">
+                                                <span>N/A</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="review-section review-section-border col-12 col-md-4 d-flex flex-row flex-md-column justify-content-between align-items-center">
+                                        <label for="work-handover">Stores manager remark</label>
+                                        <div class="buttons buttonsPrint d-flex justify-content-center align-items-center">
+                                            <label class="radio-label">
+                                                <input type="radio" name="handover13" class="no" value="no">
+                                                <span>NO</span>
+                                            </label>
+
+                                            <label class="radio-label">
+                                                <input type="radio" name="handover13" class="yes" value="yes">
+                                                <span>YES</span>
+                                            </label>
+                                            <label class="radio-label">
+                                                <input type="radio" name="handover13" class="na" value="na">
+                                                <span>N/A</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-4">
+                                <div class="comments-section">
+
+                                    <textarea class="comments" placeholder="Comments"></textarea>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="button-Approval" >
+                            <div class="btn btnApproval btnApprove">
+                                Approve
+                            </div>
+                            <div class="btn btnApproval btnReturn">
+                                Return
+                            </div>
+                            <div class="btn btnApproval btnReject">
+                                Reject
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item clearanceCheck" style="display: block" onclick="toggleAccordionHeader(this)">
+                    <button class="accordion-header d-flex justify-content-center align-items-center" onclick="toggleAccordion(this)">
+                                <span>
+                                    Action here
+                                </span>
+                        <div class="d-flex justify-content-center align-items-center mx-3" >
+                            <img src="../../../assets/images/sign-in/Evaluated@3x.png" style="display: none; width: 25px ;" alt="Evaluated">
+                            <img src="../../../assets/images/sign-in/Pending@3x.png" style="display: none; width: 25px ;" alt="Pending">
+                            <img src="../../../assets/images/sign-in/Returned@3x.png" style="display: none; width: 25px ;" alt="Returned">
+                        </div>
+
+                        <div class="manager d-flex justify-content-center align-items-center">
+                            IT DEPARTMENT
+                            <div class="mx-3 icon">
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
+                            <p class="mb-0 nameEmployee">
+                                Ahmed Muhammed Elsayed
+                            </p>
+                        </div>
+                        <div class="iconArrowDown">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </button>
+
+                    <div class="accordion-content">
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="review-section review-section-border col-12 col-md-3 d-flex flex-row flex-md-column justify-content-between align-items-center">
+                                        <label for="work-handover">Lap-Top returned</label>
+                                        <div class="buttons buttonsPrint d-flex justify-content-center align-items-center">
+                                            <label class="radio-label">
+                                                <input type="radio" name="handover18" class="no" value="no">
+                                                <span>NO</span>
+                                            </label>
+
+                                            <label class="radio-label">
+                                                <input type="radio" name="handover18" class="yes" value="yes">
+                                                <span>YES</span>
+                                            </label>
+                                            <label class="radio-label">
+                                                <input type="radio" name="handover18" class="na" value="na">
+                                                <span>N/A</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="review-section review-section-border col-12 col-md-3 d-flex flex-row flex-md-column justify-content-between align-items-center">
+                                        <label for="work-handover">Desk top handover</label>
+                                        <div class="buttons buttonsPrint d-flex justify-content-center align-items-center">
+                                            <label class="radio-label">
+                                                <input type="radio" name="handover19" class="no" value="no">
+                                                <span>NO</span>
+                                            </label>
+
+                                            <label class="radio-label">
+                                                <input type="radio" name="handover19" class="yes" value="yes">
+                                                <span>YES</span>
+                                            </label>
+                                            <label class="radio-label">
+                                                <input type="radio" name="handover19" class="na" value="na">
+                                                <span>N/A</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="review-section review-section-border col-12 col-md-3 d-flex flex-row flex-md-column justify-content-between align-items-center">
+                                        <label for="work-handover">Mobile and SIM card</label>
+                                        <div class="buttons buttonsPrint d-flex justify-content-center align-items-center">
+                                            <label class="radio-label">
+                                                <input type="radio" name="handover20" class="no" value="no">
+                                                <span>NO</span>
+                                            </label>
+
+                                            <label class="radio-label">
+                                                <input type="radio" name="handover20" class="yes" value="yes">
+                                                <span>YES</span>
+                                            </label>
+                                            <label class="radio-label">
+                                                <input type="radio" name="handover20" class="na" value="na">
+                                                <span>N/A</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="review-section review-section-border col-12 col-md-3 d-flex flex-row flex-md-column justify-content-between align-items-center">
+                                        <label for="work-handover" class="text-center">Others (Printers, Scanners, Camera, USB, External HD, ....)</label>
+                                        <div class="buttons buttonsPrint d-flex justify-content-center align-items-center">
+                                            <label class="radio-label">
+                                                <input type="radio" name="handover21" class="no" value="no">
+                                                <span>NO</span>
+                                            </label>
+
+                                            <label class="radio-label">
+                                                <input type="radio" name="handover21" class="yes" value="yes">
+                                                <span>YES</span>
+                                            </label>
+                                            <label class="radio-label">
+                                                <input type="radio" name="handover21" class="na" value="na">
+                                                <span>N/A</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="comments-section">
+
+                                    <textarea class="comments" placeholder="Comments"></textarea>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="button-Approval" >
+                            <div class="btn btnApproval btnApprove">
+                                Approve
+                            </div>
+                            <div class="btn btnApproval btnReturn">
+                                Return
+                            </div>
+                            <div class="btn btnApproval btnReject">
+                                Reject
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item clearanceCheck" style="display: block" onclick="toggleAccordionHeader(this)">
+                    <button class="accordion-header d-flex justify-content-center align-items-center" onclick="toggleAccordion(this)">
+                                <span>
+                                    Action here
+                                </span>
+                        <div class="d-flex justify-content-center align-items-center mx-3" >
+                            <img src="../../../assets/images/sign-in/Evaluated@3x.png" style="display: none; width: 25px ;" alt="Evaluated">
+                            <img src="../../../assets/images/sign-in/Pending@3x.png" style="display: none; width: 25px ;" alt="Pending">
+                            <img src="../../../assets/images/sign-in/Returned@3x.png" style="display: none; width: 25px ;" alt="Returned">
+                        </div>
+
+                        <div class="manager d-flex justify-content-center align-items-center">
+                            FINANCE DEPARTMENT
+                            <div class="mx-3 icon">
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
+                            <p class="mb-0 nameEmployee">
+                                Ahmed Muhammed Elsayed
+                            </p>
+                        </div>
+                        <div class="iconArrowDown">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </button>
+
+                    <div class="accordion-content">
+
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class="review-section review-section-border d-flex justify-content-between align-items-center">
+                                    <label for="work-handover">Outstanding deductions settled</label>
+                                    <div class="buttons buttonsPrint d-flex justify-content-center align-items-center">
+                                        <label class="radio-label">
+                                            <input type="radio" name="handover23" class="no" value="no">
+                                            <span>NO</span>
+                                        </label>
+
+                                        <label class="radio-label">
+                                            <input type="radio" name="handover23" class="yes" value="yes">
+                                            <span>YES</span>
+                                        </label>
+                                        <label class="radio-label">
+                                            <input type="radio" name="handover23" class="na" value="na">
+                                            <span>N/A</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="col-12">
+                                    <div class="comments-section">
+
+                                        <textarea class="comments" placeholder="Comments"></textarea>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="button-Approval" >
+                            <div class="btn btnApproval btnApprove">
+                                Approve
+                            </div>
+                            <div class="btn btnApproval btnReturn">
+                                Return
+                            </div>
+                            <div class="btn btnApproval btnReject">
+                                Reject
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item-static">
+                    <div class="accordion-header-static">
+                        FINAL APPROVAL
+                    </div>
+                </div>
+                <div class="accordion-item" onclick="toggleAccordionHeader(this)">
+                    <button class="accordion-header d-flex justify-content-center align-items-center" onclick="toggleAccordion(this)">
+                                <span>
+                                    Action here
+                                </span>
+                        <div class="d-flex justify-content-center align-items-center mx-3" >
+                            <img src="../../../assets/images/sign-in/Evaluated@3x.png" style="display: none; width: 25px ;" alt="Evaluated">
+                            <img src="../../../assets/images/sign-in/Pending@3x.png" style="display: none; width: 25px ;" alt="Pending">
+                            <img src="../../../assets/images/sign-in/Returned@3x.png" style="display: none; width: 25px ;" alt="Returned">
+                        </div>
+                        <div class="manager d-flex justify-content-center align-items-center">
+                            ADMINISTRATION DEPARTMENT
+                            <div class="mx-3 icon">
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
+                            <p class="mb-0 nameEmployee">
+                                Ahmed Muhammed Elsayed
+                            </p>
+                        </div>
+                        <div class="iconArrowDown">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </button>
+
+                    <div class="accordion-content">
+
+                        <div class="row">
+                            <div class="col-6 col-md-3">
+                                <div class="review-section review-section-border d-flex flex-column flex-lg-column flex-md-row justify-content-between align-items-center">
+                                    <label for="work-handover">Gate Pass Returned</label>
+                                    <div class="buttons buttonsPrint d-flex justify-content-center align-items-center">
+                                        <label class="radio-label">
+                                            <input type="radio" name="handover2117" class="no" value="no">
+                                            <span>NO</span>
+                                        </label>
+
+                                        <label class="radio-label">
+                                            <input type="radio" name="handover2117" class="yes" value="yes">
+                                            <span>YES</span>
+                                        </label>
+                                        <label class="radio-label">
+                                            <input type="radio" name="handover2117" class="na" value="na">
+                                            <span>N/A</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="review-section review-section-border d-flex flex-lg-column flex-column flex-md-row justify-content-between align-items-center">
+                                    <label for="work-handover">Leave Settlement prepared</label>
+                                    <div class="buttons buttonsPrint d-flex justify-content-center align-items-center">
+                                        <label class="radio-label">
+                                            <input type="radio" name="handover2227" class="no" value="no">
+                                            <span>NO</span>
+                                        </label>
+
+                                        <label class="radio-label">
+                                            <input type="radio" name="handover2227" class="yes" value="yes">
+                                            <span>YES</span>
+                                        </label>
+                                        <label class="radio-label">
+                                            <input type="radio" name="handover2227" class="na" value="na">
+                                            <span>N/A</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="review-section review-section-border d-flex flex-lg-column flex-column flex-md-row justify-content-between align-items-center">
+                                    <label for="work-handover">Undertaking for Long leave</label>
+                                    <div class="buttons buttonsPrint d-flex justify-content-center align-items-center">
+                                        <label class="radio-label">
+                                            <input type="radio" name="handover2317" class="no" value="no">
+                                            <span>NO</span>
+                                        </label>
+
+                                        <label class="radio-label">
+                                            <input type="radio" name="handover2317" class="yes" value="yes">
+                                            <span>YES</span>
+                                        </label>
+                                        <label class="radio-label">
+                                            <input type="radio" name="handover2317" class="na" value="na">
+                                            <span>N/A</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="comments-section">
+
+                                    <textarea class="comments" placeholder="Comments"></textarea>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="button-Approval" >
+                            <div class="btn btnApproval btnApprove">
+                                Approve
+                            </div>
+                            <div class="btn btnApproval btnReturn">
+                                Return
+                            </div>
+                            <div class="btn btnApproval btnReject">
+                                Reject
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item" onclick="toggleAccordionHeader(this)">
+                    <button class="accordion-header d-flex justify-content-center align-items-center" onclick="toggleAccordion(this)">
+                                <span>
+                                    Action here
+                                </span>
+                        <div class="d-flex justify-content-center align-items-center mx-3" >
+                            <img src="../../../assets/images/sign-in/Evaluated@3x.png" style="display: none; width: 25px ;" alt="Evaluated">
+                            <img src="../../../assets/images/sign-in/Pending@3x.png" style="display: none; width: 25px ;" alt="Pending">
+                            <img src="../../../assets/images/sign-in/Returned@3x.png" style="display: none; width: 25px ;" alt="Returned">
+                        </div>
+                        <div class="manager d-flex justify-content-center align-items-center">
+                            HR FINAL approval
+                            <div class="mx-3 icon">
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
+                            <p class="mb-0 nameEmployee">
+                                Ahmed Muhammed Elsayed
+                            </p>
+                        </div>
+                        <div class="iconArrowDown">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </button>
+
+                    <div class="accordion-content">
+
+                        <div class="row">
+                            <div class="col-12 col-md-4">
+                                <div class="review-section review-section-border d-flex flex-column justify-content-between align-items-center">
+                                    <label for="work-handover">If the employee needs to issue an Exit Permit, your approval is required</label>
+                                    <div class="buttons buttonsPrint d-flex justify-content-center align-items-center">
+                                        <label class="radio-label">
+                                            <input type="radio" name="handover27" class="no" value="no">
+                                            <span>NO</span>
+                                        </label>
+
+                                        <label class="radio-label">
+                                            <input type="radio" name="handover27" class="yes" value="yes">
+                                            <span>YES</span>
+                                        </label>
+                                        <label class="radio-label">
+                                            <input type="radio" name="handover27" class="na" value="na">
+                                            <span>N/A</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <div class="review-section review-section-border d-flex flex-column flex-md-row justify-content-between align-items-center">
+                                    <label for="work-handover">Proceed For Leave</label>
+                                    <div class="buttons buttonsPrint d-flex justify-content-center align-items-center">
+                                        <label class="radio-label">
+                                            <input type="radio" name="handover29" class="no" value="no">
+                                            <span>NO</span>
+                                        </label>
+
+                                        <label class="radio-label">
+                                            <input type="radio" name="handover29" class="yes" value="yes">
+                                            <span>YES</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <div class="comments-section">
+
+                                    <textarea class="comments" placeholder="Comments"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button-Approval" >
+                            <div class="btn btnApproval btnApprove">
+                                Approve
+                            </div>
+                            <div class="btn btnApproval btnReturn">
+                                Return
+                            </div>
+                            <div class="btn btnApproval btnReject">
+                                Reject
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item" onclick="toggleAccordionHeader(this)">
+                    <button class="accordion-header d-flex justify-content-center align-items-center" onclick="toggleAccordion(this)">
+                                <span>
+                                    Action here
+                                </span>
+                        <div class="d-flex justify-content-center align-items-center mx-3" >
+                            <img src="../../../assets/images/sign-in/Evaluated@3x.png" style="display: none; width: 25px ;" alt="Evaluated">
+                            <img src="../../../assets/images/sign-in/Pending@3x.png" style="display: none; width: 25px ;" alt="Pending">
+                            <img src="../../../assets/images/sign-in/Returned@3x.png" style="display: none; width: 25px ;" alt="Returned">
+                        </div>
+
+                        <div class="manager d-flex justify-content-center align-items-center">
+                            Immigration approval
+                            <div class="mx-3 icon">
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
+                            <p class="mb-0 nameEmployee">
+                                Ahmed Muhammed Elsayed
+                            </p>
+                        </div>
+                        <div class="iconArrowDown">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </button>
+
+                    <div class="accordion-content">
+
+                        <div class="row">
+                            <div class="col-12 col-md-4">
+                                <div class="review-section review-section-border d-flex flex-column flex-md-row justify-content-between align-items-center">
+                                    <label for="work-handover">Exit Permit</label>
+                                    <div class="buttons buttonsPrint d-flex justify-content-center align-items-center">
+                                        <label class="radio-label">
+                                            <input type="radio" name="handover237" class="no" value="no">
+                                            <span>NO</span>
+                                        </label>
+                                        <label class="radio-label">
+                                            <input type="radio" name="handover237" class="yes" value="yes">
+                                            <span>YES</span>
+                                        </label>
+                                        <label class="radio-label">
+                                            <input type="radio" name="handover237" class="na" value="na">
+                                            <span>N/A</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <div class="review-section review-section-border d-flex flex-column flex-md-row justify-content-between align-items-center">
+                                    <label for="work-handover">Proceed For Leave</label>
+                                    <div class="buttons buttonsPrint d-flex justify-content-center align-items-center">
+                                        <label class="radio-label">
+                                            <input type="radio" name="handover2219" class="no" value="no">
+                                            <span>NO</span>
+                                        </label>
+
+                                        <label class="radio-label">
+                                            <input type="radio" name="handover2219" class="yes" value="yes">
+                                            <span>YES</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <div class="comments-section">
+
+                                    <textarea class="comments" placeholder="Comments"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button-Approval" >
+                            <div class="btn btnApproval btnApprove">
+                                Approve
+                            </div>
+                            <div class="btn btnApproval btnReturn">
+                                Return
+                            </div>
+                            <div class="btn btnApproval btnReject">
+                                Reject
+                            </div>
+                        </div>
+                    </div>
+                </div>
+</div>
+</section>
+</article>
+</main>
+
+</div>
+
+
+
+<div id="approve-popup" class="overlayPopupOverlay hidden">
+    <div class="popupPolicy popupApprove">
+        <h2>Are you sure , you want to approve this request ?</h2>
+        <div class="w-100 d-flex justify-content-end">
+            <button id="approve-close-popup" class="btn btnClose btnYes  mt-3">YES</button>
+        </div>
+    </div>
+</div>
+<div id="return-popup" class="overlayPopupOverlay hidden">
+    <div class="popupPolicy popupReturn">
+        <h2>Hold Leave Reasons</h2>
+        <div class="textSection">
+            <p class="titlePolicy">Here are 6 common reasons for leave cancellation, which can serve as guidelines for employees:</p>
+        </div>
+        <form class="FormboxReturnDan FormboxReturnDan FirstReturnDan">
+            <div class="form-group">
+                <input type="checkbox" name="Return" id="ReturnOne">
+                <label for="ReturnOne">
+                    Urgent Business Needs: When unexpected work requirements or deadlines necessitate the employee's presence at work.
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" name="Return" id="ReturnTwo">
+                <label for="ReturnTwo">
+                    Handover Not Completed: When the employee has not properly handed over their responsibilities and tasks to a colleague before taking leave.
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" name="Return" id="ReturnThree">
+                <label for="ReturnThree">
+                    Priority: If multiple leave requests overlap, managers may prioritize based on departmental needs.
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" name="Return" id="ReturnFour">
+                <label for="ReturnFour">
+                    Project Changes: When abrupt changes in project timelines or scope impact planned leave.
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" name="Return" id="ReturnFive">
+                <label for="ReturnFive">
+                    Clearance Not Completed: When required clearance processes or tasks associated with the leave have not been finished by the employee.
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" name="Return" id="ReturnSix">
+                <label for="ReturnSix">
+                    Policy Violations: When the leave request doesn't align with company leave policies, such as insufficient notice or exceeding allowed balances.
+                </label>
+            </div>
+        </form>
+        <div class="reasonSpecify">
+            <div class="titleSpecify">
+                <p>
+                    Other Reasons: <span>(Specify)</span>
+                </p>
+            </div>
+            <textarea name="areaReasonSpecify" id="areaReasonSpecifyLeave" placeholder="Type Other Reason"></textarea>
+        </div>
+        <div class="w-100 d-flex">
+            <button id="return-close-popup" class="btn btnClose btnReturn mx-auto mt-3">
+                Back to Sender
+            </button>
+        </div>
+    </div>
+</div>
+<div id="Reject-popup" class="overlayPopupOverlay hidden">
+    <div class="popupPolicy popupReturn">
+        <h2>Reject Leave Reasons</h2>
+        <div class="textSection">
+            <p class="titlePolicy">Here are 8 common reasons for leave cancellation, which can serve as guidelines for employees:</p>
+        </div>
+        <form class="FormboxReturnDan FormboxRejectDan FirstReturnDan">
+            <div class="form-group">
+                <input type="checkbox" name="Reject" id="RejectOne">
+                <label for="RejectOne">
+                    Urgent Business Needs: When unexpected work requirements or deadlines necessitate the employee's presence at work.
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" name="Reject" id="RejectTwo">
+                <label for="RejectTwo">
+                    Incorrect Manager Approval: If the Leave was not approved or authorized by the responsible manager.
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" name="Reject" id="RejectThree">
+                <label for="RejectThree">
+                    Handover Not Completed: When the employee has not properly handed over their responsibilities and tasks to a colleague before taking lecive.
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" name="Reject" id="RejectFour">
+                <label for="RejectFour">
+                    Incomplete Clearance: If the required clearance with the leave is not completed or missed by the employee.
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" name="Reject" id="RejectFive">
+                <label for="RejectFive">
+                    Employee Agreement: If the employee voluntarily agrees to cancel or modify their approved leave.
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" name="Reject" id="RejectSix">
+                <label for="RejectSix">
+                    Staffing Shortages: If granting leave would result in insufficient staff levels, disrupting operations.
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" name="Reject" id="RejectSeven">
+                <label for="RejectSeven">
+                    Policy Violations: When the leave request cloesn't align with company leave policies, such as insufficient notice or exceeding allowed balances.
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" name="Reject" id="RejectEight">
+                <label for="RejectEight">
+                    Legal/Regulatory Requirements: When legal or regulatory mandates demand the employee's availability.
+                </label>
+            </div>
+        </form>
+        <div class="reasonSpecify">
+            <div class="titleSpecify">
+                <p>
+                    Other Reasons: <span>(Specify)</span>
+                </p>
+            </div>
+            <textarea name="areaReasonSpecify" id="areaReasonSpecifyLeave" placeholder="Type Other Reason"></textarea>
+        </div>
+        <div class="w-100 d-flex">
+            <button id="Reject-close-popup" class="btn btnClose btnReject mx-auto mt-3">
+                Reject
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- bootstrap -->
+<script src="../../../assets/js/bootstrap.bundle.min.js"></script>
+<script src="../../../assets/js/all.min.js"></script>
+
+<!-- FullCalendar JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/6.1.15/index.global.js" integrity="sha512-3I+0zIxy2IkeeCvvhXUEu+AFT3zAGuHslHLDmM8JBv6FT7IW6WjhGpUZ55DyGXArYHD0NshixtmNUWJzt0K32w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- custom javaScript -->
+<script src="../../../assets/js/KPI.js"></script>
+<script src="../../../assets/js/LeaveRequests.js"></script>
+<script src="../../../assets/js/ManageRequests.js"></script>
+<script src="../../../assets/js/dashboard.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+</html>

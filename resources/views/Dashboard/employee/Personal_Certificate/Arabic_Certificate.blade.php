@@ -361,18 +361,21 @@
     </div>
     <div id="approve-popup" class="overlayPopupOverlay hidden">
         <div class="popupPolicy popupApprove">
+
             <h2>Are you sure you want to submit the request?</h2>
             <div class="w-100 d-flex justify-content-end">
                 <button id="approve-close-popup" class="btn btnClose btnYes  mt-3">Confirm</button>
+{{--                <button id="approve-close-popup" class="btn btnClose   mt-3">Cancel</button>--}}
             </div>
         </div>
     </div>
     <!-- bootstrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/6.1.15/index.global.js" integrity="sha512-3I+0zIxy2IkeeCvvhXUEu+AFT3zAGuHslHLDmM8JBv6FT7IW6WjhGpUZ55DyGXArYHD0NshixtmNUWJzt0K32w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <script src="../../../assets/js/bootstrap.bundle.min.js"></script>
     <script src="../../../assets/js/all.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- FullCalendar JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/6.1.15/index.global.js" integrity="sha512-3I+0zIxy2IkeeCvvhXUEu+AFT3zAGuHslHLDmM8JBv6FT7IW6WjhGpUZ55DyGXArYHD0NshixtmNUWJzt0K32w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- custom javaScript -->
     <script src="../../../assets/js/Personal_Certificate_Arabic.js"></script>

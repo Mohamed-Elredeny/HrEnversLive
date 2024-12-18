@@ -68,7 +68,7 @@ html{
 
 }
 body{
-    height: 100%; 
+    height: 100%;
     max-width: 100% ;
     overflow-x: hidden;
 }
@@ -133,11 +133,11 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); 
+    background: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000; 
+    z-index: 1000;
 }
 .overlayPopupOverlay .popupPolicy {
     background: #fff;
@@ -670,7 +670,7 @@ button.btnTra a{
 .LeaveTap_section .accordion .accordion-item  .accordion-content .approval-options .spanTitle{
     font-weight: bold;
     margin-bottom: 10px;
-    color: var(--main-color);  
+    color: var(--main-color);
     background-color: var(--white-color);
     padding: 10px;
     text-align: center;
@@ -848,7 +848,7 @@ button.btnTra a{
     pointer-events: none !important;
 }
 .LeaveTap_section .accordion .accordion-item .accordion-content .review-section .buttons .radio-label input {
-    appearance: none; 
+    appearance: none;
     width: 30px;
     height: 30px;
     border: 1px solid var(--white-color, #fff);
@@ -896,7 +896,7 @@ button.btnTra a{
 }
 .LeaveTap_section .accordion .accordion-item .accordion-content .review-section .buttons .radio-label .na:checked + span {
     background-color: var(--gray-text-color);
-    
+
 }
 .LeaveTap_section .accordion .accordion-item .accordion-content .review-section .buttons .radio-label .yes:checked {
     background-color: var(--success-dark-color);
@@ -910,14 +910,14 @@ button.btnTra a{
     background-color: var(--success-dark-color);
 }
 .LeaveTap_section .accordion .accordion-item .accordion-content .review-section .buttons .radio-label span:hover {
-    color: var(--dark-color); 
+    color: var(--dark-color);
 }
 .no:checked, .na:checked, .yes:checked {
-    background-color: transparent; 
+    background-color: transparent;
     border-color: transparent;
 }
 .LeaveTap_section .accordion .accordion-item .accordion-content .review-section .buttons .radio-label input:checked + span {
-    font-weight: bold; 
+    font-weight: bold;
 }
 .LeaveTap_section .accordion .accordion-item .accordion-content .comments-section {
     margin-bottom: 20px;
@@ -926,14 +926,14 @@ button.btnTra a{
     font-size: 12px;
     font-weight: 700;
     color: var(--main-color);
-} 
+}
 .LeaveTap_section .accordion .accordion-item .accordion-content .comments-section .signature-upload-title{
     border: 1px solid var(--main-blue-color);
     padding: 10px !important;
     border-radius: 5px;
     font-size: 14px;
     font-weight: 700;
-} 
+}
 .LeaveTap_section .accordion .accordion-item .accordion-content .comments-section .signature-upload-title span{
     color: var(--dark-color);
     font-size: 10px;
@@ -960,7 +960,7 @@ button.btnTra a{
     background-color: transparent;
     border-radius: 10px;
     padding: 10px 20px;
-} 
+}
 .LeaveTap_section .accordion .accordion-item .accordion-content .button-Approval .btnApproval{
     color: var(--white-color);
     background-color: var(--gray-ExtraLight-color);
@@ -1035,6 +1035,12 @@ button.btnTra a{
     background: var(--success-color);
 }
 .overlayPopupOverlay .popupPolicy .btn.btnYes {
+    background: var(--success-dark-color);
+}
+.overlayPopupOverlay .popupPolicy .btn.btnNo:hover {
+    background: var(--success-color);
+}
+.overlayPopupOverlay .popupPolicy .btn.btnNo {
     background: var(--success-dark-color);
 }
 .overlayPopupOverlay .popupPolicy .btn.btnReturn:hover {
@@ -1213,7 +1219,7 @@ input:checked + .slider:before {
     place-content: center;
     background-color: var(--main-color);
     color: var(--success-dark-color);
-    
+
 }
 .accordion .accordion-item .counter .boxCounter p{
     margin-bottom: 0;
@@ -1303,7 +1309,7 @@ input:checked + .slider:before {
         position: relative;
         margin-top: 10px;
         width: 100%;
-        margin-right: 0px !important; 
+        margin-right: 0px !important;
     }
     .LeaveTap_section .accordion .accordion-item  .accordion-content .options.options1fr {
         display: grid;
