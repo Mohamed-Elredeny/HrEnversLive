@@ -23,11 +23,12 @@ return new class extends Migration
             $table->string('approval_name')->nullable();
             $table->string('approval_remark')->nullable();
             $table->string('approval_status')->nullable();
-            $table->unsignedBigInteger('certificateType_id')->nullable();
-            $table->foreign('certificateType_id')->references('id')->on('certificate_type')->onDelete('cascade');
+            $table->unsignedBigInteger('certificateType_id');
+            $table->foreign('certificateType_id')->references('id')->on('certificate_type');
+
             $table->string('remark')->nullable();
-            $table->unsignedBigInteger('Emp_id')->nullable();
-            $table->foreign('Emp_id')->references('id')->on('employees')->onDelete('cascade');
+            $table->unsignedBigInteger('Emp_id');
+            $table->foreign('Emp_id')->references('id')->on('employees');
             $table->string('embassy')->nullable();
             $table->string('returnReasons')->nullable();
             $table->timestamps();
