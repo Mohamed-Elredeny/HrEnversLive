@@ -48,6 +48,7 @@ Route::group([
     Route::get('ApprovalCertificates', function () {
         $id = Auth::guard('employee')->user()->id ?? null;
         $certificates = DB::table('certificate')->get();
+        $employee=null;
         foreach ($certificates as $certificate) {
             $employee = DB::table('employees')->where('id', '=', $certificate->Emp_id ?? "")->get();
         }

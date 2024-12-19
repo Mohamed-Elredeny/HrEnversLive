@@ -119,7 +119,7 @@
                         <div class="col-6">
                             <div class="imagee" >
                                 <div class="img-fluid">
-                                    <img src="../../../assets/images/logos/1717495704_Copy of Untitled Design.png" alt="Medgulf Header">
+                                    <img src="{{asset("assets/images/logos/1717495704_Copy of Untitled Design.png")}}"  alt="Medgulf Header">
                                 </div>
                             </div>
                         </div>
@@ -127,11 +127,11 @@
                             <div class="imagee" >
                                 <div class="img-fluid company">
                                     @if ($emp->company_id == "medgulf")
-                                        <img class="Medgulf" src="../../../assets/images/logos/company_1_sign.png" alt="Medgulf Header">
+                                        <img class="Medgulf" src="{{asset("assets/images/logos/company_1_sign.png")}}"  alt="Medgulf Header">
                                     @elseif ($emp->company_id == "trags")
-                                        <img class="tragsEng" src="../../../assets/images/logos/company_2_sign.png" alt="tragsEng Header">
+                                        <img class="tragsEng" src="{{asset("assets/images/logos/company_2_sign.png")}}"  alt="tragsEng Header">
                                     @else
-                                        <img class="trags" src="../../../assets/images/logos/company_3_sign.png" alt="trags Header">
+                                        <img class="trags" src="{{asset("assets/images/logos/company_3_sign.png")}}"  alt="trags Header">
                                     @endif
                                 </div>
                             </div></div></div>

@@ -119,12 +119,12 @@
                 Requests
             </h2>
             <div class="image order-1 order-md-2">
-                <img src="../../../assets/images/sign-in/Home-light@3x-2.png" alt="icon">
+                <img src="{{asset("assets/images/sign-in/Home-light@3x-2.png")}}" alt="icon">
             </div>
         </div>
         <ul>
-            <li><a href="../KPI/index.html">KPI <span>12</span> </a></li>
-            <li><a class="open" href="index.html">Personal Certificate <span>1</span> </a></li>
+            <li><a href="{{route('employee.index')}}">KPI <span>12</span> </a></li>
+            <li><a class="open" href="{{route('employee.index')}}">Personal Certificate <span>1</span> </a></li>
             <li><a href="#">Leave Requests <span>6</span> </a></li>
             <li><a href="#">HR Expenses From <span>9</span> </a></li>
             <li><a href="#">Jop Description <span>18</span> </a></li>
@@ -259,12 +259,12 @@
             <section class="head">
                 <div class="title">
 
-                    <a href="index.html">
+                    <a href="{{route('employee.index')}}">
                         <p>My Personal Certificate</p>
                     </a>
                     <span>|</span>
                 </div>
-                <a href="employee.html" class="image">
+                <a href="{{route('employee.index')}}" class="image">
                     <div class="img-fluid">
                         <img src="{{asset("assets/images/sign-in/Back@3x.png")}}" alt="back arrow">
                     </div>
