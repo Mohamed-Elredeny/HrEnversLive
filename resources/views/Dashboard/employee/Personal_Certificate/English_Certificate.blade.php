@@ -252,6 +252,13 @@
         </header>
 
 
+        @if(session()->has('errorcertificate'))
+            <div>
+                <div class="alert alert-danger">
+                    {{session()->get('errorcertificate')}}
+                </div>
+            </div>
+        @endif
         <main>
             <article class="container">
                 <section class="head">
