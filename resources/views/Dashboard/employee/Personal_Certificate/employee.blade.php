@@ -4,42 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ENSRV</title>
-    
+
     <!-- custom style -->
-    <link rel="stylesheet" href="../../../assets/css/KPI.css">
-    <link rel="stylesheet" href="../../../assets/css/dashboard.css">
+    <link rel="stylesheet" href="{{asset("assets/css/KPI.css")}}">
+    <link rel="stylesheet" href="{{asset("assets/css/dashboard.css")}}">
 
     <!-- google font Syne-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
-    
+
     <!-- google font Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    
+
     <!-- google font Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
     <!-- bootstrap -->
-    <link rel="stylesheet" href="../../../assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../../assets/css/all.min.css">
+    <link rel="stylesheet" href="{{asset("assets/css/bootstrap.min.css")}}">
+    <link rel="stylesheet" href="{{asset("assets/css/all.min.css")}}">
 
 </head>
 <body>
-    
+
     <div id="sideBar" class="sidebar">
         <ul>
             <li >
                 <a href="#">
                     <div class="image-dark home-dark active image">
-                        <img src="../../../assets/images/sign-in/Home@3x.png" alt="icon">
+                        <img src="{{asset("assets/images/sign-in/Home@3x.png")}}" alt="icon">
                     </div>
                     <div class="image-light home-light  image">
-                        <img src="../../../assets/images/sign-in/Home-light@3x-3.png" alt="icon">
+                        <img src="{{asset("assets/images/sign-in/Home-light@3x-3.png")}}" alt="icon">
                     </div>
                 </a>
                 <span>Home</span>
@@ -47,10 +47,10 @@
             <li class="open">
                 <a href="#">
                     <div class="image-dark employee-dark  image">
-                        <img src="../../../assets/images/sign-in/Home@3x-5.png" alt="icon">
+                        <img src="{{asset("assets/images/sign-in/Home@3x-5.png")}}" alt="icon">
                     </div>
                     <div class="image-light employee-light active image">
-                        <img src="../../../assets/images/sign-in/Home-light@3x-2.png" alt="icon">
+                        <img src="{{asset("assets/images/sign-in/Home-light@3x-2.png")}}" alt="icon">
                     </div>
                 </a>
                 <span>Requests</span>
@@ -58,10 +58,10 @@
             <li>
                 <a href="#">
                     <div class="image-dark hrStaff-dark  active image">
-                        <img src="../../../assets/images/sign-in/Home@3x-1.png" alt="icon">
+                        <img src="{{asset("assets/images/sign-in/Home@3x-1.png")}}" alt="icon">
                     </div>
                     <div class="image-light  hrStaff-light image">
-                        <img src="../../../assets/images/sign-in/Home-light@3x-4.png" alt="icon">
+                        <img src="{{asset("assets/images/sign-in/Home-light@3x-4.png")}}" alt="icon">
                     </div>
                 </a>
                 <span>HR Staff</span>
@@ -69,10 +69,10 @@
             <li>
                 <a href="#">
                     <div class="image-dark calendar-dark active image">
-                        <img src="../../../assets/images/sign-in/Home@3x-4.png" alt="icon">
+                        <img src="{{asset("assets/images/sign-in/Home@3x-4.png")}}" alt="icon">
                     </div>
                     <div class="image-light  calendar-light image">
-                        <img src="../../../assets/images/sign-in/Home-light@3x-1.png" alt="icon">
+                        <img src="{{asset("assets/images/sign-in/Home-light@3x-1.png")}}" alt="icon">
                     </div>
                 </a>
                 <span>Calendar</span>
@@ -80,25 +80,25 @@
             <li>
                 <a href="#">
                     <div class="image-dark settings-dark active image">
-                        <img src="../../../assets/images/sign-in/Home@3x-2.png" alt="icon">
+                        <img src="{{asset("assets/images/sign-in/Home@3x-2.png")}}" alt="icon">
                     </div>
                     <div class="image-light  settings-light image">
-                        <img src="../../../assets/images/sign-in/Home-light@3x-5.png" alt="icon">
+                        <img src="{{asset("assets/images/sign-in/Home-light@3x-5.png")}}" alt="icon">
                     </div>
                 </a>
                 <span>Settings</span>
             </li>
-            
+
         </ul>
     </div>
     <div id="openslider" class="openslider">
         <div id="home" class="home  sectionslider">
             <div class="title">
                 <h2 class="order-2 order-md-1">
-                    Home 
+                    Home
                 </h2>
                 <div class="image order-1 order-md-2">
-                    <img src="../../../assets/images/sign-in/Home-light@3x-3.png" alt="icon">
+                    <img src="{{asset("assets/images/sign-in/Home-light@3x-3.png")}}" alt="icon">
                 </div>
             </div>
             <ul>
@@ -113,7 +113,7 @@
                     Requests
                 </h2>
                 <div class="image order-1 order-md-2">
-                    <img src="../../../assets/images/sign-in/Home-light@3x-2.png" alt="icon">
+                    <img src="{{asset("assets/images/sign-in/Home-light@3x-2.png")}}" alt="icon">
                 </div>
             </div>
             <ul>
@@ -127,10 +127,10 @@
         <div id="hrStaff" class="hrStaff sectionslider">
             <div class="title">
                 <h2 class="order-2 order-md-1" style="padding-inline-start: 15px;">
-                    HR Staff 
+                    HR Staff
                 </h2>
                 <div class="image order-1 order-md-2">
-                    <img src="../../../assets/images/sign-in/Home-light@3x-1.png" alt="icon">
+                    <img src="{{asset("assets/images/sign-in/Home-light@3x-1.png")}}" alt="icon">
                 </div>
             </div>
             <ul>
@@ -142,10 +142,10 @@
         <div id="calendar"  class="calendar sectionslider">
             <div class="title">
                 <h2 class="order-2 order-md-1">
-                    Calendar 
+                    Calendar
                 </h2>
                 <div class="image order-1 order-md-2">
-                    <img src="../../../assets/images/sign-in/Home-light@3x-4.png" alt="icon">
+                    <img src="{{asset("assets/images/sign-in/Home-light@3x-4.png")}}" alt="icon">
                 </div>
             </div>
             <ul>
@@ -157,10 +157,10 @@
         <div id="settings" class="settings sectionslider">
             <div class="title">
                 <h2 class="order-2 order-md-1">
-                    Settings 
+                    Settings
                 </h2>
                 <div class="image order-1 order-md-2">
-                    <img src="../../../assets/images/sign-in/Home-light@3x-5.png" alt="icon">
+                    <img src="{{asset("assets/images/sign-in/Home-light@3x-5.png")}}" alt="icon">
                 </div>
             </div>
             <ul>
@@ -200,7 +200,7 @@
         <header>
             <div class="logo">
                 <div class="img-fluid">
-                    <img src="../../../assets/images/sign-in/Logos@3x.png" alt="logos">
+                    <img src="{{asset("assets/images/sign-in/Logos@3x.png")}}" alt="logos">
                 </div>
                 <div class="titleLogo">
                     <p>Medgulf Construction Company WLL</p>
@@ -209,7 +209,7 @@
             <div class="account">
                 <div class="image">
                     <div class="ima-fluid">
-                        <img src="../../../assets/images/sign-in/1718183412_1694698427_Mohamed1.jpg" alt="Personal photo">
+                        <img src="{{asset("assets/images/sign-in/1718183412_1694698427_Mohamed1.jpg")}}" alt="Personal photo">
                     </div>
                 </div>
                 <div class="name">
@@ -218,7 +218,7 @@
                 </div>
                 <div class="arrow">
                     <div class="ima-fluid">
-                        <img onclick="openEdit()" src="../../../assets/images/sign-in/Arrow@3x-1.png" alt="arrow-dowm">
+                        <img onclick="openEdit()" src="{{asset("assets/images/sign-in/Arrow@3x-1.png")}}" alt="arrow-dowm">
                     </div>
                 </div>
                 <div class="settingAccount">
@@ -259,14 +259,14 @@
                     </div>
                     <a href="../../Dashboard.html" class="image">
                         <div class="img-fluid">
-                            <img src="../../../assets/images/sign-in/Back@3x.png" alt="back arrow">
+                            <img src="{{asset("assets/images/sign-in/Back@3x.png")}}" alt="back arrow">
                         </div>
                     </a>
                 </section>
                 <section class="info">
                     <div class="image">
                         <div class="img-fluid">
-                            <img src="../../../assets/images/sign-in/1718183412_1694698427_Mohamed1.jpg" alt="Personal photo">
+                            <img src="{{asset("assets/images/sign-in/1718183412_1694698427_Mohamed1.jpg")}}" alt="Personal photo">
                         </div>
                     </div>
                     <div class="content_Info">
@@ -357,7 +357,7 @@
                     <div class="butt">
                         <button class="btn" onclick="addEventBtn()">
                             <div class="icon">
-                                <i class="fa-solid  fa-plus"></i> 
+                                <i class="fa-solid  fa-plus"></i>
                             </div>
                             <p>
                                 Create
@@ -407,20 +407,20 @@
         </div>
     </div>
     <div class="overlay" id="overlayEvent" onclick="closeEvent()"></div>
-    
 
-    
-    
+
+
+
     <!-- bootstrap -->
-    <script src="../../../assets/js/bootstrap.bundle.min.js"></script>
-    <script src="../../../assets/js/all.min.js"></script>
+    <script src="{{asset("assets/js/bootstrap.bundle.min.js")}}"></script>
+    <script src="{{asset("assets/js/all.min.js")}}"></script>
 
     <!-- FullCalendar JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/6.1.15/index.global.js" integrity="sha512-3I+0zIxy2IkeeCvvhXUEu+AFT3zAGuHslHLDmM8JBv6FT7IW6WjhGpUZ55DyGXArYHD0NshixtmNUWJzt0K32w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
+
     <!-- custom javaScript -->
-    <script src="../../../assets/js/KPI.js"></script>
-    <script src="../../../assets/js/dashboard.js"></script>
+    <script src="{{asset("assets/js/KPI.js")}}"></script>
+    <script src="{{asset("assets/js/dashboard.js")}}"></script>
 
 </body>
 </html>
