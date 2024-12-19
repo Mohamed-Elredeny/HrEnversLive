@@ -33,9 +33,9 @@ class CertificateController extends Controller
 
     public function storeEnglishcertificate(Request $request)
     {
-        CertificatesType::create([
-            'type'=>'EnglishCertificate'
-        ]);
+//        CertificatesType::create([
+//            'type'=>'EnglishCertificate'
+//        ]);
         $id= Auth::guard('employee')->user()->id??null;
         $currentdate = now();
 //$employee=Employee::find($id);
@@ -60,7 +60,7 @@ class CertificateController extends Controller
         } catch (\Exception $e) {
             Log::error('Failed to insert certificate: ' . $e->getMessage());
 //            return response()->json(['message' => 'Failed to insert certificate.'], 500);
-            return redirect()->back()->with('errorcertificate', "Please insert your data");
+            return redirect()->back()->with('errorcertificate', "Please error{{$e->getMessage()}}");
         }
 
         return redirect()->route('employee.index');
@@ -95,7 +95,7 @@ class CertificateController extends Controller
             ]);
         } catch (\Exception $e) {
 //            Log::error('Failed to insert certificate: ' . $e->getMessage());
-            return redirect()->back()->with('errorcertificate', "Please insert your data");
+            return redirect()->back()->with('errorcertificate', "Please error{{$e->getMessage()}}");
         }
 
         return redirect()->route('employee.index');
