@@ -9,7 +9,7 @@ class Certificates extends Model
 {
     use Notifiable;
 
-    protected $table = "Certificate";
+    protected $table = "certificate";
     protected $guarded=[];
 
     // In your Certificate model
