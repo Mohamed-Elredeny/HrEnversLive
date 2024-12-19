@@ -251,7 +251,13 @@
             </div>
         </header>
 
-
+        @if(session()->has('errorcertificate'))
+            <div>
+                <div class="alert alert-danger">
+                    {{session()->get('errorcertificate')}}
+                </div>
+            </div>
+        @endif
         <main>
             <article class="container">
                 <section class="head">
@@ -359,6 +365,7 @@
         </main>
 
     </div>
+
     <div id="approve-popup" class="overlayPopupOverlay hidden">
         <div class="popupPolicy popupApprove">
 
@@ -375,6 +382,8 @@
     <script src="{{asset("assets/js/bootstrap.bundle.min.js")}}"></script>
     <script src="{{asset("assets/js/all.min.js")}}"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.15.2/sweetalert2.min.js" integrity="sha512-gtx8/kJpAsm7drqGdR5bl6CQtb+zzNY2wfWdzAe7wt0vCgFph7fX2ubCyxZn9CEGE/I9xasdwkaVPaKQGlq1Lw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- FullCalendar JS -->
 
     <!-- custom javaScript -->

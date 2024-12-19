@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $entity = 0;
-    return view('Site.auth.signin',compact('entity'));
+    return view('site.auth.signin',compact('entity'));
 });
 //Route::middleware('auth:employee')->group(function () {
 Route::get('/dashboard', function () {
@@ -16,7 +16,7 @@ Route::get('/dashboard', function () {
 //});
 
 Route::get('SignUp', function () {
-    return view('Site.auth.signin');
+    return view('site.auth.signin');
 })->name('signup');
 
 
