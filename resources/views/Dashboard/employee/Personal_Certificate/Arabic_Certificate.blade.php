@@ -6,10 +6,10 @@
     <title>ENSRV</title>
 
     <!-- custom style -->
-    <link rel="stylesheet" href="../../../assets/css/Leave_Requests.css">
-    <link rel="stylesheet" href="../../../assets/css/Personal_Certificate.css">
-    <link rel="stylesheet" href="../../../assets/css/KPI.css">
-    <link rel="stylesheet" href="../../../assets/css/dashboard.css">
+    <link rel="stylesheet" href="{{asset("assets/css/Leave_Requests.css")}}">
+    <link rel="stylesheet" href="{{asset("assets/css/Personal_Certificate.css")}}">
+    <link rel="stylesheet" href="{{asset("assets/css/KPI.css")}}">
+    <link rel="stylesheet" href="{{asset("assets/css/dashboard.css")}}">
 
     <!-- google font Syne-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,8 +27,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
     <!-- bootstrap -->
-    <link rel="stylesheet" href="../../../assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../../assets/css/all.min.css">
+    <link rel="stylesheet" href="{{asset("assets/css/bootstrap.min.css")}}">
+    <link rel="stylesheet" href="{{asset("assets/css/all.min.css")}}">
 
 </head>
 <body>
@@ -39,10 +39,10 @@
             <li >
                 <a href="#">
                     <div class="image-dark home-dark active image">
-                        <img src="../../../assets/images/sign-in/Home@3x.png" alt="icon">
+                        <img src="{{asset("assets/images/sign-in/Home@3x.png")}}" alt="icon">
                     </div>
                     <div class="image-light home-light  image">
-                        <img src="../../../assets/images/sign-in/Home-light@3x-3.png" alt="icon">
+                        <img src="{{asset("assets/images/sign-in/Home-light@3x-3.png")}}" alt="icon">
                     </div>
                 </a>
                 <span>Home</span>
@@ -50,10 +50,10 @@
             <li class="open">
                 <a href="#">
                     <div class="image-dark employee-dark  image">
-                        <img src="../../../assets/images/sign-in/Home@3x-5.png" alt="icon">
+                        <img src="{{asset("assets/images/sign-in/Home@3x-5.png")}}" alt="icon">
                     </div>
                     <div class="image-light employee-light active image">
-                        <img src="../../../assets/images/sign-in/Home-light@3x-2.png" alt="icon">
+                        <img src="{{asset("assets/images/sign-in/Home-light@3x-2.png")}}" alt="icon">
                     </div>
                 </a>
                 <span>Requests</span>
@@ -61,10 +61,10 @@
             <li>
                 <a href="#">
                     <div class="image-dark hrStaff-dark  active image">
-                        <img src="../../../assets/images/sign-in/Home@3x-1.png" alt="icon">
+                        <img src="{{asset("assets/images/sign-in/Home@3x-1.png")}}" alt="icon">
                     </div>
                     <div class="image-light  hrStaff-light image">
-                        <img src="../../../assets/images/sign-in/Home-light@3x-4.png" alt="icon">
+                        <img src="{{asset("assets/images/sign-in/Home-light@3x-4.png")}}" alt="icon">
                     </div>
                 </a>
                 <span>HR Staff</span>
@@ -72,10 +72,10 @@
             <li>
                 <a href="#">
                     <div class="image-dark calendar-dark active image">
-                        <img src="../../../assets/images/sign-in/Home@3x-4.png" alt="icon">
+                        <img src="{{asset("assets/images/sign-in/Home@3x-4.png")}}" alt="icon">
                     </div>
                     <div class="image-light  calendar-light image">
-                        <img src="../../../assets/images/sign-in/Home-light@3x-1.png" alt="icon">
+                        <img src="{{asset("assets/images/sign-in/Home-light@3x-1.png")}}" alt="icon">
                     </div>
                 </a>
                 <span>Calendar</span>
@@ -83,10 +83,10 @@
             <li>
                 <a href="#">
                     <div class="image-dark settings-dark active image">
-                        <img src="../../../assets/images/sign-in/Home@3x-2.png" alt="icon">
+                        <img src="{{asset("assets/images/sign-in/Home@3x-2.png")}}" alt="icon">
                     </div>
                     <div class="image-light  settings-light image">
-                        <img src="../../../assets/images/sign-in/Home-light@3x-5.png" alt="icon">
+                        <img src="{{asset("assets/images/sign-in/Home-light@3x-5.png")}}" alt="icon">
                     </div>
                 </a>
                 <span>Settings</span>
@@ -101,7 +101,7 @@
                     Home
                 </h2>
                 <div class="image order-1 order-md-2">
-                    <img src="../../../assets/images/sign-in/Home-light@3x-3.png" alt="icon">
+                    <img src="{{asset("assets/images/sign-in/Home-light@3x-3.png")}}" alt="icon">
                 </div>
             </div>
             <ul>
@@ -116,12 +116,12 @@
                     Requests
                 </h2>
                 <div class="image order-1 order-md-2">
-                    <img src="../../../assets/images/sign-in/Home-light@3x-2.png" alt="icon">
+                    <img src="{{asset("assets/images/sign-in/Home-light@3x-2.png")}}" alt="icon">
                 </div>
             </div>
             <ul>
                 <li><a href="../KPI/index.html">KPI <span>12</span> </a></li>
-                <li><a class="open" href="index.html">Personal Certificate <span>1</span> </a></li>
+                <li><a class="open" href="{{route('employee.index')}}">Personal Certificate <span>1</span> </a></li>
                 <li><a href="#">Leave Requests <span>6</span> </a></li>
                 <li><a href="#">HR Expenses From <span>9</span> </a></li>
                 <li><a href="#">Jop Description <span>18</span> </a></li>
@@ -133,7 +133,7 @@
                     HR Staff
                 </h2>
                 <div class="image order-1 order-md-2">
-                    <img src="../../../assets/images/sign-in/Home-light@3x-1.png" alt="icon">
+                    <img src="{{asset("assets/images/sign-in/Home-light@3x-1.png")}}" alt="icon">
                 </div>
             </div>
             <ul>
@@ -148,7 +148,7 @@
                     Calendar
                 </h2>
                 <div class="image order-1 order-md-2">
-                    <img src="../../../assets/images/sign-in/Home-light@3x-4.png" alt="icon">
+                    <img src="{{asset("assets/images/sign-in/Home-light@3x-4.png")}}" alt="icon">
                 </div>
             </div>
             <ul>
@@ -163,7 +163,7 @@
                     Settings
                 </h2>
                 <div class="image order-1 order-md-2">
-                    <img src="../../../assets/images/sign-in/Home-light@3x-5.png" alt="icon">
+                    <img src="{{asset("assets/images/sign-in/Home-light@3x-5.png")}}" alt="icon">
                 </div>
             </div>
             <ul>
@@ -203,7 +203,7 @@
         <header>
             <div class="logo">
                 <div class="img-fluid">
-                    <img src="../../../assets/images/sign-in/Logos@3x.png" alt="logos">
+                    <img src="{{asset("assets/images/sign-in/Logos@3x.png")}}" alt="logos">
                 </div>
                 <div class="titleLogo">
                     <p>Medgulf Construction Company WLL</p>
@@ -212,7 +212,7 @@
             <div class="account">
                 <div class="image">
                     <div class="ima-fluid">
-                        <img src="../../../assets/images/sign-in/1718183412_1694698427_Mohamed1.jpg" alt="Personal photo">
+                        <img src="{{asset("assets/images/sign-in/1718183412_1694698427_Mohamed1.jpg")}}" alt="Personal photo">
                     </div>
                 </div>
                 <div class="name">
@@ -221,7 +221,7 @@
                 </div>
                 <div class="arrow">
                     <div class="ima-fluid">
-                        <img onclick="openEdit()" src="../../../assets/images/sign-in/Arrow@3x-1.png" alt="arrow-dowm">
+                        <img onclick="openEdit()" src="{{asset("assets/images/sign-in/Arrow@3x-1.png")}}" alt="arrow-dowm">
                     </div>
                 </div>
                 <div class="settingAccount">
@@ -266,7 +266,7 @@
 
                     <a href="{{route('employee.index')}}" class="image">
                         <div class="img-fluid">
-                            <img src="../../../assets/images/sign-in/Back@3x.png" alt="back arrow">
+                            <img src="{{asset("assets/images/sign-in/Back@3x.png")}}" alt="back arrow">
                         </div>
                     </a>
 
@@ -284,7 +284,7 @@
                             <p>GATE PASS LOST</p>
                         </div>
                         <div class="image">
-                            <div class="img-fluid"><img class="gray_Evaluated" src="../../../assets/images/sign-in/Evaluated@3x.png" alt="Evaluated"></div>
+                            <div class="img-fluid"><img class="gray_Evaluated" src="{{asset("assets/images/sign-in/Evaluated@3x.png")}}" alt="Evaluated"></div>
                         </div>
                     </div>
                     </label>
@@ -295,7 +295,7 @@
                             <p>GATE PASS CANCELLATION</p>
                         </div>
                         <div class="image">
-                            <div class="img-fluid"><img class="gray_Evaluated" src="../../../assets/images/sign-in/Evaluated@3x.png" alt="Evaluated"></div>
+                            <div class="img-fluid"><img class="gray_Evaluated" src="{{asset("assets/images/sign-in/Evaluated@3x.png")}}" alt="Evaluated"></div>
                         </div>
                     </div>
                     </label>
@@ -306,7 +306,7 @@
                             <p>EXPERIENCE CERTIFICATE</p>
                         </div>
                         <div class="image">
-                            <div class="img-fluid"><img class="gray_Evaluated" src="../../../assets/images/sign-in/Evaluated@3x.png" alt="Evaluated"></div>
+                            <div class="img-fluid"><img class="gray_Evaluated" src="{{asset("assets/images/sign-in/Evaluated@3x.png")}}" alt="Evaluated"></div>
                         </div>
                     </div>
                     </label>
@@ -317,7 +317,7 @@
                             <p>FAMILY VISIT FISA REQUEST</p>
                         </div>
                         <div class="image">
-                            <div class="img-fluid"><img class="gray_Evaluated" src="../../../assets/images/sign-in/Evaluated@3x.png" alt="Evaluated"></div>
+                            <div class="img-fluid"><img class="gray_Evaluated" src="{{asset("assets/images/sign-in/Evaluated@3x.png")}}" alt="Evaluated"></div>
                         </div>
                     </div>
                     </label>
@@ -328,7 +328,7 @@
                             <p>FAMILY RESIDENCY VISA REQUEST</p>
                         </div>
                         <div class="image">
-                            <div class="img-fluid"><img class="gray_Evaluated" src="../../../assets/images/sign-in/Evaluated@3x.png" alt="Evaluated"></div>
+                            <div class="img-fluid"><img class="gray_Evaluated" src="{{asset("assets/images/sign-in/Evaluated@3x.png")}}" alt="Evaluated"></div>
                         </div>
                     </div></label>
 
@@ -339,7 +339,7 @@
                             <p>QID LOST</p>
                         </div>
                         <div class="image">
-                            <div class="img-fluid"><img class="gray_Evaluated" src="../../../assets/images/sign-in/Evaluated@3x.png" alt="Evaluated"></div>
+                            <div class="img-fluid"><img class="gray_Evaluated" src="{{asset("assets/images/sign-in/Evaluated@3x.png")}}" alt="Evaluated"></div>
                         </div>
                     </div>
                     </label>
@@ -361,23 +361,26 @@
     </div>
     <div id="approve-popup" class="overlayPopupOverlay hidden">
         <div class="popupPolicy popupApprove">
+
             <h2>Are you sure you want to submit the request?</h2>
             <div class="w-100 d-flex justify-content-end">
                 <button id="approve-close-popup" class="btn btnClose btnYes  mt-3">Confirm</button>
+                <button id="approve-close-popup" class="btn btnClose   mt-3">Cancel</button>
             </div>
         </div>
     </div>
     <!-- bootstrap -->
-    <script src="../../../assets/js/bootstrap.bundle.min.js"></script>
-    <script src="../../../assets/js/all.min.js"></script>
-
-    <!-- FullCalendar JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/6.1.15/index.global.js" integrity="sha512-3I+0zIxy2IkeeCvvhXUEu+AFT3zAGuHslHLDmM8JBv6FT7IW6WjhGpUZ55DyGXArYHD0NshixtmNUWJzt0K32w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+    <script src="{{asset("assets/js/bootstrap.bundle.min.js")}}"></script>
+    <script src="{{asset("assets/js/all.min.js")}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- FullCalendar JS -->
+
     <!-- custom javaScript -->
-    <script src="../../../assets/js/Personal_Certificate_Arabic.js"></script>
-    <script src="../../../assets/js/KPI.js"></script>
-    <script src="../../../assets/js/dashboard.js"></script>
+    <script src="{{asset("assets/js/Personal_Certificate_Arabic.js")}}"></script>
+    <script src="{{asset("assets/js/KPI.js")}}"></script>
+    <script src="{{asset("assets/js/dashboard.js")}}"></script>
     <script>
         const buttons = document.querySelector(".submitCertificate");
         const popupOverlay = document.getElementById("approve-popup");

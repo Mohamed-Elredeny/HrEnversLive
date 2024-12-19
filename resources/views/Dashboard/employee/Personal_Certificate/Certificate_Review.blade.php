@@ -4,45 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ENSRV</title>
-    
+
     <!-- custom style -->
-    <link rel="stylesheet" href="../../../assets/css/Leave_Requests.css">
-    <link rel="stylesheet" href="../../../assets/css/Personal_Certificate.css">
-    <link rel="stylesheet" href="../../../assets/css/KPI.css">
-    <link rel="stylesheet" href="../../../assets/css/dashboard.css">
+    <link rel="stylesheet" href="{{asset("assets/css/Leave_Requests.css")}}">
+    <link rel="stylesheet" href="{{asset("assets/css/Personal_Certificate.css")}}">
+    <link rel="stylesheet" href="{{asset("assets/css/KPI.css")}}">
+    <link rel="stylesheet" href="{{asset("assets/css/dashboard.css")}}">
 
     <!-- google font Syne-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
-    
+
     <!-- google font Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    
+
     <!-- google font Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
     <!-- bootstrap -->
-    <link rel="stylesheet" href="../../../assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../../assets/css/all.min.css">
+    <link rel="stylesheet" href="{{asset("assets/css/bootstrap.min.css")}}">
+    <link rel="stylesheet" href="{{asset("assets/css/all.min.css")}}">
 
 </head>
 <body>
-    
-        
+
+
     <div id="sideBar" class="sidebar">
         <ul>
             <li >
                 <a href="#">
                     <div class="image-dark home-dark active image">
-                        <img src="../../../assets/images/sign-in/Home@3x.png" alt="icon">
+                        <img src="{{asset("assets/images/sign-in/Home@3x.png")}}" alt="icon">
                     </div>
                     <div class="image-light home-light  image">
-                        <img src="../../../assets/images/sign-in/Home-light@3x-3.png" alt="icon">
+                        <img src="{{asset("assets/images/sign-in/Home-light@3x-3.png")}}" alt="icon">
                     </div>
                 </a>
                 <span>Home</span>
@@ -50,10 +50,10 @@
             <li class="open">
                 <a href="#">
                     <div class="image-dark employee-dark  image">
-                        <img src="../../../assets/images/sign-in/Home@3x-5.png" alt="icon">
+                        <img src="{{asset("assets/images/sign-in/Home@3x-5.png")}}" alt="icon">
                     </div>
                     <div class="image-light employee-light active image">
-                        <img src="../../../assets/images/sign-in/Home-light@3x-2.png" alt="icon">
+                        <img src="{{asset("assets/images/sign-in/Home-light@3x-2.png")}}" alt="icon">
                     </div>
                 </a>
                 <span>Requests</span>
@@ -61,10 +61,10 @@
             <li>
                 <a href="#">
                     <div class="image-dark hrStaff-dark  active image">
-                        <img src="../../../assets/images/sign-in/Home@3x-1.png" alt="icon">
+                        <img src="{{asset("assets/images/sign-in/Home@3x-1.png")}}" alt="icon">
                     </div>
                     <div class="image-light  hrStaff-light image">
-                        <img src="../../../assets/images/sign-in/Home-light@3x-4.png" alt="icon">
+                        <img src="{{asset("assets/images/sign-in/Home-light@3x-4.png")}}" alt="icon">
                     </div>
                 </a>
                 <span>HR Staff</span>
@@ -72,10 +72,10 @@
             <li>
                 <a href="#">
                     <div class="image-dark calendar-dark active image">
-                        <img src="../../../assets/images/sign-in/Home@3x-4.png" alt="icon">
+                        <img src="{{asset("assets/images/sign-in/Home@3x-4.png")}}" alt="icon">
                     </div>
                     <div class="image-light  calendar-light image">
-                        <img src="../../../assets/images/sign-in/Home-light@3x-1.png" alt="icon">
+                        <img src="{{asset("assets/images/sign-in/Home-light@3x-1.png")}}" alt="icon">
                     </div>
                 </a>
                 <span>Calendar</span>
@@ -83,25 +83,25 @@
             <li>
                 <a href="#">
                     <div class="image-dark settings-dark active image">
-                        <img src="../../../assets/images/sign-in/Home@3x-2.png" alt="icon">
+                        <img src="{{asset("assets/images/sign-in/Home@3x-2.png")}}" alt="icon">
                     </div>
                     <div class="image-light  settings-light image">
-                        <img src="../../../assets/images/sign-in/Home-light@3x-5.png" alt="icon">
+                        <img src="{{asset("assets/images/sign-in/Home-light@3x-5.png")}}" alt="icon">
                     </div>
                 </a>
                 <span>Settings</span>
             </li>
-            
+
         </ul>
     </div>
     <div id="openslider" class="openslider">
         <div id="home" class="home  sectionslider">
             <div class="title">
                 <h2 class="order-2 order-md-1">
-                    Home 
+                    Home
                 </h2>
                 <div class="image order-1 order-md-2">
-                    <img src="../../../assets/images/sign-in/Home-light@3x-3.png" alt="icon">
+                    <img src="{{asset("assets/images/sign-in/Home-light@3x-3.png")}}" alt="icon">
                 </div>
             </div>
             <ul>
@@ -116,7 +116,7 @@
                     Requests
                 </h2>
                 <div class="image order-1 order-md-2">
-                    <img src="../../../assets/images/sign-in/Home-light@3x-2.png" alt="icon">
+                    <img src="{{asset("assets/images/sign-in/Home-light@3x-2.png")}}" alt="icon">
                 </div>
             </div>
             <ul>
@@ -130,10 +130,10 @@
         <div id="hrStaff" class="hrStaff sectionslider">
             <div class="title">
                 <h2 class="order-2 order-md-1" style="padding-inline-start: 15px;">
-                    HR Staff 
+                    HR Staff
                 </h2>
                 <div class="image order-1 order-md-2">
-                    <img src="../../../assets/images/sign-in/Home-light@3x-1.png" alt="icon">
+                    <img src="{{asset("assets/images/sign-in/Home-light@3x-1.png")}}" alt="icon">
                 </div>
             </div>
             <ul>
@@ -145,10 +145,10 @@
         <div id="calendar"  class="calendar sectionslider">
             <div class="title">
                 <h2 class="order-2 order-md-1">
-                    Calendar 
+                    Calendar
                 </h2>
                 <div class="image order-1 order-md-2">
-                    <img src="../../../assets/images/sign-in/Home-light@3x-4.png" alt="icon">
+                    <img src="{{asset("assets/images/sign-in/Home-light@3x-4.png")}}" alt="icon">
                 </div>
             </div>
             <ul>
@@ -160,10 +160,10 @@
         <div id="settings" class="settings sectionslider">
             <div class="title">
                 <h2 class="order-2 order-md-1">
-                    Settings 
+                    Settings
                 </h2>
                 <div class="image order-1 order-md-2">
-                    <img src="../../../assets/images/sign-in/Home-light@3x-5.png" alt="icon">
+                    <img src="{{asset("assets/images/sign-in/Home-light@3x-5.png")}}" alt="icon">
                 </div>
             </div>
             <ul>
@@ -203,7 +203,7 @@
         <header>
             <div class="logo">
                 <div class="img-fluid">
-                    <img src="../../../assets/images/sign-in/Logos@3x.png" alt="logos">
+                    <img src="{{asset("assets/images/sign-in/Logos@3x.png")}}" alt="logos">
                 </div>
                 <div class="titleLogo">
                     <p>Medgulf Construction Company WLL</p>
@@ -212,7 +212,7 @@
             <div class="account">
                 <div class="image">
                     <div class="ima-fluid">
-                        <img src="../../../assets/images/sign-in/1718183412_1694698427_Mohamed1.jpg" alt="Personal photo">
+                        <img src="{{asset("assets/images/sign-in/1718183412_1694698427_Mohamed1.jpg")}}" alt="Personal photo">
                     </div>
                 </div>
                 <div class="name">
@@ -221,7 +221,7 @@
                 </div>
                 <div class="arrow">
                     <div class="ima-fluid">
-                        <img onclick="openEdit()" src="../../../assets/images/sign-in/Arrow@3x-1.png" alt="arrow-dowm">
+                        <img onclick="openEdit()" src="{{asset("assets/images/sign-in/Arrow@3x-1.png")}}" alt="arrow-dowm">
                     </div>
                 </div>
                 <div class="settingAccount">
@@ -264,7 +264,7 @@
                     </div>
                     <a href="index.html" class="image">
                         <div class="img-fluid">
-                            <img src="../../../assets/images/sign-in/Back@3x.png" alt="back arrow">
+                            <img src="{{asset("assets/images/sign-in/Back@3x.png")}}" alt="back arrow">
                         </div>
                     </a>
                 </section>
@@ -275,7 +275,7 @@
                     <div class="info Certificates">
                         <div class="image">
                             <div class="img-fluid">
-                                <img src="../../../assets/images/sign-in/1718183412_1694698427_Mohamed1.jpg" alt="Personal photo">
+                                <img src="{{asset("assets/images/sign-in/1718183412_1694698427_Mohamed1.jpg")}}" alt="Personal photo">
                             </div>
                         </div>
                         <div class="content_Info">
@@ -356,9 +356,9 @@
                 <section class="a4_section" id="a4_section">
                     <div class="image">
                         <div class="img-fluid">
-                            <img src="../../../assets/images/logos/header.png" alt="Medgulf Header">
-                            <!-- <img src="../../../assets/images/logos/tragsEngHeader.jpg" alt="TragsEng Header"> -->
-                            <!-- <img src="../../../assets/images/logos/tragsHeader.png" alt="Trags Header"> -->
+                            <img src="{{asset("assets/images/logos/header.png")}}" alt="Medgulf Header">
+                            <!-- <img src="{{asset("assets/images/logos/tragsEngHeader.jpg")}}" alt="TragsEng Header"> -->
+                            <!-- <img src="{{asset("assets/images/logos/tragsHeader.png")}}" alt="Trags Header"> -->
                         </div>
                     </div>
                     <div class="content_certificate">
@@ -367,7 +367,7 @@
                             <h5>Ref No <span> X Number X </span>: Employee No. <span> X Number X </span> /CBQ.</h5>
                             <h5>The Manager</h5>
                             <p>
-                                Commercial Bank of Qatar 
+                                Commercial Bank of Qatar
                                 <br>
                                 State of Doha – Qatar
                             </p>
@@ -375,19 +375,19 @@
                         <div class="body_certificate">
                             <div>
                                 <p>Dear Sir,</p>
-                                
+
                                 <p>This is to certify that<span> X Mr. Name /Ms. Name X</span>, holder of <span>X Nationality X</span>  Passport # <span>X Number X</span> & QID / Visa  <span>X Number X</span> working in the capacity of <span>X Designation X</span> is a confirmed employee of Medgulf Construction Company. He joined the company on <span>X Date X</span> and still employed till date.</p>
-                                
+
                                 <p>His Gross Salary per month is QAR. <span>X Number X</span> /-Amount in letters</p>
-                                
+
                                 <p>To assist the above mentioned employee to obtain <span>X Credit Card OR Personal loan OR Car loan X</span> from your bank, we confirm that this monthly salary will continue to be paid to his bank account, account number <span>X Number X</span> effective next month.</p>
-                                
+
                                 <p>If the above mentioned employee resigns or his employment is terminated by Medgulf, we will inform you accordingly and pay all amounts of End of services benefits due to him, if any, to his aforementioned bank account.</p>
-                                
+
                                 <p>We confirm that both monthly salary and end of service dues, if any, will not be transferred to another bank before obtaining a written clearance Letter from your bank or by directive through Qatar courts. </p>
-                                
+
                                 <p>The bank and above named employee fully understands that Medgulf Construction Company does not, in any way, hold itself responsible for any debits incurred by him and that the granting of credit or loan is the sole discretion of your Bank.</p>
-                                
+
                                 <p>Yours truly,</p>
                             </div>
                             <h5>For Medgulf Construction Company W.L.L.</h5>
@@ -396,14 +396,14 @@
                             <div class="Footer_certificate_photo">
                                 <div class="image">
                                     <div class="img-fluid">
-                                        <img style="opacity: 0;" src="../../../assets/images/logos/1717495704_Copy of Untitled Design.png" alt="Medgulf Header">
+                                        <img style="opacity: 0;" src="{{asset("assets/images/logos/1717495704_Copy of Untitled Design.png")}}" alt="Medgulf Header">
                                     </div>
                                 </div>
                                 <div class="image">
                                     <div class="img-fluid company">
-                                        <img class="Medgulf" style="opacity: .05;" src="../../../assets/images/logos/company_1_sign.png" alt="Medgulf Header">
-                                        <!-- <img class="tragsEng" style="opacity: .05;" src="../../../assets/images/logos/company_2_sign.png" alt="tragsEng Header"> -->
-                                        <!-- <img class="trags" style="opacity: .05;" src="../../../assets/images/logos/company_3_sign.png" alt="trags Header"> -->
+                                        <img class="Medgulf" style="opacity: .05;" src="{{asset("assets/images/logos/company_1_sign.png")}}" alt="Medgulf Header">
+                                        <!-- <img class="tragsEng" style="opacity: .05;" src="{{asset("assets/images/logos/company_2_sign.png")}}" alt="tragsEng Header"> -->
+                                        <!-- <img class="trags" style="opacity: .05;" src="{{asset("assets/images/logos/company_3_sign.png")}}" alt="trags Header"> -->
                                     </div>
                                 </div>
                             </div>
@@ -415,9 +415,9 @@
                     </div>
                     <div class="image footer">
                         <div class="img-fluid">
-                            <img src="../../../assets/images/logos/footer.jpg" alt="Medgulf Footer">
-                            <!-- <img src="../../../assets/images/logos/tragsEngFooter.jpg" alt="tragsEng Footer"> -->
-                            <!-- <img src="../../../assets/images/logos/tragsfooter.jpg" alt="trags Footer"> -->
+                            <img src="{{asset("assets/images/logos/footer.jpg")}}" alt="Medgulf Footer">
+                            <!-- <img src="{{asset("assets/images/logos/tragsEngFooter.jpg")}}" alt="tragsEng Footer"> -->
+                            <!-- <img src="{{asset("assets/images/logos/tragsfooter.jpg")}}" alt="trags Footer"> -->
                         </div>
                     </div>
                 </section>
@@ -437,7 +437,7 @@
                 </section>
             </article>
         </main>
-        
+
     </div>
     <div class="overlayBoxForEmployee overlayBoxCertificate "></div>
     <div class="boxReturnDan boxReturnDanFirst boxReturnDanCertificate">
@@ -526,7 +526,7 @@
                 Are you sure you have reviewed this certificate to proceed to final approval?
             </p>
         </div>
-        
+
         <div class="reasonSpecify">
             <div class="titleSpecify">
                 <p>
@@ -542,19 +542,19 @@
         </div>
     </div>
     <!-- bootstrap -->
-    <script src="../../../assets/js/bootstrap.bundle.min.js"></script>
-    <script src="../../../assets/js/all.min.js"></script>
+    <script src="{{asset("assets/js/bootstrap.bundle.min.js")}}"></script>
+    <script src="{{asset("assets/js/all.min.js")}}"></script>
 
     <!-- FullCalendar JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/6.1.15/index.global.js" integrity="sha512-3I+0zIxy2IkeeCvvhXUEu+AFT3zAGuHslHLDmM8JBv6FT7IW6WjhGpUZ55DyGXArYHD0NshixtmNUWJzt0K32w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
+
     <!-- custom javaScript -->
-    <script src="../../../assets/js/Personal_Certificate.js"></script>
-    <script src="../../../assets/js/Certificate_Returned.js"></script>
-    <script src="../../../assets/js/dashboard.js"></script>
-    <script src="../../../assets/js/Certitcate_dashboard.js"></script>
+    <script src="{{asset("assets/js/Personal_Certificate.js")}}"></script>
+    <script src="{{asset("assets/js/Certificate_Returned.js")}}"></script>
+    <script src="{{asset("assets/js/dashboard.js")}}"></script>
+    <script src="{{asset("assets/js/Certitcate_dashboard.js")}}"></script>
     <script>
-        
+
         const btnReturn = document.querySelector("#btnReturn");
         const btnReview = document.querySelector("#btnReview");
         const overlayBoxCertificate = document.querySelector(".overlayBoxCertificate");
@@ -592,3 +592,4 @@
     </script>
 </body>
 </html>
+

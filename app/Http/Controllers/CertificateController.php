@@ -33,13 +33,12 @@ class CertificateController extends Controller
 
     public function storeEnglishcertificate(Request $request)
     {
-//        CertificatesType::create([
-//            'type'=>'EnglishCertificate'
-//        ]);
+        CertificatesType::create([
+            'type'=>'EnglishCertificate'
+        ]);
         $id= Auth::guard('employee')->user()->id??null;
         $currentdate = now();
 //$employee=Employee::find($id);
-
         try {
             Certificates::create([
                 'ref' => $request->input('item_id'),
@@ -70,9 +69,9 @@ class CertificateController extends Controller
     {
         $id= Auth::guard('employee')->user()->id??null;
 
-//        CertificatesType::create([
-//            'type'=>'ArabicCertificate'
-//        ]);
+        CertificatesType::create([
+            'type'=>'ArabicCertificate'
+        ]);
         $currentdate = now();
         try {
 

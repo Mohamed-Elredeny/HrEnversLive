@@ -33,6 +33,11 @@
         </div>
     </div>
 @endif
+@if (session('error'))
+    <div class="alert alert-danger">
+        {{ session('error') }}
+    </div>
+@endif
 <header>
     <div class="container">
         <div class="img-fluid">
@@ -119,6 +124,9 @@
                         </p>
                         <div class="card-list">
                             <div class="card" onclick="medgulfSignIn()">
+{{--                            <label for="radio-card-5"  >--}}
+{{--                                <input type="radio" style="display: none"--}}
+{{--                                       name="company_name" value="medgulf" id="radio-card-5"/></label>--}}
                                 <div class="image">
                                     <img src="{{asset("assets/images/logos/MEDGULF-logo.png")}}" alt="logo medgulf">
                                 </div>
@@ -129,6 +137,9 @@
                                 </div>
                             </div>
                             <div class="card" onclick="TragsSignIn()">
+{{--                                <label for="radio-card-6"  >--}}
+{{--                                    <input type="radio" style="display: none"--}}
+{{--                                           name="company_name" value="trags" id="radio-card-6"/></label>--}}
                                 <div class="image">
                                     <img src="{{asset("assets/images/logos/Trags.png")}}" alt="logo Trags">
                                 </div>
@@ -138,7 +149,9 @@
                                     </p>
                                 </div>
                             </div>
+
                             <div class="card" onclick="EngineeringSignIn()">
+
                                 <div class="image">
                                     <img src="{{asset("assets/images/logos/tragsentity2.png")}}"
                                          alt="logo Trags Engineering">
@@ -240,7 +253,6 @@
                             <form class="formlogo2 formlogo" method="Post" action="{{route('signinpageTrags')}}"
                                   id="signintrags">
                                 @csrf
-                                {{--                            <form class="formlogo2 formlogo">--}}
                                 <input type="email" placeholder="Work Email" class="form-control" name="emailTrags"
                                        id="emailTrags">
                                 <div class="password">
@@ -442,7 +454,7 @@
                                         Procced
                                     </div>
                                     <div class="img-fluid">
-                                        <img src="../../assets/images/sign-in/Double_Up@3x.png" alt="arrow">
+                                        <img src="{{asset('assets/images/sign-in/Double_Up@3x.png')}}" alt="arrow">
                                     </div>
                                 </button>
                             </div>
@@ -473,7 +485,7 @@
                                         </label>
                                         <label for="radio-card-2" class="radio-card col-md-4" onclick="logvisable2()">
                                             <input style="display: none" type="radio"
-                                                   @if($entity==2) checked @endif
+{{--                                                   @if($entity==2) checked @endif--}}
                                                    name="company_id" value="medgulf" id="radio-card-2"/>
                                             <div class="col-4 d-flex justify-content-center">
                                                 <div class="image active logoscom">
@@ -486,7 +498,7 @@
                                         </label>
                                         <label for="radio-card-3" class="radio-card col-md-4" onclick="logvisable3()">
                                             <input type="radio" style="display: none"
-                                                   @if($entity==3) checked @endif
+{{--                                                   @if($entity==3) checked @endif--}}
                                                    name="company_id" value="trags" id="radio-card-3"/>
                                             <div class="col-4 d-flex justify-content-center">
                                                 <div class="image active logoscom">
@@ -608,11 +620,11 @@
 
     function logvisable2() {
         document.getElementById('logform').style.display = 'block';
-        <?php
-//            $entity =2;
-        ?>
+{{--        <?php--}}
+{{--//            $entity =2;--}}
+{{--        ?>--}}
         document.getElementById('join').innerHTML = `<p class="text-left">
-                                                    You have <img class="img-fluid d-inline" style="width: 70px" src="{{asset("assets/images/hr360.png")}}"> Platform Account? <a class="" href=""> Log In now</a>
+{{--                                                    You have <img class="img-fluid d-inline" style="width: 70px" src="{{asset("assets/images/hr360.png")}}"> Platform Account? <a class="" href=""> Log In now</a>--}}
                                                 </p>
                                                 <p class="text-left">
                                                     <a class="" href="}">Forgot Password</a>
@@ -621,9 +633,7 @@
 
     function logvisable3() {
         document.getElementById('logform').style.display = 'block';
-        <?php
-//            $entity =3;
-        ?>
+
         document.getElementById('join').innerHTML = `<p class="text-left">
                                                     You have <img class="img-fluid d-inline" style="width: 70px" src="{{asset("assets/images/hr360.png")}}"> Platform Account? <a class="" href=""> Log In now</a>
                                                 </p>

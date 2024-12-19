@@ -1,37 +1,28 @@
 <?php
 
+use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
 Route::get('/', function () {
     $entity = 0;
-    return view('site.auth.signin',compact('entity'));
+    return view('Site.auth.signin',compact('entity'));
 });
-Route::middleware('auth:employee')->group(function () {
+//Route::middleware('auth:employee')->group(function () {
 Route::get('/dashboard', function () {
     return view('Dashboard.Dashboard');
-})->name('dashboard');});
+})->name('dashboard');
+//});
 
 Route::get('SignUp', function () {
-    return view('site.auth.Register');
+    return view('Site.auth.signin');
 })->name('signup');
 
 
-Route::post('/signup', [RegisterController::class, 'store'])->name('signuppage');
+Route::post('/signup', [AuthController::class, 'store'])->name('signuppage');
 
-Route::post('/SignInMedgulf', [LoginController::class, 'loginMedgulf'])->name('signinpageMedgulf');
-Route::post('/SignInTrags', [LoginController::class, 'loginTrags'])->name('signinpageTrags');
-Route::post('/SignInEnjineering', [LoginController::class, 'loginEnjineering'])->name('signinpageEnjineering');
+Route::post('/SignInMedgulf', [AuthController::class, 'loginMedgulf'])->name('signinpageMedgulf');
+Route::post('/SignInTrags', [AuthController::class, 'loginTrags'])->name('signinpageTrags');
+Route::post('/SignInEnjineering', [AuthController::class, 'loginEnjineering'])->name('signinpageEnjineering');
 

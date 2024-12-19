@@ -1,0 +1,37 @@
+name: Auto Deploy Menna Backend Work
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Deploy to Server
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Checkout the repository
+    - name: Checkout Code
+      uses: actions/checkout@v4
+
+    # Step 2: Set up SSH
+    - name: Set up SSH
+      uses: webfactory/ssh-agent@v0.8.0
+      with:
+        ssh-private-key: |
+          ${{ secrets.SSH_PRIVATE_KEY }}
+
+    # Step 3: Deploy code via SSH
+    - name: Deploy to Server
+      run: |
+        ssh -p 65002 -o StrictHostKeyChecking=no u544504040@195.35.39.222 << 'EOF'
+          cd public_html/dev/backend/menna/HrEnversLive/
+          git pull origin main
+          composer2 update
+          php artisan migrate --force
+          php artisan config:cache
+          php artisan route:cache
+          php artisan view:cache
+          php artisan optimize:clear
+        EOF
