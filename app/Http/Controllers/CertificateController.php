@@ -59,7 +59,8 @@ class CertificateController extends Controller
             ]);
         } catch (\Exception $e) {
             Log::error('Failed to insert certificate: ' . $e->getMessage());
-            return response()->json(['message' => 'Failed to insert certificate.'], 500);
+//            return response()->json(['message' => 'Failed to insert certificate.'], 500);
+            return redirect()->back()->with('errorcertificate', "Please insert your data");
         }
 
         return redirect()->route('employee.index');
@@ -69,9 +70,9 @@ class CertificateController extends Controller
     {
         $id= Auth::guard('employee')->user()->id??null;
 
-        CertificatesType::create([
-            'type'=>'ArabicCertificate'
-        ]);
+//        CertificatesType::create([
+//            'type'=>'ArabicCertificate'
+//        ]);
         $currentdate = now();
         try {
 
@@ -93,8 +94,8 @@ class CertificateController extends Controller
                 'returnReasons' => null,
             ]);
         } catch (\Exception $e) {
-            Log::error('Failed to insert certificate: ' . $e->getMessage());
-            return response()->json(['message' => 'Failed to insert certificate.'], 500);
+//            Log::error('Failed to insert certificate: ' . $e->getMessage());
+            return redirect()->back()->with('errorcertificate', "Please insert your data");
         }
 
         return redirect()->route('employee.index');
