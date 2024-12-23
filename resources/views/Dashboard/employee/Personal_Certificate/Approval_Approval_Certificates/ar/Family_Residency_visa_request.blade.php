@@ -113,7 +113,9 @@
                         <div class="col-6">
                             <div class="imagee" >
                                 <div class="img-fluid">
-                                    <img src="{{asset("assets/images/logos/1717495704_Copy of Untitled Design.png")}}"  alt="Medgulf Header">
+                                    <img
+                                        src="{{asset('assets/images/logos')}}/{{$emp->signature??""}}"
+                                        alt="Medgulf Header">
                                 </div>
                             </div>
                         </div>

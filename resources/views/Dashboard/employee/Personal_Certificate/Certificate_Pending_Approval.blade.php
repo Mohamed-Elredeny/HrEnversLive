@@ -433,7 +433,7 @@
         </div>
     </div>
     </form>
-    <form method="post" action="{{route('employee.ApprovalCertificateConfirm',$certificate->id)}}">
+    <form method="post"  class="form2" action="{{route('employee.ApprovalCertificateConfirm',$certificate->id)}}">
         @csrf
     <div class="boxReturnDan boxReturnDanFirst boxConfirmDanCertificate" style="height: fit-content !important;">
         <div class="titleBox titleCertificate">
@@ -456,7 +456,7 @@
             <textarea name="areaReasonSpecify" id="areaReasonSpecify" placeholder="Remark"></textarea>
         </div>
         <div class="buttonReason buttonCertificate">
-            <button  class="btn ReasonBtn Return active BtnFirstReturn BtnFirstCertificate" type="submit">
+            <button  class="btn ReasonBtn Return active BtnFirstReturn submitCertificate BtnFirstCertificate" type="submit">
                 Yes
             </button>
         </div>
@@ -473,8 +473,37 @@
     <script src="{{asset("assets/js/Personal_Certificate.js")}}"></script>
     <script src="{{asset("assets/js/Certificate_Returned.js")}}"></script>
     <script src="{{asset("assets/js/dashboard.js")}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <script>
 
+        const buttons = document.querySelector(".submitCertificate");
+        buttons.addEventListener("click", () =>
+        {
+
+
+            // popupOverlay.classList.remove('hidden');
+            event.preventDefault();
+            Swal.fire({
+                title: 'Are you sure?',
+                text: 'You are about to show the clearance section.',
+                icon: 'info',
+                showCancelButton: true,
+                confirmButtonText: 'Yes, show it!',
+                cancelButtonText: 'Cancel'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire({
+                        title: 'Visible!',
+                        text: 'The clearance section is now visible.',
+                        icon: 'success',
+                        confirmButtonText: 'OK'
+                    }).then(()=>{
+                        document.querySelector(".form2").submit();
+                    });
+
+                }
+            });});
         const btnReturn = document.querySelector("#btnReturn");
         const btnReview = document.querySelector("#btnReview");
         const overlayBoxCertificate = document.querySelector(".overlayBoxCertificate");

@@ -372,7 +372,6 @@
                     </button>
                 </section>
              </form>
-
             </article>
         </main>
 
@@ -386,6 +385,8 @@
         </div>
     </div>
     <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <script src="{{asset("assets/js/bootstrap.bundle.min.js")}}"></script>
     <script src="{{asset("assets/js/all.min.js")}}"></script>
 
@@ -403,8 +404,31 @@
         console.log(buttons);
         console.log(popupOverlay);
         console.log(closeButton);
-        buttons.addEventListener("click", () => {
-            popupOverlay.classList.remove('hidden');
+        buttons.addEventListener(
+            "click", () =>
+            {
+            // popupOverlay.classList.remove('hidden');
+            event.preventDefault();
+            Swal.fire({
+                title: 'Are you sure?',
+                text: 'You are about to show the clearance section.',
+                icon: 'info',
+                showCancelButton: true,
+                confirmButtonText: 'Yes, show it!',
+                cancelButtonText: 'Cancel'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire({
+                        title: 'Visible!',
+                        text: 'The clearance section is now visible.',
+                        icon: 'success',
+                        confirmButtonText: 'OK'
+                    }).then(()=>{
+                        document.querySelector("form").submit();
+                    });
+
+                }
+            });
         });
 
         closeButton.addEventListener('click', () => {
