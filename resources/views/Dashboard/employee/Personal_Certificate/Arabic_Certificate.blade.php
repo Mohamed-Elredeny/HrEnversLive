@@ -378,6 +378,7 @@
     </div>
     <!-- bootstrap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/6.1.15/index.global.js" integrity="sha512-3I+0zIxy2IkeeCvvhXUEu+AFT3zAGuHslHLDmM8JBv6FT7IW6WjhGpUZ55DyGXArYHD0NshixtmNUWJzt0K32w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/6.1.15/index.global.js" integrity="sha512-3I+0zIxy2IkeeCvvhXUEu+AFT3zAGuHslHLDmM8JBv6FT7IW6WjhGpUZ55DyGXArYHD0NshixtmNUWJzt0K32w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script src="{{asset("assets/js/bootstrap.bundle.min.js")}}"></script>
     <script src="{{asset("assets/js/all.min.js")}}"></script>
@@ -385,6 +386,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.15.2/sweetalert2.min.js" integrity="sha512-gtx8/kJpAsm7drqGdR5bl6CQtb+zzNY2wfWdzAe7wt0vCgFph7fX2ubCyxZn9CEGE/I9xasdwkaVPaKQGlq1Lw=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- FullCalendar JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 
     <!-- custom javaScript -->
     <script src="{{asset("assets/js/Personal_Certificate_Arabic.js")}}"></script>
@@ -397,9 +400,33 @@
         console.log(buttons);
         console.log(popupOverlay);
         console.log(closeButton);
-        buttons.addEventListener("click", () => {
-            popupOverlay.classList.remove('hidden');
-        });
+        buttons.addEventListener("click", () =>
+        {
+
+
+                // popupOverlay.classList.remove('hidden');
+                event.preventDefault();
+                Swal.fire({
+                    title: 'Are you sure?',
+                    text: 'You are about to show the clearance section.',
+                    icon: 'info',
+                    showCancelButton: true,
+                    confirmButtonText: 'Yes, show it!',
+                    cancelButtonText: 'Cancel'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        Swal.fire({
+                            title: 'Visible!',
+                            text: 'The clearance section is now visible.',
+                            icon: 'success',
+                            confirmButtonText: 'OK'
+                        }).then(()=>{
+                            document.querySelector("form").submit();
+                        });
+
+                    }
+                });});
+
 
         closeButton.addEventListener('click', () => {
             popupOverlay.classList.add('hidden');

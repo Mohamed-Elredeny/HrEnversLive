@@ -3,8 +3,9 @@
     <div class="col-12 ar_text" style=" padding: 20px">
         <div class="text-right" dir="rtl">
             <h5>
-            التاريخ: {{$certificate->date_submit}}
-            <br>
+                التاريخ:
+                <span style="display: inline;">{{$certificate->date_submit}}</span>
+                <br>
             Ref: HRA-MG
             </h5>
         </div>

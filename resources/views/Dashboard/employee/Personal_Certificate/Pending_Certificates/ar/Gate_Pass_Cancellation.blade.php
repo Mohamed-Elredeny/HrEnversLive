@@ -3,7 +3,8 @@
     <div class="col-12 ar_text" style=" padding: 20px">
         <div class="text-right" dir="rtl">
             <h5>
-            التاريخ:     {{$certificate->date_submit}}
+                التاريخ:
+                <span style="display: inline;">{{$certificate->date_submit}}</span>
             <br>
             Ref No  {{$employee->empCode}}/CBQ/2024
                 </h5>

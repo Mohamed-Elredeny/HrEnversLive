@@ -4,7 +4,11 @@
 
         <div class="text-right" dir="rtl">
             <h5>
-            التاريخ: {{$certificate->date_submit}}
+
+                    التاريخ:
+                    <span style="display: inline;">{{$certificate->date_submit}}</span>
+
+
             <br>
                 Ref: HRA-MG
             </h5>
