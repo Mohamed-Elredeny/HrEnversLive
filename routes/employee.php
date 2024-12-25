@@ -341,6 +341,7 @@ $employee=\App\Models\Employee::find($certificate->Emp_id ?? "");
         return view('Dashboard.employee.Personal_Certificate.employee');
     })->name('employee');
 
+    Route::resource('leaves', "LeavesController");
 });
 //Auth::routes();
 
