@@ -443,7 +443,7 @@
         </div>
         <div class="suptitleBox suptitleCertificate">
             <p>
-                Are you sure you have reviewed this certificate for confirmation
+                Are you sure you have reviewed this certificate before confirming its issuance?
             </p>
         </div>
 
@@ -485,25 +485,29 @@
             // popupOverlay.classList.remove('hidden');
             event.preventDefault();
             Swal.fire({
-                title: 'Are you sure?',
-                text: 'You are about to show the clearance section.',
-                icon: 'info',
+                title: 'Approved!',
+                text: 'The certificate will be issued to the employee.',
+                icon: 'success',
                 showCancelButton: true,
-                confirmButtonText: 'Yes, show it!',
-                cancelButtonText: 'Cancel'
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    Swal.fire({
-                        title: 'Visible!',
-                        text: 'The clearance section is now visible.',
-                        icon: 'success',
-                        confirmButtonText: 'OK'
-                    }).then(()=>{
-                        document.querySelector(".form2").submit();
-                    });
-
-                }
-            });});
+                confirmButtonText: 'OK!',
+                // cancelButtonText: 'Cancel'
+            }).then(()=>{
+                            document.querySelector(".form2").submit();
+                        });
+            //     .then((result) => {
+            //     if (result.isConfirmed) {
+            //         Swal.fire({
+            //             title: 'Visible!',
+            //             text: 'The clearance section is now visible.',
+            //             icon: 'success',
+            //             confirmButtonText: 'OK'
+            //         }).then(()=>{
+            //             document.querySelector(".form2").submit();
+            //         });
+            //
+            //     }
+            // });
+        });
         const btnReturn = document.querySelector("#btnReturn");
         const btnReview = document.querySelector("#btnReview");
         const overlayBoxCertificate = document.querySelector(".overlayBoxCertificate");

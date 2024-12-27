@@ -350,7 +350,9 @@
                 ];
                 $selectedReasons = json_decode($certificate->returnReasons, true); // Decode selected reasons
             @endphp
-
+            @php
+                $selectedReasons = $selectedReasons ?? [];
+            @endphp
             @foreach ($allReasons as $reasonKey => $reasonLabel)
                 <div class="form-group">
                     <div style="display: flex ;align-items: center; gap: 5px;">

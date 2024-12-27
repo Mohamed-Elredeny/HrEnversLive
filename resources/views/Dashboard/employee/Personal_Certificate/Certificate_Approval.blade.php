@@ -197,7 +197,6 @@
     </button>
     <div class="overlayOpenSlider" id="overlayOpenSlider" onclick="closeSidebar()"></div>
 
-
     <div id="mainContent" class="content content_responsev">
         <header>
             @foreach($employee as $emp)
@@ -275,8 +274,6 @@
                 </div>
             </div>
         </header>
-
-
         <main>
             <article class="container">
                 <section class="head ReturnReasons">
@@ -309,8 +306,9 @@
                             @endforeach
                         </div>
                     </div>
+{{--                    <div class="container mt-4">--}}
                    @yield('certificate_content_approval')
-
+{{--                    </div>--}}
                     <div class="image footer">
                         <div class="img-fluid">
                             @foreach($employee as $emp)

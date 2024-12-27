@@ -1,16 +1,18 @@
 @extends('Dashboard.employee.Personal_Certificate.Certificate_Pending_Approval')
 @section('certificate_content_pending_approval')
-    <div class="col-12 ar_text" style=" padding: 20px">
+
+        <div class="content_certificate">
+            <div class="header_certificate">
         <div class="text-right" dir="rtl">
             <h5>
                 التاريخ:
-                <span style="display: inline;">{{$certificate->date_submit}}</span>
+                {{$certificate->date_submit}}
                 <br>
                 Ref No  {{$employee->empCode}}/CBQ/2024
             </h5>
         </div>
-        <br><br>
-
+            </div><br>
+        <div class="body_certificate">
         <div class="text-right" dir="rtl">
             <h5>
                 السـيد/ مديرادارة شرطة
@@ -75,10 +77,10 @@
             </b>
             <br><br>
             <div  style="font-size: x-small;">
-                <b style="padding-left: 20px"> 33393081</b>
+                 33393081
             </div>
         </h5>
 
+        </div></div>
 
-    </div>
 @endsection

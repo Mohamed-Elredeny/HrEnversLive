@@ -2,7 +2,9 @@
 @section('certificate_content_approval')
     @foreach($employee as $emp)
         <div class="col-12 ar_text" style=" padding: 20px">
+            <div class="content_certificate">
 
+                <div class="header_certificate">
             <div class="text-right" dir="rtl">
                 <h5>
                     التاريخ: {{$certificate->date_submit}}
@@ -10,7 +12,9 @@
                     Ref: HRA-MG
                 </h5>
             </div>
-            <br><br>
+                </div>
+            <br>
+                <div class="body_certificate">
             <div class="text-right " dir="rtl">
                 <h5>
                     من يهمه الامر
@@ -60,7 +64,7 @@
                     وتفضلوا بقبول فائق الإحترام والتقدير.</h4>
             </div>
             <br>
-            <h5>
+
 
                 <div class="col-3" style="display: inline">
 
@@ -90,7 +94,8 @@
 
 
 
-            </h5>
+
+                </div>
         </div>
     @endforeach
 @endsection

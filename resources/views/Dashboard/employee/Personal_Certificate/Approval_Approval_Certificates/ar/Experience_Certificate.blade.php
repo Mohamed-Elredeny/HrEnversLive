@@ -19,6 +19,9 @@
 
     </style>
     @foreach($employee as $emp)
+        <div class="content_certificate">
+
+            <div class="header_certificate">
         <div class="col-12 ar_text" style=" padding: 20px">
 
             <div class="text-right" dir="rtl">
@@ -28,6 +31,8 @@
                     Ref: HRA-MG
                 </h5>
             </div>
+        </div>
+                <div class="body_certificate">
             <br><br>
             <div class="text-right " dir="rtl">
                 <h5>
@@ -137,6 +142,7 @@
 
 
             </h5>
+                </div></div>
         </div>
     @endforeach
 @endsection

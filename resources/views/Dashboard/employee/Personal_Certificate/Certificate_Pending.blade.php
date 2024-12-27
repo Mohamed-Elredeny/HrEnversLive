@@ -301,13 +301,13 @@
                 <section class="statistics_Content ">
                     <div class="info Certificates">
                         <div class="image">
-                            <div class="img-fluid">
+                            <div class="img-fluid" style="">
                                 <img src="{{asset("assets/images/sign-in/1718183412_1694698427_Mohamed1.jpg")}}" alt="Personal photo">
                             </div>
                         </div>
                         <div class="content_Info">
                             <div class="title">
-                                <p>Welcome, <span>Ahmed Muhammed Elsayed</span> to your 360HR paltform account</p>
+                                <p>Employee Name:, <span>{{$employee->empName}}</span> </p>
                             </div>
                             <div class="infolist">
                                 <div class="row">
@@ -351,7 +351,7 @@
                                             2023
                                         </p>
                                     </div>
-                                    <div class="col-4 col-md-3">
+                                    <div class="col-4 ">
                                         <h2>
                                             Project Number
                                         </h2>
@@ -359,7 +359,7 @@
                                             1103
                                         </p>
                                     </div>
-                                    <div class="col-4 col-md-3">
+                                    <div class="col-4 ">
                                         <h2>
                                             Project Number
                                         </h2>
@@ -367,7 +367,7 @@
                                             1103
                                         </p>
                                     </div>
-                                    <div class="col-4 col-md-3">
+                                    <div class="col-4 ">
                                         <h2>
                                             Date Of Joining
                                         </h2>
@@ -538,8 +538,7 @@
         </div>
         <div class="suptitleBox suptitleCertificate">
             <p>
-                Are you sure you have reviewed this certificate before confirming its issuance?
-            </p>
+                Are you sure you have reviewed this certificate to proceed for final approval?            </p>
         </div>
 
         <div class="reasonSpecify">
@@ -579,25 +578,18 @@
             // popupOverlay.classList.remove('hidden');
             event.preventDefault();
             Swal.fire({
-                title: 'Are you sure?',
-                text: 'You are about to show the clearance section.',
+                title: 'Reviewed!',
+                text: 'The certificate has been sent for final approval.',
                 icon: 'info',
                 showCancelButton: true,
                 confirmButtonText: 'Yes, show it!',
                 cancelButtonText: 'Cancel'
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    Swal.fire({
-                        title: 'Visible!',
-                        text: 'The clearance section is now visible.',
-                        icon: 'success',
-                        confirmButtonText: 'OK'
-                    }).then(()=>{
-                        document.querySelector(".form2").submit();
-                    });
+            })   .then(()=>{
+                document.querySelector(".form2").submit();
+            });
 
-                }
-            });});
+
+            });
         const btnReturn = document.querySelector("#btnReturn");
         const btnReview = document.querySelector("#btnReview");
         const overlayBoxCertificate = document.querySelector(".overlayBoxCertificate");

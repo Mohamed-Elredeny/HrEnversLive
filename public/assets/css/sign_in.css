@@ -40,7 +40,7 @@ header .img-fluid img{
 
 /* hero section */
 .hero{
-    height: calc(100vh - 292px);
+    height: calc(100vh - 172px);
 }
 .hero .top{
     display: flex;
@@ -48,7 +48,7 @@ header .img-fluid img{
     width: 100%;
 }
 .hero .top .content{
-    margin-block-start: 70px;
+    margin-block-start: 54px;
     width: 40%;
 }
 .hero .top .content .img-fluid img{
@@ -57,11 +57,21 @@ header .img-fluid img{
     width: 450px;
 }
 .hero .top .content .title{
-    font-family: "Poppins";
+    font-family: "Poppins", serif;
     color: var(--main-color);
     font-size: 35px;
     font-weight: 700;
     line-height: 37px;
+}
+.hero .top .content .title2{
+
+    transform: translate(-50% , -50%);
+    font-family: "Poppins", sans-serif !important;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 35px;
+    /*color: var(--main-color);*/
+
 }
 .hero .top .content .subtitle{
     font-family: "Poppins";
@@ -123,21 +133,22 @@ header .img-fluid img{
     background-color: #54DAFF24;
 }
 .hero .down{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 187px;
-    background-color: var(--main-light-color);
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 35px;
-    text-align: center;
+    /*position: absolute;*/
+    /*bottom: 0;*/
+    /*left: 0;*/
+    /*width: 100%;*/
+    /*height: 187px;*/
+    /*background-color: var(--main-light-color);*/
+    font-size: 25px;
+    font-weight: 600;
+    /*line-height: 35px;*/
+    /*text-align: center;*/
 }
 .hero .down p{
     position: absolute;
-    top: 50%;
-    left: 50%;
+    /*top: 50%;*/
+    left: 22%;
+   top: 40%;
     transform: translate(-50% , -50%);
     font-family: "Poppins", sans-serif !important;
 }
@@ -292,9 +303,11 @@ header .img-fluid img{
 }
 .popup .signin .content .card-list .card .image{
     width: 30%;
+    height: auto;
 }
 .popup .signin .content .card-list .card .image img{
-    width: 65px;
+    width: 50px;
+    height: 40px;
 }
 .popup .signin .content .card-list .card .content{
     width: 70%;
@@ -475,7 +488,7 @@ header .img-fluid img{
     transition: all .3s ease-in-out;
 }
 .popup .signin .signLogo .content .forget p{
-    position: relative;
+    /*position: relative;*/
     font-size: 14px;
     font-weight: 500;
     line-height: 13px;
@@ -1115,7 +1128,7 @@ header .img-fluid img{
     }
     .popup {
         width: 100%;
-        height: 75%;
+        height: 95%;
     }
 }
 @media (max-width: 991px) and (min-width: 768px){
@@ -1361,14 +1374,15 @@ header .img-fluid img{
         bottom: 0%;
     }
     .popup {
-        width: 100%;
-        height: 75%;
+        width: 500%;
+
     }
     .popup .left {
         display: none;
     }
     .popup .signin {
         width: 100%;
+
     }
     .popup .signin .content .card-list {
         width: 90%;

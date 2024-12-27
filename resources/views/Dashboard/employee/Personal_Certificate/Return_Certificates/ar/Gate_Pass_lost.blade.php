@@ -2,7 +2,8 @@
 @section('Certificate_Content_Return')
     @foreach($employee as $emp)
         <div class="col-12 ar_text" style=" padding: 20px">
-
+            <div class="content_certificate">
+                <div class="header_certificate">
             <div class="text-right" dir="rtl">
                 <h5>
                     التاريخ: {{$certificate->date_submit}}
@@ -11,7 +12,8 @@
                 </h5>
             </div>
 
-            <br><br>
+                </div><br>
+                <div class="body_certificate">
             <div class="text-right" dir="rtl">
                 <h5>
                     السـيد/ مديرادارة شرطة مسيعيد
@@ -94,7 +96,7 @@
                 </h5>
 
 
-            </div>
+            </div></div></div>
         </div>
     @endforeach
 @endsection

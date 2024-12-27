@@ -1,6 +1,8 @@
 @extends('Dashboard.employee.Personal_Certificate.Certificate_Pending')
 @section('certificate_content')
-    <div class="col-12 ar_text" style=" padding: 20px">
+
+        <div class="content_certificate">
+            <div class="header_certificate">
         <div class="text-right" dir="rtl">
             <h5>
                   التاريخ:
@@ -9,7 +11,7 @@
                 Ref: HRA-MG
             </h5>
         </div>
-        <br><br>
+                <br></div>
 
         <div class="text-right" dir="rtl">
             <h5>
@@ -61,7 +63,7 @@
             وتفضلوا بقبول فائق الإحترام والتقدير.
             </h5>
         </div>
-
+            <div class="body_certificate">
             <div class="row">
                 <div class="col-6">
                     <h5>
@@ -93,5 +95,5 @@
     <b style="padding-left: 50px"> 33393081</b>
 
 </h5>
-    </div>
+            </div></div>
 @endsection

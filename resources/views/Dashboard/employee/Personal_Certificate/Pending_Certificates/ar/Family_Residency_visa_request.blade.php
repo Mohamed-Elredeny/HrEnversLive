@@ -1,6 +1,8 @@
 @extends('Dashboard.employee.Personal_Certificate.Certificate_Pending')
 @section('certificate_content')
-    <div class="col-12 ar_text" style=" padding: 20px">
+
+        <div class="content_certificate">
+            <div class="header_certificate">
         <div class="text-right" dir="rtl">
             <h5>
                 التاريخ:
@@ -9,7 +11,8 @@
             Ref: HRA-MG
             </h5>
         </div>
-        <br><br>
+                <br></div>
+            <div class="body_certificate">
         <div class="text-right" dir="rtl">
             <h5>
             السيد مديرادارة الجوازات وشؤون
@@ -89,6 +92,6 @@
         </div>
 
 </h5>
-    </div>
+            </div></div>
 @endsection
 

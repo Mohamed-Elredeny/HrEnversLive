@@ -12,14 +12,9 @@ Route::group([
     'as' => 'employee.',
     'namespace' => 'Employee'
 ], function () {
+    Route::resource('certificates',\App\Http\Controllers\CertificateController::class);
 
-    Route::get('index', function () {
-        $idd = Auth::guard('employee')->user()->id ;
-
-//        $userpermission = DB::table('user_permissions')->where('employee_id', '=', $idd)->get()??null;
-
-        return view('Dashboard.employee.Personal_Certificate.index', );
-    })->name('index');
+    Route::get('index',[CertificateController::class,'index'])->name('index');
 
 
     Route::get('EnglishCertificate', function () {
@@ -58,13 +53,10 @@ Route::group([
         return view('Dashboard.employee.Personal_Certificate.Approval_Certificates', ['employee' => $employee, 'certificates' => $certificates, 'certificatespending' => $certificatespending, 'certificatesreturn' => $certificatesreturn, 'certificatesapproval' => $certificatesapproval]);
     })->name('ApprovalCertificates');
 
-
-
     Route::get('CertificateApproval/{id}', function ($id) {
-             $idd = Auth::guard('employee')->user()->id??null;
+        $idd = Auth::guard('employee')->user()->id??null;
         $certificate = Certificates::find($id);
         $employee = DB::table('employees')->where('id', '=', $certificate->Emp_id ?? "")->get();
-
         $certificatespending = DB::table('certificate')->where('Emp_id', '=', $id)->where('review_status', '=', null)->get();
         $certificatesreturn = DB::table('certificate')->where('Emp_id', '=', $id)->where('review_status', '=', 'Return To Sender')->get();
         $certificatesapproval = DB::table('certificate')->where('Emp_id', '=', $id)->where('review_status', '=', 'ConfirmCertificate')->get();
@@ -104,22 +96,71 @@ Route::group([
 
         }
         elseif ($certificate->ref == "FAMILY RESIDENCY VISA REQUEST") {
-
             return view('Dashboard.employee.Personal_Certificate.Approval_Certificates.ar.Family_Residency_visa_request', [ 'certificate' => $certificate, 'employee' => $employee,'currentuserid'=>$idd]);
-
         }
         elseif ($certificate->ref == "QID LOST") {
-
             return view('Dashboard.employee.Personal_Certificate.Approval_Certificates.ar.QID_Lost', [ 'certificate' => $certificate, 'employee' => $employee,'currentuserid'=>$idd]);
         }
 
         return view('Dashboard.employee.Personal_Certificate.Certificate_Approval', ['certificate' => $certificate, 'certificatespending' => $certificatespending, 'employee' => $employee, 'certificatesreturn' => $certificatesreturn, 'certificatesapproval' => $certificatesapproval]);
     })->name('CertificateApproval');
+
+
+//    Route::get('CertificateApproval/{id}', function ($id) {
+//               $idd = Auth::guard('employee')->user()->id??null;
+//               $certificate = Certificates::find($id);
+//                $employee = DB::table('employees')->where('id', '=', $certificate->Emp_id ?? "")->get();
+//                $certificatespending = DB::table('certificate')->where('Emp_id', '=', $id)->where('review_status', '=', null)->get();
+//                $certificatesreturn = DB::table('certificate')->where('Emp_id', '=', $id)->where('review_status', '=', 'Return To Sender')->get();
+//             $certificatesapproval = DB::table('certificate')->where('Emp_id', '=', $id)->where('review_status', '=', 'ConfirmCertificate')->get();
+//
+//        if ($certificate->ref == "PERSONA LOAN" || $certificate->ref == "CREDIT CARD" || $certificate->ref == "VEHICLE LOAN")
+//        {
+//            return view('Dashboard.employee.Personal_Certificate.Approval_Certificates.en.loan', [ 'certificate' => $certificate, 'employee' => $employee,'currentuserid'=>$idd]);
+//
+//        }
+//        elseif ($certificate->ref == "EMPLOYMENT CERTIFICATE TO EMBASSY") {
+//
+//            return view('Dashboard.employee.Personal_Certificate.Approval_Certificates.en.embassy',[ 'certificate' => $certificate, 'employee' => $employee,'currentuserid'=>$idd]);
+//        }
+//        elseif ($certificate->ref == "CERTIFICATE WITHOUT SALARY" || $certificate->ref == "SALARY CERTIFICATE") {
+//
+//            return view('Dashboard.employee.Personal_Certificate.Approval_Certificates.en.salary',[ 'certificate' => $certificate, 'employee' => $employee,'currentuserid'=>$idd]);
+//
+//        }
+//        elseif ($certificate->ref == "GATE PASS LOST") {
+//
+//            return view('Dashboard.employee.Personal_Certificate.Approval_Certificates.ar.Gate_Pass_lost', [ 'certificate' => $certificate, 'employee' => $employee,'currentuserid'=>$idd]);
+//
+//        }
+//        elseif ($certificate->ref == "GATE PASS CANCELLATION") {
+//
+//            return view('Dashboard.employee.Personal_Certificate.Approval_Certificates.ar.Gate_Pass_Cancellation', [ 'certificate' => $certificate, 'employee' => $employee,'currentuserid'=>$idd]);
+//
+//        }
+//        elseif ($certificate->ref == "EXPERIENCE CERTIFICATE") {
+//
+//            return view('Dashboard.employee.Personal_Certificate.Approval_Certificates.ar.Experience_Certificate', [ 'certificate' => $certificate, 'employee' => $employee,'currentuserid'=>$idd]);
+//
+//        }
+//        elseif ($certificate->ref == "FAMILY VISIT FISA REQUEST") {
+//
+//            return view('Dashboard.employee.Personal_Certificate.Approval_Certificates.ar.Family_Visit_visa_request', [ 'certificate' => $certificate, 'employee' => $employee,'currentuserid'=>$idd]);
+//
+//        }
+//        elseif ($certificate->ref == "FAMILY RESIDENCY VISA REQUEST") {
+//            return view('Dashboard.employee.Personal_Certificate.Approval_Certificates.ar.Family_Residency_visa_request', [ 'certificate' => $certificate, 'employee' => $employee,'currentuserid'=>$idd]);
+//        }
+//        elseif ($certificate->ref == "QID LOST") {
+//            return view('Dashboard.employee.Personal_Certificate.Approval_Certificates.ar.QID_Lost', [ 'certificate' => $certificate, 'employee' => $employee,'currentuserid'=>$idd]);
+//        }
+//
+//        return view('Dashboard.employee.Personal_Certificate.Certificate_Approval', ['certificate' => $certificate, 'certificatespending' => $certificatespending, 'employee' => $employee, 'certificatesreturn' => $certificatesreturn, 'certificatesapproval' => $certificatesapproval]);
+//    })->name('CertificateApproval');
     Route::get('CertificateApprovalApproval/{id}', function ($id) {
         $idd = Auth::guard('employee')->user()->id??null;
         $certificate = Certificates::find($id);
         $employee = DB::table('employees')->where('id', '=', $certificate->Emp_id ?? "")->get();
-
         $certificatespending = DB::table('certificate')->where('Emp_id', '=', $id)->where('review_status', '=', null)->get();
         $certificatesreturn = DB::table('certificate')->where('Emp_id', '=', $id)->where('review_status', '=', 'Return To Sender')->get();
         $certificatesapproval = DB::table('certificate')->where('Emp_id', '=', $id)->where('review_status', '=', 'ConfirmCertificate')->get();

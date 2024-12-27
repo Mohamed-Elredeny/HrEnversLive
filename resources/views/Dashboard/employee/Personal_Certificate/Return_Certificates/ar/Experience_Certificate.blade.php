@@ -2,7 +2,8 @@
 @section('Certificate_Content_Return')
     @foreach($employee as $emp)
         <div class="col-12 ar_text" style=" padding: 20px">
-
+            <div class="content_certificate">
+                <div class="header_certificate">
             <div class="text-right" dir="rtl">
                 <h5>
                     التاريخ: {{$certificate->date_submit}}
@@ -10,7 +11,7 @@
                     Ref: HRA-MG
                 </h5>
             </div>
-            <br><br>
+                </div><br>
             <div class="text-right " dir="rtl">
                 <h5>
                     من يهمه الامر
@@ -21,6 +22,7 @@
                     <br>
                     <br>
                 </h5>
+                <div class="body_certificate">
                 <h3 class="text-center font-weight-bold"><b style="font-weight: bold;display: inline; text-decoration: underline; text-underline-offset: 5px;"><u>افادة عمل</u></b></h3>
                 <br><br>
                 <h4>تفيد شركة أن
@@ -83,13 +85,8 @@
                         <b style="padding-left: 50px">
                             33393081</b>
                     </div>
-
-
                 </div>
-
-
-
             </h5>
-        </div>
+            </div></div></div>
     @endforeach
 @endsection

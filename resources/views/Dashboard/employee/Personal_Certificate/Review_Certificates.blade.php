@@ -74,7 +74,7 @@
                         <img src="{{asset("assets/images/sign-in/Home@3x-4.png")}}" alt="icon">
                     </div>
                     <div class="image-light  calendar-light image">
-                        <img src="{{asset("assets/images/sign-in/Home-light@3x-1.png")}} alt="icon">
+                        <img src="{{asset("assets/images/sign-in/Home-light@3x-1.png")}}" alt="icon">
                     </div>
                 </a>
                 <span>Calendar</span>
@@ -268,11 +268,7 @@
                     </a>
                 </section>
 
-                <section class="name_page">
-                    <p>
-                        Review Certificates
-                    </p>
-                </section>
+
                 <section class="table_section table_Certificate th_td_last_child border-white table_responsev">
                     <table class="w-100">
                         <thead>
@@ -319,7 +315,7 @@
                                 <td>
                                     <a href="{{route('employee.CertificateApproval',$certificate->id)}}">
                                         <button class="btn">
-                                            show
+                                           View
                                         </button>
                                     </a>
                                 </td>
@@ -353,7 +349,7 @@
                                 <td>
                                     <a href="{{route('employee.CertificatePending',$certificate->id)}}">
                                         <button class="btn">
-                                            show
+                                           Review
                                         </button>
                                     </a>
                                 </td>
@@ -390,7 +386,7 @@
                                 <td>
                                     <a href="{{route('employee.CertificateReturned',$certificate->id)}}">
                                         <button class="btn">
-                                            show
+                                            return
                                         </button>
                                     </a>
                                 </td>

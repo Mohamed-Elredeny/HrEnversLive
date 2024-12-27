@@ -410,17 +410,17 @@
             // popupOverlay.classList.remove('hidden');
             event.preventDefault();
             Swal.fire({
-                title: 'Are you sure?',
-                text: 'You are about to show the clearance section.',
+                title: 'CONFIRM CERTIFICATE?',
+                html: "Please review your selection and remarks. <br> If correct, click confirm to proceed.",
                 icon: 'info',
                 showCancelButton: true,
-                confirmButtonText: 'Yes, show it!',
+                confirmButtonText: 'Confirm!',
                 cancelButtonText: 'Cancel'
             }).then((result) => {
                 if (result.isConfirmed) {
                     Swal.fire({
-                        title: 'Visible!',
-                        text: 'The clearance section is now visible.',
+                        title: 'Submitted !',
+                        text: 'Your certificate has been sent to HR for review .',
                         icon: 'success',
                         confirmButtonText: 'OK'
                     }).then(()=>{

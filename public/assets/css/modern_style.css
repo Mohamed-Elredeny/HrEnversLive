@@ -37,7 +37,7 @@
     --tran07: all 0.7s ease-in-out;
 }
 html {
-    font-size: 62.5%; 
+    font-size: 62.5%;
 }
 header{
     width: 100%;
@@ -81,7 +81,7 @@ header{
 }
 .preload.load{
     opacity: 0;
-    
+
     pointer-events: none;
 }
 .loader3 {
@@ -231,7 +231,7 @@ animation-delay: 0.1s;
     height: calc(1.5em + .75rem + 14px) !important;
 }
 #LetterType::after {
-    content: "▼"; 
+    content: "▼";
     font-size: 12px;
     color: #333;
     position: absolute;
@@ -410,12 +410,12 @@ animation-delay: 0.1s;
     transition: 0.5s all;
     overflow: hidden;
 
-} 
+}
 
 .card-body .col-4 .btn.active{
     background-color: var(--secoundColor);
     box-shadow: 0px 5px 9px 5px #82beff63;
-} 
+}
 
 .card-body .col-4 .btn .btn-primary-header{
     outline: none !important;
@@ -621,7 +621,7 @@ animation-delay: 0.1s;
 .news .icon{
     font-size: 4rem;
     margin-top: -10px;
-    
+
 }
 .news .icon i,
 .logo .icon i{
@@ -732,8 +732,8 @@ animation-delay: 0.1s;
 }
 
 .menu_bar_left::-webkit-scrollbar{
-    width: 8px; 
-    height: 8px !important; 
+    width: 8px;
+    height: 8px !important;
 }
 .menu_bar_left::-webkit-scrollbar-thumb{
     background-color: var(--darkGrayColor);
@@ -743,8 +743,8 @@ animation-delay: 0.1s;
     background-color:var(--whiteColor);
 }
 .menu_bar_right::-webkit-scrollbar{
-    width: 8px; 
-    height: 8px !important; 
+    width: 8px;
+    height: 8px !important;
 }
 .menu_bar_right::-webkit-scrollbar-thumb{
     background-color: var(--darkGrayColor);
@@ -846,11 +846,11 @@ animation-delay: 0.1s;
 }
 .menu_bar_left  .nav_link a:has(.icon) .nav_text {
     margin-left: -16px !important;
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
 }
 
 .menu_bar_left  .nav_link .nav_text{
-    font-size: 1.6rem; 
+    font-size: 1.6rem;
     text-wrap: nowrap;
     margin-left: 5px;
     color: var(--textColor);
@@ -1136,11 +1136,11 @@ animation-delay: 0.1s;
 }
 .fc-button-group .fc-button {
     background-color: var(--secoundColor);
-    color: white; 
+    color: white;
     border-color : var(--blackColor) !important;
     border-radius: 5px;
     margin: 0 0px;
-    padding: 5px 10px; 
+    padding: 5px 10px;
     transition: var(--tran03);
 }
 .fc-button-group .fc-button:hover {
@@ -1157,7 +1157,7 @@ animation-delay: 0.1s;
 .fc .fc-toolbar.fc-header-toolbar {
     color: var(--blackColor);
     padding: 10px;
-    margin-bottom: 40px !important; 
+    margin-bottom: 40px !important;
 }
 .fc-toolbar-title{
     font-weight: 700;
@@ -1166,12 +1166,12 @@ animation-delay: 0.1s;
     background-color: var(--grayColor);
 }
 .fc .fc-col-header-cell-cushion {
-    color: white; 
+    color: white;
     font-weight: 700;
-    padding: 10px; 
-    border-radius: 5px; 
-    margin: 2px; 
-    text-align: center; 
+    padding: 10px;
+    border-radius: 5px;
+    margin: 2px;
+    text-align: center;
 }
 .fc-daygrid-event {
     overflow: hidden; /* إخفاء المحتوى الزائد */
@@ -1259,7 +1259,7 @@ animation-delay: 0.1s;
 }
 
 .note-editor.note-airframe .note-statusbar .note-resizebar, .note-editor.note-frame .note-statusbar .note-resizebar {
-    background-color: var(--grayColor); 
+    background-color: var(--grayColor);
 }
 
 .preview .delete-btn,
@@ -1347,8 +1347,8 @@ animation-delay: 0.1s;
         top: 0;
         height: 55px;
     }
-    
-    
+
+
     .menu_bar_left{
         overflow-y: auto;
         visibility: visible;
@@ -1447,7 +1447,7 @@ animation-delay: 0.1s;
     .logo.closee .bar .icon{
         margin-left: -10px !important;
     }
-    
+
     .container .title .head .img-fluid{
         margin-left: -40px !important ;
         margin-top: 3px !important;
@@ -1519,12 +1519,12 @@ animation-delay: 0.1s;
 }
 @media (min-width: 577px) and (max-width: 768px) {
     .container {
-        max-width: 750px; 
+        max-width: 750px;
     }
     html {
-        font-size: 38.5%; 
+        font-size: 38.5%;
     }
-    
+
     header{
         width: 100%;
         top: 0;
@@ -1681,12 +1681,12 @@ animation-delay: 0.1s;
         transition: all 0.5s ease-in-out;
     }
     .menu_bar_left::-webkit-scrollbar{
-        width: 4px; 
-        height: 4px !important; 
+        width: 4px;
+        height: 4px !important;
     }
     .menu_bar_right::-webkit-scrollbar{
-        width: 4px; 
-        height: 4px !important; 
+        width: 4px;
+        height: 4px !important;
     }
     .header_left .text p{
         text-align: center;
@@ -1702,17 +1702,17 @@ animation-delay: 0.1s;
         font-size: 1.4rem;
     }
     .menu_bar_left  .nav_link .nav_text{
-        font-size: 1.8rem; 
+        font-size: 1.8rem;
         text-wrap: nowrap;
         margin-left: .2rem;
     }
     .menu_bar_left ul:nth-of-type(1) .nav_link:nth-child(2) .nav_text{
-        font-size: 1.5rem; 
+        font-size: 1.5rem;
         text-wrap: nowrap;
         margin-left: 0rem;
     }
     .menu_bar_left ul:nth-of-type(2) .nav_link .nav_text{
-        font-size: 1.8rem; 
+        font-size: 1.8rem;
         text-wrap: nowrap;
         margin-left: .2rem;
     }
@@ -1720,12 +1720,12 @@ animation-delay: 0.1s;
         margin-top: -20px;
     }
     .menu_bar_left .dropedit a:has(.icon) .nav_text{
-        font-size: 1.8rem; 
+        font-size: 1.8rem;
         margin-top: -10px;
         margin-left: -30px !important;
     }
     .menu_bar_left ul:nth-of-type(2) .nav_link:nth-child(2) .nav_text{
-        font-size: 1.5rem; 
+        font-size: 1.5rem;
         text-wrap: nowrap;
         margin-left: .2rem;
     }
@@ -1860,7 +1860,7 @@ animation-delay: 0.1s;
         max-width: 1150px;
     }
     html {
-        font-size: 48.5%; 
+        font-size: 48.5%;
     }
     header{
         width: 100%;
@@ -1997,22 +1997,22 @@ animation-delay: 0.1s;
         font-size: 1.4rem;
     }
     .menu_bar_left  .nav_link .nav_text{
-        font-size: 1.3rem; 
+        font-size: 1.3rem;
         text-wrap: nowrap;
         margin-left: .2rem;
     }
     .menu_bar_left ul:nth-of-type(1) .nav_link:nth-child(2) .nav_text{
-        font-size: .9rem; 
+        font-size: .9rem;
         text-wrap: nowrap;
         margin-left: 0rem;
     }
     .menu_bar_left ul:nth-of-type(2) .nav_link .nav_text{
-        font-size: 1.3rem; 
+        font-size: 1.3rem;
         text-wrap: nowrap;
         margin-left: .2rem;
     }
     .menu_bar_left ul:nth-of-type(2) .nav_link:nth-child(2) .nav_text{
-        font-size: 1rem; 
+        font-size: 1rem;
         text-wrap: nowrap;
         margin-left: .2rem;
     }
@@ -2046,12 +2046,12 @@ animation-delay: 0.1s;
         transition: all 0.5s ease-in-out;
     }
     .menu_bar_left::-webkit-scrollbar{
-        width: 4px; 
-        height: 4px !important; 
+        width: 4px;
+        height: 4px !important;
     }
     .menu_bar_right::-webkit-scrollbar{
-        width: 4px; 
-        height: 4px !important; 
+        width: 4px;
+        height: 4px !important;
     }
     .sidebar_left .menu_bar_left .meun_link_left .nav_link .img-fluid{
         margin-left: 0px;

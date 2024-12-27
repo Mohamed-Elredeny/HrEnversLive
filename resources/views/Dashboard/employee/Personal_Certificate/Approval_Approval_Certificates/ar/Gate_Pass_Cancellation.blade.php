@@ -20,6 +20,9 @@
     </style>
     @foreach($employee as $emp)
         <div class="col-12 ar_text" style=" padding: 20px">
+            <div class="content_certificate">
+
+                <div class="header_certificate">
             <div class="text-right" dir="rtl">
                 <h5>
                     التاريخ:     {{$certificate->date_submit}}
@@ -27,7 +30,9 @@
                     Ref No  {{$emp->empCode}}/CBQ/2024
                 </h5>
             </div>
-            <br><br>
+                </div>
+            <br>
+                <div class="body_certificate">
 
             <div class="text-right" dir="rtl">
                 <h5>
@@ -93,7 +98,7 @@
                 <b style="font-weight: bold">
                     مدير الموارد البشرية
                 </b>
-                <br><br>
+                <br>
                 <div  style="font-size: x-small;">
                     <b style="padding-left: 20px"> 33393081</b>
                 </div>
@@ -126,7 +131,7 @@
                 </div>
             </div>
 
-
+                </div>
         </div>
 
     @endforeach

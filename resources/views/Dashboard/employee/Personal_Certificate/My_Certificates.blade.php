@@ -268,11 +268,7 @@
                     </a>
                 </section>
 
-                <section class="name_page">
-                    <p>
-                        My Certificates
-                    </p>
-                </section>
+
                 <section class="table_section table_Certificate th_td_last_child border-white table_responsev">
                     <table class="w-100">
                         <thead>
@@ -322,7 +318,7 @@
                                 <td>
                                     <a href="{{route('employee.CertificateApproval',$certificate->id)}}">
                                         <button class="btn">
-                                            show
+                                            View
                                         </button>
                                     </a>
                                 </td>
@@ -362,7 +358,7 @@
 
                                     <a href="{{ route('employee.CertificatePending', ['id' => $certificate->id, ]) }}">
                                         <button class="btn">
-                                            Show
+                                            Pending
                                         </button>
                                     </a>
 
@@ -400,7 +396,7 @@
                                 <td>
                                     <a href="{{route('employee.CertificateReturned',$certificate->id)}}">
                                         <button class="btn">
-                                            show
+                                            Return
                                         </button>
                                     </a>
                                 </td>

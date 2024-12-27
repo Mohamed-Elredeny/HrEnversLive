@@ -20,7 +20,19 @@ class CertificateController extends Controller
      */
     public function index()
     {
-        //
+        $idd = Auth::guard('employee')->user()->id??null ;
+
+$certificate1=DB::table('certificate')->where('review_status', '=', null)->get();
+$certificate2=DB::table('certificate')-> where('review_status','=','ConfirmCertificate')->orWhere('approval_status','=','Return To Sender')->get();
+        $certificatesreview =$certificate1->count()+$certificate2->count();
+        $certificatespending = DB::table('certificate')->where('review_status', '=', 'ConfirmCertificate')->where('approval_status', '=', null)->get();
+
+        $certificatesreturn = DB::table('certificate')->where('approval_status', '=', 'Return To Sender')->get();
+        $certificatesapproval = DB::table('certificate')->where('approval_status', '=', 'ConfirmCertificate')->get();
+        $certificateapprovalcount=$certificatespending->count();
+        $userpermission = DB::table('user_permissions')->where('employee_id', '=', $idd)->get()??null;
+        $mycertificates = DB::table('certificate')->where('Emp_id','=',$idd)->get();
+        return view('Dashboard.employee.Personal_Certificate.index',['mycertificates'=>$mycertificates,"certificatesreview"=>$certificatesreview,"certificateapprovalcount"=>$certificateapprovalcount] );
     }
 
     /**
@@ -196,7 +208,7 @@ class CertificateController extends Controller
     }
     public function showcertificatereviewer()
     {
-        $id= Auth::guard('employee')->user()->id??null;
+//        $id= Auth::guard('employee')->user()->id??null;
         $certificates = DB::table('certificate')->get();
         $certificatespending = DB::table('certificate')->where('review_status','=',null)->get();
         $certificatesreturn = DB::table('certificate')->where('review_status','=','Return To Sender')->get();
@@ -206,13 +218,13 @@ class CertificateController extends Controller
         $employeereturn=[];
         $employeeapproval=[];
            foreach ($certificatespending as $certificate) {
-             $employee= DB::table('employees')->where('id','=',$certificate->Emp_id??"")->get();
+             $employee= DB::table('employees')->where('id','=',$certificate->Emp_id??"")->first();
              $employeepend[]=$employee;
 
 
            }
         foreach ($certificatesreturn as $certificate) {
-            $employee= DB::table('employees')->where('id','=',$certificate->Emp_id??"")->get();
+            $employee= DB::table('employees')->where('id','=',$certificate->Emp_id??"")->first();
             $employeereturn[]=$employee;
 
         }

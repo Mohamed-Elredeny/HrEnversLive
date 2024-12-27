@@ -1,7 +1,8 @@
 @extends('Dashboard.employee.Personal_Certificate.Certificate_Pending')
 @section('certificate_content')
-    <div class="col-12 ar_text" style=" padding: 20px">
 
+        <div class="content_certificate">
+            <div class="header_certificate">
         <div class="text-right" dir="rtl">
             <h5>
                 التاريخ:
@@ -9,9 +10,9 @@
                 <br>
                 Ref No : {{$employee->empCode}}/CBQ/2024
             </h5>
-        </div>
+        </div></div>
 
-        <br><br>
+        <br>  <div class="body_certificate">
         <div class="text-right" dir="rtl">
             <h5>
                 السـيد/ مديرادارة شرطة مسيعيد
@@ -95,5 +96,5 @@
             </h5>
 
         </div>
-    </div>
+            </div></div>
 @endsection
