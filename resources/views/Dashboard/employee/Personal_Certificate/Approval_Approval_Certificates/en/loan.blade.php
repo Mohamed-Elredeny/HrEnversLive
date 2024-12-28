@@ -74,37 +74,42 @@
                 </div>
             </div>
             <br><br>
-            <div class="Footer_certificate">
-                <div class="Footer_certificate_photo">
-                    <div class="image">
-                        <div class="img-fluid">
-                            <img
-                                src="{{asset('assets/images/logos')}}/{{$emp->signature??""}}"
-                                alt="Medgulf Header">
-                        </div>
-                    </div>
-                    <div class="image">
-                        <div class="img-fluid company">
-                            <!-- <img class="Medgulf" src="../../../assets/images/logos/company_1_sign.png" alt="Medgulf Header"> -->
-                            <img class="tragsEng" src="../../../assets/images/logos/company_2_sign.png"
-                                 alt="tragsEng Header">
-                            <!-- <img class="trags" src="../../../assets/images/logos/company_3_sign.png" alt="trags Header"> -->
-                        </div>
+
+        </div>
+        <div class="Footer_certificate">
+            <div class="Footer_certificate_photo">
+
+                <div class="image" >
+                    <div class="img-fluid">
+                        <img
+                            src="{{asset('assets/images/logos')}}/{{$emp->signature??""}}"
+                            alt="Medgulf Header">
                     </div>
                 </div>
 
+                <div class="image" >
+                    <div class="img-fluid company">
+                        @if ($emp->company_id == "medgulf")
+                            <img class="Medgulf" src="{{asset("assets/images/logos/company_1_sign.png")}}"  alt="Medgulf Header">
+                        @elseif ($emp->company_id == "trags")
+                            <img class="tragsEng" src="{{asset("assets/images/logos/company_2_sign.png")}}"  alt="tragsEng Header">
+                        @else
+                            <img class="trags" src="{{asset("assets/images/logos/company_3_sign.png")}}"  alt="trags Header">
+                        @endif
+                    </div>
+                </div>
             </div>
-             <br><br>
-            <h5>
-
-                Elie Azzi
-                <br>
-                <b style="display: inline;font-weight: bold">
-                    Group HR Director
-                </b>
-                <br>
-            </h5>
         </div>
+        <br><br>
+        <h5>
+
+            Elie Azzi
+            <br>
+            <b style="display: inline;font-weight: bold">
+                Group HR Director
+            </b>
+            <br>
+        </h5>
     </div>
 @endforeach
 

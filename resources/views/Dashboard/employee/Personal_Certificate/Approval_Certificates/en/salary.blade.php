@@ -53,7 +53,7 @@
                     This Certificate is issued upon employee request without any liability against
 
                     <span style="font-weight: bold;display: inline;">{{$emp->company_id}}</span>.
-                    <br><br>
+                    <br><br><br><br>
                     <span style="font-weight: bold;display: inline;">For {{$emp->company_id}}</span>
 
                 </h5>

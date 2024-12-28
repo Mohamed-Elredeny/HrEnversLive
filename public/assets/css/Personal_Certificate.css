@@ -563,8 +563,8 @@ body{
 .a4_section .content_certificate p{
     color: var(--dark-color);
     font-family: "Syne";
-    font-size: 14px;
-    font-weight: 500;
+    /*font-size: 14px;*/
+    /*font-weight: 500;*/
     line-height: 20px;
 }
 .a4_section .content_certificate .body_certificate h5{
@@ -783,6 +783,7 @@ body{
     .Certificate_Type .item_type .name_item_type p {
         margin-bottom: 0;
         font-size: 12px;
+        display:flex;
         font-weight: 500;
     }
     .Certificate_Type .item_type .image img {

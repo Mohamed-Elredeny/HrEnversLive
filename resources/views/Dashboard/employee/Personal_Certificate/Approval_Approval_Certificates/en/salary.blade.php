@@ -53,37 +53,45 @@
                     This Certificate is issued upon employee request without any liability against
 
                         <span style="font-weight: bold;display: inline;">{{$emp->company_id}}</span>.
-                    <br><br>
-                    <span style="font-weight: bold;display: inline;">For {{$emp->company_id}}</span>
                     <br><br><br><br>
-                    <div class="Footer_certificate">
-                        <div class="Footer_certificate_photo">
-                            <div class="image">
-                                <div class="img-fluid">
-                                    <img src="{{asset('assets/images/logos')}}/{{$emp->signature??""}}"
-                                        alt="Medgulf Header">
-                                </div>
-                            </div>
-                            <div class="image">
-                                <div class="img-fluid company">
-                                    <!-- <img class="Medgulf" src="../../../assets/images/logos/company_1_sign.png" alt="Medgulf Header"> -->
-                                    <img class="tragsEng" src="../../../assets/images/logos/company_2_sign.png" alt="tragsEng Header">
-                                    <!-- <img class="trags" src="../../../assets/images/logos/company_3_sign.png" alt="trags Header"> -->
-                                </div>
-                            </div>
-                        </div>
+                    <span style="font-weight: bold;display: inline;">For {{$emp->company_id}}</span>
+                    <br><br>
 
-                    </div>
                 </h5>
                 <br>
-                <h5>
-                    Elie Azzi</h5>
-
-                <h5 style="font-weight: bold">Group HR Director
-                </h5>
-
 
             </div>
+            <div class="Footer_certificate">
+                <div class="Footer_certificate_photo">
+
+                    <div class="image" >
+                        <div class="img-fluid">
+                            <img
+                                src="{{asset('assets/images/logos')}}/{{$emp->signature??""}}"
+                                alt="Medgulf Header">
+                        </div>
+                    </div>
+
+                    <div class="image" >
+                        <div class="img-fluid company">
+                            @if ($emp->company_id == "medgulf")
+                                <img class="Medgulf" src="{{asset("assets/images/logos/company_1_sign.png")}}"  alt="Medgulf Header">
+                            @elseif ($emp->company_id == "trags")
+                                <img class="tragsEng" src="{{asset("assets/images/logos/company_2_sign.png")}}"  alt="tragsEng Header">
+                            @else
+                                <img class="trags" src="{{asset("assets/images/logos/company_3_sign.png")}}"  alt="trags Header">
+                            @endif
+                        </div>
+                    </div>
+                </div>
+
+
+            <br>
+            <h5>
+                Elie Azzi</h5>
+
+            <h5 style="font-weight: bold">Group HR Director
+            </h5>
         </div>
 
     @endforeach

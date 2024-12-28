@@ -163,7 +163,7 @@ header .img-fluid img{
     left: 50%;
     transform: translate(-50%, 100%);
     width: 60%;
-    height: 65%;
+    height: 75%;
     background-color:var(--white-color);
     display: flex;
     justify-content: space-between;

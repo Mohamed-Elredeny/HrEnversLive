@@ -339,16 +339,16 @@
                         </div>
                     </div>
                     </label>
-                    <label for="radio-card-6" class="radio-card col-md-4" >
-                        <input type="radio" style="display: none" name="item_id" value="EMPLOYMENT CERTIFICATE TO EMBASSY" id="radio-card-6"/>
-                    <div class="item_type item_embassy">
-                        <div class="name_item_type">
-                            <p>EMPLOYMENT CERTIFICATE TO EMBASSY</p>
+                    <label for="radio-card-6" class="radio-card col-md-4">
+                        <input type="radio" style="display: none" name="item_id" value="EMPLOYMENT CERTIFICATE TO EMBASSY" id="radio-card-6" />
+                        <div class="item_type item_embassy" style="display: flex; align-items: center; ">
+                            <div class="name_item_type" style="flex: 1;">
+                                <p >EMPLOYMENT CERTIFICATE TO EMBASSY</p>
+                            </div>
+                            <div class="image" style="flex-shrink: 0;">
+                                <img class="gray_Evaluated" src="{{asset('assets/images/sign-in/Evaluated@3x.png')}}" alt="Evaluated" style="width: 20px; height: 20px;">
+                            </div>
                         </div>
-                        <div class="image">
-                            <div class="img-fluid"><img class="gray_Evaluated" src="{{asset("assets/images/sign-in/Evaluated@3x.png")}}" alt="Evaluated"></div>
-                        </div>
-                    </div>
                     </label>
 
                     <div class="embassy_name">

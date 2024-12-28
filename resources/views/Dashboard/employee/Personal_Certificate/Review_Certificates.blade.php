@@ -30,6 +30,13 @@
     <link rel="stylesheet" href="{{asset("assets/css/all.min.css")}}">
 
 </head>
+<style>
+    @media (min-width: 1400px) {
+        .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+            max-width: 1260px !important;
+        }
+    }
+</style>
 <body>
 
 
@@ -342,7 +349,7 @@
                                             </div>
                                         </div>
                                         <p>
-                                            Pending To Review
+                                            Pending  Review
                                         </p>
                                     </div>
                                 </td>
@@ -386,7 +393,7 @@
                                 <td>
                                     <a href="{{route('employee.CertificateReturned',$certificate->id)}}">
                                         <button class="btn">
-                                            return
+                                            Return
                                         </button>
                                     </a>
                                 </td>
