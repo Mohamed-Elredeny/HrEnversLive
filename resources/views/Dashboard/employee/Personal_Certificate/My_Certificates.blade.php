@@ -252,7 +252,7 @@
 
 
         <main>
-            <article class="container">
+            <article class="container" style="max-width: 1460px !important;">
                 <section class="head">
                     <div class="title">
                         <a href="">
@@ -268,11 +268,7 @@
                     </a>
                 </section>
 
-                <section class="name_page">
-                    <p>
-                        My Certificates
-                    </p>
-                </section>
+
                 <section class="table_section table_Certificate th_td_last_child border-white table_responsev">
                     <table class="w-100">
                         <thead>
@@ -314,15 +310,15 @@
                                             </div>
                                         </div>
                                         <p>
-
                                             Approval
                                         </p>
                                     </div>
                                 </td>
                                 <td>
-                                    <a href="{{route('employee.CertificateApproval',$certificate->id)}}">
+                                    <a href="{{ route('employee.Certificate', [ 'type' => 'Approval_Certificates','id' => $certificate->id]) }}">
+
                                         <button class="btn">
-                                            show
+                                            View
                                         </button>
                                     </a>
                                 </td>
@@ -360,9 +356,9 @@
                                 <td>
 
 
-                                    <a href="{{ route('employee.CertificatePending', ['id' => $certificate->id, ]) }}">
+                                    <a href="{{ route('employee.Certificate', [ 'type' => 'Pending_Certificates','id' => $certificate->id]) }}">
                                         <button class="btn">
-                                            Show
+                                            Pending
                                         </button>
                                     </a>
 
@@ -398,9 +394,9 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <a href="{{route('employee.CertificateReturned',$certificate->id)}}">
+                                    <a href="{{ route('employee.Certificate', [ 'type' => 'Return_Certificates','id' => $certificate->id]) }}">
                                         <button class="btn">
-                                            show
+                                            Return
                                         </button>
                                     </a>
                                 </td>
