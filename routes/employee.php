@@ -76,6 +76,7 @@ Route::group([
         return view('Dashboard.employee.Personal_Certificate.employee');
     })->name('employee');
 
+    Route::resource('leaves', "LeavesController");
 });
 //Auth::routes();
 

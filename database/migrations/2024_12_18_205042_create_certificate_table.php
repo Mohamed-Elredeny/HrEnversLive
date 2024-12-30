@@ -26,12 +26,15 @@ return new class extends Migration
                 $table->string('approval_name')->nullable();
                 $table->string('approval_remark')->nullable();
                 $table->string('approval_status')->nullable();
-                $table->unsignedInteger('certificateType_id');
+               
+                $table->unsignedBigInteger('certificateType_id');
                 $table->foreign('certificateType_id')->references('id')->on('certificate_type');
 
                 $table->string('remark')->nullable();
-                $table->unsignedInteger('Emp_id');
+                
+                $table->unsignedBigInteger('Emp_id');
                 $table->foreign('Emp_id')->references('id')->on('employees');
+
                 $table->string('embassy')->nullable();
                 $table->string('returnReasons')->nullable();
                 $table->timestamps();

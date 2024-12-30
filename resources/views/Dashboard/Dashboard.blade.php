@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ENSRV</title>
 
-    <!-- custom style -->
+
     <link rel="stylesheet" href="{{asset("assets/css/dashboard.css")}}">
 
     <!-- google font Syne-->
@@ -24,6 +24,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
     <!-- bootstrap -->
+
     <link rel="stylesheet" href="{{asset("assets/css/bootstrap.min.css")}}">
     <link rel="stylesheet" href="{{asset("assets/css/all.min.css")}}">
 

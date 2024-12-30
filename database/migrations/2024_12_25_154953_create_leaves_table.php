@@ -13,11 +13,19 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('user_permissions', function (Blueprint $table) {
+        Schema::create('leaves', function (Blueprint $table) {
             $table->id();
+       
+
+            $table->unsignedBigInteger('leave_type_id');
+            $table->foreign('leave_type_id')->references('id')->on('leaves_types');
+
             $table->unsignedBigInteger('employee_id');
             $table->foreign('employee_id')->references('id')->on('employees');
-            $table->string('permission')->nullable();
+
+            $table->string('status')->default('pending');
+            $table->text('extraInfo')->nullable();
+
             $table->timestamps();
         });
     }
@@ -29,7 +37,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_permissions');
-
+        Schema::dropIfExists('leaves');
     }
 };
