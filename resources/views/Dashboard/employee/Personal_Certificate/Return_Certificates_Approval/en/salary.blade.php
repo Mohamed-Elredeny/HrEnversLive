@@ -1,8 +1,6 @@
-@extends('Dashboard.employee.Personal_Certificate.Certificate_Approval')
-@section('certificate_content_approval')
+@extends('Dashboard.employee.Personal_Certificate.Certificate_Returned_Approval')
+@section('Certificate_Content_Return_Approval')
 {{--    @foreach($employee as $emp)--}}
-
-
         <div class="content_certificate">
 
             <div class="header_certificate">
@@ -53,7 +51,7 @@
                     This Certificate is issued upon employee request without any liability against
 
                     <span style="font-weight: bold;display: inline;">{{$employee->company_id}}</span>.
-                    <br><br><br><br>
+                    <br><br>
                     <span style="font-weight: bold;display: inline;">For {{$employee->company_id}}</span>
 
                 </h5>
@@ -67,7 +65,6 @@
 
             </div>
         </div>
-
 
 {{--    @endforeach--}}
 @endsection

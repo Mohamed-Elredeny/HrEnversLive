@@ -1,31 +1,30 @@
-@extends('Dashboard.employee.Personal_Certificate.Certificate_Approval')
-@section('certificate_content_approval')
-
+@extends('Dashboard.employee.Personal_Certificate.Certificate_Returned_Approval')
+@section('Certificate_Content_Return_Approval')
 {{--    @foreach($employee as $emp)--}}
         <div class="content_certificate">
 
             <div class="header_certificate">
 
-            <div class="text-right" dir="rtl">
-                <h6>
+                <div class="text-right" dir="rtl">
+                    <h6>
                       <span style="display: inline;color:#a39e9e">
                     التاريخ: {{$certificate->date_submit}}
                     <br>
                     Ref: HRA-MG
                       </span>
-                </h6>
-                <br><br>
-                <h5>
-                    لمن يهمه الامر
-                    <br>
-                    السلام عليكم ورحمة الله وبركاته
-                    <br>
-                    تحية طيبة وبعد,,,
-                    <br>
-                    <br>
-                </h5>
-            </div>
-                <br>
+                    </h6>
+                    <br><br>
+                    <h5>
+                        لمن يهمه الامر
+                        <br>
+                        السلام عليكم ورحمة الله وبركاته
+                        <br>
+                        تحية طيبة وبعد,,,
+                        <br>
+                        <br>
+                    </h5>
+                </div>
+
                 <div class="body_certificate">
 
                     <div class="text-right " dir="rtl">
@@ -76,7 +75,7 @@
                         <span style="font-weight: bold;display: inline;">
                             <p>
                          @if ($employee->company_id == "medgulf")
-                                عن شركة مدجلف للإنشاءات</p>
+                                    عن شركة مدجلف للإنشاءات</p>
                             @elseif ($employee->company_id == "trags")
 
                                 <p>      عن شركة تراجز للهندسة الكهربائية وتكييف الهواء</p>
@@ -99,29 +98,7 @@
                 </div>
                 <br><br>
                 <div class="Footer_certificate">
-                    <div class="Footer_certificate_photo">
 
-                        <div class="image" >
-                            <div class="img-fluid">
-                                <img
-                                    src="{{asset('assets/images/logos')}}/{{$employee->signature??""}}"
-                                    alt="Medgulf Header">
-                            </div>
-                        </div>
-
-                        <div class="image" >
-                            <div class="img-fluid company">
-                                @if ($employee->company_id == "medgulf")
-                                    <img class="Medgulf" src="{{asset("assets/images/logos/company_1_sign.png")}}"  alt="Medgulf Header">
-                                @elseif ($employee->company_id == "trags")
-                                    <img class="tragsEng" src="{{asset("assets/images/logos/company_2_sign.png")}}"  alt="tragsEng Header">
-                                @else
-                                    <img class="trags" src="{{asset("assets/images/logos/company_3_sign.png")}}"  alt="trags Header">
-                                @endif
-                            </div>
-                        </div>
-                    </div>
-                    <br><br>
                     <h5>
                         <b style="padding-left: 20px">
                             ايلي القزي</b>

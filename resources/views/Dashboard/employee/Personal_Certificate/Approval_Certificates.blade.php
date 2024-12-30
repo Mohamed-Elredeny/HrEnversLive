@@ -252,7 +252,7 @@
 
 
         <main>
-            <article class="container">
+            <article class="container" style="max-width: 1460px !important;">
                 <section class="head">
                     <div class="title">
                         <a href="{{route('employee.index')}}">
@@ -313,7 +313,7 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <a href="{{route('employee.CertificateApprovalApproval',$certificateapproval->id)}}">
+                                    <a href="{{ route('employee.Certificate', [ 'type' => 'Approval_Approval_Certificates','id' => $certificateapproval->id]) }}">
                                         <button class="btn">
                                             View
                                         </button>
@@ -347,7 +347,7 @@
                                 </td>
                                 <td>
 
-                                    <a href="{{route('employee.CertificatePendingApproval',$certificatepending->id)}}">
+                                    <a href="{{ route('employee.Certificate', [ 'type' => 'Pending_Certificates_Approval','id' => $certificatepending->id]) }}">
                                         <button class="btn">
                                             Approve
                                         </button>
@@ -382,7 +382,7 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <a href="{{route('employee.CertificateReturned',$certificatereturn->id)}}">
+                                    <a href="{{ route('employee.Certificate', [ 'type' => 'Return_Certificates','id' => $certificatereturn->id]) }}">
                                         <button class="btn">
                                             Return
                                         </button>

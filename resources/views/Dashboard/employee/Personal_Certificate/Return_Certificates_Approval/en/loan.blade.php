@@ -1,5 +1,5 @@
-@extends('Dashboard.employee.Personal_Certificate.Certificate_Returned')
-@section('Certificate_Content_Return')
+@extends('Dashboard.employee.Personal_Certificate.Certificate_Returned_Approval')
+@section('Certificate_Content_Return_Approval')
 {{--    @foreach($employee as $emp)--}}
 
         <div class="content_certificate">

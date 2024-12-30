@@ -1,6 +1,6 @@
 @extends('Dashboard.employee.Personal_Certificate.Certificate_Returned')
 @section('Certificate_Content_Return')
-    @foreach($employee as $emp)
+{{--    @foreach($employee as $emp)--}}
         <div class="content_certificate">
 
             <div class="header_certificate">
@@ -34,29 +34,29 @@
                         <h3 class=" text-center font-weight-bold"><b style="font-weight: bold;display: inline; text-decoration: underline; text-underline-offset: 5px;"><u>افادة عمل</u></b></h3>
                         <br><br>
                         <h4>تفيد شركة أن
-                            @if($emp->sex=="Male")السيد/ @else السيدة/ @endif
-                            <span style="font-weight: bold;display: inline;"> {{ " " . $emp->arabic_name}}</span>،
-                            <span style="font-weight: bold;display: inline;"> {{$emp->arabic_nationality}}</span>
+                            @if($employee->sex=="Male")السيد/ @else السيدة/ @endif
+                            <span style="font-weight: bold;display: inline;"> {{ " " . $employee->arabic_name}}</span>،
+                            <span style="font-weight: bold;display: inline;"> {{$employee->arabic_nationality}}</span>
                             الجنسية و الحامل لجواز
                             سفر رقم (
-                            <span style="font-weight: bold;display: inline;">  {{$emp->passportNo}}</span>)
+                            <span style="font-weight: bold;display: inline;">  {{$employee->passportNo}}</span>)
                             و بطاقة شخصية رقم
-                            (<span style="font-weight: bold;display: inline;">  {{$emp->visaNo}}</span>)
+                            (<span style="font-weight: bold;display: inline;">  {{$employee->visaNo}}</span>)
                             ، يعمل لدينا و على كفالتنا
                             بمهنة
 
-                            <span style="font-weight: bold;display: inline;"> {{$emp->arabic_designation}} </span>
+                            <span style="font-weight: bold;display: inline;"> {{$employee->arabic_designation}} </span>
                             منذ تاريخ
-                            <span style="font-weight: bold;display: inline;"> {{$emp->joiningDate}}</span>
+                            <span style="font-weight: bold;display: inline;"> {{$employee->joiningDate}}</span>
                             يزال على رأس
                             عمله.
                             <br> <br></h4>
                         <h4>
                             أعطيت له هذه الأفادة بطلب من المعني دون أدنى مسؤولية على
 
-                            @if ($emp->company_id == "medgulf")
+                            @if ($employee->company_id == "medgulf")
                                 شركة مدجلف للإنشاءات
-                            @elseif ($emp->company_id == "trags")
+                            @elseif ($employee->company_id == "trags")
                                 شركة تراجز للهندسة الكهربائية وتكييف الهواء
                             @else  شركة الخدمات التجارية والتوكيلات المحدودة
                             @endif
@@ -74,9 +74,9 @@
 
                         <span style="font-weight: bold;display: inline;">
                             <p>
-                         @if ($emp->company_id == "medgulf")
+                         @if ($employee->company_id == "medgulf")
                                     عن شركة مدجلف للإنشاءات</p>
-                            @elseif ($emp->company_id == "trags")
+                            @elseif ($employee->company_id == "trags")
 
                                 <p>      عن شركة تراجز للهندسة الكهربائية وتكييف الهواء</p>
                             @else
@@ -115,5 +115,5 @@
                 </div>
 
             </div></div>
-    @endforeach
+{{--    @endforeach--}}
 @endsection

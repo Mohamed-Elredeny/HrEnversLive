@@ -1,6 +1,6 @@
 @extends('Dashboard.employee.Personal_Certificate.Certificate_Approval')
 @section('certificate_content_approval')
-    @foreach($employee as $emp)
+{{--    @foreach($employee as $emp)--}}
         <div class="content_certificate">
             <div class="header_certificate">
 
@@ -32,37 +32,37 @@
                 </h5>
                 <h5>
                     <br><br>
-                    This is to certify that <span style="font-weight: bold;display: inline;"> @if($emp->sex=="Male")
+                    This is to certify that <span style="font-weight: bold;display: inline;"> @if($employee->sex=="Male")
                             Mr
                         @else
                             Ms
                         @endif
-            . {{$emp->empName}}, {{$emp->nationality}} </span> National, holding Passport
-                    Number<span style="font-weight: bold;display: inline;"> {{$emp->passportNo}}</span> and QID Number
-                    <span style="font-weight: bold;display: inline;">{{$emp->visaNo}}</span> has been working with us
+            . {{$employee->empName}}, {{$employee->nationality}} </span> National, holding Passport
+                    Number<span style="font-weight: bold;display: inline;"> {{$employee->passportNo}}</span> and QID Number
+                    <span style="font-weight: bold;display: inline;">{{$employee->visaNo}}</span> has been working with us
                     since
-                    <span style="font-weight: bold;display: inline;">{{$emp->joiningDate}}</span> in the capacity of
-                    <span style="font-weight: bold;display: inline;">{{$emp->designation}}</span>.
+                    <span style="font-weight: bold;display: inline;">{{$employee->joiningDate}}</span> in the capacity of
+                    <span style="font-weight: bold;display: inline;">{{$employee->designation}}</span>.
                     <br><br>
                     His present monthly gross salary is
                     QAR.<span
-                        style="font-weight: bold;display: inline;"> @isset($emp->total_salary){{$emp->total_salary}}</span>
-                    / <span style="font-weight: bold;display: inline;">{{$emp->total_salary}}@else
+                        style="font-weight: bold;display: inline;"> @isset($employee->total_salary){{$employee->total_salary}}</span>
+                    / <span style="font-weight: bold;display: inline;">{{$employee->total_salary}}@else
                             Unknown
                         @endisset</span>.
                     <br><br>
-                    <span style="font-weight: bold;display: inline;"> {{$emp->company_id}} </span> doesn’t have any
+                    <span style="font-weight: bold;display: inline;"> {{$employee->company_id}} </span> doesn’t have any
                     objection for
-                    <b style="font-weight: bold"> @if($emp->sex=="Male")
+                    <b style="font-weight: bold"> @if($employee->sex=="Male")
                             Mr
                         @else
                             Ms
-                        @endif. {{$emp->empName}}</b> to
+                        @endif. {{$employee->empName}}</b> to
                     use part of his Annual Leave to visit your country.
                     <br><br>
                     This Certificate was given upon employee’s request without any liabilities against
 
-                    <span style="font-weight: bold;display: inline;"> {{$emp->company_id}}.</span>
+                    <span style="font-weight: bold;display: inline;"> {{$employee->company_id}}.</span>
                     <br>
                     <br>
                 </h5>
@@ -81,5 +81,5 @@
 
             </div></div>
 
-    @endforeach
+{{--    @endforeach--}}
 @endsection

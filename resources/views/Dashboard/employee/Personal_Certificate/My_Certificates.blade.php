@@ -252,7 +252,7 @@
 
 
         <main>
-            <article class="container">
+            <article class="container" style="max-width: 1460px !important;">
                 <section class="head">
                     <div class="title">
                         <a href="">
@@ -310,13 +310,13 @@
                                             </div>
                                         </div>
                                         <p>
-
                                             Approval
                                         </p>
                                     </div>
                                 </td>
                                 <td>
-                                    <a href="{{route('employee.CertificateApproval',$certificate->id)}}">
+                                    <a href="{{ route('employee.Certificate', [ 'type' => 'Approval_Certificates','id' => $certificate->id]) }}">
+
                                         <button class="btn">
                                             View
                                         </button>
@@ -356,7 +356,7 @@
                                 <td>
 
 
-                                    <a href="{{ route('employee.CertificatePending', ['id' => $certificate->id, ]) }}">
+                                    <a href="{{ route('employee.Certificate', [ 'type' => 'Pending_Certificates','id' => $certificate->id]) }}">
                                         <button class="btn">
                                             Pending
                                         </button>
@@ -394,7 +394,7 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <a href="{{route('employee.CertificateReturned',$certificate->id)}}">
+                                    <a href="{{ route('employee.Certificate', [ 'type' => 'Return_Certificates','id' => $certificate->id]) }}">
                                         <button class="btn">
                                             Return
                                         </button>

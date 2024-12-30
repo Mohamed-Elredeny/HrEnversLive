@@ -1,6 +1,6 @@
 @extends('Dashboard.employee.Personal_Certificate.Certificate_Returned')
 @section('Certificate_Content_Return')
-    @foreach($employee as $emp)
+{{--    @foreach($employee as $emp)--}}
         <style>
             .content_certificate .body_certificate h4{
                 font-size: 16px;
@@ -42,21 +42,21 @@
                             دخول</b></h3>
                     <br><br><h4>
                         نود أن نحيط سيادتكم علما بأن
-                        @if($emp->sex=="Male")
+                        @if($employee->sex=="Male")
                             السيد/
                         @else
                             السيدة/
                         @endif
-                        <span style="font-weight: bold;display: inline;"> {{$emp->arabic_name}}</span>
+                        <span style="font-weight: bold;display: inline;"> {{$employee->arabic_name}}</span>
 
                         ،
-                        <span style="font-weight: bold;display: inline;">{{$emp->arabic_nationality}}</span>
+                        <span style="font-weight: bold;display: inline;">{{$employee->arabic_nationality}}</span>
 
                         الجنسية و الحامل لجواز
                         سفر رقم (
-                        <span style="font-weight: bold;display: inline;font-family: 'Times New Roman'"> {{$emp->passportNo}}</span>)
+                        <span style="font-weight: bold;display: inline;font-family: 'Times New Roman'"> {{$employee->passportNo}}</span>)
                         و بطاقة شخصية رقم
-                        ( <span style="font-weight: bold;display: inline;font-family: 'Times New Roman;"> {{$emp->visaNo}}</span>
+                        ( <span style="font-weight: bold;display: inline;font-family: 'Times New Roman;"> {{$employee->visaNo}}</span>
                         ) ،
                         يعمل لدينا و على كفالتنا
                         ، حيث أنه فقد تصريح الدخول الخاص به لمنطقة مسيعيد والذي مازال صالحاً، نرجو التكرم بمنحنا شهادة
@@ -74,9 +74,9 @@
                         <div class="col-6">
 
                             <span style="font-weight: bold;display: inline;">
-                         @if ($emp->company_id == "medgulf")
+                         @if ($employee->company_id == "medgulf")
                                    عن شركة مدجلف للإنشاءات
-                                @elseif ($emp->company_id == "trags")
+                                @elseif ($employee->company_id == "trags")
                                     شركة تراجز للهندسة الكهربائية وتكييف الهواء
                                 @else
                                     شركة الخدمات التجارية والتوكيلات المحدودة
@@ -109,5 +109,5 @@
             </div>
         </div>
 
-    @endforeach
+{{--    @endforeach--}}
 @endsection

@@ -1,5 +1,5 @@
-@extends('Dashboard.employee.Personal_Certificate.Certificate_Returned')
-@section('Certificate_Content_Return')
+@extends('Dashboard.employee.Personal_Certificate.Certificate_Returned_Approval')
+@section('Certificate_Content_Return_Approval')
 {{--    @foreach($employee as $emp)--}}
         <div class="content_certificate">
             <div class="header_certificate">
@@ -32,7 +32,8 @@
                 </h5>
                 <h5>
                     <br><br>
-                    This is to certify that <span style="font-weight: bold;display: inline;"> @if($employee->sex=="Male")
+                    This is to certify that <span style="font-weight: bold;display: inline;">
+                        @if($employee->sex=="Male")
                             Mr
                         @else
                             Ms
@@ -80,5 +81,5 @@
                 <br>
 
             </div></div>
-{{--    @endforeach--}}
+    @endforeach
 @endsection

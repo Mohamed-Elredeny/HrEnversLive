@@ -1,5 +1,5 @@
-@extends('Dashboard.employee.Personal_Certificate.Certificate_Approval')
-@section('certificate_content_approval')
+@extends('Dashboard.employee.Personal_Certificate.Certificate_Returned_Approval')
+@section('Certificate_Content_Return_Approval')
 {{--    @foreach($employee as $emp)--}}
         <style>
             .content_certificate .body_certificate h4{
@@ -12,7 +12,7 @@
             }
         </style>
 
-        <div class="content_certificate"  >
+        <div class="content_certificate" >
             <div class="header_certificate">
                 <div class="text-right" dir="rtl">
                     <h6 >
@@ -75,7 +75,7 @@
 
                             <span style="font-weight: bold;display: inline;">
                          @if ($employee->company_id == "medgulf")
-                                    عن شركة مدجلف للإنشاءات
+                                   عن شركة مدجلف للإنشاءات
                                 @elseif ($employee->company_id == "trags")
                                     شركة تراجز للهندسة الكهربائية وتكييف الهواء
                                 @else
@@ -109,5 +109,5 @@
             </div>
         </div>
 
-{{--    @endforeach--}}
+    @endforeach
 @endsection

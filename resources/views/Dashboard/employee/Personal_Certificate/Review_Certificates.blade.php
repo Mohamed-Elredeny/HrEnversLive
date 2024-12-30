@@ -31,9 +31,9 @@
 
 </head>
 <style>
-    @media (min-width: 1400px) {
-        .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-            max-width: 1260px !important;
+    @media (min-width: 1500px) {
+        .container {
+            max-width: 1460px !important;
         }
     }
 </style>
@@ -257,9 +257,8 @@
             </div>
         </header>
 
-
         <main>
-            <article class="container">
+            <article class="container" style="max-width: 1460px !important;">
                 <section class="head">
                     <div class="title">
                         <a href="{{route('employee.index')}}">
@@ -274,8 +273,6 @@
                         </div>
                     </a>
                 </section>
-
-
                 <section class="table_section table_Certificate th_td_last_child border-white table_responsev">
                     <table class="w-100">
                         <thead>
@@ -320,8 +317,10 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <a href="{{route('employee.CertificateApproval',$certificate->id)}}">
-                                        <button class="btn">
+{{--                                    <a href="{{route('employee.CertificateApproval',$certificate->id)}}">--}}
+
+                                    <a href="{{ route('employee.Certificate', [ 'type' => 'Approval_Certificates','id' => $certificate->id]) }}">
+                                    <button class="btn">
                                            View
                                         </button>
                                     </a>
@@ -354,7 +353,8 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <a href="{{route('employee.CertificatePending',$certificate->id)}}">
+                                    <a href="{{ route('employee.Certificate', [ 'type' => 'Pending_Certificates','id' => $certificate->id]) }}">
+
                                         <button class="btn">
                                            Review
                                         </button>
@@ -391,7 +391,7 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <a href="{{route('employee.CertificateReturned',$certificate->id)}}">
+                                    <a href="{{ route('employee.Certificate', [ 'type' => 'Return_Certificates','id' => $certificate->id]) }}">
                                         <button class="btn">
                                             Return
                                         </button>
@@ -399,7 +399,42 @@
                                 </td>
                             </tr>
                         @endforeach
+                        @foreach($certificatesreturnapproval as $certificate)
 
+                            <tr class="Returned_Certificate" style="display:table-row ;">
+                                <td>{{ \App\Models\Employee::find($certificate->Emp_id)->empName ?? '' }}</td>
+                                <td>{{ $certificate->ref }}</td>
+                                <td>{{$certificate->remark}}</td>
+                                <td>{{$certificate->date_submit}}</td>
+                                <td>{{$certificate->review_name}}</td>
+                                <td>{{$certificate->review_date??" "}}</td>
+                                <td>{{$certificate->review_remark??"  "}}</td>
+                                <td>{{$certificate->approval_name}}</td>
+                                <td>{{$certificate->approval_date??" "}}</td>
+                                <td>{{$certificate->approval_remark??" "}}</td>
+
+
+                                <td>
+                                    <div class="statu">
+                                        <div class="image">
+                                            <div class="img-fluid">
+                                                <img src="{{asset("assets/images/sign-in/Returned@3x.png")}}" alt="Returned">
+                                            </div>
+                                        </div>
+                                        <p>
+                                            Approval Returned
+                                        </p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <a href="{{ route('employee.Certificate', [ 'type' => 'Return_Certificates_Approval','id' => $certificate->id]) }}">
+                                        <button class="btn">
+                                            Return
+                                        </button>
+                                    </a>
+                                </td>
+                            </tr>
+                        @endforeach
 
                         </tbody>
                     </table>

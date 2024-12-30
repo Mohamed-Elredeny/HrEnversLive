@@ -1,48 +1,60 @@
-@extends('Dashboard.employee.Personal_Certificate.Certificate_Returned')
-@section('Certificate_Content_Return')
+@extends('Dashboard.employee.Personal_Certificate.Certificate_Returned_Approval')
+@section('Certificate_Content_Return_Approval')
 {{--    @foreach($employee as $emp)--}}
         <div class="content_certificate">
 
             <div class="header_certificate">
                 <div class="text-right" dir="rtl">
                     <h6 >
+
                 <span style="display: inline;color:#a39e9e">
                     التاريخ:     {{$certificate->date_submit}}
                     <br>
-                   Ref: HRA-MG
-                </span> </h6>
-                </div>
-            </div>
-            <br>
-
-            <div class="body_certificate">
-                <div class="text-right" dir="rtl">
+                    Ref : HRA-MG
+                    </span>
+                    </h6>
+                    <br>
                     <h5>
-                        السيد مديرادارة الجوازات وشؤون
-                        <p style="word-spacing: 10px;">الوافدين المحترم</p>
+                        السـيد/ مديرادارة شرطة ميسعيد
+                        المحترم
                         <br>
-                        السلام عليكم ورحمة الله وبركاته
+                        مدينة مسيعيد الصناعية
+                        <br>
+                        وزارة الداخلية
                         <br>
                         تحية طيبة وبعد,,,
-                        <br>
-                        <br>
                     </h5>
-                    <h3 class="text-center font-weight-bold"> <b style="font-weight: bold;display: inline; text-decoration: underline; text-underline-offset: 5px;"><u>الموضوع : بلاغ فقدان بطاقة شخصية</u></b></h3>
-                    <br><br><h4>
-                        نحيطكم علماً بأن
-                        @if($employee->sex=="Male")السيد/ @else السيدة/ @endif
-                        <span style="font-weight: bold;display: inline">{{$employee->arabic_name}}</span>
-                        ،
-                        يحمل بطاقة شخصية قطرية رقم  (
-                        <span style="font-weight: bold;display: inline;"> {{$employee->visaNo}}</span>
-                        )،
-                        <span style="font-weight: bold;display: inline;">{{$employee->arabic_nationality}}  </span> الجنسية، قد فقد بطاقته الشخصية ونرجو منكم اتخاد الاجراءات اللازمة ليتسنى لنا
-                        اكمال الاجراءات المتعلقة لدى سيادتكم.
+                </div>
+            </div>
 
+            <br>
+            <div class="body_certificate">
+
+                <div class="text-right" dir="rtl">
+
+                    <br>
+                    <br>
+                    <h3 class="text-center font-weight-bold"><b style="font-weight: bold;display: inline; text-decoration: underline; text-underline-offset: 5px;"><u>الموضوع : طلب الغاء تصريح دخول</u></b>
+                    </h3>
+                    <br>
+                    <h4>
+                        نرجوا من سيادتكم التكرم بالغاء تصريح الدخول الخاص
+                        @if($employee->sex=="Male")السيد/ @else السيدة/ @endif
+                        <span style="font-weight: bold;display: inline;"> {{$employee->arabic_name}}</span>
+                        ،
+                        <span style="font-weight: bold;display: inline;">  {{$employee->arabic_nationality}}</span>
+                        الجنسية و الحامل لجواز
+                        سفر رقم (
+                        <span style="font-weight: bold;display: inline;"> {{$employee->passportNo}}</span>
+                        ) و بطاقة شخصية رقم
+                        (<span style="font-weight: bold;display: inline;">{{$employee->visaNo}}</span>
+                        ) ، يعمل لدينا و على كفالتنا.
                         <br><br>
                         وتفضلوا بقبول فائق الإحترام والتقدير.
                     </h4>
-                </div><br>
+                </div>
+                <br>
+
                 <div class="row">
                     <div class="col-6">
                         <h5>
@@ -68,8 +80,7 @@
 
                 </div>
             </div>
-
-
+            <br><br>
             <div class="Footer_certificate">
 
 
@@ -89,6 +100,5 @@
             </div>
 
         </div>
-
-{{--    @endforeach--}}
+    @endforeach
 @endsection

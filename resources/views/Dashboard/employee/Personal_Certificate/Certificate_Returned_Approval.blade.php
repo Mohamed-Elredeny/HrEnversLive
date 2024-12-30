@@ -305,7 +305,7 @@
                             @endif
                         </div>
                     </div>
-                    @yield('Certificate_Content_Return')
+                    @yield('Certificate_Content_Return_Approval')
 
                     <div class="image footer">
                         <div class="img-fluid">
@@ -323,6 +323,21 @@
                         </div>
                     </div>
                 </section>
+                <section class="buttonForEmployee buttonForEResponsev buttonForFirstApproval">
+                    <div class="ContentDate">
+                        <p>Date</p>
+                        <span>{{$currentdate}}</span>
+                    </div>
+                    <div class="buttonFor">
+                        <button class="btn btnFor btnForCertificate btnReview" id="btnReview">
+                            Confirm Certificate
+                        </button>
+                        <button class="btn btnFor btnForCertificate btnReturn" id="btnReturn">
+                            Return To Sender
+                        </button>
+                    </div>
+                </section>
+
             </article>
         </main>
 
@@ -378,6 +393,199 @@
 
     </div>
 
+    <div class="overlayBoxForEmployee overlayBoxCertificate "></div>
+
+    <form method="post" action="{{route('employee.ReviewerCertificateReturnToSenderApproval',$certificate->id)}}">
+
+        @csrf
+        <div class="boxReturnDan boxReturnDanFirst boxReturnDanCertificate">
+            <div class="titleBox">
+                <h2>
+                    Return Certificate To Sender
+                </h2>
+            </div>
+            <div class="suptitleBox">
+                <p>
+                    Here are 8 common reasons to return to sender, and you can select one or more as guides to amend:
+                </p>
+            </div>
+
+            <div class="form-group">
+                <div style="display: flex ;align-items: center; gap: 5px;">
+                    <input type="checkbox" value="reasonOne" name="reason[]" id="reasonOne">
+                    <label for="reasonOne">
+                        Incomplete Information: The employee has not provided all the necessary details required for processing the certificate.
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div style="display: flex ;align-items: center; gap: 5px;">
+                    <input type="checkbox" value="reasonTwo" name="reason[]" id="reasonTwo">
+                    <label for="reasonTwo">
+                        Invalid Purpose: The reason provided for the certificate request does not meet the criteria for issuance.
+                    </label></div>
+            </div>
+            <div class="form-group">
+                <div style="display: flex ;align-items: center; gap: 5px;">
+                    <input type="checkbox" value="reasonThree" name="reason[]" id="reasonThree">
+                    <label for="reasonThree">
+                        Document Format Issue: The format requested for the certificate is not supported by the company's standard documentation.
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div style="display: flex ;align-items: center; gap: 5px;">
+                    <input type="checkbox" value="reasonFour" name="reason[]" id="reasonFour">
+                    <label for="reasonFour">
+                        Request Outside of Policy: The certificate requested is outside the company's policy for issuance or the type of certificate is not provided.
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div style="display: flex ;align-items: center; gap: 5px;">
+                    <input type="checkbox" name="reason[]" value="reasonFive" id="reasonFive">
+                    <label for="reasonFive">
+                        Supporting Documents Missing: Any additional documents required to verify the certificate request are not attached.
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div style="display: flex ;align-items: center; gap: 5px;">
+                    <input type="checkbox" name="reason[]" value="reasonSix" id="reasonSix">
+                    <label for="reasonSix">
+                        Clarification Needed: Further details or clarification are needed to process the request effectively.
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div style="display: flex ;align-items: center; gap: 5px;">
+                    <input type="checkbox" name="reason[]" value="reasonSeven" id="reasonSeven">
+                    <label for="reasonSeven">
+                        Conflicting Requests: The employee has multiple overlapping or conflicting certificate requests.
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div style="display: flex ;align-items: center; gap: 5px;">
+                    <input type="checkbox" name="reason[]" value="reasonEight" id="reasonEight">
+                    <label for="reasonEight">
+                        Incorrect Employee Data: The provided employee information is incorrect or does not match company records.
+                    </label>
+                </div>
+            </div>
+
+            <div class="reasonSpecify">
+                <div class="titleSpecify">
+                    <p>
+                        Reasons: <span>(Specify)</span>
+                    </p>
+                </div>
+                <textarea name="areaReasonSpecifyrefuse" id="areaReasonSpecify" placeholder="Type Other Reason"></textarea>
+            </div>
+            <div class="buttonReason">
+                <button class="btn ReasonBtn Return active BtnFirstReturn" type="submit">
+                    Return
+                </button>
+            </div>
+        </div>
+    </form>
+    <form method="post" class="form2" action="{{route('employee.ReviewerCertificateConfirmApproval',$certificate->id)}}">
+        @csrf
+        <div class="boxReturnDan boxReturnDanFirst boxConfirmDanCertificate" style="height: fit-content !important;">
+            <div class="titleBox titleCertificate">
+                <h2>
+                    CONFIRM CERTIFICATE
+                </h2>
+            </div>
+            <div class="suptitleBox suptitleCertificate">
+                <p>
+                    Are you sure you have reviewed this certificate to proceed for final approval?            </p>
+            </div>
+
+            <div class="reasonSpecify">
+                <div class="titleSpecify">
+                    <p>
+                        Remark
+                    </p>
+                </div>
+                <textarea name="areaReasonSpecifyreturn" id="areaReasonSpecify" placeholder="Remark"></textarea>
+            </div>
+            <div class="buttonReason buttonCertificate">
+                <button class="btn ReasonBtn Return active BtnFirstReturn submitCertificate BtnFirstCertificate" type="submit">
+                    Yes
+                </button>
+            </div>
+        </div>
+    </form>
+
+
+
+
+    <script>
+        const buttons = document.querySelector(".submitCertificate");
+        buttons.addEventListener("click", () =>
+        {
+
+
+            // popupOverlay.classList.remove('hidden');
+            event.preventDefault();
+            Swal.fire({
+                title: 'Reviewed!',
+                text: 'The certificate has been sent for final approval.',
+                icon: 'info',
+                showCancelButton: true,
+                confirmButtonText: 'Yes, show it!',
+                cancelButtonText: 'Cancel'
+            })   .then(()=>{
+                document.querySelector(".form2").submit();
+            });
+
+
+        });
+        const btnReturn = document.querySelector("#btnReturn");
+        const btnReview = document.querySelector("#btnReview");
+        const overlayBoxCertificate = document.querySelector(".overlayBoxCertificate");
+        const boxReturnDanCertificate = document.querySelector(".boxReturnDanCertificate");
+        const boxConfirmDanCertificate = document.querySelector(".boxConfirmDanCertificate");
+        const FormboxDan = document.querySelectorAll(".FormboxDan input");
+        const ReasonBtn = document.querySelector(".ReasonBtn");
+        const BtnFirstCertificate = document.querySelector(".BtnFirstCertificate");
+
+        btnReturn.addEventListener("click", () => {
+            overlayBoxCertificate.classList.toggle("active");
+            boxReturnDanCertificate.classList.toggle("active");
+        });
+        btnReview.addEventListener("click", () => {
+            overlayBoxCertificate.classList.toggle("active");
+            boxConfirmDanCertificate.classList.toggle("active");
+        });
+        overlayBoxCertificate.addEventListener("click", () => {
+            overlayBoxCertificate.classList.remove("active");
+            boxReturnDanCertificate.classList.remove("active");
+            boxConfirmDanCertificate.classList.remove("active");
+        });
+        ReasonBtn.addEventListener("click", () => {
+            overlayBoxCertificate.classList.remove("active");
+            boxReturnDanCertificate.classList.remove("active");
+        });
+        BtnFirstCertificate.addEventListener("click", () => {
+            overlayBoxCertificate.classList.remove("active");
+            boxConfirmDanCertificate.classList.remove("active");
+        });
+
+        FormboxDan.forEach((input) => {
+            input.addEventListener("change", () => {
+                const checkedCount = Array.from(FormboxDan).filter(input => input.checked).length;
+
+                if (checkedCount >= 1) {
+                    ReasonBtn.classList.add("active");
+                } else {
+                    ReasonBtn.classList.remove("active");
+                }
+            });
+        });
+
+    </script>
 
     <!-- bootstrap -->
     <script src="{{asset("assets/js/bootstrap.bundle.min.js")}}"></script>
@@ -391,8 +599,18 @@
     <script src="{{asset("assets/js/Certificate_Returned.js")}}"></script>
     <script src="{{asset("assets/js/KPI.js")}}"></script>
     <script src="{{asset("assets/js/dashboard.js")}}"></script>
-    <script>
+    <script src="{{asset("assets/js/bootstrap.bundle.min.js")}}"></script>
+    <script src="{{asset("assets/js/all.min.js")}}"></script>
 
-    </script>
+    <!-- FullCalendar JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/6.1.15/index.global.js" integrity="sha512-3I+0zIxy2IkeeCvvhXUEu+AFT3zAGuHslHLDmM8JBv6FT7IW6WjhGpUZ55DyGXArYHD0NshixtmNUWJzt0K32w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- custom javaScript -->
+    <script src="{{asset("assets/js/Personal_Certificate.js")}}"></script>
+    <script src="{{asset("assets/js/Certificate_Returned.js")}}"></script>
+    <script src="{{asset("assets/js/dashboard.js")}}"></script>
+    <script src="{{asset("assets/js/Certitcate_dashboard.js")}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </body>
 </html>

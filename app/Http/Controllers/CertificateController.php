@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\CertificatesType;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Models\Certificates;
 use App\Models\Employee;
@@ -128,6 +129,23 @@ $certificate2=DB::table('certificate')-> where('review_status','=','ConfirmCerti
         $certificat->save();
         return redirect()->route('employee.index');
     }
+
+    public function returncertificatereviewerapproval(Request $request,$id)
+    {
+        $idd= Auth::guard('employee')->user()->id??null;
+
+        $employee=Employee::find($idd);
+        $currentdate = now();
+        $certificat = Certificates::findOrFail($id);
+        $certificat->review_name=$employee->empName;
+        $certificat->review_status = 'Return To Sender';
+        $certificat->returnReasons=$request->reason;
+
+        $certificat->review_remark=$request->input('areaReasonSpecifyrefuse');
+        $certificat->review_date=$currentdate;
+        $certificat->save();
+        return redirect()->route('employee.index');
+    }
     public function submitcertificatereview(Request $request,$id)
     {
         $idd= Auth::guard('employee')->user()->id??null;
@@ -138,11 +156,86 @@ $certificate2=DB::table('certificate')-> where('review_status','=','ConfirmCerti
         $certificat->review_name=$employee->empName??"";
         $certificat->review_status = 'ConfirmCertificate';
         $certificat->review_remark =$request->input('areaReasonSpecify');
+
         $certificat->review_date=$currentdate;
         $certificat->save();
         return redirect()->route('employee.index');
 
     }
+    public function submitcertificatereviewapproval(Request $request,$id){
+        $idd= Auth::guard('employee')->user()->id??null;
+
+        $employee=Employee::find($idd);
+        $currentdate = now();
+        $certificat = Certificates::findOrFail($id);
+        $certificat->review_name=$employee->empName??"";
+        $certificat->review_status = 'ConfirmCertificate';
+        $certificat->review_remark =$request->input('areaReasonSpecifyreturn');
+        $certificat->approval_status = null;
+        $certificat->approval_remark =null;
+        $certificat->review_date=$currentdate;
+        $certificat->save();
+        return redirect()->route('employee.index');
+
+    }
+
+public function Certificatecontent($type,$id)
+{
+        $idd = Auth::guard('employee')->user()->id ;
+        $certificate = Certificates::find($id);
+        $currentdate = Carbon::now();
+        $employee = DB::table('employees')->where('id', '=', $certificate->Emp_id ?? "")->first();
+        $certificatespending = DB::table('certificate')->where('Emp_id', '=', $id)->where('review_status', '=', null)->get();
+        $certificatesreturn = DB::table('certificate')->where('Emp_id', '=', $id)->where('review_status', '=', 'Return To Sender')->get();
+        $certificatesapproval = DB::table('certificate')->where('Emp_id', '=', $id)->where('review_status', '=', 'ConfirmCertificate')->get();
+
+        if ($certificate->ref == "PERSONA LOAN" || $certificate->ref == "CREDIT CARD" || $certificate->ref == "VEHICLE LOAN")
+        {
+            return view('Dashboard.employee.Personal_Certificate.'.$type.'.en.loan', [ 'certificate' => $certificate, 'employee' => $employee,'currentuserid'=>$idd,'currentdate'=>$currentdate]);
+
+        }
+        elseif ($certificate->ref == "EMPLOYMENT CERTIFICATE TO EMBASSY") {
+
+            return view('Dashboard.employee.Personal_Certificate.'.$type.'.en.embassy',[ 'certificate' => $certificate, 'employee' => $employee,'currentuserid'=>$idd,'currentdate'=>$currentdate]);
+        }
+        elseif ($certificate->ref == "CERTIFICATE WITHOUT SALARY" || $certificate->ref == "SALARY CERTIFICATE") {
+
+            return view('Dashboard.employee.Personal_Certificate.'.$type.'.en.salary',[ 'certificate' => $certificate, 'employee' => $employee,'currentuserid'=>$id,'currentdate'=>$currentdate]);
+
+        }
+        elseif ($certificate->ref == "GATE PASS LOST") {
+
+            return view('Dashboard.employee.Personal_Certificate.'.$type.'.ar.Gate_Pass_lost', [ 'certificate' => $certificate, 'employee' => $employee,'currentuserid'=>$id,'currentdate'=>$currentdate]);
+
+        }
+        elseif ($certificate->ref == "GATE PASS CANCELLATION") {
+
+            return view('Dashboard.employee.Personal_Certificate.'.$type.'.ar.Gate_Pass_Cancellation', [ 'certificate' => $certificate, 'employee' => $employee,'currentuserid'=>$id,'currentdate'=>$currentdate]);
+
+        }
+        elseif ($certificate->ref == "EXPERIENCE CERTIFICATE") {
+
+            return view('Dashboard.employee.Personal_Certificate.'.$type.'.ar.Experience_Certificate', [ 'certificate' => $certificate, 'employee' => $employee,'currentuserid'=>$id,'currentdate'=>$currentdate]);
+
+        }
+        elseif ($certificate->ref == "FAMILY VISIT FISA REQUEST") {
+
+            return view('Dashboard.employee.Personal_Certificate.'.$type.'.ar.Family_Visit_visa_request', [ 'certificate' => $certificate, 'employee' => $employee,'currentuserid'=>$id,'currentdate'=>$currentdate]);
+
+        }
+        elseif ($certificate->ref == "FAMILY RESIDENCY VISA REQUEST") {
+
+            return view('Dashboard.employee.Personal_Certificate.'.$type.'.ar.Family_Residency_visa_request', [ 'certificate' => $certificate, 'employee' => $employee,'currentuserid'=>$id,'currentdate'=>$currentdate]);
+
+        }
+        elseif ($certificate->ref == "QID LOST") {
+
+            return view('Dashboard.employee.Personal_Certificate.'.$type.'.ar.QID_Lost', [ 'certificate' => $certificate, 'employee' => $employee,'currentuserid'=>$id,'currentdate'=>$currentdate]);
+        }
+        return view('Dashboard.employee.Personal_Certificate.'.$type.'.ar.QID_Lost', [ 'certificate' => $certificate, 'employee' => $employee,'currentuserid'=>$id,'currentdate'=>$currentdate]);
+
+
+}
 
     public function returncertificateapproval(Request $request,$id)
     {
@@ -206,17 +299,47 @@ $certificate2=DB::table('certificate')-> where('review_status','=','ConfirmCerti
 
         return view('Dashboard.employee.Personal_Certificate.My_Certificates', ['certificates' => $certificates,'employee'=>$employee,'certificatesapproval'=>$certificatesapproval,'certificatesreturn'=>$certificatesreturn,'currentdate'=>$currentdate,'certificatespending'=>$certificatesPending]);
     }
+    public function ApprovalCertificate (Request $request)
+    {
+
+            $id = Auth::guard('employee')->user()->id ?? null;
+            $certificates = DB::table('certificate')->get();
+            $employee=null;
+            foreach ($certificates as $certificate) {
+                $employee = DB::table('employees')->where('id', '=', $certificate->Emp_id ?? "")->get();
+            }
+            $certificatespending = DB::table('certificate')->where('review_status', '=', 'ConfirmCertificate')->where('approval_status', '=', null)->get();
+            $certificatesreturn = DB::table('certificate')->where('approval_status', '=', 'Return To Sender')->get();
+            $certificatesapproval = DB::table('certificate')->where('approval_status', '=', 'ConfirmCertificate')->get();
+            return view('Dashboard.employee.Personal_Certificate.Approval_Certificates', ['employee' => $employee, 'certificates' => $certificates, 'certificatespending' => $certificatespending, 'certificatesreturn' => $certificatesreturn, 'certificatesapproval' => $certificatesapproval]);
+
+        }
+    public function CertificateApproval(Request $request)
+    {
+
+    }
     public function showcertificatereviewer()
     {
 //        $id= Auth::guard('employee')->user()->id??null;
         $certificates = DB::table('certificate')->get();
         $certificatespending = DB::table('certificate')->where('review_status','=',null)->get();
         $certificatesreturn = DB::table('certificate')->where('review_status','=','Return To Sender')->get();
-        $certificatesapproval = DB::table('certificate')->where('review_status','=','ConfirmCertificate')->get();
+        $certificatesreturnapproval = DB::table('certificate')->where('review_status','=','ConfirmCertificate')->where('approval_status','=','Return To Sender')->get();
+        $certificatesapproval = DB::table('certificate')->where('review_status','=','ConfirmCertificate')->whereNot('approval_status','=','Return To Sender')->get();
         $currentdate=now();
         $employeepend=[];
         $employeereturn=[];
         $employeeapproval=[];
+        $employeeapprovalreturn=[];
+
+        foreach ($certificatesreturnapproval as $certificate) {
+            $employee= DB::table('employees')->where('id','=',$certificate->Emp_id??"")->first();
+            $employeeapprovalreturn[]=$employee;
+
+
+        }
+
+
            foreach ($certificatespending as $certificate) {
              $employee= DB::table('employees')->where('id','=',$certificate->Emp_id??"")->first();
              $employeepend[]=$employee;
@@ -234,7 +357,7 @@ $certificate2=DB::table('certificate')-> where('review_status','=','ConfirmCerti
 
         }
 
-        return view('Dashboard.employee.Personal_Certificate.Review_Certificates', ['certificates' => $certificates,'employeepend'=>$employeepend,'employeereturn'=>$employeereturn,'employeeapproval'=>$employeeapproval,'currentdate'=>$currentdate,'certificatespending'=>$certificatespending,'certificatesreturn'=>$certificatesreturn,'certificatesapproval'=>$certificatesapproval]);
+        return view('Dashboard.employee.Personal_Certificate.Review_Certificates', ['certificates' => $certificates,'employeepend'=>$employeepend,'employeereturn'=>$employeereturn,'employeeapproval'=>$employeeapproval,'currentdate'=>$currentdate,'certificatespending'=>$certificatespending,'certificatesreturn'=>$certificatesreturn,'certificatesapproval'=>$certificatesapproval,'certificatesreturnapproval'=>$certificatesreturnapproval,'employeeapprovalreturn'=>$employeeapprovalreturn]);
 
     }
 

@@ -199,8 +199,8 @@
 
     <div id="mainContent" class="content content_responsev">
         <header>
-            @foreach($employee as $emp)
-                @if($emp->company_id=='medgulf')
+{{--            @foreach($employee as $emp)--}}
+                @if($employee->company_id=='medgulf')
                     <div class="logo">
                         <div class="img-fluid">
                             <img src="{{asset("assets/images/sign-in/Logos@3x.png")}}" alt="logos">
@@ -210,7 +210,7 @@
                         </div>
                     </div>
                 @endif
-                @if($emp->company_id=='trags')
+                @if($employee->company_id=='trags')
                     <div class="logo">
                         <div class="img-fluid">
                             <img src="{{asset("assets/images/sign-in/Logos@3x-1.png")}}" alt="logos">
@@ -220,7 +220,7 @@
                         </div>
                     </div>
                 @endif
-                @if($emp->company_id=='enjineering')
+                @if($employee->company_id=='enjineering')
                     <div class="logo">
                         <div class="img-fluid">
                             <img src="{{asset("assets/images/sign-in/Logos@3x-2.png")}}" alt="logos">
@@ -230,7 +230,7 @@
                         </div>
                     </div>
                 @endif
-            @endforeach
+{{--            @endforeach--}}
             <div class="account">
                 <div class="image">
                     <div class="ima-fluid">
@@ -293,17 +293,17 @@
                 <section class="a4_section" id="a4_section">
                     <div class="image">
                         <div class="img-fluid">
-                            @foreach($employee as $emp)
-                                @if($emp->company_id=='medgulf')
+{{--                            @foreach($employee as $emp)--}}
+                                @if($employee->company_id=='medgulf')
                                     <img src="{{asset("assets/images/logos/header.png")}}" alt="Medgulf Header">
                                 @endif
-                                @if($emp->company_id=='trags')
+                                @if($employee->company_id=='trags')
                                     <img src="{{asset("assets/images/logos/tragsEngHeader.jpg")}}" alt="TragsEng Header">
                                 @endif
-                                @if($emp->company_id=='enjineering')
+                                @if($employee->company_id=='enjineering')
                                     <img src="{{asset("assets/images/logos/tragsHeader.png")}}" alt="Trags Header">
                                 @endif
-                            @endforeach
+{{--                            @endforeach--}}
                         </div>
                     </div>
 {{--                    <div class="container mt-4">--}}
@@ -311,17 +311,17 @@
 {{--                    </div>--}}
                     <div class="image footer">
                         <div class="img-fluid">
-                            @foreach($employee as $emp)
-                                @if($emp->company_id=='medgulf')
+{{--                            @foreach($employee as $emp)--}}
+                                @if($employee->company_id=='medgulf')
                                     <img src="{{asset("assets/images/logos/footer.jpg")}}" alt="Medgulf Footer">
                                 @endif
-                                @if($emp->company_id=='trags')
+                                @if($employee->company_id=='trags')
                                     <img src="{{asset("assets/images/logos/tragsEngFooter.jpg")}}" alt="tragsEng Footer">
                                 @endif
-                                @if($emp->company_id=='enjineering')
+                                @if($employee->company_id=='enjineering')
                                     <img src="{{asset("assets/images/logos/tragsfooter.jpg")}}" alt="trags Footer">
                                 @endif
-                            @endforeach
+{{--                            @endforeach--}}
                         </div>
                     </div>
                 </section>
@@ -449,11 +449,12 @@
                             }
                             .a4_section {
                                 width: 210mm;
-                                height: 287mm;
+                                /*height: 287mm;*/
                                 background-color: var(--white-color);
                                 border: 1px solid var(--main-color);
                                 border-radius: 10px;
                                 margin-inline: auto;
+                                height:auto;
                                 margin-block-start: 20px;
                                 padding: 20px;
                                 box-sizing: border-box;
@@ -464,34 +465,51 @@
                                 margin: -12px;
                             }
                             .a4_section .image.footer{
-                                position: absolute;
-                                bottom: 20px;
+                                 display: flex;
+                                bottom: 10px;
                                 left: 0;
                                 margin: 0px;
                                 padding: 0px 8px;
                             }
                             .a4_section .image .img-fluid img{
                                 width: 100%;
+
                             }
                             .a4_section .content_certificate{
                                 margin-block-start: 30px;
                             }
-                            .a4_section .content_certificate h5{
+                            .a4_section .content_certificate{
                                 color: var(--dark-color);
                                 font-family: "Syne";
-                                font-size: 16px;
-                                font-weight: 700;
+                                font-size: 12px;
+                                font-weight: 500;
+                                line-height: 18px;
+                                padding-block: 2px;
+                            }
+   .a4_section .content_certificate .header_certificate h5{
+                                color: var(--dark-color);
+                                font-family: "Syne";
+                                font-size: 12px;
+                                font-weight: 500;
+                                line-height: 18px;
+                                padding-block: 2px;
+                            }
+                        .a4_section .content_certificate .header_certificate h6{
+                                color: var(--dark-color);
+                                font-family: "Syne";
+                                font-size: 12px;
+                                font-weight: 500;
                                 line-height: 18px;
                                 padding-block: 2px;
                             }
                             .a4_section .content_certificate .header_certificate h5 span{
-                                color: var(--orange-color);
+
                                 display: inline;
                             }
                             .a4_section .content_certificate p{
                                 color: var(--dark-color);
                                 font-family: "Syne";
-                                font-size: 14px;
+                                font-size: 8px;
                                 font-weight: 500;
                                 line-height: 18px;
                             }
@@ -499,11 +517,13 @@
                                 padding-block: 5px;
                             }
                             .a4_section .content_certificate .body_certificate p span{
-                                color: var(--orange-color);
+
                                 display: inline;
                             }
                             .a4_section .content_certificate .Footer_certificate .Footer_certificate_photo{
-                                display: flex;
+
+                                  padding-left:60px;
+                                   padding-right: 60px;
                                 justify-content: space-between;
                                 align-items: center;
                             }
@@ -511,7 +531,7 @@
                                 position: relative;
                             }
                             .a4_section .content_certificate .Footer_certificate .Footer_certificate_photo .image .img-fluid img{
-                                width: 250px;
+                                width: 125px;
                             }
                             .a4_section .content_certificate .Footer_certificate .Footer_certificate_photo .image .img-fluid.company img.tragsEng{
                                 width: 170px;
@@ -520,7 +540,7 @@
                                 width: 650px;
                             }
                             .a4_section .content_certificate .Footer_certificate .Footer_certificate_photo .image .img-fluid.company img.Medgulf{
-                                width: 500px;
+                                width: 240px;
                             }
                             .a4_section .content_certificate .Footer_certificate .Footer_certificate_photo .image .img-fluid.company:has(.tragsEng) {
                                 position: absolute;
@@ -529,7 +549,7 @@
                             }
                             .a4_section .content_certificate .Footer_certificate .Footer_certificate_photo .image .img-fluid.company{
                                 position: absolute;
-                                top: -120px;
+                                top: -190px;
                                 right: -100px;
                             }
                             .a4_section .content_certificate .Footer_certificate .Footer_certificate_content{
@@ -566,6 +586,7 @@
                                 }
                                 .a4_section:has(.Medgulf) .content_certificate .Footer_certificate .Footer_certificate_content{
                                     padding-block-start: 20px;
+bottom:30px
                                 }
                                 .a4_section:has(.Medgulf) .content_certificate h5{
                                     font-size: 16px;
@@ -607,6 +628,7 @@
                     </head>
                     <body>
                         ${sectionToPrint}
+
                         <button class="buttonPrint" onclick="window.print()">Print</button>
                     </body>
                 </html>
