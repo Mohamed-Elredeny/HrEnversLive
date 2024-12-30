@@ -81,5 +81,5 @@
                 <br>
 
             </div></div>
-    @endforeach
+{{--    @endforeach--}}
 @endsection

@@ -1,6 +1,6 @@
 @extends('Dashboard.employee.Personal_Certificate.Certificate_Returned_Approval')
 @section('Certificate_Content_Return_Approval')
-    @foreach($employee as $emp)
+{{--    @foreach($employee as $emp)--}}
         <div class="content_certificate">
 
             <div class="header_certificate">
@@ -110,6 +110,6 @@
             </div>
 
         </div>
-    @endforeach
+{{--    @endforeach--}}
 @endsection
 
