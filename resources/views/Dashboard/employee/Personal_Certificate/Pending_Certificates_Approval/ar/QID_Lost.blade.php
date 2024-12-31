@@ -30,13 +30,13 @@
                 <h3 class="text-center font-weight-bold"> <b style="font-weight: bold;display: inline; text-decoration: underline; text-underline-offset: 5px;"><u>الموضوع : بلاغ فقدان بطاقة شخصية</u></b></h3>
                 <br><br><h4>
                     نحيطكم علماً بأن
-                    @if($$employee->sex=="Male")السيد/ @else السيدة/ @endif
-                    <span style="font-weight: bold;display: inline">{{$$employee->arabic_name}}</span>
+                    @if($employee->sex=="Male")السيد/ @else السيدة/ @endif
+                    <span style="font-weight: bold;display: inline">{{$employee->arabic_name}}</span>
                     ،
                     يحمل بطاقة شخصية قطرية رقم  (
-                    <span style="font-weight: bold;display: inline;"> {{$$employee->visaNo}}</span>
+                    <span style="font-weight: bold;display: inline;"> {{$employee->visaNo}}</span>
                     )،
-                    <span style="font-weight: bold;display: inline;">{{$$employee->arabic_nationality}}  </span> الجنسية، قد فقد بطاقته الشخصية ونرجو منكم اتخاد الاجراءات اللازمة ليتسنى لنا
+                    <span style="font-weight: bold;display: inline;">{{$employee->arabic_nationality}}  </span> الجنسية، قد فقد بطاقته الشخصية ونرجو منكم اتخاد الاجراءات اللازمة ليتسنى لنا
                     اكمال الاجراءات المتعلقة لدى سيادتكم.
 
                     <br><br>
@@ -48,9 +48,9 @@
                     <h5>
 
                         <span style="font-weight: bold;display: inline;">
-                         @if ($$employee->company_id == "medgulf")
+                         @if ($employee->company_id == "medgulf")
                                 عن شركة مدجلف للإنشاءات
-                            @elseif ($$employee->company_id == "trags")
+                            @elseif ($employee->company_id == "trags")
                                 عن شركة تراجز للهندسة الكهربائية وتكييف الهواء
                             @else
                                 عن شركة الخدمات التجارية والتوكيلات المحدودة
