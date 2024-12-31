@@ -14,7 +14,7 @@
 
                  Date: {{$certificate->date_submit}}
 <br>
-            Ref No  {{$employee->empCode}}/CBQ/2024
+            Ref No  {{$employee->empCode}}/CBQ/{{$currentYear}}
             </h5>
         </div>
                 <br>

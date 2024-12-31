@@ -181,6 +181,9 @@ $certificate2=DB::table('certificate')-> where('review_status','=','ConfirmCerti
 
 public function Certificatecontent($type,$id)
 {
+
+
+    $currentYear = Carbon::now()->year;
         $idd = Auth::guard('employee')->user()->id ;
         $certificate = Certificates::find($id);
         $currentdate = Carbon::now();
@@ -191,48 +194,48 @@ public function Certificatecontent($type,$id)
 
         if ($certificate->ref == "PERSONA LOAN" || $certificate->ref == "CREDIT CARD" || $certificate->ref == "VEHICLE LOAN")
         {
-            return view('Dashboard.employee.Personal_Certificate.'.$type.'.en.loan', [ 'certificate' => $certificate, 'employee' => $employee,'currentuserid'=>$idd,'currentdate'=>$currentdate]);
+            return view('Dashboard.employee.Personal_Certificate.'.$type.'.en.loan', [ 'certificate' => $certificate, 'employee' => $employee,'currentuserid'=>$idd,'currentdate'=>$currentdate,'currentyear'=>$currentYear]);
 
         }
         elseif ($certificate->ref == "EMPLOYMENT CERTIFICATE TO EMBASSY") {
 
-            return view('Dashboard.employee.Personal_Certificate.'.$type.'.en.embassy',[ 'certificate' => $certificate, 'employee' => $employee,'currentuserid'=>$idd,'currentdate'=>$currentdate]);
+            return view('Dashboard.employee.Personal_Certificate.'.$type.'.en.embassy',[ 'certificate' => $certificate, 'employee' => $employee,'currentuserid'=>$idd,'currentdate'=>$currentdate,'currentyear'=>$currentYear]);
         }
         elseif ($certificate->ref == "CERTIFICATE WITHOUT SALARY" || $certificate->ref == "SALARY CERTIFICATE") {
 
-            return view('Dashboard.employee.Personal_Certificate.'.$type.'.en.salary',[ 'certificate' => $certificate, 'employee' => $employee,'currentuserid'=>$id,'currentdate'=>$currentdate]);
+            return view('Dashboard.employee.Personal_Certificate.'.$type.'.en.salary',[ 'certificate' => $certificate, 'employee' => $employee,'currentuserid'=>$id,'currentdate'=>$currentdate,'currentyear'=>$currentYear]);
 
         }
         elseif ($certificate->ref == "GATE PASS LOST") {
 
-            return view('Dashboard.employee.Personal_Certificate.'.$type.'.ar.Gate_Pass_lost', [ 'certificate' => $certificate, 'employee' => $employee,'currentuserid'=>$id,'currentdate'=>$currentdate]);
+            return view('Dashboard.employee.Personal_Certificate.'.$type.'.ar.Gate_Pass_lost', [ 'certificate' => $certificate, 'employee' => $employee,'currentuserid'=>$id,'currentdate'=>$currentdate,'currentyear'=>$currentYear]);
 
         }
         elseif ($certificate->ref == "GATE PASS CANCELLATION") {
 
-            return view('Dashboard.employee.Personal_Certificate.'.$type.'.ar.Gate_Pass_Cancellation', [ 'certificate' => $certificate, 'employee' => $employee,'currentuserid'=>$id,'currentdate'=>$currentdate]);
+            return view('Dashboard.employee.Personal_Certificate.'.$type.'.ar.Gate_Pass_Cancellation', [ 'certificate' => $certificate, 'employee' => $employee,'currentuserid'=>$id,'currentdate'=>$currentdate,'currentyear'=>$currentYear]);
 
         }
         elseif ($certificate->ref == "EXPERIENCE CERTIFICATE") {
 
-            return view('Dashboard.employee.Personal_Certificate.'.$type.'.ar.Experience_Certificate', [ 'certificate' => $certificate, 'employee' => $employee,'currentuserid'=>$id,'currentdate'=>$currentdate]);
+            return view('Dashboard.employee.Personal_Certificate.'.$type.'.ar.Experience_Certificate', [ 'certificate' => $certificate, 'employee' => $employee,'currentuserid'=>$id,'currentdate'=>$currentdate,'currentyear'=>$currentYear]);
 
         }
         elseif ($certificate->ref == "FAMILY VISIT FISA REQUEST") {
 
-            return view('Dashboard.employee.Personal_Certificate.'.$type.'.ar.Family_Visit_visa_request', [ 'certificate' => $certificate, 'employee' => $employee,'currentuserid'=>$id,'currentdate'=>$currentdate]);
+            return view('Dashboard.employee.Personal_Certificate.'.$type.'.ar.Family_Visit_visa_request', [ 'certificate' => $certificate, 'employee' => $employee,'currentuserid'=>$id,'currentdate'=>$currentdate,'currentyear'=>$currentYear]);
 
         }
         elseif ($certificate->ref == "FAMILY RESIDENCY VISA REQUEST") {
 
-            return view('Dashboard.employee.Personal_Certificate.'.$type.'.ar.Family_Residency_visa_request', [ 'certificate' => $certificate, 'employee' => $employee,'currentuserid'=>$id,'currentdate'=>$currentdate]);
+            return view('Dashboard.employee.Personal_Certificate.'.$type.'.ar.Family_Residency_visa_request', [ 'certificate' => $certificate, 'employee' => $employee,'currentuserid'=>$id,'currentdate'=>$currentdate,'currentyear'=>$currentYear]);
 
         }
         elseif ($certificate->ref == "QID LOST") {
 
-            return view('Dashboard.employee.Personal_Certificate.'.$type.'.ar.QID_Lost', [ 'certificate' => $certificate, 'employee' => $employee,'currentuserid'=>$id,'currentdate'=>$currentdate]);
+            return view('Dashboard.employee.Personal_Certificate.'.$type.'.ar.QID_Lost', [ 'certificate' => $certificate, 'employee' => $employee,'currentuserid'=>$id,'currentdate'=>$currentdate,'currentyear'=>$currentYear]);
         }
-        return view('Dashboard.employee.Personal_Certificate.'.$type.'.ar.QID_Lost', [ 'certificate' => $certificate, 'employee' => $employee,'currentuserid'=>$id,'currentdate'=>$currentdate]);
+        return view('Dashboard.employee.Personal_Certificate.'.$type.'.ar.QID_Lost', [ 'certificate' => $certificate, 'employee' => $employee,'currentuserid'=>$id,'currentdate'=>$currentdate,'currentyear'=>$currentYear]);
 
 
 }
