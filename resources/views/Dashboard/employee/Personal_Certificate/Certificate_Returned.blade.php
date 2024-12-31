@@ -200,8 +200,8 @@
 
     <div id="mainContent" class="content content_responsev">
         <header>
-            @foreach($employee as $emp)
-                @if($emp->company_id=='medgulf')
+{{--            @foreach($employee as $emp)--}}
+                @if($employee->company_id=='medgulf')
                     <div class="logo">
                         <div class="img-fluid">
                             <img src="{{asset("assets/images/sign-in/Logos@3x.png")}}" alt="logos">
@@ -211,7 +211,7 @@
                         </div>
                     </div>
                 @endif
-                @if($emp->company_id=='trags')
+                @if($employee->company_id=='trags')
                     <div class="logo">
                         <div class="img-fluid">
                             <img src="{{asset("assets/images/sign-in/Logos@3x-1.png")}}" alt="logos">
@@ -221,7 +221,7 @@
                         </div>
                     </div>
                 @endif
-                @if($emp->company_id=='enjineering')
+                @if($employee->company_id=='enjineering')
                     <div class="logo">
                         <div class="img-fluid">
                             <img src="{{asset("assets/images/sign-in/Logos@3x-2.png")}}" alt="logos">
@@ -231,7 +231,7 @@
                         </div>
                     </div>
                 @endif
-            @endforeach
+{{--            @endforeach--}}
             <div class="account">
                 <div class="image">
                     <div class="ima-fluid">
@@ -294,13 +294,13 @@
                 <section class="a4_section" id="a4_section">
                     <div class="image">
                         <div class="img-fluid">
-                            @if($emp->company_id=='medgulf')
+                            @if($employee->company_id=='medgulf')
                                 <img src="{{asset("assets/images/logos/header.png")}}" alt="Medgulf Header">
                             @endif
-                            @if($emp->company_id=='trags')
+                            @if($employee->company_id=='trags')
                                 <img src="{{asset("assets/images/logos/tragsEngHeader.jpg")}}" alt="TragsEng Header">
                             @endif
-                            @if($emp->company_id=='enjineering')
+                            @if($employee->company_id=='enjineering')
                                 <img src="{{asset("assets/images/logos/tragsHeader.png")}}" alt="Trags Header">
                             @endif
                         </div>
@@ -309,17 +309,17 @@
 
                     <div class="image footer">
                         <div class="img-fluid">
-                            @foreach($employee as $emp)
-                                @if($emp->company_id=='medgulf')
+{{--                            @foreach($employee as $emp)--}}
+                                @if($employee->company_id=='medgulf')
                                     <img src="{{asset("assets/images/logos/footer.jpg")}}" alt="Medgulf Footer">
                                 @endif
-                                @if($emp->company_id=='trags')
+                                @if($employee->company_id=='trags')
                                     <img src="{{asset("assets/images/logos/tragsEngFooter.jpg")}}" alt="tragsEng Footer">
                                 @endif
-                                @if($emp->company_id=='enjineering')
+                                @if($employee->company_id=='enjineering')
                                     <img src="{{asset("assets/images/logos/tragsfooter.jpg")}}" alt="trags Footer">
                                 @endif
-                            @endforeach
+{{--                            @endforeach--}}
                         </div>
                     </div>
                 </section>
@@ -350,7 +350,9 @@
                 ];
                 $selectedReasons = json_decode($certificate->returnReasons, true); // Decode selected reasons
             @endphp
-
+            @php
+                $selectedReasons = $selectedReasons ?? [];
+            @endphp
             @foreach ($allReasons as $reasonKey => $reasonLabel)
                 <div class="form-group">
                     <div style="display: flex ;align-items: center; gap: 5px;">

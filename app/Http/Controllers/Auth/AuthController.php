@@ -78,7 +78,7 @@ class AuthController extends Controller
             return redirect()->intended('dashboard');
         }
 
-        return redirect('/')->with('message', 'Invalid credentials. Please try again.');
+        return redirect()->back()->with('message', 'Invalid credentials. Please try again.');
     }
 
     public function loginTrags(Request $request)

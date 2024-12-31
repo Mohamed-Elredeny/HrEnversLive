@@ -30,6 +30,13 @@
     <link rel="stylesheet" href="{{asset("assets/css/all.min.css")}}">
 
 </head>
+<style>
+    @media (min-width: 1500px) {
+        .container {
+            max-width: 1460px !important;
+        }
+    }
+</style>
 <body>
 
 
@@ -74,7 +81,7 @@
                         <img src="{{asset("assets/images/sign-in/Home@3x-4.png")}}" alt="icon">
                     </div>
                     <div class="image-light  calendar-light image">
-                        <img src="{{asset("assets/images/sign-in/Home-light@3x-1.png")}} alt="icon">
+                        <img src="{{asset("assets/images/sign-in/Home-light@3x-1.png")}}" alt="icon">
                     </div>
                 </a>
                 <span>Calendar</span>
@@ -250,9 +257,8 @@
             </div>
         </header>
 
-
         <main>
-            <article class="container">
+            <article class="container" style="max-width: 1460px !important;">
                 <section class="head">
                     <div class="title">
                         <a href="{{route('employee.index')}}">
@@ -266,12 +272,6 @@
                             <img src="{{asset("assets/images/sign-in/Back@3x.png")}}" alt="back arrow">
                         </div>
                     </a>
-                </section>
-
-                <section class="name_page">
-                    <p>
-                        Review Certificates
-                    </p>
                 </section>
                 <section class="table_section table_Certificate th_td_last_child border-white table_responsev">
                     <table class="w-100">
@@ -317,9 +317,11 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <a href="{{route('employee.CertificateApproval',$certificate->id)}}">
-                                        <button class="btn">
-                                            show
+{{--                                    <a href="{{route('employee.CertificateApproval',$certificate->id)}}">--}}
+
+                                    <a href="{{ route('employee.Certificate', [ 'type' => 'Approval_Certificates','id' => $certificate->id]) }}">
+                                    <button class="btn">
+                                           View
                                         </button>
                                     </a>
                                 </td>
@@ -346,14 +348,15 @@
                                             </div>
                                         </div>
                                         <p>
-                                            Pending To Review
+                                            Pending  Review
                                         </p>
                                     </div>
                                 </td>
                                 <td>
-                                    <a href="{{route('employee.CertificatePending',$certificate->id)}}">
+                                    <a href="{{ route('employee.Certificate', [ 'type' => 'Pending_Certificates','id' => $certificate->id]) }}">
+
                                         <button class="btn">
-                                            show
+                                           Review
                                         </button>
                                     </a>
                                 </td>
@@ -388,15 +391,50 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <a href="{{route('employee.CertificateReturned',$certificate->id)}}">
+                                    <a href="{{ route('employee.Certificate', [ 'type' => 'Return_Certificates','id' => $certificate->id]) }}">
                                         <button class="btn">
-                                            show
+                                            Return
                                         </button>
                                     </a>
                                 </td>
                             </tr>
                         @endforeach
+                        @foreach($certificatesreturnapproval as $certificate)
 
+                            <tr class="Returned_Certificate" style="display:table-row ;">
+                                <td>{{ \App\Models\Employee::find($certificate->Emp_id)->empName ?? '' }}</td>
+                                <td>{{ $certificate->ref }}</td>
+                                <td>{{$certificate->remark}}</td>
+                                <td>{{$certificate->date_submit}}</td>
+                                <td>{{$certificate->review_name}}</td>
+                                <td>{{$certificate->review_date??" "}}</td>
+                                <td>{{$certificate->review_remark??"  "}}</td>
+                                <td>{{$certificate->approval_name}}</td>
+                                <td>{{$certificate->approval_date??" "}}</td>
+                                <td>{{$certificate->approval_remark??" "}}</td>
+
+
+                                <td>
+                                    <div class="statu">
+                                        <div class="image">
+                                            <div class="img-fluid">
+                                                <img src="{{asset("assets/images/sign-in/Returned@3x.png")}}" alt="Returned">
+                                            </div>
+                                        </div>
+                                        <p>
+                                            Approval Returned
+                                        </p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <a href="{{ route('employee.Certificate', [ 'type' => 'Return_Certificates_Approval','id' => $certificate->id]) }}">
+                                        <button class="btn">
+                                            Return
+                                        </button>
+                                    </a>
+                                </td>
+                            </tr>
+                        @endforeach
 
                         </tbody>
                     </table>

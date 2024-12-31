@@ -1,35 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="csrf_token" content="{{csrf_token()}}">
     <title>ENSRV sign-in</title>
 
     <link rel="stylesheet" href="{{asset("assets/css/sign_in.css")}}">
 
-    <link rel="preconnect" href="{{asset("https://fonts.googleapis.com")}}">
-    <link rel="preconnect" href="{{asset("https://fonts.gstatic.com") }}" crossorigin>
-    <link href="{{asset("https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap")}}" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
 
-    <link rel="preconnect" href="{{asset("https://fonts.googleapis.com")}}">
-    <link rel="preconnect" href="{{asset("https://fonts.gstatic.com")}}" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="{{asset("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap")}}"
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 
     <!-- bootstrap -->
     <link rel="stylesheet" href="{{asset("assets/css/bootstrap.min.css")}}">
     <link rel="stylesheet" href="{{asset("assets/css/all.min.css")}}">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
 </head>
+<style>
+    .logos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .radio-card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+    @media (max-width: 768px) {
+        .radio-card {
+            margin-bottom: 15px;
+        }
+    }
+
+</style>
 <body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
 @if(session()->has('message'))
     <div>
         <div class="alert alert-danger">
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+
             {{session()->get('message')}}
+
         </div>
     </div>
 @endif
@@ -56,6 +79,14 @@
                         <div class="img-fluid">
                             <img src="{{asset("assets/images/sign-in/HR_360_logo.png")}}" alt="">
                         </div>
+
+                        <div class="title" style="color:var(--dark-color)">
+
+                                Your One-Stop HR Solutions
+
+                        </div>
+                        <br>
+
                         <div class="title">
                             Welcome to your one-stop hub for
                             HR resources and tools.
@@ -75,16 +106,13 @@
                         <div class="img-fluid">
                             <img src="{{asset("assets/images/sign-in/331@3x.png")}}" alt="build">
                         </div>
+
                         <p class="span text-1">It’s all digitalized now!</p>
                         <p class="span text-2">Don’t waste your time<br>with paper work</p>
                         <p class="span text-3">Easy Access!</p>
                     </div>
                 </div>
-                <div class="down">
-                    <p>
-                        Your One-Stop HR Solutions
-                    </p>
-                </div>
+
             </section>
             <!-- hero section -->
 
@@ -99,18 +127,15 @@
                             <img src="{{asset("assets/images/sign-in/HR_360_logo.png")}}" alt="logo photo">
                         </div>
                     </div>
-                    <p>
-                        Your One-Stop
-                        <br>
-                        HR Solutions
-                    </p>
+
                 </div>
                 <div class="signin">
                     <div class="head">
                         <div class="nav">
-                            <p class="signdiff active" id="signInId" onclick="SignIn()">Sign In</p>
-                            <p class="" id="SignUpId" onclick="SignUp()">Sign Up</p>
 
+                            <p class="signdiff active" id="signInId" onclick="SignIn()">Sign In</p>
+                            |
+                            <p class="" id="SignUpId" onclick="SignUp()">Sign Up</p>
                         </div>
                         <div class="img-fluid">
                             <img src="{{asset("assets/images/sign-in/Sign_IN_Icon@3x.png")}}">
@@ -123,12 +148,11 @@
                             Please click on your company's logo to log in.
                         </p>
                         <div class="card-list">
+
+
                             <div class="card" onclick="medgulfSignIn()">
-{{--                            <label for="radio-card-5"  >--}}
-{{--                                <input type="radio" style="display: none"--}}
-{{--                                       name="company_name" value="medgulf" id="radio-card-5"/></label>--}}
                                 <div class="image">
-                                    <img src="{{asset("assets/images/logos/MEDGULF-logo.png")}}" alt="logo medgulf">
+                                    <img src="{{asset("assets/images/logos/MEDGULF-logo.png")}}"   alt="logo medgulf">
                                 </div>
                                 <div class="content">
                                     <p>
@@ -136,12 +160,11 @@
                                     </p>
                                 </div>
                             </div>
+
                             <div class="card" onclick="TragsSignIn()">
-{{--                                <label for="radio-card-6"  >--}}
-{{--                                    <input type="radio" style="display: none"--}}
-{{--                                           name="company_name" value="trags" id="radio-card-6"/></label>--}}
+
                                 <div class="image">
-                                    <img src="{{asset("assets/images/logos/Trags.png")}}" alt="logo Trags">
+                                    <img src="{{asset("assets/images/logos/4.jpg")}}" alt="logo Trags">
                                 </div>
                                 <div class="content">
                                     <p>
@@ -153,8 +176,7 @@
                             <div class="card" onclick="EngineeringSignIn()">
 
                                 <div class="image">
-                                    <img src="{{asset("assets/images/logos/tragsentity2.png")}}"
-                                         alt="logo Trags Engineering">
+                                    <img src="{{asset("assets/images/logos/3.jpg")}}" alt="logo Trags Engineering">
                                 </div>
                                 <div class="content">
                                     <p>
@@ -179,6 +201,13 @@
                     </div>
 
                     <div class="content signLogo medgulfSignin" id="medgulfSignin">
+
+                        <div onclick="SignIn()" style=" position: absolute; top: 10px;left: 10px;cursor: pointer;display: inline-flex;align-items: center;">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20"  style=" margin-right: 5px;">
+                                <path d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M19 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H19v-2z"/>
+                            </svg></div>
+
                         <div class="image">
                             <div class="img-fluid">
                                 <img src="{{asset("assets/images/logos/MEDGULF-logo.png")}}" alt="logo medgulf">
@@ -197,10 +226,9 @@
                                   id="signinmedgulf">
                                 @csrf
 
-                                <input type="email" placeholder="Work Email" class="form-control" name="emailMedgulf"
-                                       id="emailMedgulf">
+                                <input type="email" placeholder="Work Email" class="form-control" name="emailMedgulf" id="emailMedgulf">
                                 <div class="password">
-                                    <input type="password" placeholder="password" class="form-control"
+                                    <input type="password" placeholder="Password" class="form-control"
                                            name="PasswordMedgulf" id="PasswordMedgulf">
                                     <div class="iconPassword active iconPasswordOpen" id="openEyeMedgulf">
                                         <i class="fa-solid fa-eye"></i>
@@ -238,6 +266,11 @@
 
 
                     <div class="content signLogo TragsSignin" id="TragsSignin">
+                        <div onclick="SignIn()" style=" position: absolute; top: 10px;left: 10px;cursor: pointer;display: inline-flex;align-items: center;">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20"  style=" margin-right: 5px;">
+                                <path d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M19 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H19v-2z"/>
+                            </svg></div>
                         <div class="image">
                             <div class="img-fluid">
                                 <img src="{{asset("assets/images/logos/Trags.png")}}" alt="logo Trags">
@@ -256,7 +289,7 @@
                                 <input type="email" placeholder="Work Email" class="form-control" name="emailTrags"
                                        id="emailTrags">
                                 <div class="password">
-                                    <input type="password" placeholder="password" class="form-control"
+                                    <input type="password" placeholder="Password" class="form-control"
                                            name="PasswordTrags" id="PasswordTrags">
                                     <div class="iconPassword active iconPasswordOpen" id="openEyeTrags">
                                         <i class="fa-solid fa-eye"></i>
@@ -294,6 +327,11 @@
 
 
                     <div class="content signLogo EngineeringSignin" id="EngineeringSignin">
+                        <div onclick="SignIn()" style=" position: absolute; top: 10px;left: 10px;cursor: pointer;display: inline-flex;align-items: center;">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20"  style=" margin-right: 5px;">
+                                <path d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M19 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H19v-2z"/>
+                            </svg></div>
                         <div class="image">
                             <div class="img-fluid">
                                 <img src="{{asset("assets/images/logos/tragsentity2.png")}}" alt="logo Engineering">
@@ -313,7 +351,7 @@
                                 <input type="email" placeholder="Work Email" class="form-control"
                                        name="emailEngineering" id="emailEngineering">
                                 <div class="password">
-                                    <input type="password" placeholder="password" class="form-control"
+                                    <input type="password" placeholder="Password" class="form-control"
                                            name="PasswordEngineering" id="PasswordEngineering">
                                     <div class="iconPassword active iconPasswordOpen" id="openEyeEngineering">
                                         <i class="fa-solid fa-eye"></i>
@@ -468,49 +506,32 @@
                                 <div class="text">
                                     <p>Register <br> Please click on your company's logo.</p>
                                 </div>
-                                <div class="logos">
-                                    <div class="row">
-                                        <label for="radio-card-1" class="radio-card col-md-4" onclick="logvisable1()">
-                                            <input type="radio" style="display: none"
-                                                   {{--                                                                                              @if($entity==1) checked @endif--}}
-                                                   name="company_id" value="enjineering" id="radio-card-1"/>
-                                            <div class="col-4 d-flex justify-content-center">
-                                                <div class="image active logoscom">
-                                                    <div class="img-fluid">
-                                                        <img src="{{asset("assets/images/logos/tragsentity2.png")}}"
-                                                             alt="logo trags">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </label>
-                                        <label for="radio-card-2" class="radio-card col-md-4" onclick="logvisable2()">
-                                            <input style="display: none" type="radio"
-{{--                                                   @if($entity==2) checked @endif--}}
-                                                   name="company_id" value="medgulf" id="radio-card-2"/>
-                                            <div class="col-4 d-flex justify-content-center">
-                                                <div class="image active logoscom">
-                                                    <div class="img-fluid">
-                                                        <img src="{{asset("assets/images/logos/MEDGULF-logo.png")}}"
-                                                             alt="logo medgulf">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </label>
-                                        <label for="radio-card-3" class="radio-card col-md-4" onclick="logvisable3()">
-                                            <input type="radio" style="display: none"
-{{--                                                   @if($entity==3) checked @endif--}}
-                                                   name="company_id" value="trags" id="radio-card-3"/>
-                                            <div class="col-4 d-flex justify-content-center">
-                                                <div class="image active logoscom">
-                                                    <div class="img-fluid">
-                                                        <img src="{{asset("assets/images/logos/Trags.png")}}"
-                                                             alt="logo Engineering">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </label>
-                                    </div>
+                                <div class="logos" style="display: flex; justify-content: center; align-items: center;gap :5px ">
+                                    <!-- Card 1 -->
+                                    <label for="radio-card-1"  style="cursor: pointer;">
+                                        <input type="radio" name="company_id" value="engineering" id="radio-card-1" hidden>
+                                        <div class="image logoscom" style="display: flex; justify-content: center; align-items: center;">
+                                            <img src="{{asset('assets/images/logos/tragsentity2.png')}}" alt="logo trags" class="img-fluid" style="max-width: 100%; height: auto;">
+                                        </div>
+                                    </label>
+
+                                    <!-- Card 2 -->
+                                    <label for="radio-card-2"  style="cursor: pointer;">
+                                        <input type="radio" name="company_id" value="medgulf" id="radio-card-2" hidden>
+                                        <div class="image logoscom" style="display: flex; justify-content: center; align-items: center;">
+                                            <img src="{{asset('assets/images/logos/MEDGULF-logo.png')}}" alt="logo medgulf" class="img-fluid" style="max-width: 100%; height: auto;">
+                                        </div>
+                                    </label>
+
+                                    <!-- Card 3 -->
+                                    <label for="radio-card-3"  style="cursor: pointer;">
+                                        <input type="radio" name="company_id" value="trags" id="radio-card-3" hidden>
+                                        <div class="image logoscom" style="display: flex; justify-content: center; align-items: center;">
+                                            <img src="{{asset('assets/images/logos/Trags.png')}}" alt="logo engineering" class="img-fluid" style="max-width: 100%; height: auto;">
+                                        </div>
+                                    </label>
                                 </div>
+
                                 <input type="text" placeholder="Employee Number" class="form-control"
                                        name="employee_numberr" id="employee_number">
                                 <input type="email" placeholder="Work Email" class="form-control" name="work_email"
@@ -649,280 +670,6 @@
 <script src="{{asset("assets/js/all.min.js")}}"></script>
 
 <script type="text/javascript"></script>
-{{--<script>--}}
-{{--    $(document).ready(function () {--}}
-{{--        $.ajaxSetup({--}}
-{{--            headers: {--}}
-{{--                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')--}}
-{{--            }--}}
-{{--        });--}}
-{{--// Prevent form from submitting the traditional way--}}
-{{--        $('#passwordresett').submit(function (e) {--}}
-{{--            e.preventDefault(); // Prevent the default form submission--}}
 
-{{--// Get form data--}}
-{{--            var formData = $(this).serialize(); // Serialize form data--}}
-{{--            $.ajax({--}}
-{{--                type: 'POST',--}}
-{{--                url: '{{route('forgetpasswordpost')}}', // Replace with your server script--}}
-{{--                data: formData,--}}
-{{--                dataType: 'json',--}}
-{{--                success: function (response) {--}}
-{{--// Handle success response--}}
-{{--                    $('#confirmcodeform').modal('show');--}}
-{{--                },--}}
-{{--                error: function (xhr, status, error) {--}}
-{{--// Handle error response--}}
-{{--                    if (xhr.status === 404) {--}}
-{{--                        alert('Error: ' + xhr.responseJSON.message); // Show invalid code message--}}
-{{--                    } else {--}}
-{{--                        alert('Something went wrong, please try again.');--}}
-{{--                    }--}}
-{{--// $('#confirmcodeform').modal('hide');--}}
-{{--                }--}}
-{{--            });--}}
-{{--        });--}}
-{{--    });</script>--}}
-
-
-//**************************
-{{--<script>--}}
-
-{{--    $(document).ready(function () {--}}
-{{--        $.ajaxSetup({--}}
-{{--            headers: {--}}
-{{--                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')--}}
-{{--            }--}}
-{{--        });--}}
-{{--        // Prevent form from submitting the traditional way--}}
-{{--        $('#passwordresett').submit(function (e) {--}}
-{{--            e.preventDefault(); // Prevent the default form submission--}}
-{{--            // let code = $('#codeForget').val();--}}
-{{--            // Get form data--}}
-{{--            var formData = $(this).serialize(); // Serialize form data--}}
-
-{{--            // AJAX request--}}
-{{--            $.ajax({--}}
-{{--                type: 'POST',--}}
-{{--                url: '{{ route('forgetpasswordpost') }}' , // Replace with your server script--}}
-{{--                data: formData,--}}
-
-{{--                dataType: 'json',--}}
-{{--                success: function (response) {--}}
-{{--                    // alert('sucess post mail.');--}}
-{{--                    forgetFirst.classList.remove("active");--}}
-{{--                    forgetSec.classList.add("active");--}}
-{{--                    forgetThir.classList.remove("active");--}}
-{{--                    // Handle success response--}}
-{{--                    // $('#confirmcodeform').modal('show');--}}
-{{--                },--}}
-{{--                error: function (xhr, status, error) {--}}
-{{--                    if (xhr.status === 404) {--}}
-{{--                        alert('Error: No user found with this email.');--}}
-{{--                    } else if (xhr.status === 500) {--}}
-{{--                        alert('Error: server' + xhr.responseJSON.message);--}}
-{{--                    }--}}
-{{--                }--}}
-{{--            });--}}
-{{--        });--}}
-{{--    });--}}
-{{--</script>--}}
-{{--<script>--}}
-
-{{--    $(document).ready(function () {--}}
-{{--        $.ajaxSetup({--}}
-{{--            headers: {--}}
-{{--                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')--}}
-{{--            }--}}
-{{--        });--}}
-{{--        // Prevent form from submitting the traditional way--}}
-{{--        $('#confirmcodeform').submit(function (e) {--}}
-{{--            e.preventDefault(); // Prevent the default form submission--}}
-{{--            var submitButton = $(this).find('button[type="submit"]'); // Get the submit button--}}
-{{--            // submitButton.prop('disabled', true);--}}
-{{--            // Get form data--}}
-{{--            var formData = $(this).serialize(); // Serialize form data--}}
-
-{{--            // AJAX request--}}
-{{--            $.ajax({--}}
-{{--                type: 'POST',--}}
-{{--                url: '{{route('confirmcodepost')}}', // Replace with your server script--}}
-{{--                data: formData,--}}
-
-{{--                dataType: 'json',--}}
-{{--                success: function (response) {--}}
-{{--                    // Handle success response--}}
-{{--                    // $('#forgetThirdform').modal('show');--}}
-{{--                    forgetFirst.classList.remove("active");--}}
-{{--                    forgetSec.classList.remove("active");--}}
-{{--                    forgetThir.classList.add("active");--}}
-{{--                },--}}
-{{--                error: function (xhr) {--}}
-{{--                    // Handle error response--}}
-{{--                    if (xhr.status === 404) {--}}
-{{--                        alert('Error: ' + xhr.responseJSON.message); // Show invalid code message--}}
-{{--                    } else {--}}
-{{--                        alert('Something went wrong, please try again.');--}}
-{{--                        forgetFirst.classList.remove("active");--}}
-{{--                        forgetSec.classList.add("active");--}}
-{{--                        forgetThir.classList.remove("active");--}}
-{{--                    }--}}
-{{--                    // Hide the modal on error--}}
-{{--                }--}}
-{{--            });--}}
-{{--        });--}}
-{{--    });--}}
-{{--</script>--}}
-{{--<script>--}}
-
-{{--    $(document).ready(function () {--}}
-{{--        $.ajaxSetup({--}}
-{{--            headers: {--}}
-{{--                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')--}}
-{{--            }--}}
-{{--        });--}}
-{{--        // Prevent form from submitting the traditional way--}}
-{{--        $('#signinenjineering').submit(function (e) {--}}
-{{--            e.preventDefault(); // Prevent the default form submission--}}
-{{--            var submitButton = $(this).find('button[type="submit"]'); // Get the submit button--}}
-{{--            // submitButton.prop('disabled', true);--}}
-{{--            // Get form data--}}
-{{--            var formData = $(this).serialize(); // Serialize form data--}}
-
-{{--            // AJAX request--}}
-{{--            $.ajax({--}}
-{{--                type: 'POST',--}}
-{{--                url: '{{route('signinpageEnjineering')}}', // Replace with your server script--}}
-{{--                data: formData,--}}
-
-{{--                dataType:'json',--}}
-{{--                success: function (response) {--}}
-{{--                    // Handle success response--}}
-{{--                    // $('#forgetThirdform').modal('show');--}}
-{{--                    alert('Success');--}}
-
-{{--                },--}}
-{{--                error: function (xhr) {--}}
-{{--                    // Handle error response--}}
-{{--                    if (xhr.status === 404) {--}}
-{{--                        alert('Error: ' + xhr.responseJSON.message); // Show invalid code message--}}
-{{--                    } else {--}}
-{{--                        alert('Something went wrong, please try again.');--}}
-
-{{--                    }--}}
-{{--                   // Hide the modal on error--}}
-{{--                }--}}
-{{--            });--}}
-{{--        });--}}
-{{--    });--}}
-{{--</script>--}}
-{{--<script>--}}
-
-{{--    $(document).ready(function () {--}}
-{{--        $.ajaxSetup({--}}
-{{--            headers: {--}}
-{{--                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')--}}
-{{--            }--}}
-{{--        });--}}
-{{--        // Prevent form from submitting the traditional way--}}
-{{--        $('#signintrags').submit(function (e) {--}}
-{{--            e.preventDefault(); // Prevent the default form submission--}}
-{{--            var submitButton = $(this).find('button[type="submit"]'); // Get the submit button--}}
-{{--            // submitButton.prop('disabled', true);--}}
-{{--            // Get form data--}}
-{{--            var formData = $(this).serialize(); // Serialize form data--}}
-
-{{--            // AJAX request--}}
-{{--            $.ajax({--}}
-{{--                type: 'POST',--}}
-{{--                url: '{{route('signinpageTrags')}}', // Replace with your server script--}}
-{{--                data: formData,--}}
-
-{{--                dataType:'json',--}}
-{{--                success: function (response) {--}}
-{{--                    // Handle success response--}}
-{{--                    // $('#forgetThirdform').modal('show');--}}
-{{--                    alert('Success');--}}
-
-{{--                },--}}
-{{--                error: function (xhr) {--}}
-{{--                    // Handle error response--}}
-{{--                    if (xhr.status === 404) {--}}
-{{--                        alert('Error: ' + xhr.responseJSON.message); // Show invalid code message--}}
-{{--                    } else {--}}
-{{--                        alert('Something went wrong, please try again.');--}}
-
-{{--                    }--}}
-{{--                    // Hide the modal on error--}}
-{{--                }--}}
-{{--            });--}}
-{{--        });--}}
-{{--    });--}}
-{{--</script>--}}
-{{--<script>--}}
-
-{{--    $(document).ready(function () {--}}
-{{--        $.ajaxSetup({--}}
-{{--            headers: {--}}
-{{--                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')--}}
-{{--            }--}}
-{{--        });--}}
-{{--        // Prevent form from submitting the traditional way--}}
-{{--        $('#signinmedgulf').submit(function (e) {--}}
-{{--            e.preventDefault(); // Prevent the default form submission--}}
-{{--            var submitButton = $(this).find('button[type="submit"]'); // Get the submit button--}}
-{{--            // submitButton.prop('disabled', true);--}}
-{{--            // Get form data--}}
-{{--            var formData = $(this).serialize(); // Serialize form data--}}
-
-{{--            // AJAX request--}}
-{{--            $.ajax({--}}
-{{--                type: 'POST',--}}
-{{--                url: '{{route('signinpageMedgulf')}}', // Replace with your server script--}}
-{{--                data: formData,--}}
-
-{{--                dataType:'json',--}}
-{{--                success: function (response) {--}}
-{{--                    // Handle success response--}}
-{{--                    // $('#forgetThirdform').modal('show');--}}
-{{--                    alert('Success');--}}
-
-{{--                },--}}
-{{--                error: function (xhr) {--}}
-{{--                    // Handle error response--}}
-{{--                    if (xhr.status === 404) {--}}
-{{--                        alert('Error: ' + xhr.responseJSON.message); // Show invalid code message--}}
-{{--                    } else {--}}
-{{--                        alert('Something went wrong, please try again.');--}}
-
-{{--                    }--}}
-{{--                    // Hide the modal on error--}}
-{{--                }--}}
-{{--            });--}}
-{{--        });--}}
-{{--    });--}}
-{{--</script>--}}
-
-
-{{--<script>--}}
-{{--    document.getElementById('#passwordresett').addEventListener('submit', function (e) {--}}
-{{--        e.preventDefault(); // Prevent default form submission--}}
-
-{{--        let formData = new FormData(this); // Create a FormData object--}}
-
-{{--        // Use Fetch API to submit form--}}
-{{--        fetch("{{url('forgetpasswordd')}}", {--}}
-{{--            method: 'POST',--}}
-{{--            body: formData--}}
-{{--        })--}}
-{{--            .then(response => response.text()) // Parse response as text--}}
-{{--            .then(data => {--}}
-{{--                document.getElementById('#forgetSec').innerHTML = 'Form submitted successfully: ' + data;--}}
-{{--            })--}}
-{{--            .catch(error => {--}}
-{{--                document.getElementById('#forgetSec').innerHTML = 'Error: ' + error.message;--}}
-{{--            });--}}
-{{--    });--}}
-{{--</script>--}}
 </body>
 </html>

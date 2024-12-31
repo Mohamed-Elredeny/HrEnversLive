@@ -336,7 +336,7 @@ body{
     display: inline ; font-size: 20px; padding-inline-end: 15px; color: #EB0C0C;
 }
 #logout{
-    display: inline ; position: absolute; width: 180%; top: 50%; transform: translateY(-50%); 
+    display: inline ; position: absolute; width: 180%; top: 50%; transform: translateY(-50%);
 }
 
 /* Side Bar */
@@ -646,7 +646,7 @@ margin-bottom: 0;
     font-size: 26px;
     font-weight: 700;
     line-height: 20px;
-    color: var(--main-color); 
+    color: var(--main-color);
 }
 .section_Com .content_employee{
     padding: 10px 20px 40px;
@@ -695,14 +695,14 @@ margin-bottom: 0;
     font-size: 26px;
     font-weight: 700;
     line-height: 13px;
-    color: var(--main-color); 
+    color: var(--main-color);
 }
 .news .content_news .suptitle{
     padding-block-start: 20px;
     font-size: 16px;
     font-weight: 500;
     line-height: 18px;
-    color: var(--gray-color); 
+    color: var(--gray-color);
 }
 .news .slider_image{
     position: relative;
@@ -916,7 +916,7 @@ table thead{
 .fc-theme-standard td, .fc-theme-standard th {
     text-align: end;
     border: none;
-    border-bottom: 4px solid var(--gray-light-color); 
+    border-bottom: 4px solid var(--gray-light-color);
 }
 .fc .fc-toolbar.fc-header-toolbar {
     margin-bottom: 25px;
@@ -988,13 +988,13 @@ table thead{
 }
 .fc-prev-button::before,
 .fc-next-button::before{
-    content: '←'; 
+    content: '←';
     font-size: 20px;
     font-weight: bold;
     color: var(--dark-color);
 }
 .fc-next-button::before {
-    content: '→'; 
+    content: '→';
 }
 .fc-h-event {
     background-color: var(--success-dark-color);
@@ -1612,7 +1612,7 @@ table thead{
     .fc-direction-ltr .fc-toolbar > * > :not(:first-child) {
         margin-left: -.5em;
     }
-    .fc .fc-col-header-cell-cushion, 
+    .fc .fc-col-header-cell-cushion,
     .fc .fc-daygrid-day-number {
         font-size: 11px;
     }
