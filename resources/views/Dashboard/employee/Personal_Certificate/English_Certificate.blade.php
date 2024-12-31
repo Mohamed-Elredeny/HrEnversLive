@@ -339,16 +339,16 @@
                         </div>
                     </div>
                     </label>
-                    <label for="radio-card-6" class="radio-card col-md-4" >
-                        <input type="radio" style="display: none" name="item_id" value="EMPLOYMENT CERTIFICATE TO EMBASSY" id="radio-card-6"/>
-                    <div class="item_type item_embassy">
-                        <div class="name_item_type">
-                            <p>EMPLOYMENT CERTIFICATE TO EMBASSY</p>
+                    <label for="radio-card-6" class="radio-card col-md-4">
+                        <input type="radio" style="display: none" name="item_id" value="EMPLOYMENT CERTIFICATE TO EMBASSY" id="radio-card-6" />
+                        <div class="item_type item_embassy" style="display: flex; align-items: center; ">
+                            <div class="name_item_type" style="flex: 1;">
+                                <p >EMPLOYMENT CERTIFICATE TO EMBASSY</p>
+                            </div>
+                            <div class="image" style="flex-shrink: 0;">
+                                <img class="gray_Evaluated" src="{{asset('assets/images/sign-in/Evaluated@3x.png')}}" alt="Evaluated" style="width: 20px; height: 20px;">
+                            </div>
                         </div>
-                        <div class="image">
-                            <div class="img-fluid"><img class="gray_Evaluated" src="{{asset("assets/images/sign-in/Evaluated@3x.png")}}" alt="Evaluated"></div>
-                        </div>
-                    </div>
                     </label>
 
                     <div class="embassy_name">
@@ -410,17 +410,17 @@
             // popupOverlay.classList.remove('hidden');
             event.preventDefault();
             Swal.fire({
-                title: 'Are you sure?',
-                text: 'You are about to show the clearance section.',
+                title: 'CONFIRM CERTIFICATE?',
+                html: "Please review your selection and remarks. <br> If correct, click confirm to proceed.",
                 icon: 'info',
                 showCancelButton: true,
-                confirmButtonText: 'Yes, show it!',
+                confirmButtonText: 'Confirm!',
                 cancelButtonText: 'Cancel'
             }).then((result) => {
                 if (result.isConfirmed) {
                     Swal.fire({
-                        title: 'Visible!',
-                        text: 'The clearance section is now visible.',
+                        title: 'Submitted !',
+                        text: 'Your certificate has been sent to HR for review .',
                         icon: 'success',
                         confirmButtonText: 'OK'
                     }).then(()=>{

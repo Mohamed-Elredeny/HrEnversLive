@@ -285,10 +285,13 @@
                                     <span>6</span>
                                 </div>
 
+
                                     <div class="textContent">
+
                                         <h4>English Certificates</h4>
-                                        <p>Includes six certificates: Loan, Credit Card, Vehicle Loan, Embassy, With
-                                            Salary, and Without Salary.</p>
+
+                                        <p >Includes six certificates: Loan, Credit Card, Vehicle Loan, Embassy,  With
+                                            Salary, <br> and Without Salary.</p>
                                     </div>
 
                             </div>
@@ -309,8 +312,8 @@
                                 </div>
                                 <div class="textContent">
                                     <h4>Arabic Certificates</h4>
-                                    <p>Includes six certificates: Gate Pass Lost/Cancellation, Experience, QID Lost,
-                                        Family Visit Visa, and Family Residency Visa.</p>
+                                    <p>Includes six certificates: Gate Pass Lost/Cancellation, Experience QID Lost,
+                                      <br>  Family Visit Visa, and Family Residency Visa.</p>
                                 </div>
                             </div>
                             <a href="{{route('employee.ArabicCertificate')}}" class="buttonCard">
@@ -333,12 +336,11 @@
                         <div class="card">
                             <div class="textCard Certificates">
                                 <div class="number">
-                                    <span class="diff">5</span>
+                                    <span class="diff">{{$mycertificates->count()}}</span>
                                 </div>
                                 <div class="textContent">
                                     <h4>My Certificate</h4>
-                                    <p>Access and manage your previously requested certificates with ease and
-                                        efficiency.</p>
+                                    <p>Access and manage your previously requested certificates with ease and efficiency.</p>
                                 </div>
                             </div>
                             <a href="{{route('employee.MyCertificate')}}" class="buttonCard">
@@ -348,6 +350,12 @@
                             </a>
                         </div>
                     </div>
+
+                    <div class="col-12 titleKPI">
+                        <h2>
+                            HR Approval
+                        </h2>
+                    </div>
 {{--                    @if(isset($userpermission) )--}}
 {{--                        @foreach ($userpermission as $userpermissionn)--}}
 {{--                            @if($userpermissionn->permission ==  "CertificatesReviewer")--}}
@@ -356,7 +364,7 @@
                                     <div class="card">
                                         <div class="textCard Certificates">
                                             <div class="number">
-                                                <span>6</span>
+                                                <span>{{$certificatesreview}}</span>
                                             </div>
                                             <div class="textContent">
                                                 <h4>Review Certificate</h4>
@@ -383,7 +391,7 @@
                             <div class="card">
                                 <div class="textCard Certificates">
                                     <div class="number">
-                                        <span>1</span>
+                                        <span>{{$certificateapprovalcount}}</span>
                                     </div>
                                     <div class="textContent">
                                         <h4>Approval Certificate</h4>
