@@ -71,7 +71,6 @@ Route::group([
 
 
 
-
     Route::get('employee', function () {
         return view('Dashboard.employee.Personal_Certificate.employee');
     })->name('employee');

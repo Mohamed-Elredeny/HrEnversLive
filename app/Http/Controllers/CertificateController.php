@@ -325,7 +325,9 @@ public function Certificatecontent($type,$id)
         $certificatespending = DB::table('certificate')->where('review_status','=',null)->get();
         $certificatesreturn = DB::table('certificate')->where('review_status','=','Return To Sender')->get();
         $certificatesreturnapproval = DB::table('certificate')->where('review_status','=','ConfirmCertificate')->where('approval_status','=','Return To Sender')->get();
-        $certificatesapproval = DB::table('certificate')->where('review_status','=','ConfirmCertificate')->whereNot('approval_status','=','Return To Sender')->get();
+        $certificatesapproval = DB::table('certificate')->where('review_status','=','ConfirmCertificate')->
+        where(function($query) {$query->where('approval_status','=',null)->orWhere('approval_status','=','ConfirmCertificate');})->get();
+
         $currentdate=now();
         $employeepend=[];
         $employeereturn=[];
