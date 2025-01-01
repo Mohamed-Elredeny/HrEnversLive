@@ -66,14 +66,8 @@
             <br>
             <h5><span style="display: inline;font-weight: bold">For {{$employee->company_id}}</span></h5>
             <br>
-            <div class="row">
-                <div class="col-6">
-                        <?php
-                        $elie = \App\Models\Employee::where('emailWork', 'elie.azzi@ensrv.com')->first();
-                        ?>
-                </div>
-            </div>
-            <br><br>
+
+
 
         </div>
         <div class="Footer_certificate">
@@ -92,15 +86,15 @@
                         @if ($employee->company_id == "medgulf")
                             <img class="Medgulf" src="{{asset("assets/images/logos/company_1_sign.png")}}"  alt="Medgulf Header">
                         @elseif ($employee->company_id == "trags")
-                            <img class="tragsEng" src="{{asset("assets/images/logos/company_2_sign.png")}}"  alt="tragsEng Header">
-                        @else
-                            <img class="trags" src="{{asset("assets/images/logos/company_3_sign.png")}}"  alt="trags Header">
+                            <img class="trags" src="{{asset("assets/images/logos/company_3_sign.png")}}"  alt="tragsEng Header">
+                        @elseif ($employee->company_id == "engineering")
+                            <img class="tragsEng" src="{{asset("assets/images/logos/company_2_sign.png")}}"  alt="tragseng Header">
                         @endif
                     </div>
                 </div>
             </div>
         </div>
-        <br><br>
+
         <h5>
 
             Elie Azzi

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CertificateController;
 use App\Models\Certificates;
+use App\Models\Employee;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -18,7 +19,10 @@ Route::group([
 
 
     Route::get('EnglishCertificate', function () {
-        return view('Dashboard.employee.Personal_Certificate.English_Certificate');
+        $id= Auth::guard('employee')->user()->id??null;
+
+        $employee=Employee::find($id);
+        return view('Dashboard.employee.Personal_Certificate.English_Certificate',['employee'=>$employee]);
     })->name('EnglishCertificate');
 
     Route::post('EnglishCertificateSubmit', [CertificateController::class, 'storeEnglishcertificate'])->name('EnglishCertificateSubmit');
@@ -35,7 +39,10 @@ Route::group([
     Route::post('ApprovalCertificateReturnToSender/{id}', [CertificateController::class, 'returncertificateapproval'])->name('ApprovalCertificateReturnToSender');
 
     Route::get('ArabicCertificate', function () {
-        return view('Dashboard.employee.Personal_Certificate.Arabic_Certificate');
+        $id= Auth::guard('employee')->user()->id??null;
+
+        $employee=Employee::find($id);
+        return view('Dashboard.employee.Personal_Certificate.Arabic_Certificate',['employee'=>$employee]);
     })->name('ArabicCertificate');
 
     Route::get('Employee', function () {

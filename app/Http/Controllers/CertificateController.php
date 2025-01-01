@@ -21,19 +21,19 @@ class CertificateController extends Controller
      */
     public function index()
     {
-        $idd = Auth::guard('employee')->user()->id??null ;
-
-$certificate1=DB::table('certificate')->where('review_status', '=', null)->get();
-$certificate2=DB::table('certificate')-> where('review_status','=','ConfirmCertificate')->orWhere('approval_status','=','Return To Sender')->get();
-        $certificatesreview =$certificate1->count()+$certificate2->count();
+        $idd = Auth::guard('employee')->user()->id ?? null;
+        $employee = Employee::find($idd);
+        $certificate1 = DB::table('certificate')->where('review_status', '=', null)->get();
+        $certificate2 = DB::table('certificate')->where('review_status', '=', 'ConfirmCertificate')->orWhere('approval_status', '=', 'Return To Sender')->get();
+        $certificatesreview = $certificate1->count() + $certificate2->count();
         $certificatespending = DB::table('certificate')->where('review_status', '=', 'ConfirmCertificate')->where('approval_status', '=', null)->get();
 
         $certificatesreturn = DB::table('certificate')->where('approval_status', '=', 'Return To Sender')->get();
         $certificatesapproval = DB::table('certificate')->where('approval_status', '=', 'ConfirmCertificate')->get();
-        $certificateapprovalcount=$certificatespending->count();
-        $userpermission = DB::table('user_permissions')->where('employee_id', '=', $idd)->get()??null;
-        $mycertificates = DB::table('certificate')->where('Emp_id','=',$idd)->get();
-        return view('Dashboard.employee.Personal_Certificate.index',['mycertificates'=>$mycertificates,"certificatesreview"=>$certificatesreview,"certificateapprovalcount"=>$certificateapprovalcount] );
+        $certificateapprovalcount = $certificatespending->count();
+        $userpermission = DB::table('user_permissions')->where('employee_id', '=', $idd)->get() ?? null;
+        $mycertificates = DB::table('certificate')->where('Emp_id', '=', $idd)->get();
+        return view('Dashboard.employee.Personal_Certificate.index', ['mycertificates' => $mycertificates, "certificatesreview" => $certificatesreview, "certificateapprovalcount" => $certificateapprovalcount, 'employee' => $employee]);
     }
 
     /**
@@ -49,9 +49,10 @@ $certificate2=DB::table('certificate')-> where('review_status','=','ConfirmCerti
 //        CertificatesType::create([
 //            'type'=>'EnglishCertificate'
 //        ]);
+
         $id= Auth::guard('employee')->user()->id??null;
         $currentdate = now();
-//$employee=Employee::find($id);
+
         try {
             Certificates::create([
                 'ref' => $request->input('item_id'),
@@ -306,6 +307,7 @@ public function Certificatecontent($type,$id)
     {
 
             $id = Auth::guard('employee')->user()->id ?? null;
+            $employ=Employee::find($id);
             $certificates = DB::table('certificate')->get();
             $employee=null;
             foreach ($certificates as $certificate) {
@@ -314,7 +316,7 @@ public function Certificatecontent($type,$id)
             $certificatespending = DB::table('certificate')->where('review_status', '=', 'ConfirmCertificate')->where('approval_status', '=', null)->get();
             $certificatesreturn = DB::table('certificate')->where('approval_status', '=', 'Return To Sender')->get();
             $certificatesapproval = DB::table('certificate')->where('approval_status', '=', 'ConfirmCertificate')->get();
-            return view('Dashboard.employee.Personal_Certificate.Approval_Certificates', ['employee' => $employee, 'certificates' => $certificates, 'certificatespending' => $certificatespending, 'certificatesreturn' => $certificatesreturn, 'certificatesapproval' => $certificatesapproval]);
+            return view('Dashboard.employee.Personal_Certificate.Approval_Certificates', ['employee' => $employee,'employ'=>$employ ,'certificates' => $certificates, 'certificatespending' => $certificatespending, 'certificatesreturn' => $certificatesreturn, 'certificatesapproval' => $certificatesapproval]);
 
         }
     public function CertificateApproval(Request $request)
@@ -323,7 +325,8 @@ public function Certificatecontent($type,$id)
     }
     public function showcertificatereviewer()
     {
-//        $id= Auth::guard('employee')->user()->id??null;
+        $id= Auth::guard('employee')->user()->id??null;
+        $employee=Employee::find($id);
         $certificates = DB::table('certificate')->get();
         $certificatespending = DB::table('certificate')->where('review_status','=',null)->get();
         $certificatesreturn = DB::table('certificate')->where('review_status','=','Return To Sender')->get();
@@ -361,7 +364,7 @@ public function Certificatecontent($type,$id)
 
         }
 
-        return view('Dashboard.employee.Personal_Certificate.Review_Certificates', ['certificates' => $certificates,'employeepend'=>$employeepend,'employeereturn'=>$employeereturn,'employeeapproval'=>$employeeapproval,'currentdate'=>$currentdate,'certificatespending'=>$certificatespending,'certificatesreturn'=>$certificatesreturn,'certificatesapproval'=>$certificatesapproval,'certificatesreturnapproval'=>$certificatesreturnapproval,'employeeapprovalreturn'=>$employeeapprovalreturn]);
+        return view('Dashboard.employee.Personal_Certificate.Review_Certificates', ['certificates' => $certificates,'employeepend'=>$employeepend,'employeereturn'=>$employeereturn,'employeeapproval'=>$employeeapproval,'currentdate'=>$currentdate,'certificatespending'=>$certificatespending,'certificatesreturn'=>$certificatesreturn,'certificatesapproval'=>$certificatesapproval,'certificatesreturnapproval'=>$certificatesreturnapproval,'employeeapprovalreturn'=>$employeeapprovalreturn,'employee'=>$employee]);
 
     }
 

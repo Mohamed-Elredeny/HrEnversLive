@@ -200,14 +200,37 @@
 
     <div id="mainContent" class="content content_responsev">
         <header>
-            <div class="logo">
-                <div class="img-fluid">
-                    <img src="{{asset("assets/images/sign-in/Logos@3x.png")}}" alt="logos">
+            @if($employ->company_id=='medgulf')
+                <div class="logo">
+                    <div class="img-fluid">
+                        <img src="{{asset("assets/images/sign-in/Logos@3x.png")}}" alt="logos">
+                    </div>
+                    <div class="titleLogo">
+                        <p>Medgulf Construction Company WLL</p>
+                    </div>
                 </div>
-                <div class="titleLogo">
-                    <p>Medgulf Construction Company WLL</p>
+            @endif
+            @if($employ->company_id=='engineering')
+                <div class="logo">
+                    <div class="img-fluid">
+                        <img src="{{asset("assets/images/sign-in/Logos@3x-1.png")}}" alt="logos">
+                    </div>
+                    <div class="titleLogo">
+                        <p>TRAGS ENGINEERING COMPANY WLL</p>
+                    </div>
                 </div>
-            </div>
+            @endif
+            @if($employ->company_id=='trags')
+                <div class="logo">
+                    <div class="img-fluid">
+                        <img src="{{asset("assets/images/sign-in/Logos@3x-2.png")}}" alt="logos">
+                    </div>
+                    <div class="titleLogo">
+                        <p>TRADING AND AGENCY SERVICES LIMITED COMPANY WLL</p>
+                    </div>
+                </div>
+            @endif
+
             <div class="account">
                 <div class="image">
                     <div class="ima-fluid">

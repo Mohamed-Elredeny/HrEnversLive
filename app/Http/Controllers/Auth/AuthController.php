@@ -93,7 +93,7 @@ class AuthController extends Controller
     public function loginEnjineering(Request $request)
     {
 
-        if (Auth::guard('employee')->attempt( ['emailWork' => $request['emailEngineering'], 'password' => $request['PasswordEngineering'],'company_id'=>'enjineering'])) {
+        if (Auth::guard('employee')->attempt( ['emailWork' => $request['emailEngineering'], 'password' => $request['PasswordEngineering'],'company_id'=>'engineering'])) {
             return redirect()->intended('dashboard');
         }
         return redirect('/')->with('message', 'Invalid credentials. Please try again.');

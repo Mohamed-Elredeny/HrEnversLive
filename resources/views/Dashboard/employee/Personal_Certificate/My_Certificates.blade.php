@@ -200,14 +200,39 @@
 
     <div id="mainContent" class="content content_responsev">
         <header>
-            <div class="logo">
-                <div class="img-fluid">
-                    <img src="{{asset("assets/images/sign-in/Logos@3x.png")}}" alt="logos">
+
+            @if($employee->company_id=='medgulf')
+                <div class="logo">
+                    <div class="img-fluid">
+                        <img src="{{asset("assets/images/sign-in/Logos@3x.png")}}" alt="logos">
+                    </div>
+                    <div class="titleLogo">
+                        <p>Medgulf Construction Company WLL</p>
+                    </div>
                 </div>
-                <div class="titleLogo">
-                    <p>Medgulf Construction Company WLL</p>
+            @endif
+            @if($employee->company_id=='engineering')
+                <div class="logo">
+                    <div class="img-fluid">
+                        <img src="{{asset("assets/images/sign-in/Logos@3x-1.png")}}" alt="logos">
+                    </div>
+                    <div class="titleLogo">
+                        <p>TRAGS ENGINEERING COMPANY WLL</p>
+                    </div>
                 </div>
-            </div>
+            @endif
+            @if($employee->company_id=='trags')
+                <div class="logo">
+                    <div class="img-fluid">
+                        <img src="{{asset("assets/images/sign-in/Logos@3x-2.png")}}" alt="logos">
+                    </div>
+                    <div class="titleLogo">
+                        <p>TRADING AND AGENCY SERVICES LIMITED COMPANY WLL</p>
+                    </div>
+                </div>
+            @endif
+
+
             <div class="account">
                 <div class="image">
                     <div class="ima-fluid">
@@ -346,7 +371,7 @@
                                         </div>
                                         <p>
                                             @if($certificate->review_status == null && $certificate->approval_status==null)
-                                            Pending To Review
+                                            Pending Review
                                             @elseif($certificate->review_status != null && $certificate->approval_status==null)
                                                 Pending To Approval
                                             @endif
@@ -354,17 +379,11 @@
                                     </div>
                                 </td>
                                 <td>
-
-
-                                    <a href="{{ route('employee.Certificate', [ 'type' => 'Pending_Certificates','id' => $certificate->id]) }}">
+                                    <a href="{{ route('employee.Certificate', [ 'type' => 'Pending_MyCertificates','id' => $certificate->id,]) }}">
                                         <button class="btn">
                                             Pending
                                         </button>
                                     </a>
-
-
-
-
                                 </td>
                             </tr>
                         @endforeach
@@ -394,7 +413,7 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <a href="{{ route('employee.Certificate', [ 'type' => 'Return_Certificates','id' => $certificate->id]) }}">
+                                    <a href="{{ route('employee.Certificate', [ 'type' => 'Return_Certificates','id' => $certificate->id,]) }}">
                                         <button class="btn">
                                             Return
                                         </button>
