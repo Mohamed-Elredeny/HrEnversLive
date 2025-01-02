@@ -519,7 +519,7 @@ body{
 /* a4_section */
 .a4_section {
     width: 210mm;
-    height: 267mm;
+    height: auto;
     padding-bottom: 20vh;
     background-color: var(--white-color);
     border: 1px solid var(--main-color);
@@ -533,7 +533,7 @@ body{
     position: relative;
 }
 .a4_section .image{
-    margin: -12px;
+    margin: 12px;
 }
 .a4_section .image.footer{
     position: absolute;
@@ -546,15 +546,18 @@ body{
     width: 100%;
 }
 .a4_section .content_certificate{
-    margin-block-start: 30px;
+    margin-block-start: 10px;
+    margin-block-end: 40px;
+    height: auto;
 }
 .a4_section .content_certificate {
+
     color: var(--dark-color);
     font-family: "Calibri";
     font-size: 12px;
     font-weight: 400;
     line-height: 22px;
-    padding-block: 2px;
+    padding-bottom: 80px;
 }
 .a4_section .content_certificate .header_certificate h5 span{
     color: var(--orange-color);
@@ -577,24 +580,27 @@ body{
 }
 .a4_section .content_certificate .Footer_certificate .Footer_certificate_photo{
     display: flex;
-    padding: 20px;
+    padding: 10px;
     justify-content: space-between;
     align-items: center;
+
 }
 .a4_section .content_certificate .Footer_certificate .Footer_certificate_photo .image {
     position: relative;
 }
 .a4_section .content_certificate .Footer_certificate .Footer_certificate_photo .image .img-fluid img{
-    width: 250px;
+    width: 200px;
 }
 .a4_section .content_certificate .Footer_certificate .Footer_certificate_photo .image .img-fluid.company img.tragsEng{
-    width: 170px;
+    width: 160px;
+
+
 }
 .a4_section .content_certificate .Footer_certificate .Footer_certificate_photo .image .img-fluid.company img.trags{
-    width: 650px;
+    width: 450px;
 }
 .a4_section .content_certificate .Footer_certificate .Footer_certificate_photo .image .img-fluid.company img.Medgulf{
-    width: 500px;
+    width: 350px;
 }
 .a4_section .content_certificate .Footer_certificate .Footer_certificate_photo .image .img-fluid.company:has(.tragsEng) {
     position: absolute;
@@ -733,7 +739,7 @@ body{
     }
     .a4_section {
         width: 80vw;
-        height: calc(80vw * 1.414);
+        height: calc(80vw * 1.714);
     }
     .a4_section .content_certificate h5{
         font-size: 10px;
@@ -759,7 +765,8 @@ body{
         width: 125px;
     }
     .a4_section .content_certificate .Footer_certificate .Footer_certificate_photo .image .img-fluid.company img.tragsEng {
-        width: 70px;
+        width: 90px;
+
     }
     .a4_section .content_certificate .Footer_certificate .Footer_certificate_photo .image .img-fluid.company img.Medgulf{
         width: 240px;
@@ -768,7 +775,7 @@ body{
         padding-block-start: 10px;
     }
     .a4_section .content_certificate .Footer_certificate .Footer_certificate_photo .image .img-fluid.company img.trags {
-        width: 300px;
+        width: 100px;
     }
     .buttonForEmployee .buttonFor .btnFor.btnForCertificate {
         font-size: 14px;
@@ -805,8 +812,9 @@ body{
     }
     .a4_section {
         width: 90vw;
-        /*height: 90vh;*/
+        /*height: 140vh;*/
         height:auto;
+        /*height: calc(80vw * 1.514);*/
     }
     .a4_section .content_certificate .body_certificate {
         padding-block: 0px;
@@ -833,10 +841,10 @@ body{
         width: 100px;
     }
     .a4_section .content_certificate .Footer_certificate .Footer_certificate_photo .image .img-fluid.company img.tragsEng {
-        width: 60px;
+        width: 90px;
     }
     .a4_section .content_certificate .Footer_certificate .Footer_certificate_photo .image .img-fluid.company img.trags {
-        width: 200px;
+        width: 100px;
     }
     .a4_section .content_certificate .Footer_certificate .Footer_certificate_photo .image .img-fluid.company img.Medgulf{
         width: 180px;
@@ -882,10 +890,11 @@ body{
         width: 100px;
     }
     .a4_section .content_certificate .Footer_certificate .Footer_certificate_photo .image .img-fluid.company img.tragsEng {
-        width: 60px;
+        width: 90px;
+
     }
     .a4_section .content_certificate .Footer_certificate .Footer_certificate_photo .image .img-fluid.company img.trags {
-        width: 200px;
+        width: 100px;
     }
     .a4_section .content_certificate .Footer_certificate .Footer_certificate_photo .image .img-fluid.company img.Medgulf{
         width: 180px;

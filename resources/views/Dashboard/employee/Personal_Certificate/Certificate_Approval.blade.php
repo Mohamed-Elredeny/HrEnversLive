@@ -210,7 +210,7 @@
                         </div>
                     </div>
                 @endif
-                @if($employee->company_id=='trags')
+                @if($employee->company_id=='engineering')
                     <div class="logo">
                         <div class="img-fluid">
                             <img src="{{asset("assets/images/sign-in/Logos@3x-1.png")}}" alt="logos">
@@ -220,7 +220,7 @@
                         </div>
                     </div>
                 @endif
-                @if($employee->company_id=='enjineering')
+                @if($employee->company_id=='trags')
                     <div class="logo">
                         <div class="img-fluid">
                             <img src="{{asset("assets/images/sign-in/Logos@3x-2.png")}}" alt="logos">
@@ -297,10 +297,10 @@
                                 @if($employee->company_id=='medgulf')
                                     <img src="{{asset("assets/images/logos/header.png")}}" alt="Medgulf Header">
                                 @endif
-                                @if($employee->company_id=='trags')
+                                @if($employee->company_id=='engineering')
                                     <img src="{{asset("assets/images/logos/tragsEngHeader.jpg")}}" alt="TragsEng Header">
                                 @endif
-                                @if($employee->company_id=='enjineering')
+                                @if($employee->company_id=='trags')
                                     <img src="{{asset("assets/images/logos/tragsHeader.png")}}" alt="Trags Header">
                                 @endif
 {{--                            @endforeach--}}
@@ -315,10 +315,10 @@
                                 @if($employee->company_id=='medgulf')
                                     <img src="{{asset("assets/images/logos/footer.jpg")}}" alt="Medgulf Footer">
                                 @endif
-                                @if($employee->company_id=='trags')
+                                @if($employee->company_id=='engineering')
                                     <img src="{{asset("assets/images/logos/tragsEngFooter.jpg")}}" alt="tragsEng Footer">
                                 @endif
-                                @if($employee->company_id=='enjineering')
+                                @if($employee->company_id=='trags')
                                     <img src="{{asset("assets/images/logos/tragsfooter.jpg")}}" alt="trags Footer">
                                 @endif
 {{--                            @endforeach--}}

@@ -397,7 +397,7 @@
 
                         </div>
                     </div>
-                    @yield('certificate_content')
+                    @yield('mycertificate_content')
 
                     <div class="image footer">
                         <div class="img-fluid">
@@ -413,21 +413,6 @@
                                 @endif
 {{--                            @endforeach--}}
                         </div>
-                    </div>
-                </section>
-
-                <section class="buttonForEmployee buttonForEResponsev buttonForFirstApproval">
-                    <div class="ContentDate">
-                        <p>Date</p>
-                        <span>{{$currentdate->toDateString()}}</span>
-                    </div>
-                    <div class="buttonFor">
-                        <button class="btn btnFor btnForCertificate btnReview" id="btnReview">
-                            Confirm Certificate
-                        </button>
-                        <button class="btn btnFor btnForCertificate btnReturn" id="btnReturn">
-                            Return To Sender
-                        </button>
                     </div>
                 </section>
 

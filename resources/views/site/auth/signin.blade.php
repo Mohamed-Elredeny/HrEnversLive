@@ -161,7 +161,7 @@
                                 </div>
                             </div>
 
-                            <div class="card" onclick="TragsSignIn()">
+                            <div class="card" onclick= "TragsSignIn()">
 
                                 <div class="image">
                                     <img src="{{asset("assets/images/logos/4.jpg")}}" alt="logo Trags">
@@ -173,7 +173,7 @@
                                 </div>
                             </div>
 
-                            <div class="card" onclick="EngineeringSignIn()">
+                            <div class="card" onclick= "EngineeringSignIn()">
 
                                 <div class="image">
                                     <img src="{{asset("assets/images/logos/3.jpg")}}" alt="logo Trags Engineering">
@@ -273,7 +273,7 @@
                             </svg></div>
                         <div class="image">
                             <div class="img-fluid">
-                                <img src="{{asset("assets/images/logos/Trags.png")}}" alt="logo Trags">
+                                <img src="{{asset("assets/images/logos/4.jpg")}}" alt="logo Trags">
                             </div>
                         </div>
                         <div class="content">
@@ -334,7 +334,7 @@
                             </svg></div>
                         <div class="image">
                             <div class="img-fluid">
-                                <img src="{{asset("assets/images/logos/tragsentity2.png")}}" alt="logo Engineering">
+                                <img src="{{asset("assets/images/logos/3.jpg")}}" alt="logo Engineering">
                             </div>
                         </div>
                         <div class="content">
@@ -509,7 +509,7 @@
                                 <div class="logos" style="display: flex; justify-content: center; align-items: center;gap :5px ">
                                     <!-- Card 1 -->
                                     <label for="radio-card-1"  style="cursor: pointer;">
-                                        <input type="radio" name="company_id" value="engineering" id="radio-card-1" hidden>
+                                        <input type="radio" name="company_id" value="trags" id="radio-card-1" hidden>
                                         <div class="image logoscom" style="display: flex; justify-content: center; align-items: center;">
                                             <img src="{{asset('assets/images/logos/tragsentity2.png')}}" alt="logo trags" class="img-fluid" style="max-width: 100%; height: auto;">
                                         </div>
@@ -525,7 +525,7 @@
 
                                     <!-- Card 3 -->
                                     <label for="radio-card-3"  style="cursor: pointer;">
-                                        <input type="radio" name="company_id" value="trags" id="radio-card-3" hidden>
+                                        <input type="radio" name="company_id" value="engineering" id="radio-card-3" hidden>
                                         <div class="image logoscom" style="display: flex; justify-content: center; align-items: center;">
                                             <img src="{{asset('assets/images/logos/Trags.png')}}" alt="logo engineering" class="img-fluid" style="max-width: 100%; height: auto;">
                                         </div>
