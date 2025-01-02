@@ -321,7 +321,7 @@
                 <section class="buttonForEmployee buttonForEResponsev buttonForFirstApproval">
                     <div class="ContentDate">
                         <p>Date</p>
-                        <span>{{$currentdate}}</span>
+                        <span>{{$currentdate->toDateString()}}</span>
                     </div>
                     <div class="buttonFor">
                         <button class="btn btnFor btnForCertificate btnReview" id="btnReview">

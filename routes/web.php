@@ -3,6 +3,8 @@
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Models\Employee;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -11,7 +13,9 @@ Route::get('/', function () {
 });
 //Route::middleware('auth:employee')->group(function () {
 Route::get('/dashboard', function () {
-    return view('Dashboard.Dashboard');
+    $id = Auth::guard('employee')->user()->id ?? null;
+    $employ=Employee::find($id);
+    return view('Dashboard.Dashboard',['employee'=>$employ]);
 })->name('dashboard');
 //});
 

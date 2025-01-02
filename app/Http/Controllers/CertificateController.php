@@ -182,9 +182,7 @@ class CertificateController extends Controller
 
 public function Certificatecontent($type,$id)
 {
-
-
-    $currentYear = Carbon::now()->year;
+        $currentYear = Carbon::now()->year;
         $idd = Auth::guard('employee')->user()->id ;
         $certificate = Certificates::find($id);
         $currentdate = Carbon::now();

@@ -196,14 +196,36 @@
     <div class="overlayOpenSlider" id="overlayOpenSlider" onclick="closeSidebar()"></div>
     <div id="mainContent" class="content ">
         <header>
-            <div class="logo">
-                <div class="img-fluid">
-                    <img src="{{asset("assets/images/sign-in/Logos@3x.png")}}" alt="logos">
+            @if($employee->company_id=='medgulf')
+                <div class="logo">
+                    <div class="img-fluid">
+                        <img src="{{asset("assets/images/sign-in/Logos@3x.png")}}" alt="logos">
+                    </div>
+                    <div class="titleLogo">
+                        <p>Medgulf Construction Company WLL</p>
+                    </div>
                 </div>
-                <div class="titleLogo">
-                    <p>Medgulf Construction Company WLL</p>
+            @endif
+            @if($employee->company_id=='engineering')
+                <div class="logo">
+                    <div class="img-fluid">
+                        <img src="{{asset("assets/images/sign-in/Logos@3x-1.png")}}" alt="logos">
+                    </div>
+                    <div class="titleLogo">
+                        <p>TRAGS ENGINEERING COMPANY WLL</p>
+                    </div>
                 </div>
-            </div>
+            @endif
+            @if($employee->company_id=='trags')
+                <div class="logo">
+                    <div class="img-fluid">
+                        <img src="{{asset("assets/images/sign-in/Logos@3x-2.png")}}" alt="logos">
+                    </div>
+                    <div class="titleLogo">
+                        <p>TRADING AND AGENCY SERVICES LIMITED COMPANY WLL</p>
+                    </div>
+                </div>
+            @endif
             <div class="account">
                 <div class="image">
                     <div class="ima-fluid">

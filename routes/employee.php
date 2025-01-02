@@ -79,7 +79,9 @@ Route::group([
 
 
     Route::get('employee', function () {
-        return view('Dashboard.employee.Personal_Certificate.employee');
+        $id = Auth::guard('employee')->user()->id ?? null;
+        $employ=Employee::find($id);
+        return view('Dashboard.employee.Personal_Certificate.employee',['employee'=>$employ]);
     })->name('employee');
 
     Route::resource('leaves', "LeavesController");

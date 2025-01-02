@@ -63,24 +63,17 @@
                     This Certificate was given upon employee’s request without any liabilities against
 
                     <span style="font-weight: bold;display: inline;"> {{$employee->company_id}}.</span>
-                    <br>
+
                     <br>
                 </h5>
                 <br>
                 <h5><span style="display: inline;font-weight: bold">Regards</span></h5>
-                <br>
-                <div class="row">
-                    <div class="col-6">
-                            <?php
-                            $elie = \App\Models\Employee::where('emailWork', 'elie.azzi@ensrv.com')->first();
-                            ?>
-                    </div>
-                </div>
-                <br><br>
+
+
                 <div class="Footer_certificate">
                     <div class="Footer_certificate_photo">
 
-                        <div class="imagee" >
+                        <div class="image" >
                             <div class="img-fluid">
                                 <img
                                     src="{{asset('assets/images/logos')}}/{{$employee->signature??""}}"
@@ -88,33 +81,30 @@
                             </div>
                         </div>
 
-                        <div class="imagee" >
+                        <div class="image" >
                             <div class="img-fluid company">
                                 @if ($employee->company_id == "medgulf")
                                     <img class="Medgulf" src="{{asset("assets/images/logos/company_1_sign.png")}}"  alt="Medgulf Header">
                                 @elseif ($employee->company_id == "trags")
-                                    <img class="tragsEng" src="{{asset("assets/images/logos/company_3_sign.png")}}"  alt="tragsEng Header">
+                                    <img class="trags" src="{{asset("assets/images/logos/company_3_sign.png")}}"  alt="tragsEng Header">
                                 @elseif ($employee->company_id == "engineering")
-                                    <img class="trags" src="{{asset("assets/images/logos/company_2_sign.png")}}"  alt="trags Header">
+                                    <img class="tragsEng" src="{{asset("assets/images/logos/company_2_sign.png")}}"  alt="trags Header">
                                 @endif
                             </div>
                         </div>
                     </div>
                 </div>
-                <br><br>
-                <div class="col-3">
+
+
                     <div class="center">
                         <h5>
                             Elie Azzi
                         </h5>
                     </div>
-
-
-
                     <h5 style="font-weight: bold">Group HR Director</h5></div>
                 <br>
 
-            </div></div>
+            </div>
 
-{{--    @endforeach--}}
+
 @endsection

@@ -340,7 +340,7 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <a href="{{ route('employee.Certificate', [ 'type' => 'Approval_Certificates','id' => $certificate->id]) }}">
+                                    <a href="{{ route('employee.Certificate', [ 'type' => 'Approval_Approval_Certificates','id' => $certificate->id]) }}">
 
                                         <button class="btn">
                                             View

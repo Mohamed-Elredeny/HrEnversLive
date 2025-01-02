@@ -112,9 +112,9 @@
                             @if ($employee->company_id == "medgulf")
                                 <img class="Medgulf" src="{{asset("assets/images/logos/company_1_sign.png")}}"  alt="Medgulf Header">
                             @elseif ($employee->company_id == "trags")
-                                <img class="tragsEng" src="{{asset("assets/images/logos/company_3_sign.png")}}"  alt="tragsEng Header">
+                                <img class="trags" src="{{asset("assets/images/logos/company_3_sign.png")}}"  alt="tragsEng Header">
                             @elseif ($employee->company_id == "engineering")
-                                <img class="trags" src="{{asset("assets/images/logos/company_2_sign.png")}}"  alt="trags Header">
+                                <img class="tragsEng" src="{{asset("assets/images/logos/company_2_sign.png")}}"  alt="trags Header">
                             @endif
                         </div>
                     </div>
