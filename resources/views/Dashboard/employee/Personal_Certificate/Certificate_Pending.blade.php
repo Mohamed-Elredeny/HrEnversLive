@@ -575,18 +575,18 @@
         const buttons = document.querySelector(".submitCertificate");
         buttons.addEventListener("click", () =>
         {
-
-
             // popupOverlay.classList.remove('hidden');
             event.preventDefault();
             Swal.fire({
                 title: 'Reviewed!',
                 text: 'The certificate has been sent for final approval.',
                 icon: 'info',
-                showCancelButton: true,
-                confirmButtonText: 'Yes, show it!',
-                cancelButtonText: 'Cancel'
-            })   .then(()=>{
+                showCancelButton: false,
+                showConfirmButton: false
+                // confirmButtonText: 'Confirm',
+
+            })
+                .then(()=>{
                 document.querySelector(".form2").submit();
             });
 

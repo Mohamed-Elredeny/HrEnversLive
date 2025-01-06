@@ -401,7 +401,7 @@ body{
     background-color: var(--main-color);
 }
 .boxCertificateReasons .suptitleBox p{
-    font-size: 16px;
+    font-size: 25px;
     font-weight: 500;
     line-height: 27px;
     margin-bottom: 25px;
@@ -650,7 +650,7 @@ body{
 
 .boxReturnDan {
     width: 60%;
-    height: 80% !important;
+    height: 50% !important;
 }
 
 
@@ -658,8 +658,8 @@ body{
 
 @media (max-width: 1399px) {
     .boxReturnDan {
-        width: 70%;
-        height: 85% !important;
+        width: 80%;
+        height: 65% !important;
     }
 }
 

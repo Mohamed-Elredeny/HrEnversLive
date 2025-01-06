@@ -311,39 +311,6 @@
                             </tr>
                         </thead>
                         <tbody>
-                        @foreach($certificatesapproval as $certificateapproval)
-                            <tr class="Approval_Certificate" style="display:table-row ;">
-                                <td>{{ \App\Models\Employee::find($certificateapproval->Emp_id)->empName ?? '' }}</td>
-                                <td>{{$certificateapproval->ref}}</td>
-                                <td>{{$certificateapproval->remark}}</td>
-                                <td>{{$certificateapproval->date_submit}}</td>
-                                <td>{{$certificateapproval->review_name}}</td>
-                                <td>{{$certificateapproval->review_date}}</td>
-                                <td>{{$certificateapproval->review_remark}}</td>
-                                <td>{{$certificateapproval->approval_name}}</td>
-                                <td>{{$certificateapproval->approval_date}}</td>
-                                <td>{{$certificateapproval->approval_remark}}</td>
-                                <td>
-                                    <div class="statu">
-                                        <div class="image">
-                                            <div class="img-fluid">
-                                                <img src="{{asset("assets/images/sign-in/Evaluated@3x.png")}}" alt="Evaluated">
-                                            </div>
-                                        </div>
-                                        <p>
-                                            Approval
-                                        </p>
-                                    </div>
-                                </td>
-                                <td>
-                                    <a href="{{ route('employee.Certificate', [ 'type' => 'Approval_Approval_Certificates','id' => $certificateapproval->id]) }}">
-                                        <button class="btn">
-                                            View
-                                        </button>
-                                    </a>
-                                </td>
-                            </tr>
-                        @endforeach
                         @foreach($certificatespending as $certificatepending)
                             <tr class="Pending_Certificate" style="display:table-row ;">
                                 <td>{{ \App\Models\Employee::find($certificatepending->Emp_id)->empName ?? '' }}</td>
@@ -373,6 +340,40 @@
                                     <a href="{{ route('employee.Certificate', [ 'type' => 'Pending_Certificates_Approval','id' => $certificatepending->id]) }}">
                                         <button class="btn">
                                             Approve
+                                        </button>
+                                    </a>
+                                </td>
+                            </tr>
+                        @endforeach
+
+                        @foreach($certificatesapproval as $certificateapproval)
+                            <tr class="Approval_Certificate" style="display:table-row ;">
+                                <td>{{ \App\Models\Employee::find($certificateapproval->Emp_id)->empName ?? '' }}</td>
+                                <td>{{$certificateapproval->ref}}</td>
+                                <td>{{$certificateapproval->remark}}</td>
+                                <td>{{$certificateapproval->date_submit}}</td>
+                                <td>{{$certificateapproval->review_name}}</td>
+                                <td>{{$certificateapproval->review_date}}</td>
+                                <td>{{$certificateapproval->review_remark}}</td>
+                                <td>{{$certificateapproval->approval_name}}</td>
+                                <td>{{$certificateapproval->approval_date}}</td>
+                                <td>{{$certificateapproval->approval_remark}}</td>
+                                <td>
+                                    <div class="statu">
+                                        <div class="image">
+                                            <div class="img-fluid">
+                                                <img src="{{asset("assets/images/sign-in/Evaluated@3x.png")}}" alt="Evaluated">
+                                            </div>
+                                        </div>
+                                        <p>
+                                            Approval
+                                        </p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <a href="{{ route('employee.Certificate', [ 'type' => 'Approval_Approval_Certificates','id' => $certificateapproval->id]) }}">
+                                        <button class="btn">
+                                            View
                                         </button>
                                     </a>
                                 </td>
