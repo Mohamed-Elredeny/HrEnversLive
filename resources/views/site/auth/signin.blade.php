@@ -163,8 +163,8 @@
 
                             <div class="card" onclick= "TragsSignIn()">
 
-                                <div class="image">
-                                    <img src="{{asset("assets/images/logos/4.jpg")}}" alt="logo Trags">
+                                <div class="image" >
+                                    <img src="{{asset("assets/images/logos/4.jpg")}}" alt="logo Trags" width="40%">
                                 </div>
                                 <div class="content">
                                     <p>
@@ -176,7 +176,7 @@
                             <div class="card" onclick= "EngineeringSignIn()">
 
                                 <div class="image">
-                                    <img src="{{asset("assets/images/logos/3.jpg")}}" alt="logo Trags Engineering">
+                                    <img src="{{asset("assets/images/logos/3.jpg")}}" alt="logo Trags Engineering" width="40%">
                                 </div>
                                 <div class="content">
                                     <p>
@@ -273,7 +273,7 @@
                             </svg></div>
                         <div class="image">
                             <div class="img-fluid">
-                                <img src="{{asset("assets/images/logos/4.jpg")}}" alt="logo Trags">
+                                <img src="{{asset("assets/images/logos/4.jpg")}}" alt="logo Trags" width="40%">
                             </div>
                         </div>
                         <div class="content">
@@ -334,7 +334,7 @@
                             </svg></div>
                         <div class="image">
                             <div class="img-fluid">
-                                <img src="{{asset("assets/images/logos/3.jpg")}}" alt="logo Engineering">
+                                <img src="{{asset("assets/images/logos/3.jpg")}}" alt="logo Engineering" width="40%">
                             </div>
                         </div>
                         <div class="content">

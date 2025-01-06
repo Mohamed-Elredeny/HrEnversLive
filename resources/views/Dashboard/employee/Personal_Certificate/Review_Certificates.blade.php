@@ -314,6 +314,41 @@
                             </tr>
                         </thead>
                         <tbody>
+                        @foreach($certificatespending as $certificate)
+
+                            <tr class="Pending_Certificate" style="display:table-row ;">
+                                <td>{{ \App\Models\Employee::find($certificate->Emp_id)->empName ?? '' }}</td>
+                                <td>{{ $certificate->ref }}</td>
+                                <td>{{$certificate->remark}}</td>
+                                <td>{{$certificate->date_submit}}</td>
+                                <td>{{$certificate->review_name}}</td>
+                                <td>{{$certificate->review_date??" "}}</td>
+                                <td>{{$certificate->review_remark??" "}}</td>
+                                <td>{{$certificate->approval_name}}</td>
+                                <td>{{$certificate->approval_date??" "}}</td>
+                                <td>{{$certificate->approval_remark??" "}}</td>
+                                <td>  <div class="statu">
+                                        <div class="image">
+                                            <div class="img-fluid">
+                                                <img src="{{asset("assets/images/sign-in/Pending@3x.png")}}" alt="Pending">
+                                            </div>
+                                        </div>
+                                        <p>
+                                            Pending  Review
+                                        </p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <a href="{{ route('employee.Certificate', [ 'type' => 'Pending_Certificates','id' => $certificate->id]) }}">
+
+                                        <button class="btn">
+                                            Review
+                                        </button>
+                                    </a>
+                                </td>
+                            </tr>
+                        @endforeach
+
                         @foreach($certificatesapproval as $certificate)
                             <tr class="Approval_Certificate" style="display:table-row ;">
                                 <td>{{ \App\Models\Employee::find($certificate->Emp_id)->empName ?? '' }}</td>
@@ -350,40 +385,6 @@
                             </tr>
                         @endforeach
 
-                        @foreach($certificatespending as $certificate)
-
-                            <tr class="Pending_Certificate" style="display:table-row ;">
-                                <td>{{ \App\Models\Employee::find($certificate->Emp_id)->empName ?? '' }}</td>
-                                <td>{{ $certificate->ref }}</td>
-                                <td>{{$certificate->remark}}</td>
-                                <td>{{$certificate->date_submit}}</td>
-                                <td>{{$certificate->review_name}}</td>
-                                <td>{{$certificate->review_date??" "}}</td>
-                                <td>{{$certificate->review_remark??" "}}</td>
-                                <td>{{$certificate->approval_name}}</td>
-                                <td>{{$certificate->approval_date??" "}}</td>
-                                <td>{{$certificate->approval_remark??" "}}</td>
-                                <td>  <div class="statu">
-                                        <div class="image">
-                                            <div class="img-fluid">
-                                                <img src="{{asset("assets/images/sign-in/Pending@3x.png")}}" alt="Pending">
-                                            </div>
-                                        </div>
-                                        <p>
-                                            Pending  Review
-                                        </p>
-                                    </div>
-                                </td>
-                                <td>
-                                    <a href="{{ route('employee.Certificate', [ 'type' => 'Pending_Certificates','id' => $certificate->id]) }}">
-
-                                        <button class="btn">
-                                           Review
-                                        </button>
-                                    </a>
-                                </td>
-                            </tr>
-                        @endforeach
 
                         @foreach($certificatesreturn as $certificate)
 

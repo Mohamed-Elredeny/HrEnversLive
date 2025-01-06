@@ -354,14 +354,21 @@
                 $selectedReasons = $selectedReasons ?? [];
             @endphp
             @foreach ($allReasons as $reasonKey => $reasonLabel)
+                @php
+                    // Split the label into bold part and normal text
+                    [$boldText, $normalText] = explode(':', $reasonLabel, 2);
+                @endphp
                 <div class="form-group">
-                    <div style="display: flex ;align-items: center; gap: 5px;">
-                    <input type="checkbox" name="reasonSta" disabled id="{{ $reasonKey }}" {{ in_array($reasonKey, $selectedReasons) ? 'checked' : '' }}>
-                    <label for="{{ $reasonKey }}">{{ $reasonLabel }}
-                    </label></div>
+                    <div style="display: flex; align-items: center; gap: 5px;">
+                        <input type="checkbox" name="reasonSta" disabled id="{{ $reasonKey }}" {{ in_array($reasonKey, $selectedReasons) ? 'checked' : '' }}>
+                        <label for="{{ $reasonKey }}">
+                            <b style="font-weight: bold">{{ $boldText }}:</b>{{ $normalText }}
+                        </label>
+                    </div>
                 </div>
             @endforeach
         </div>
+
 
 
 

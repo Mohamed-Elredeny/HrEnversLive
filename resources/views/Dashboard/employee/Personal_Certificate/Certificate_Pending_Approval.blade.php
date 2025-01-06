@@ -357,7 +357,7 @@
                 <div style="display: flex ;align-items: center; gap: 5px;">
                 <input type="checkbox" name="reason[]" value="reasonOne" id="reasonOne">
                 <label for="reasonOne">
-                    Incomplete Information: The employee has not provided all the necessary details required for processing the certificate.
+                    <b style="font-weight: bold"> Incomplete Information:</b> The employee has not provided all the necessary details required for processing the certificate.
                 </label>
                 </div>
             </div>
@@ -365,7 +365,7 @@
                 <div style="display: flex ;align-items: center; gap: 5px;">
                 <input type="checkbox" name="reason[]" value="reasonTwo" id="reasonTwo">
                 <label for="reasonTwo">
-                    Invalid Purpose: The reason provided for the certificate request does not meet the criteria for issuance.
+                    <b style="font-weight: bold"> Invalid Purpose: </b>The reason provided for the certificate request does not meet the criteria for issuance.
                 </label>
                 </div>
             </div>
@@ -373,7 +373,7 @@
                 <div style="display: flex ;align-items: center; gap: 5px;">
                 <input type="checkbox" name="reason[]" value="reasonThree" id="reasonThree">
                 <label for="reasonThree">
-                    Document Format Issue: The format requested for the certificate is not supported by the company's standard documentation.
+                    <b style="font-weight: bold">  Document Format Issue: </b>The format requested for the certificate is not supported by the company's standard documentation.
                 </label>
                 </div>
             </div>
@@ -381,7 +381,7 @@
                 <div style="display: flex ;align-items: center; gap: 5px;">
                 <input type="checkbox" name="reason[]" value="reasonFour" id="reasonFour">
                 <label for="reasonFour">
-                    Request Outside of Policy: The certificate requested is outside the company's policy for issuance or the type of certificate is not provided.
+                    <b style="font-weight: bold">  Request Outside of Policy:</b> The certificate requested is outside the company's policy for issuance or the type of certificate is not provided.
                 </label>
                 </div>
             </div>
@@ -389,7 +389,7 @@
                 <div style="display: flex ;align-items: center; gap: 5px;">
                 <input type="checkbox" name="reason[]" value="reasonFive" id="reasonFive">
                 <label for="reasonFive">
-                    Supporting Documents Missing: Any additional documents required to verify the certificate request are not attached.
+                    <b style="font-weight: bold"> Supporting Documents Missing:</b> Any additional documents required to verify the certificate request are not attached.
                 </label>
                 </div>
             </div>
@@ -397,7 +397,7 @@
                 <div style="display: flex ;align-items: center; gap: 5px;">
                 <input type="checkbox" name="reason[]" value="reasonSix" id="reasonSix">
                 <label for="reasonSix">
-                    Clarification Needed: Further details or clarification are needed to process the request effectively.
+                 <b style="font-weight: bold">  Clarification Needed:</b>  Further details or clarification are needed to process the request effectively.
                 </label>
                 </div>
             </div>
@@ -405,7 +405,7 @@
                 <div style="display: flex ;align-items: center; gap: 5px;">
                 <input type="checkbox" name="reason[]" value="reasonSeven" id="reasonSeven">
                 <label for="reasonSeven">
-                    Conflicting Requests: The employee has multiple overlapping or conflicting certificate requests.
+                    <b style="font-weight: bold"> Conflicting Requests:</b> The employee has multiple overlapping or conflicting certificate requests.
                 </label>
                 </div>
             </div>
@@ -413,7 +413,7 @@
                 <div style="display: flex ;align-items: center; gap: 5px;">
                 <input type="checkbox" name="reason[]" value="reasonEight" id="reasonEight">
                 <label for="reasonEight">
-                    Incorrect Employee Data: The provided employee information is incorrect or does not match company records.
+                    <b style="font-weight: bold"> Incorrect Employee Data:</b> The provided employee information is incorrect or does not match company records.
                 </label>
                 </div>
             </div>
@@ -488,8 +488,9 @@
                 title: 'Approved!',
                 text: 'The certificate will be issued to the employee.',
                 icon: 'success',
-                showCancelButton: true,
-                confirmButtonText: 'OK!',
+
+                showCancelButton: false,
+                showConfirmButton: false
                 // cancelButtonText: 'Cancel'
             }).then(()=>{
                             document.querySelector(".form2").submit();
