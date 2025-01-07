@@ -1,17 +1,17 @@
 <?php
 namespace App\Repositories;
+use App\Interfaces\LeavesRepositoryInterface;
 use App\Models\Employee;
 use App\Models\Leave;
 use App\Models\LeaveStage;
 use App\Models\LeaveType;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
-use App\LeavesRepositoryInterface;
 
 class LeavesRepository implements LeavesRepositoryInterface{
     public function index()
     {
-        $employee = auth('employee')->user();
+        $employee = auth('employees')->user();
 
         $responsible_leaves_ids = array_unique(LeaveStage::where('responsible_employee', $employee->id)->pluck('leave_id')->toArray());
         $responsible_leaves_ids1 = [];
@@ -60,7 +60,7 @@ class LeavesRepository implements LeavesRepositoryInterface{
      */
     public function create()
     {
-        $employee = auth('employee')->user();
+        $employee = auth('employees')->user();
         $result = $employee;
         $stringDateFromDatabase = $employee->joiningDate;
         $carbonDate = Carbon::parse($stringDateFromDatabase);
@@ -89,14 +89,14 @@ class LeavesRepository implements LeavesRepositoryInterface{
             'days.gt' => 'The number of days must be greater than 0.',
             'days.max' => 'The number of days must not exceed the available limit of your leaves which is ' . $available . '.',
         ]);
-        $employee_id = auth('employee')->user()->id;
+        $employee_id = auth('employees')->user()->id;
 
-        if ($leave_type_record->getEmpLeaves(auth('employee')->user())['statistics'][$leave_type]['remain'] != 0) {
+        if ($leave_type_record->getEmpLeaves(auth('employees')->user())['statistics'][$leave_type]['remain'] != 0) {
             return redirect()->back()->with('error', 'Dear Colleagues,<br>
- you need ' . $leave_type_record->getEmpLeaves(auth('employee')->user())['statistics'][$leave_type]['remain'] . ' more workdays to qualify for this leave.<br>
+ you need ' . $leave_type_record->getEmpLeaves(auth('employees')->user())['statistics'][$leave_type]['remain'] . ' more workdays to qualify for this leave.<br>
  In urgent situations, unpaid leave is an option.');
         }
-        if ($leave_type_record->getEmpLeaves(auth('employee')->user())['statistics'][$leave_type]['available'] <= 0) {
+        if ($leave_type_record->getEmpLeaves(auth('employees')->user())['statistics'][$leave_type]['available'] <= 0) {
             return redirect()->back()->with('error', 'This leave is not available');
         }
 
@@ -274,7 +274,7 @@ class LeavesRepository implements LeavesRepositoryInterface{
      */
     public function show(int $id)
     {
-        $employee = auth('employee')->user();
+        $employee = auth('employees')->user();
         $stringDateFromDatabase = $employee->joiningDate;
         $carbonDate = Carbon::parse($stringDateFromDatabase);
         $today = Carbon::now();
@@ -322,5 +322,10 @@ class LeavesRepository implements LeavesRepositoryInterface{
     {
         return view('employees.leaves.leaveInstructions');
 
+    }
+
+    public function viewLeaves(array $filters)
+    {
+        // TODO: Implement viewLeaves() method.
     }
 }

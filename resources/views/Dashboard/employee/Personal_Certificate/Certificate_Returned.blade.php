@@ -285,7 +285,7 @@
                             </button>
                         </div>
                     </div>
-                    <a href="{{route('employee.index')}}" class="image">
+                    <a href="{{route('employees.index')}}" class="image">
                         <div class="img-fluid">
                             <img src="{{asset("assets/images/sign-in/Back@3x.png")}}" alt="back arrow">
                         </div>
@@ -339,14 +339,14 @@
             @php
                 // Define all possible reasons with their labels
                 $allReasons = [
-                    'reasonOne' => 'Incomplete Information: The employee has not provided all the necessary details required for processing the certificate.',
+                    'reasonOne' => 'Incomplete Information: The employees has not provided all the necessary details required for processing the certificate.',
                     'reasonTwo' => 'Invalid Purpose: The reason provided for the certificate request does not meet the criteria for issuance.',
                     'reasonThree' => 'Document Format Issue: The format requested for the certificate is not supported by the company\'s standard documentation.',
                     'reasonFour' => 'Request Outside of Policy: The certificate requested is outside the company\'s policy for issuance or the type of certificate is not provided.',
                     'reasonFive' => 'Supporting Documents Missing: Any additional documents required to verify the certificate request are not attached.',
                     'reasonSix' => 'Clarification Needed: Further details or clarification are needed to process the request effectively.',
-                    'reasonSeven' => 'Conflicting Requests: The employee has multiple overlapping or conflicting certificate requests.',
-                    'reasonEight' => 'Incorrect Employee Data: The provided employee information is incorrect or does not match company records.',
+                    'reasonSeven' => 'Conflicting Requests: The employees has multiple overlapping or conflicting certificate requests.',
+                    'reasonEight' => 'Incorrect Employee Data: The provided employees information is incorrect or does not match company records.',
                 ];
                 $selectedReasons = json_decode($certificate->returnReasons, true); // Decode selected reasons
             @endphp

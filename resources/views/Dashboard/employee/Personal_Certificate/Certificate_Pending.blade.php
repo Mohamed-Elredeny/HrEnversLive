@@ -281,14 +281,14 @@
             <article class="container">
                 <section class="head ">
                     <div class="title">
-                        <a href="{{route('employee.index')}}">
+                        <a href="{{route('employees.index')}}">
                             <span>My Personal Certificate</span>
                         </a>
 
                         <p>Pending Certificate</p>
                         <span>|</span>
                     </div>
-                    <a href="{{route('employee.index')}}" class="image">
+                    <a href="{{route('employees.index')}}" class="image">
                         <div class="img-fluid">
                             <img src="{{asset("assets/images/sign-in/Back@3x.png")}}" alt="back arrow">
                         </div>
@@ -434,7 +434,7 @@
     </div>
 
     <div class="overlayBoxForEmployee overlayBoxCertificate "></div>
-    <form method="post" action="{{route('employee.ReviewerCertificateReturnToSender',$certificate->id)}}">
+    <form method="post" action="{{route('employees.ReviewerCertificateReturnToSender',$certificate->id)}}">
 
         @csrf
     <div class="boxReturnDan boxReturnDanFirst boxReturnDanCertificate">
@@ -528,7 +528,7 @@
         </div>
     </div>
     </form>
-    <form method="post" class="form2" action="{{route('employee.ReviewerCertificateConfirm',$certificate->id)}}">
+    <form method="post" class="form2" action="{{route('employees.ReviewerCertificateConfirm',$certificate->id)}}">
         @csrf
     <div class="boxReturnDan boxReturnDanFirst boxConfirmDanCertificate" style="height: fit-content !important;">
         <div class="titleBox titleCertificate">

@@ -75,7 +75,7 @@ class AuthController extends Controller
         if (Auth::guard('employee')->attempt(['emailWork' => $request['emailMedgulf'], 'password' => $request['PasswordMedgulf'],'company_id'=>'medgulf'])) {
 
             $user = Auth::guard('employee')->user();
-            return redirect()->intended('dashboard');
+            return redirect()->intended('employee');
         }
 
         return redirect('/')->with('message', 'Invalid credentials. Please try again.');
@@ -86,7 +86,7 @@ class AuthController extends Controller
 
 
         if (Auth::guard('employee')->attempt(['emailWork' => $request['emailTrags'], 'password' => $request['PasswordTrags'],'company_id'=>'trags'])) {
-            return redirect()->intended('dashboard');
+            return redirect()->intended('employee');
         }
         return redirect('/')->with('message', 'Invalid credentials. Please try again.');
     }
@@ -94,7 +94,7 @@ class AuthController extends Controller
     {
 
         if (Auth::guard('employee')->attempt( ['emailWork' => $request['emailEngineering'], 'password' => $request['PasswordEngineering'],'company_id'=>'enjineering'])) {
-            return redirect()->intended('dashboard');
+            return redirect()->intended('employee');
         }
         return redirect('/')->with('message', 'Invalid credentials. Please try again.');
     }

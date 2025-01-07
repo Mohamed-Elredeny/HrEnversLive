@@ -22,6 +22,7 @@
 body{
     height: 100%;
     overflow: hidden;
+    
 }
 *{
     margin: 0;
@@ -84,7 +85,7 @@ header .img-fluid img{
     position: relative;
     overflow: hidden;
     width: 60%;
-}
+} 
 .hero .top .image .img-fluid{
     position: absolute;
     bottom: 0px;
@@ -485,7 +486,7 @@ header .img-fluid img{
 }
 .popup .signin .signLogo .content .forget p:hover{
     color: var(--main-blue-color);
-}
+} 
 .popup .signin .signLogo .content .forget p::after{
     content: "";
     position: absolute;
@@ -665,7 +666,7 @@ header .img-fluid img{
 .popup .signin .signup .first .prag{
     width: 100%;
     text-align: left;
-    margin-block: 22px;
+    margin-block: 22px; 
 }
 .popup .signin .signup .first .prag h2{
     font-size: 19px;
@@ -785,7 +786,7 @@ header .img-fluid img{
     transition: all .3s ease-in-out;
 }
 .popup .signin .signup .second .logos .image.active{
-
+    
     border: 1px solid var(--gray-color);
     opacity: 1;
     transition: all .3s ease-in-out;
@@ -1015,7 +1016,7 @@ header .img-fluid img{
         padding: 20px 15px ;
     }
     .hero .top .content {
-        margin-block-start: 54px ;
+        margin-block-start: 184px ;
     }
     .hero .top {
         margin: 0 auto ;
@@ -1521,7 +1522,7 @@ header .img-fluid img{
     }
     .popup .signin .content .text {
         font-size: 13px;
-    }
+    } 
     .popup .signin .signup .second .logos .image {
         height: 67px;
     }

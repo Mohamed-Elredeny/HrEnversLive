@@ -18,8 +18,9 @@ return new class extends Migration
 
             $table->string('name');
             //all or specific type
-            $table->string('employee_category')->default('employee');
+            $table->string('employee_category')->default('employees');
             $table->double('joining_days')->default(0);
+            $table->double('available_after')->default(0);
             $table->double('quantity')->default(0);
             $table->string('status')->default('active');
 

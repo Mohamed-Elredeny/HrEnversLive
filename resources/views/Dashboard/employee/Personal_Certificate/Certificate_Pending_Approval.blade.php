@@ -1,34 +1,37 @@
+<!-- custom style -->
+<link rel="stylesheet" href="{{asset("assets/css/Personal_Certificate.css")}}">
+<link rel="stylesheet" href="{{asset("assets/css/KPI.css")}}">
+<link rel="stylesheet" href="{{asset("assets/css/dashboard.css")}}">
 
-    <!-- custom style -->
-    <link rel="stylesheet" href="{{asset("assets/css/Personal_Certificate.css")}}">
-    <link rel="stylesheet" href="{{asset("assets/css/KPI.css")}}">
-    <link rel="stylesheet" href="{{asset("assets/css/dashboard.css")}}">
+<!-- google font Syne-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
 
-    <!-- google font Syne-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
+<!-- google font Poppins -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 
-    <!-- google font Poppins -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<!-- google font Inter -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
 
-    <!-- google font Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+<!-- bootstrap -->
+<link rel="stylesheet" href="{{asset("assets/css/bootstrap.min.css")}}">
+<link rel="stylesheet" href="{{asset("assets/css/all.min.css")}}">
 
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="{{asset("assets/css/bootstrap.min.css")}}">
-    <link rel="stylesheet" href="{{asset("assets/css/all.min.css")}}">
-
-    @extends('layout.site')
-    @section('content')
+@extends('layouts.site')
+@section('content')
 
     <div id="sideBar" class="sidebar">
         <ul>
-            <li >
+            <li>
                 <a href="#">
                     <div class="image-dark home-dark active image">
                         <img src="{{asset("assets/images/sign-in/Home@3x.png")}}" alt="icon">
@@ -134,7 +137,7 @@
                 <li><a href="#">Confirmation Letter <span>12</span> </a></li>
             </ul>
         </div>
-        <div id="calendar"  class="calendar sectionslider">
+        <div id="calendar" class="calendar sectionslider">
             <div class="title">
                 <h2 class="order-2 order-md-1">
                     Calendar
@@ -160,21 +163,21 @@
             </div>
             <ul>
                 <li>
-                    <a href="#" id="edit" >
-                        <div class="iconSetting" id="editicon" >
+                    <a href="#" id="edit">
+                        <div class="iconSetting" id="editicon">
                             <i class="fa-solid fa-camera-retro"></i>
                         </div>
-                        <p id="editphoto" >
+                        <p id="editphoto">
                             Edit Photo
                         </p>
                     </a>
                 </li>
                 <li>
-                    <a href="#" id="log" >
-                        <div class="iconSetting" id="iconlog" >
+                    <a href="#" id="log">
+                        <div class="iconSetting" id="iconlog">
                             <i class="fa-solid fa-right-from-bracket"></i>
                         </div>
-                        <p id="logout" >
+                        <p id="logout">
                             Log out
                         </p>
                     </a>
@@ -193,40 +196,41 @@
 
     <div id="mainContent" class="content content_responsev">
         <header>
-                @if($employee->company_id=='medgulf')
-                    <div class="logo">
-                        <div class="img-fluid">
-                            <img src="{{asset("assets/images/sign-in/Logos@3x.png")}}" alt="logos">
-                        </div>
-                        <div class="titleLogo">
-                            <p>Medgulf Construction Company WLL</p>
-                        </div>
+            @if($employee->company_id=='medgulf')
+                <div class="logo">
+                    <div class="img-fluid">
+                        <img src="{{asset("assets/images/sign-in/Logos@3x.png")}}" alt="logos">
                     </div>
-                @endif
-                @if($employee->company_id=='trags')
-                    <div class="logo">
-                        <div class="img-fluid">
-                            <img src="{{asset("assets/images/sign-in/Logos@3x-1.png")}}" alt="logos">
-                        </div>
-                        <div class="titleLogo">
-                            <p>TRAGS ENGINEERING COMPANY WLL</p>
-                        </div>
+                    <div class="titleLogo">
+                        <p>Medgulf Construction Company WLL</p>
                     </div>
-                @endif
-                @if($employee->company_id=='enjineering')
-                    <div class="logo">
-                        <div class="img-fluid">
-                            <img src="{{asset("assets/images/sign-in/Logos@3x-2.png")}}" alt="logos">
-                        </div>
-                        <div class="titleLogo">
-                            <p>TRADING AND AGENCY SERVICES LIMITED COMPANY WLL</p>
-                        </div>
+                </div>
+            @endif
+            @if($employee->company_id=='trags')
+                <div class="logo">
+                    <div class="img-fluid">
+                        <img src="{{asset("assets/images/sign-in/Logos@3x-1.png")}}" alt="logos">
                     </div>
-                @endif
+                    <div class="titleLogo">
+                        <p>TRAGS ENGINEERING COMPANY WLL</p>
+                    </div>
+                </div>
+            @endif
+            @if($employee->company_id=='enjineering')
+                <div class="logo">
+                    <div class="img-fluid">
+                        <img src="{{asset("assets/images/sign-in/Logos@3x-2.png")}}" alt="logos">
+                    </div>
+                    <div class="titleLogo">
+                        <p>TRADING AND AGENCY SERVICES LIMITED COMPANY WLL</p>
+                    </div>
+                </div>
+            @endif
             <div class="account">
                 <div class="image">
                     <div class="ima-fluid">
-                        <img src="{{asset("assets/images/sign-in/1718183412_1694698427_Mohamed1.jpg")}}" alt="Personal photo">
+                        <img src="{{asset("assets/images/sign-in/1718183412_1694698427_Mohamed1.jpg")}}"
+                             alt="Personal photo">
                     </div>
                 </div>
                 <div class="name">
@@ -235,7 +239,8 @@
                 </div>
                 <div class="arrow">
                     <div class="ima-fluid">
-                        <img onclick="openEdit()" src="{{asset("assets/images/sign-in/Arrow@3x-1.png")}}" alt="arrow-dowm">
+                        <img onclick="openEdit()" src="{{asset("assets/images/sign-in/Arrow@3x-1.png")}}"
+                             alt="arrow-dowm">
                     </div>
                 </div>
                 <div class="settingAccount">
@@ -273,13 +278,13 @@
                         <a href="">
                             <span>Employee</span>
                         </a>
-                        <a href="{{route('employee.index')}}">
+                        <a href="{{route('employees.index')}}">
                             <span>Personal Certificate</span>
                         </a>
                         <p>Pending Certificate</p>
                         <span>|</span>
                     </div>
-                    <a href="{{route('employee.index')}}" class="image">
+                    <a href="{{route('employees.index')}}" class="image">
                         <div class="img-fluid">
                             <img src="{{asset("assets/images/sign-in/Back@3x.png")}}" alt="back arrow">
                         </div>
@@ -302,7 +307,7 @@
 
                         </div>
                     </div>
-                   @yield('certificate_content_pending_approval')
+                    @yield('certificate_content_pending_approval')
 
                     <div class="image footer">
                         <div class="img-fluid">
@@ -337,137 +342,147 @@
 
     </div>
     <div class="overlayBoxForEmployee overlayBoxCertificate "></div>
-    <form method="post" action="{{route('employee.ApprovalCertificateReturnToSender',$certificate->id)}}">
+    <form method="post" action="{{route('employees.ApprovalCertificateReturnToSender',$certificate->id)}}">
 
         @csrf
 
         <div class="boxReturnDan boxReturnDanFirst boxReturnDanCertificate">
-        <div class="titleBox">
-            <h2>
-                Return Certificate To Sender
-            </h2>
-        </div>
-        <div class="suptitleBox">
-            <p>
-                Here are 8 common reasons to return to sender, and you can select one or more as guides to amend:
-            </p>
-        </div>
-
-            <div class="form-group">
-                <div style="display: flex ;align-items: center; gap: 5px;">
-                <input type="checkbox" name="reason[]" value="reasonOne" id="reasonOne">
-                <label for="reasonOne">
-                    Incomplete Information: The employee has not provided all the necessary details required for processing the certificate.
-                </label>
-                </div>
+            <div class="titleBox">
+                <h2>
+                    Return Certificate To Sender
+                </h2>
             </div>
-            <div class="form-group">
-                <div style="display: flex ;align-items: center; gap: 5px;">
-                <input type="checkbox" name="reason[]" value="reasonTwo" id="reasonTwo">
-                <label for="reasonTwo">
-                    Invalid Purpose: The reason provided for the certificate request does not meet the criteria for issuance.
-                </label>
-                </div>
-            </div>
-            <div class="form-group">
-                <div style="display: flex ;align-items: center; gap: 5px;">
-                <input type="checkbox" name="reason[]" value="reasonThree" id="reasonThree">
-                <label for="reasonThree">
-                    Document Format Issue: The format requested for the certificate is not supported by the company's standard documentation.
-                </label>
-                </div>
-            </div>
-            <div class="form-group">
-                <div style="display: flex ;align-items: center; gap: 5px;">
-                <input type="checkbox" name="reason[]" value="reasonFour" id="reasonFour">
-                <label for="reasonFour">
-                    Request Outside of Policy: The certificate requested is outside the company's policy for issuance or the type of certificate is not provided.
-                </label>
-                </div>
-            </div>
-            <div class="form-group">
-                <div style="display: flex ;align-items: center; gap: 5px;">
-                <input type="checkbox" name="reason[]" value="reasonFive" id="reasonFive">
-                <label for="reasonFive">
-                    Supporting Documents Missing: Any additional documents required to verify the certificate request are not attached.
-                </label>
-                </div>
-            </div>
-            <div class="form-group">
-                <div style="display: flex ;align-items: center; gap: 5px;">
-                <input type="checkbox" name="reason[]" value="reasonSix" id="reasonSix">
-                <label for="reasonSix">
-                    Clarification Needed: Further details or clarification are needed to process the request effectively.
-                </label>
-                </div>
-            </div>
-            <div class="form-group">
-                <div style="display: flex ;align-items: center; gap: 5px;">
-                <input type="checkbox" name="reason[]" value="reasonSeven" id="reasonSeven">
-                <label for="reasonSeven">
-                    Conflicting Requests: The employee has multiple overlapping or conflicting certificate requests.
-                </label>
-                </div>
-            </div>
-            <div class="form-group">
-                <div style="display: flex ;align-items: center; gap: 5px;">
-                <input type="checkbox" name="reason[]" value="reasonEight" id="reasonEight">
-                <label for="reasonEight">
-                    Incorrect Employee Data: The provided employee information is incorrect or does not match company records.
-                </label>
-                </div>
-            </div>
-
-        <div class="reasonSpecify">
-            <div class="titleSpecify">
+            <div class="suptitleBox">
                 <p>
-                    Reasons: <span>(Specify)</span>
+                    Here are 8 common reasons to return to sender, and you can select one or more as guides to amend:
                 </p>
             </div>
-            <textarea name="areaReasonSpecify" id="areaReasonSpecify" placeholder="Type Other Reason"></textarea>
+
+            <div class="form-group">
+                <div style="display: flex ;align-items: center; gap: 5px;">
+                    <input type="checkbox" name="reason[]" value="reasonOne" id="reasonOne">
+                    <label for="reasonOne">
+                        Incomplete Information: The employee has not provided all the necessary details required for
+                        processing the certificate.
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div style="display: flex ;align-items: center; gap: 5px;">
+                    <input type="checkbox" name="reason[]" value="reasonTwo" id="reasonTwo">
+                    <label for="reasonTwo">
+                        Invalid Purpose: The reason provided for the certificate request does not meet the criteria for
+                        issuance.
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div style="display: flex ;align-items: center; gap: 5px;">
+                    <input type="checkbox" name="reason[]" value="reasonThree" id="reasonThree">
+                    <label for="reasonThree">
+                        Document Format Issue: The format requested for the certificate is not supported by the
+                        company's standard documentation.
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div style="display: flex ;align-items: center; gap: 5px;">
+                    <input type="checkbox" name="reason[]" value="reasonFour" id="reasonFour">
+                    <label for="reasonFour">
+                        Request Outside of Policy: The certificate requested is outside the company's policy for
+                        issuance or the type of certificate is not provided.
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div style="display: flex ;align-items: center; gap: 5px;">
+                    <input type="checkbox" name="reason[]" value="reasonFive" id="reasonFive">
+                    <label for="reasonFive">
+                        Supporting Documents Missing: Any additional documents required to verify the certificate
+                        request are not attached.
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div style="display: flex ;align-items: center; gap: 5px;">
+                    <input type="checkbox" name="reason[]" value="reasonSix" id="reasonSix">
+                    <label for="reasonSix">
+                        Clarification Needed: Further details or clarification are needed to process the request
+                        effectively.
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div style="display: flex ;align-items: center; gap: 5px;">
+                    <input type="checkbox" name="reason[]" value="reasonSeven" id="reasonSeven">
+                    <label for="reasonSeven">
+                        Conflicting Requests: The employee has multiple overlapping or conflicting certificate requests.
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div style="display: flex ;align-items: center; gap: 5px;">
+                    <input type="checkbox" name="reason[]" value="reasonEight" id="reasonEight">
+                    <label for="reasonEight">
+                        Incorrect Employee Data: The provided employee information is incorrect or does not match
+                        company records.
+                    </label>
+                </div>
+            </div>
+
+            <div class="reasonSpecify">
+                <div class="titleSpecify">
+                    <p>
+                        Reasons: <span>(Specify)</span>
+                    </p>
+                </div>
+                <textarea name="areaReasonSpecify" id="areaReasonSpecify" placeholder="Type Other Reason"></textarea>
+            </div>
+            <div class="buttonReason">
+                <button class="btn ReasonBtn Return active BtnFirstReturn" type="submit">
+                    Return
+                </button>
+            </div>
         </div>
-        <div class="buttonReason">
-            <button  class="btn ReasonBtn Return active BtnFirstReturn" type="submit">
-                Return
-            </button>
-        </div>
-    </div>
     </form>
-    <form method="post"  class="form2" action="{{route('employee.ApprovalCertificateConfirm',$certificate->id)}}">
+    <form method="post" class="form2" action="{{route('employees.ApprovalCertificateConfirm',$certificate->id)}}">
         @csrf
-    <div class="boxReturnDan boxReturnDanFirst boxConfirmDanCertificate" style="height: fit-content !important;">
-        <div class="titleBox titleCertificate">
-            <h2>
-                CONFIRM CERTIFICATE
-            </h2>
-        </div>
-        <div class="suptitleBox suptitleCertificate">
-            <p>
-                Are you sure you have reviewed this certificate for confirmation
-            </p>
-        </div>
-
-        <div class="reasonSpecify">
-            <div class="titleSpecify">
+        <div class="boxReturnDan boxReturnDanFirst boxConfirmDanCertificate" style="height: fit-content !important;">
+            <div class="titleBox titleCertificate">
+                <h2>
+                    CONFIRM CERTIFICATE
+                </h2>
+            </div>
+            <div class="suptitleBox suptitleCertificate">
                 <p>
-                    Remark
+                    Are you sure you have reviewed this certificate for confirmation
                 </p>
             </div>
-            <textarea name="areaReasonSpecify" id="areaReasonSpecify" placeholder="Remark"></textarea>
+
+            <div class="reasonSpecify">
+                <div class="titleSpecify">
+                    <p>
+                        Remark
+                    </p>
+                </div>
+                <textarea name="areaReasonSpecify" id="areaReasonSpecify" placeholder="Remark"></textarea>
+            </div>
+            <div class="buttonReason buttonCertificate">
+                <button class="btn ReasonBtn Return active BtnFirstReturn submitCertificate BtnFirstCertificate"
+                        type="submit">
+                    Yes
+                </button>
+            </div>
         </div>
-        <div class="buttonReason buttonCertificate">
-            <button  class="btn ReasonBtn Return active BtnFirstReturn submitCertificate BtnFirstCertificate" type="submit">
-                Yes
-            </button>
-        </div>
-    </div>
     </form>
     <!-- bootstrap -->
     <script src="{{asset("assets/js/bootstrap.bundle.min.js")}}"></script>
     <script src="{{asset("assets/js/all.min.js")}}"></script>
 
     <!-- FullCalendar JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/6.1.15/index.global.js" integrity="sha512-3I+0zIxy2IkeeCvvhXUEu+AFT3zAGuHslHLDmM8JBv6FT7IW6WjhGpUZ55DyGXArYHD0NshixtmNUWJzt0K32w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/6.1.15/index.global.js"
+            integrity="sha512-3I+0zIxy2IkeeCvvhXUEu+AFT3zAGuHslHLDmM8JBv6FT7IW6WjhGpUZ55DyGXArYHD0NshixtmNUWJzt0K32w=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- custom javaScript -->
     <script src="{{asset("assets/js/Personal_Certificate.js")}}"></script>
@@ -478,8 +493,7 @@
     <script>
 
         const buttons = document.querySelector(".submitCertificate");
-        buttons.addEventListener("click", () =>
-        {
+        buttons.addEventListener("click", () => {
 
 
             // popupOverlay.classList.remove('hidden');
@@ -498,12 +512,13 @@
                         text: 'The clearance section is now visible.',
                         icon: 'success',
                         confirmButtonText: 'OK'
-                    }).then(()=>{
+                    }).then(() => {
                         document.querySelector(".form2").submit();
                     });
 
                 }
-            });});
+            });
+        });
         const btnReturn = document.querySelector("#btnReturn");
         const btnReview = document.querySelector("#btnReview");
         const overlayBoxCertificate = document.querySelector(".overlayBoxCertificate");
@@ -539,4 +554,4 @@
         });
 
     </script>
-    @endsection
+@endsection

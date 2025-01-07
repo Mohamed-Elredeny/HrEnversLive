@@ -117,5 +117,18 @@ class Employee extends Authenticatable
         }
 
     }
+    public function isHasPermission($permission)
+    {
+        if ($permission == 'BookFlightTicket') {
+            $permission = 'EmployeeRelation';
+        }
+        $permissions = UserPermission::where('permission', $permission)->where('employee_id', $this->id)->count();
+        if ($permissions > 0) {
+            return 1;
+        } else {
+            return 0;
+        }
+
+    }
 
 }

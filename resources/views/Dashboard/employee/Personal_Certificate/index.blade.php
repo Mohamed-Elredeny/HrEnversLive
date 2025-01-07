@@ -123,8 +123,8 @@
             </div>
         </div>
         <ul>
-            <li><a href="{{route('employee.index')}}">KPI <span>12</span> </a></li>
-            <li><a class="open" href="{{route('employee.index')}}">Personal Certificate <span>1</span> </a></li>
+            <li><a href="{{route('employees.index')}}">KPI <span>12</span> </a></li>
+            <li><a class="open" href="{{route('employees.index')}}">Personal Certificate <span>1</span> </a></li>
             <li><a href="#">Leave Requests <span>6</span> </a></li>
             <li><a href="#">HR Expenses From <span>9</span> </a></li>
             <li><a href="#">Jop Description <span>18</span> </a></li>
@@ -259,12 +259,12 @@
             <section class="head">
                 <div class="title">
 
-                    <a href="{{route('employee.index')}}">
+                    <a href="{{route('employees.index')}}">
                         <p>My Personal Certificate</p>
                     </a>
                     <span>|</span>
                 </div>
-                <a href="{{route('employee.index')}}" class="image">
+                <a href="{{route('employees.index')}}" class="image">
                     <div class="img-fluid">
                         <img src="{{asset("assets/images/sign-in/Back@3x.png")}}" alt="back arrow">
                     </div>
@@ -292,7 +292,7 @@
                                     </div>
 
                             </div>
-                            <a href="{{route('employee.EnglishCertificate')}}" class="buttonCard">
+                            <a href="{{route('employees.EnglishCertificate')}}" class="buttonCard">
                                 <button class="btn btnCard">
                                     View
                                 </button>
@@ -313,7 +313,7 @@
                                         Family Visit Visa, and Family Residency Visa.</p>
                                 </div>
                             </div>
-                            <a href="{{route('employee.ArabicCertificate')}}" class="buttonCard">
+                            <a href="{{route('employees.ArabicCertificate')}}" class="buttonCard">
                                 <button class="btn btnCard">
                                     View
                                 </button>
@@ -341,7 +341,7 @@
                                         efficiency.</p>
                                 </div>
                             </div>
-                            <a href="{{route('employee.MyCertificate')}}" class="buttonCard">
+                            <a href="{{route('employees.MyCertificate')}}" class="buttonCard">
                                 <button class="btn btnCard">
                                     View
                                 </button>
@@ -364,7 +364,7 @@
                                                     and upholding standards.</p>
                                             </div>
                                         </div>
-                                        <a href="{{route('employee.ReviewCertificates')}}" class="buttonCard">
+                                        <a href="{{route('employees.ReviewCertificates')}}" class="buttonCard">
                                             <button class="btn btnCard">
                                                 View
                                             </button>
@@ -391,7 +391,7 @@
                                             certificate, allowing the employee to print it.</p>
                                     </div>
                                 </div>
-                                <a href="{{route('employee.ApprovalCertificates')}}" class="buttonCard">
+                                <a href="{{route('employees.ApprovalCertificates')}}" class="buttonCard">
                                     <button class="btn btnCard">
                                         View
                                     </button>

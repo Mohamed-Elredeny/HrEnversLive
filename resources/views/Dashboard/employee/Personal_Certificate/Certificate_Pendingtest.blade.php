@@ -201,7 +201,7 @@
 
     <div id="mainContent" class="content content_responsev">
         <header>
-{{--            @foreach($employee as $emp)--}}
+{{--            @foreach($employees as $emp)--}}
                 @if($employee->company_id=='medgulf')
                     <div class="logo">
                         <div class="img-fluid">
@@ -281,13 +281,13 @@
             <article class="container">
                 <section class="head ">
                     <div class="title">
-                        <a href="{{route('employee.index')}}">
+                        <a href="{{route('employees.index')}}">
                             <span>My Personal Certificate</span>
                         </a>
                         <p>Pending Certificate</p>
                         <span>|</span>
                     </div>
-                    <a href="{{route('employee.index')}}" class="image">
+                    <a href="{{route('employees.index')}}" class="image">
                         <div class="img-fluid">
                             <img src="../../../assets/images/sign-in/Back@3x.png" alt="back arrow">
                         </div>
@@ -411,17 +411,17 @@
 {{--                            <div>--}}
 {{--                                <p>Dear Sir,</p>--}}
 
-{{--                                <p>This is to certify that<span> X Mr. Name /Ms. Name X</span>, holder of <span>X Nationality X</span>  Passport # <span>X Number X</span> & QID / Visa  <span>X Number X</span> working in the capacity of <span>X Designation X</span> is a confirmed employee of Medgulf Construction Company. He joined the company on <span>X Date X</span> and still employed till date.</p>--}}
+{{--                                <p>This is to certify that<span> X Mr. Name /Ms. Name X</span>, holder of <span>X Nationality X</span>  Passport # <span>X Number X</span> & QID / Visa  <span>X Number X</span> working in the capacity of <span>X Designation X</span> is a confirmed employees of Medgulf Construction Company. He joined the company on <span>X Date X</span> and still employed till date.</p>--}}
 
 {{--                                <p>His Gross Salary per month is QAR. <span>X Number X</span> /-Amount in letters</p>--}}
 
-{{--                                <p>To assist the above mentioned employee to obtain <span>X Credit Card OR Personal loan OR Car loan X</span> from your bank, we confirm that this monthly salary will continue to be paid to his bank account, account number <span>X Number X</span> effective next month.</p>--}}
+{{--                                <p>To assist the above mentioned employees to obtain <span>X Credit Card OR Personal loan OR Car loan X</span> from your bank, we confirm that this monthly salary will continue to be paid to his bank account, account number <span>X Number X</span> effective next month.</p>--}}
 
-{{--                                <p>If the above mentioned employee resigns or his employment is terminated by Medgulf, we will inform you accordingly and pay all amounts of End of services benefits due to him, if any, to his aforementioned bank account.</p>--}}
+{{--                                <p>If the above mentioned employees resigns or his employment is terminated by Medgulf, we will inform you accordingly and pay all amounts of End of services benefits due to him, if any, to his aforementioned bank account.</p>--}}
 
 {{--                                <p>We confirm that both monthly salary and end of service dues, if any, will not be transferred to another bank before obtaining a written clearance Letter from your bank or by directive through Qatar courts. </p>--}}
 
-{{--                                <p>The bank and above named employee fully understands that Medgulf Construction Company does not, in any way, hold itself responsible for any debits incurred by him and that the granting of credit or loan is the sole discretion of your Bank.</p>--}}
+{{--                                <p>The bank and above named employees fully understands that Medgulf Construction Company does not, in any way, hold itself responsible for any debits incurred by him and that the granting of credit or loan is the sole discretion of your Bank.</p>--}}
 
 {{--                                <p>Yours truly,</p>--}}
 {{--                            </div>--}}
@@ -436,7 +436,7 @@
 {{--                                </div>--}}
 {{--                                <div class="image">--}}
 {{--                                    <div class="img-fluid company">--}}
-{{--                                        @foreach($employee as $emp)--}}
+{{--                                        @foreach($employees as $emp)--}}
 {{--                                            @if($emp->company_id=='medgulf')--}}
 {{--                                                <img class="Medgulf"--}}
 {{--                                                     src="../../../assets/images/logos/company_1_sign.png"--}}
@@ -553,7 +553,7 @@
     </div>
 
     <div class="overlayBoxForEmployee overlayBoxCertificate "></div>
-    <form method="post" action="{{route('employee.ReviewerCertificateReturnToSender',$certificate->id)}}">
+    <form method="post" action="{{route('employees.ReviewerCertificateReturnToSender',$certificate->id)}}">
 
         @csrf
     <div class="boxReturnDan boxReturnDanFirst boxReturnDanCertificate">
@@ -632,7 +632,7 @@
         </div>
     </div>
     </form>
-    <form method="post" action="{{route('employee.ReviewerCertificateConfirm',$certificate->id)}}">
+    <form method="post" action="{{route('employees.ReviewerCertificateConfirm',$certificate->id)}}">
         @csrf
     <div class="boxReturnDan boxReturnDanFirst boxConfirmDanCertificate" style="height: fit-content !important;">
         <div class="titleBox titleCertificate">

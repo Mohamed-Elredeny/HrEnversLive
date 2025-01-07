@@ -57,7 +57,7 @@ class LeaveType extends Model
                 $days += $dif;
             }
             if ($days >= $this->quantity) {
-                //old employee
+                //old employees
                 $submission = $leaves[0]->updated_at;
                 $date1 = Carbon::parse($submission);
             } else {
@@ -77,7 +77,7 @@ class LeaveType extends Model
     public function getEmpLeaves($employee)
     {
         $empLeaves = new EmployeeLeavesController();
-        //dd($empLeaves->getEmpLeaves($employee));
+        //dd($empLeaves->getEmpLeaves($employees));
         return $empLeaves->getEmpLeaves($employee);
     }
 

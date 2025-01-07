@@ -1,0 +1,169 @@
+:root{
+    /* color */
+    --main-color: #0F3464;
+    --main-light-color: #5C96FE;
+    --main-blue-color: #1758ad;
+    --main-extra-light-color: #e7faff;
+    --danger-color: #EB0C0C;
+    --success-color: #61F899 ;
+    --success-dark-color:#42b26b ;
+    --yellow-color:#ffe37c ;
+    --yellow-dark-color:#FFD748 ;
+    --orange-color: #e1322d;
+    --orange-light-color: #f06561;
+    --gray-color: #696969;
+    --gray-light-color: #f4f0f0;
+    --gray-text-color: #999999;
+    --gray-ExtraLight-color: #adb5bd;
+    --white-text-color: #D9D9D9;
+    --white-color: #fff;
+    --dark-color: #181818;
+
+    /* radius */
+    --radius-full: 50%;
+    --radius-border: 50rem;
+}
+.warning,
+.add-approval-btn,
+.accordion-content h3,
+.iconDownload,
+.accordion-item-static,
+.button-Approval{
+    display: none !important;
+}
+.nontEvent{
+    pointer-events: none !important;
+}
+
+.accordion-header{
+    font-size: 15px;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 10px;
+}
+.accordion-item{
+    padding: 6px ;
+    border-radius: 10px;
+    box-shadow: 0 0 8px 0px rgb(0 0 0 / 47%);
+}
+.LeaveTap_section .accordion .accordion-item .accordion-content .review-section {
+    flex-direction: column;
+    align-items: flex-start !important;
+}
+.LeaveTap_section .accordion .accordion-item .accordion-content .review-section .radio-label{
+    margin-inline: 5px;
+} 
+.toggle-container.secoundAccordion{
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    margin-bottom: 10px;
+}
+.toggle-item{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.slider{
+    position: relative;
+}
+.slider:before {
+    border: 5px solid var(--gray-color);
+    background-color: var(--gray-color);
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -30px;
+    left: 2px;
+    pointer-events: painted;
+}
+.checkedSpan{
+    position: relative;
+}
+.checkedSpan::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    border: 5px solid var(--gray-color);
+    background-color: var(--gray-color);
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+}
+
+.LeaveTap_section .accordion .accordion-item .accordion-content .review-section .buttons {
+    background-color: #eee !important;
+    padding: 0px 10px;
+}
+.toggle-container {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column !important;
+}
+.toggle-item .switch{
+    position: relative;
+    height: fit-content;
+    margin-inline-end: 10px;
+}
+.secoundAccordion{
+    display:flex;
+    flex-direction:column;
+}
+.LeaveTap_section .accordion .accordion-item .accordion-content h3{
+    font-size: 10px;
+}
+.LeaveTap_section .accordion .accordion-item .accordion-content .add-approval-btn{
+    font-size: 10px;
+}
+.LeaveTap_section .accordion .accordion-item .accordion-content .warning {
+    color: var(--orange-color);
+    font-size: 10px;
+}
+.LeaveTap_section .accordion .accordion-item .accordion-content .review-section{
+    flex-direction: column;
+}
+.LeaveTap_section .accordion .accordion-item .accordion-content .review-section label{
+    font-size: 10px;
+}
+.LeaveTap_section .accordion .accordion-item .accordion-content .review-section .buttons {
+    background-color: var(--gray-ExtraLight-color);
+    padding: 0px 10px;
+}
+.employee-relation-print{
+    flex-direction: column !important;
+    align-items: flex-start !important;
+}
+.employee-relation-print .ms-3{
+    margin-left: 0px !important;
+}
+.staInfoPosition h2 {
+    font-size: 10px;
+}
+.staInfoPosition .boxInfoName {
+    font-size: 7px;
+}
+.toggle-container{
+    flex-direction: column !important;
+}
+.toggle-container .toggle-item {
+    margin-block: 5px;
+}
+.accordion-content-item .row .col-12{
+    width: 50% !important;
+}
+.accordion-header img{
+    width: 15px;
+}
+.LeaveTap_section .accordion .accordion-item .accordion-content .approval-section .approval-section-p{
+    font-weight: bold;
+    border: 1px solid var(--dark-color);
+    font-size: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 2px;
+    width: fit-content;
+    transition: all 0.3s ease-in-out;
+}

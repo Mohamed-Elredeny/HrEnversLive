@@ -261,7 +261,7 @@
                         <p>My Certificates</p>
                         <span>|</span>
                     </div>
-                    <a href="{{route('employee.index')}}" class="image">
+                    <a href="{{route('employees.index')}}" class="image">
                         <div class="img-fluid">
                             <img src="{{asset("assets/images/sign-in/Back@3x.png")}}" alt="back arrow">
                         </div>
@@ -320,7 +320,7 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <a href="{{route('employee.CertificateApproval',$certificate->id)}}">
+                                    <a href="{{route('employees.CertificateApproval',$certificate->id)}}">
                                         <button class="btn">
                                             show
                                         </button>
@@ -360,7 +360,7 @@
                                 <td>
 
 
-                                    <a href="{{ route('employee.CertificatePending', ['id' => $certificate->id, ]) }}">
+                                    <a href="{{ route('employees.CertificatePending', ['id' => $certificate->id, ]) }}">
                                         <button class="btn">
                                             Show
                                         </button>
@@ -398,7 +398,7 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <a href="{{route('employee.CertificateReturned',$certificate->id)}}">
+                                    <a href="{{route('employees.CertificateReturned',$certificate->id)}}">
                                         <button class="btn">
                                             show
                                         </button>

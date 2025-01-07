@@ -36,9 +36,9 @@ class CertificateController extends Controller
 //        CertificatesType::create([
 //            'type'=>'EnglishCertificate'
 //        ]);
-        $id= Auth::guard('employee')->user()->id??null;
+        $id= Auth::guard('employees')->user()->id??null;
         $currentdate = now();
-//$employee=Employee::find($id);
+//$employees=Employee::find($id);
         try {
             Certificates::create([
                 'ref' => $request->input('item_id'),
@@ -63,12 +63,12 @@ class CertificateController extends Controller
             return redirect()->back()->with('errorcertificate', "Please error{{$e->getMessage()}}");
         }
 
-        return redirect()->route('employee.index');
+        return redirect()->route('employees.index');
     }
 
     public function storeArabicCertificate(Request $request)
     {
-        $id= Auth::guard('employee')->user()->id??null;
+        $id= Auth::guard('employees')->user()->id??null;
 
 //        CertificatesType::create([
 //            'type'=>'ArabicCertificate'
@@ -98,11 +98,11 @@ class CertificateController extends Controller
             return redirect()->back()->with('errorcertificate', "Please error{{$e->getMessage()}}");
         }
 
-        return redirect()->route('employee.index');
+        return redirect()->route('employees.index');
     }
     public function returncertificatereviewer(Request $request,$id)
     {
-        $idd= Auth::guard('employee')->user()->id??null;
+        $idd= Auth::guard('employees')->user()->id??null;
 
         $employee=Employee::find($idd);
         $currentdate = now();
@@ -114,11 +114,11 @@ class CertificateController extends Controller
         $certificat->review_remark=$request->input('areaReasonSpecify');
         $certificat->review_date=$currentdate;
         $certificat->save();
-        return redirect()->route('employee.index');
+        return redirect()->route('employees.index');
     }
     public function submitcertificatereview(Request $request,$id)
     {
-        $idd= Auth::guard('employee')->user()->id??null;
+        $idd= Auth::guard('employees')->user()->id??null;
 
         $employee=Employee::find($idd);
         $currentdate = now();
@@ -128,14 +128,14 @@ class CertificateController extends Controller
         $certificat->review_remark =$request->input('areaReasonSpecify');
         $certificat->review_date=$currentdate;
         $certificat->save();
-        return redirect()->route('employee.index');
+        return redirect()->route('employees.index');
 
     }
 
     public function returncertificateapproval(Request $request,$id)
     {
         $currentdate = now();
-        $idd= Auth::guard('employee')->user()->id??null;
+        $idd= Auth::guard('employees')->user()->id??null;
 
         $employee=Employee::find($idd);
         $certificat = Certificates::findOrFail($id);
@@ -145,7 +145,7 @@ class CertificateController extends Controller
         $certificat->approval_remark=$request->input('areaReasonSpecify');
         $certificat->approval_date=$currentdate;
         $certificat->save();
-        return redirect()->route('employee.index');
+        return redirect()->route('employees.index');
     }
 
     public function submitcertificateapproval(Request $request,$id)
@@ -154,14 +154,14 @@ class CertificateController extends Controller
         $currentdate = now();
         $certificat = Certificates::findOrFail($id);
         $certificat->approval_status = 'ConfirmCertificate';
-        $idd= Auth::guard('employee')->user()->id??null;
+        $idd= Auth::guard('employees')->user()->id??null;
 
         $employee=Employee::find($idd);
         $certificat->approval_name=$employee->empName;
         $certificat->approval_remark=$request->input('areaReasonSpecify');
         $certificat->approval_date=$currentdate;
         $certificat->save();
-        return redirect()->route('employee.index');
+        return redirect()->route('employees.index');
 
     }
 
@@ -173,7 +173,7 @@ class CertificateController extends Controller
     {
 
 
-        $id= Auth::guard('employee')->user()->id??null;
+        $id= Auth::guard('employees')->user()->id??null;
 
         $certificates = DB::table('certificate')->where('Emp_id','=',$id)->get();
 
@@ -192,11 +192,11 @@ class CertificateController extends Controller
         $certificatesreturn = DB::table('certificate')->where('Emp_id', '=', $id)->Where('review_status', '=', 'Return To Sender')->get();
         $certificatesapproval = DB::table('certificate')->where('Emp_id', '=', $id)->where('approval_status', '=', 'ConfirmCertificate')->get();
 
-        return view('Dashboard.employee.Personal_Certificate.My_Certificates', ['certificates' => $certificates,'employee'=>$employee,'certificatesapproval'=>$certificatesapproval,'certificatesreturn'=>$certificatesreturn,'currentdate'=>$currentdate,'certificatespending'=>$certificatesPending]);
+        return view('Dashboard.employees.Personal_Certificate.My_Certificates', ['certificates' => $certificates,'employees'=>$employee,'certificatesapproval'=>$certificatesapproval,'certificatesreturn'=>$certificatesreturn,'currentdate'=>$currentdate,'certificatespending'=>$certificatesPending]);
     }
     public function showcertificatereviewer()
     {
-        $id= Auth::guard('employee')->user()->id??null;
+        $id= Auth::guard('employees')->user()->id??null;
         $certificates = DB::table('certificate')->get();
         $certificatespending = DB::table('certificate')->where('review_status','=',null)->get();
         $certificatesreturn = DB::table('certificate')->where('review_status','=','Return To Sender')->get();
@@ -222,7 +222,7 @@ class CertificateController extends Controller
 
         }
 
-        return view('Dashboard.employee.Personal_Certificate.Review_Certificates', ['certificates' => $certificates,'employeepend'=>$employeepend,'employeereturn'=>$employeereturn,'employeeapproval'=>$employeeapproval,'currentdate'=>$currentdate,'certificatespending'=>$certificatespending,'certificatesreturn'=>$certificatesreturn,'certificatesapproval'=>$certificatesapproval]);
+        return view('Dashboard.employees.Personal_Certificate.Review_Certificates', ['certificates' => $certificates,'employeepend'=>$employeepend,'employeereturn'=>$employeereturn,'employeeapproval'=>$employeeapproval,'currentdate'=>$currentdate,'certificatespending'=>$certificatespending,'certificatesreturn'=>$certificatesreturn,'certificatesapproval'=>$certificatesapproval]);
 
     }
 

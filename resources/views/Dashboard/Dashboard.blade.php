@@ -119,7 +119,7 @@
             <ul>
                 <li><a href="#">KPI <span>12</span> </a></li>
                 <li><a href="#">Personal Certificate <span>1</span> </a></li>
-                <li><a href="#">Leave Requests <span>6</span> </a></li>
+                <li><a href="{{route('employee.leaves.index')}}">Leave Requests <span>6</span> </a></li>
                 <li><a href="#">HR Expenses From <span>9</span> </a></li>
                 <li><a href="#">Jop Description <span>18</span> </a></li>
             </ul>
@@ -425,26 +425,30 @@
                         </div>
 
                         <div class="col-4 col-md-3">
-                            <a href="{{route('employee.index')}}">
+                            <a href="#">
                             <div class="image">
                                 <div class="img-fluid">
-                                    <img src="{{asset("assets/images/sign-in/2.png")}}" alt="leave Request">
+                                    <img src="{{asset("assets/images/sign-in/2.png")}}" alt="Certificate Request">
                                 </div>
-                            </div></a>
+                            </div>
+                            </a>
                         </div>
                         <div class="col-4 col-md-3">
                             <div class="image">
                                 <div class="img-fluid">
-                                    <img src="{{asset("assets/images/sign-in/5.png")}}" alt="job Description">
+                                    <img src="{{asset("assets/images/sign-in/5.png")}}" alt="Hr Expenses"> ">
                                 </div>
                             </div>
                         </div>
                         <div class="col-4 col-md-3">
-                            <div class="image">
-                                <div class="img-fluid">
-                                    <img src="{{asset("assets/images/sign-in/4.png")}}" alt="hr Expenses from">
+                            <a href="{{route('employee.leaves.index')}}">
+                                <div class="image">
+                                    <div class="img-fluid">
+                                        <img src="{{asset("assets/images/sign-in/4.png")}}" alt="Leaves">
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
+
                         </div>
                         <div class="col-4 col-md-3">
                             <a href="">

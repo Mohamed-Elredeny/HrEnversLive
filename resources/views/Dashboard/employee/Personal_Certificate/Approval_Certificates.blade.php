@@ -120,7 +120,7 @@
             </div>
             <ul>
                 <li><a href="../KPI/index.html">KPI <span>12</span> </a></li>
-                <li><a class="open" href="{{route('employee.index')}}">Personal Certificate <span>1</span> </a></li>
+                <li><a class="open" href="{{route('employees.index')}}">Personal Certificate <span>1</span> </a></li>
                 <li><a href="#">Leave Requests <span>6</span> </a></li>
                 <li><a href="#">HR Expenses From <span>9</span> </a></li>
                 <li><a href="#">Jop Description <span>18</span> </a></li>
@@ -255,13 +255,13 @@
             <article class="container">
                 <section class="head">
                     <div class="title">
-                        <a href="{{route('employee.index')}}">
+                        <a href="{{route('employees.index')}}">
                             <span>My Personal Certificate</span>
                         </a>
                         <p>Approval Certificates</p>
                         <span>|</span>
                     </div>
-                    <a href="{{route('employee.index')}}" class="image">
+                    <a href="{{route('employees.index')}}" class="image">
                         <div class="img-fluid">
                             <img src="{{asset("assets/images/sign-in/Back@3x.png")}}" alt="back arrow">
                         </div>
@@ -317,7 +317,7 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <a href="{{route('employee.CertificateApprovalApproval',$certificateapproval->id)}}">
+                                    <a href="{{route('employees.CertificateApprovalApproval',$certificateapproval->id)}}">
                                         <button class="btn">
                                             show
                                         </button>
@@ -351,7 +351,7 @@
                                 </td>
                                 <td>
 
-                                    <a href="{{route('employee.CertificatePendingApproval',$certificatepending->id)}}">
+                                    <a href="{{route('employees.CertificatePendingApproval',$certificatepending->id)}}">
                                         <button class="btn">
                                             show
                                         </button>
@@ -386,7 +386,7 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <a href="{{route('employee.CertificateReturned',$certificatereturn->id)}}">
+                                    <a href="{{route('employees.CertificateReturned',$certificatereturn->id)}}">
                                         <button class="btn">
                                             show
                                         </button>

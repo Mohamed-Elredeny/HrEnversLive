@@ -120,7 +120,7 @@
             </div>
             <ul>
                 <li><a href="../KPI/index.html">KPI <span>12</span> </a></li>
-                <li><a class="open" href="{{route('employee.index')}}">Personal Certificate <span>1</span> </a></li>
+                <li><a class="open" href="{{route('employees.index')}}">Personal Certificate <span>1</span> </a></li>
                 <li><a href="#">Leave Requests <span>6</span> </a></li>
                 <li><a href="#">HR Expenses From <span>9</span> </a></li>
                 <li><a href="#">Jop Description <span>18</span> </a></li>
@@ -287,7 +287,7 @@
                             </button>
                         </div>
                     </div>
-                    <a href="{{route('employee.index')}}" class="image">
+                    <a href="{{route('employees.index')}}" class="image">
                         <div class="img-fluid">
                             <img src="{{asset("assets/images/sign-in/Back@3x.png")}}" alt="back arrow">
                         </div>
