@@ -386,7 +386,7 @@
                     </div>
                     <div class="RemarkCertificate upMargin">
                         <p>Remark</p>
-                        <textarea name="TextareaRemarkCertificate" id="TextareaRemarkCertificate" placeholder="Remark"></textarea>
+                        <textarea name="TextareaRemarkCertificateen" id="TextareaRemarkCertificate" placeholder="Remark"></textarea>
                     </div>
                 </section>
                 <section class="button_Certificate">
