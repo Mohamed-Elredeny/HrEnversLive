@@ -35,39 +35,50 @@ class AuthController extends Controller
      */
     public function store(Request $request)
     {
+
         $employeeemailWork = $request['emailWork'];
-        $emp = Employee::where('emailWork', $employeeemailWork)->first();
-        if ($request['Password_signUp'] != $request['confirm_password'])
-        {
-            return redirect()->back()->with('error', "Please crrect password");
+        if ($request['Password_signUp'] != $request['confirm_password']) {
+            return redirect()->back()->with('message', "Please correct password");
         }
-
-            if (!$request->hasFile('filenameimg'))
+        $employee = Employee::where('emailWork', $employeeemailWork)->first();
+        if ($employee) {
+            if ($employee->company_id == $request['company_id'])
             {
-                return back()->with('error', 'Please upload photo.');
-            }
-           $file = $request->file('filenameimg');
-          $fileName=$file->getClientOriginalName();
-          $file_to_store = time() . '_' . $fileName;
-         $file->move(public_path('assets/images/'), $file_to_store);
-             $token = Str::random(60);
-             $employee= Employee::create([
-             'empCode' => $request['employee_numberr'],
-             'emailWork'=> $request['work_email'],
-             'mobile_new'=> $request['mobile_number'],
-             'password'  => Hash::make($request['Password_signUp']),
+                if ($employee->empCode != $request['empCode']) {
+                    return redirect()->back()->with('error', "Dear Colleague, please note that you've entered the incorrect Employee Number.");
+                }
+                if ($employee->password == null ) {
+                    if (!$request->hasFile('filenameimg'))
+                    {
+                        return back()->with('message', 'Please upload photo.');
+                    }
+                    $file = $request->file('filenameimg');
+                    $fileName = $file->getClientOriginalName();
+                    $file_to_store = time() . '_' . $fileName;
+                    $file->move(public_path('assets/images/'), $file_to_store);
+                    $token = Str::random(60);
+                    $employee = Employee::create([
+                        'empCode' => $request['employee_numberr'],
+                        'emailWork' => $request['work_email'],
+                        'mobile_new' => $request['mobile_number'],
+                        'password' => Hash::make($request['Password_signUp']),
 //           'confirm_password' => Hash::make($request['confirm_password']),
-             'image' =>$file_to_store ,
-             'company_id' => $request['company_id']??"null",
-        ]);
+                        'image' => $file_to_store,
+                        'company_id' => $request['company_id'] ?? "null",
+                    ]);
+                    Auth::guard('employee')->login($employee);
+                    return  redirect()->route('dashboard');
 
-        Auth::guard('employee')->login($employee);
-                return  redirect()->route('dashboard');
-//            }
-//            return redirect()->back()->with('err','emp doesnot exist');
-
-
+                }
+                return redirect()->back()->with('message', 'Dear Colleague, your account has already been created. You can log in directly.');
+            }
+            return redirect()->back()->with('message', 'Dear Colleague, please note that you have selected the wrong company logo. Ensure you choose the correct company logo by making the appropriate selection.');
+        }
+        return redirect()->back()->with('message', "Dear Colleague, please note that you've entered the incorrect email ID.");
     }
+
+
+
 
     public function loginMedgulf(Request $request)
     {

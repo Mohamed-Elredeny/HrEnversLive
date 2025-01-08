@@ -233,7 +233,8 @@ header .img-fluid img{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-block: 30px 32px;
+    margin-block: 20px 32px;
+    /*//32px*/
     margin-inline: 21px;
 }
 .popup .signin .head .nav{
@@ -313,11 +314,11 @@ header .img-fluid img{
 
 }
 .popup .signin .content .card-list .card .image{
-    width: 30%;
+    width: 90%;
     height: auto;
 }
 .popup .signin .content .card-list .card .image img{
-    width: 50px;
+    width: 80px;
     height: 40px;
 }
 .popup .signin .content .card-list .card .content{
@@ -517,7 +518,7 @@ header .img-fluid img{
     left: 0px;
     background-color: var(--dark-color);
     width: 100%;
-    height: 1px;
+    height: 0px;
     transition: all 0.3s ease-in-out;
 }
 .popup .signin .signLogo .content .forget p:hover:after{
@@ -635,6 +636,7 @@ header .img-fluid img{
     position: absolute;
     top: 50%;
     left: 50%;
+    bottom: ;
     z-index: -1;
     transform: scale(.9) translate(-40%, -50%);
     opacity: 0;
@@ -670,8 +672,10 @@ header .img-fluid img{
 }
 .popup .signin .signup .first{
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 50%;
+    max-height: 60vh;
+    overflow-y:auto ;
     transform: translateX(-50%);
     z-index: -1;
     opacity: 0;
@@ -1072,7 +1076,7 @@ header .img-fluid img{
         margin-inline: auto;
     }
     .popup .signin .content .card-list .card .image img {
-        width: 50px;
+        width: 80px;
     }
     .popup .signin .signup .three.active {
         transform: translate(-50%, 50%);
@@ -1195,7 +1199,7 @@ header .img-fluid img{
     }
     .popup {
         width: 100%;
-        height: 75%;
+        height: 95%;
     }
     .popup .left p {
         margin-top: 180px;
@@ -1276,21 +1280,26 @@ header .img-fluid img{
         bottom: -31%;
     }
     .popup {
+
         width: 100%;
-        height: 75%;
+        height: 95%;
+
     }
     .popup .left {
         display: none;
     }
     .popup .signin {
         width: 100%;
+        height: 99%;
     }
     .popup .signin .signup .three.active {
         transform: translate(-50%, 50%);
     }
     .popup .signin .signup .three {
-        transform: translate(-50%, 50%);
+        transform: translate(-50%, -0%);
         width: 90%;
+        overflow-y: auto;
+        max-height: 60vh;
     }
     .popup .signin .signup .three .text h2 {
         font-size: 20px;
@@ -1386,6 +1395,7 @@ header .img-fluid img{
     }
     .popup {
         width: 100%;
+        height: 98%;
 
     }
     .popup .left {
@@ -1511,14 +1521,14 @@ header .img-fluid img{
     }
     .popup {
         width: 100%;
-        height: 85%;
+        height: 98%;
     }
     .popup .left {
         display: none;
     }
     .popup .signin {
         width: 100%;
-        height:75%;
+        height:95%;
     }
     .popup .signin .content .card-list {
         width: 90%;
