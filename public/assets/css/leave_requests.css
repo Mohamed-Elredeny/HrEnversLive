@@ -1642,3 +1642,21 @@ input:checked + .slider:before {
     }
 
 }
+.FirstReturnDan .form-group input,.FirstReturnDan .form-group label{
+    display: inline-block !important;
+}
+.overlayPopupOverlay .popupPolicy .btn.btnReturn {
+    background: var(--yellow-dark-color);
+    opacity: 0.8;
+    pointer-events: none; /* Disable pointer events when button is disabled */
+    transition: all 0.3s ease-in-out;
+}
+
+.overlayPopupOverlay .popupPolicy .btn.btnReturn.active {
+    opacity: 1;
+    pointer-events: auto; /* Enable pointer events when button is active */
+    transition: all 0.3s ease-in-out;
+}
+span{
+    display: inline-block !important;
+}
