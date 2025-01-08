@@ -152,7 +152,7 @@
 
                             <div class="card" onclick="medgulfSignIn()">
                                 <div class="image">
-                                    <img src="{{asset("assets/images/logos/MEDGULF-logo.png")}}"   alt="logo medgulf">
+                                    <img src="{{asset("assets/images/logos/MEDGULF-logo.png")}}"  width="50%"  alt="logo medgulf">
                                 </div>
                                 <div class="content">
                                     <p>
@@ -164,7 +164,7 @@
                             <div class="card" onclick= "TragsSignIn()">
 
                                 <div class="image" >
-                                    <img src="{{asset("assets/images/logos/4.jpg")}}" alt="logo Trags" width="40%">
+                                    <img src="{{asset("assets/images/logos/4.jpg")}}" alt="logo Trags" width="90%" height="50%">
                                 </div>
                                 <div class="content">
                                     <p>
@@ -176,7 +176,7 @@
                             <div class="card" onclick= "EngineeringSignIn()">
 
                                 <div class="image">
-                                    <img src="{{asset("assets/images/logos/3.jpg")}}" alt="logo Trags Engineering" width="40%">
+                                    <img src="{{asset("assets/images/logos/3.jpg")}}" alt="logo Trags Engineering" width="80%" height="60%">
                                 </div>
                                 <div class="content">
                                     <p>
@@ -273,7 +273,7 @@
                             </svg></div>
                         <div class="image">
                             <div class="img-fluid">
-                                <img src="{{asset("assets/images/logos/4.jpg")}}" alt="logo Trags" width="40%">
+                                <img src="{{asset("assets/images/logos/4.jpg")}}" alt="logo Trags" width="80%">
                             </div>
                         </div>
                         <div class="content">
@@ -334,7 +334,7 @@
                             </svg></div>
                         <div class="image">
                             <div class="img-fluid">
-                                <img src="{{asset("assets/images/logos/3.jpg")}}" alt="logo Engineering" width="40%">
+                                <img src="{{asset("assets/images/logos/3.jpg")}}" alt="logo Engineering" width="80%">
                             </div>
                         </div>
                         <div class="content">

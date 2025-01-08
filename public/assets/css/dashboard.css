@@ -366,6 +366,8 @@ header{
     align-items: center;
     justify-content: space-between;
     padding: 10px 5px ;
+   left: 90px;
+    right: 0;
     background-color: var(--white-color);
 }
 header .logo{
@@ -483,12 +485,13 @@ header .settingAccount p{
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     margin-block-start: 30px;
-    margin-inline: -30px;
+    margin-inline: 10px;
     transition: all .5s ease-in-out;
 }
 .content.open .head{
-    margin-inline: 0px;
+    margin-inline: 10px;
     transition: all .5s ease-in-out;
 }
 .head .title{
@@ -1137,7 +1140,8 @@ table thead{
         font-size: 12px;
     }
     .head {
-        margin-inline: 0px;
+        margin-inline: 10px;
+        margin-block: 10px;
     }
     .news .content_news .suptitle {
         font-size: 14px;
@@ -1348,8 +1352,8 @@ table thead{
         padding-left: 0px;
     }
     header {
-        width: 91%;
-        margin-inline-start: 9%;
+        width: 98%;
+        margin-inline-start: 2%;
     }
     header .logo .titleLogo {
         font-size: 10px;
@@ -1554,7 +1558,8 @@ table thead{
         font-size: 10px;
     }
     .head {
-        margin-inline: 4px;
+        margin-inline: 10px;
+        margin-block: 10px;
     }
     .head .image img {
         width: 44px;

@@ -420,7 +420,7 @@
                                     <div class="textContent">
                                         <h4>Approval Certificate</h4>
                                         <p>After final approval, your signature and stamp will appear on the
-                                            certificate, allowing the employee to print it.</p>
+                                            certificate,<br> allowing the employee to print it.</p>
                                     </div>
                                 </div>
                                 <a href="{{route('employee.ApprovalCertificates')}}" class="buttonCard">

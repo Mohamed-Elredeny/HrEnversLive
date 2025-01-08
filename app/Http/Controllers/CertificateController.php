@@ -66,7 +66,7 @@ class CertificateController extends Controller
                 'approval_remark' => null,
                 'approval_status'=> null,
                 'certificateType_id'=>1,
-                'remark' => $request->input('TextareaRemarkCertificate')??"" ,
+                'remark' => $request->input('TextareaRemarkCertificateen')??"" ,
                 'Emp_id' => $id,
                 'embassy'=>$request->input('Embassy')??null,
                 'returnReasons' => null,

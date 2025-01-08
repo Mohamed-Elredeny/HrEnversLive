@@ -580,7 +580,7 @@
             Swal.fire({
                 title: 'Reviewed!',
                 text: 'The certificate has been sent for final approval.',
-                icon: 'info',
+                icon: 'success',
                 showCancelButton: false,
                 showConfirmButton: false
                 // confirmButtonText: 'Confirm',
