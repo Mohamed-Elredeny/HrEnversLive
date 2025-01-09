@@ -365,9 +365,9 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 5px ;
-   left: 90px;
-    right: 0;
+    padding: 10px 5px 10px 25px ;
+   left: 30px;
+    right: 0px;
     background-color: var(--white-color);
 }
 header .logo{
@@ -1353,10 +1353,10 @@ table thead{
     }
     header {
         width: 98%;
-        margin-inline-start: 2%;
+        margin-inline-start: 5%;
     }
     header .logo .titleLogo {
-        font-size: 10px;
+        font-size: 9px;
         padding-inline-start: 5px;
     }
     header .logo img {

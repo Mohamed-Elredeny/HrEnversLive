@@ -301,7 +301,8 @@ header .img-fluid img{
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    margin-block: 20px;
+
+    margin-block:5px 20px ;
     border: 1px solid var(--white-text-color);
     border-radius: 10px;
     padding: 10px 10px;
@@ -318,8 +319,8 @@ header .img-fluid img{
     height: auto;
 }
 .popup .signin .content .card-list .card .image img{
-    width: 80px;
-    height: 40px;
+    /*width: 80px;*/
+    height: 50px;
 }
 .popup .signin .content .card-list .card .content{
     width: 70%;
@@ -332,6 +333,13 @@ header .img-fluid img{
     font-weight: 500;
     line-height: 13px;
     align-self: start;
+
+}
+@media (max-width: 425px) {
+    .popup .signin .content .card-list .card .content p{
+    font-size: 10px;}
+
+
 }
 .popup .signin .content .down .new{
     position: relative;
@@ -436,8 +444,9 @@ header .img-fluid img{
 .popup .signin .signLogo .image{
     margin-block: 15px 20px;
 }
-.popup .signin .signLogo .image img{
-    width: 72px;
+.popup .signin .signLogo .image img {
+    /*width: 130px;*/
+    height: 70px;
 }
 .popup .signin .signLogo .content .error{
     color: var(--danger-color);
@@ -674,12 +683,12 @@ header .img-fluid img{
     position: absolute;
     top: 50%;
     left: 50%;
-    max-height: 60vh;
+    max-height: 70vh;
     overflow-y:auto ;
     transform: translateX(-50%);
     z-index: -1;
     opacity: 0;
-    width: 80%;
+    width: 90%;
     border-radius: 20px;
     padding: 0px 15px 10px;
     transition: all 0.5s ease-in-out;
@@ -693,12 +702,12 @@ header .img-fluid img{
 .popup .signin .signup .first .prag{
     width: 100%;
     text-align: left;
-    margin-block: 22px;
+    margin-block: 10px;
 }
 .popup .signin .signup .first .prag h2{
-    font-size: 19px;
+    font-size: 14px;
     font-weight: 500;
-    line-height: 12px;
+    line-height: 5px;
     color: var(--main-color);
 }
 .popup .signin .signup .first .prag p{
@@ -744,7 +753,7 @@ header .img-fluid img{
     border-radius: var(--radius-border);
     border: 0;
     padding: 5px 10px;
-    margin-block: 10px 10px ;
+    margin-block: 5px 10px ;
     pointer-events: none;
     transition: all 0.3s ease-in-out;
 }
@@ -1050,8 +1059,8 @@ header .img-fluid img{
         padding-right: 20px ;
     }
     .popup .signin .signup .first .prag p {
-        font-size: 11px;
-        line-height: 13px;
+        font-size: 9px;
+        line-height: 10px;
         color: var(--gray-color);
     }
     .popup .signin .signup .second {
@@ -1415,17 +1424,20 @@ header .img-fluid img{
         width: 90%;
     }
     .popup .signin .signup .first .prag h2 {
-        font-size: 18px;
+        font-size: 14px;
     }
     .popup .signin .signup .first .prag p {
-        font-size: 11px;
-        line-height: 15px;
+        font-size: 9px;
+        line-height: 10px;
     }
     .popup .signin .signup .first .checkdiv {
         margin-block-start: 60px;
     }
     .popup .signin .signup .first .checkdiv label p {
         font-size: 10px;
+        display: flex;
+        line-height: 9px;
+
     }
     .popup .signin .signup .second {
         width: 85%;
@@ -1540,17 +1552,20 @@ header .img-fluid img{
         width: 90%;
     }
     .popup .signin .signup .first .prag h2 {
-        font-size: 18px;
+        font-size: 14px;
     }
     .popup .signin .signup .first .prag p {
-        font-size: 11px;
-        line-height: 15px;
+        font-size: 9px;
+        line-height: 10px;
     }
     .popup .signin .signup .first .checkdiv {
-        margin-block: 60px 20px;
+        margin-block: 30px 10px;
     }
     .popup .signin .signup .first .checkdiv label p {
-        font-size: 10px;
+        font-size: 9px;
+        display: flex;
+        line-height: 9px;
+
     }
     .popup .signin .signup .second {
         width: 85%;

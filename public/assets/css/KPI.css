@@ -523,7 +523,20 @@ body{
 .table_section * {
     border: none !important;
 }
+@media (max-width: 724px) {
+    .boxReturnDan {
+        border-radius: 20px;
+        top:30%!important;
+    }
 
+}
+@media (max-width: 991px) {
+    .boxReturnDan {
+        border-radius: 20px;
+        top:30%!important;
+    }
+
+}
 .table_section{
     background-color: var(--white-color);
     padding:0px;
@@ -1923,7 +1936,9 @@ body{
         transform: translateY(-550px);
     }
     .boxReturnDan {
-        width: 70%;
+        top:30%!important;
+        border-radius: 20px;
+        width: 60%;
     }
     .labelTab.review {
         margin-top: -820px;
@@ -2261,7 +2276,9 @@ body{
         width: 130% !important;
     }
     .boxReturnDan {
-        width: 80%;
+        top:35%!important;
+        border-radius: 20px;
+        width: 75%;
     }
     .boxReturnDan .suptitleBox p {
         font-size: 14px;
@@ -2344,7 +2361,9 @@ body{
         width: 182% !important;
     }
     .boxReturnDan {
-        width: 100%;
+        top:40%!important;
+        width: 95%;
+        border-radius: 20px;
         padding: 10px 15px;
     }
     .boxReturnDan .reasonSpecify {

@@ -143,20 +143,22 @@
                     </div>
                     <div class="content diff " id="diff">
                         <p class="text">
-                            Sign In
-                            <br>
+
                             Please click on your company's logo to log in.
+                        </p><p class="text">
+
+                            Sign in with
                         </p>
                         <div class="card-list">
 
 
                             <div class="card" onclick="medgulfSignIn()">
-                                <div class="image">
-                                    <img src="{{asset("assets/images/logos/MEDGULF-logo.png")}}"  width="50%"  alt="logo medgulf">
+                                <div class="image ">
+                                    <img  src="{{asset("assets/images/logos/MEDGULF-logo.png")}}"  width="50%" height="40%"  alt="logo medgulf">
                                 </div>
                                 <div class="content">
                                     <p>
-                                        Sign in with Medgulf Construction
+                                        Medgulf Construction
                                     </p>
                                 </div>
                             </div>
@@ -168,7 +170,7 @@
                                 </div>
                                 <div class="content">
                                     <p>
-                                        Sign in with Trags Trading
+                                         Trags Trading
                                     </p>
                                 </div>
                             </div>
@@ -180,7 +182,7 @@
                                 </div>
                                 <div class="content">
                                     <p>
-                                        Sign in with Trags Engineering
+                                        Trags Engineering
                                     </p>
                                 </div>
                             </div>
@@ -210,7 +212,9 @@
 
                         <div class="image">
                             <div class="img-fluid">
-                                <img src="{{asset("assets/images/logos/MEDGULF-logo.png")}}" alt="logo medgulf">
+                                <div class="med">
+                                <img  src="{{asset("assets/images/logos/MEDGULF-logo.png")}}" width="70px" height="40px" alt="logo medgulf">
+                                </div>
                             </div>
                         </div>
 
@@ -273,7 +277,7 @@
                             </svg></div>
                         <div class="image">
                             <div class="img-fluid">
-                                <img src="{{asset("assets/images/logos/4.jpg")}}" alt="logo Trags" width="80%">
+                                <img src="{{asset("assets/images/logos/4.jpg")}}" alt="logo Trags" width="130px" height="40px">
                             </div>
                         </div>
                         <div class="content">
@@ -334,7 +338,7 @@
                             </svg></div>
                         <div class="image">
                             <div class="img-fluid">
-                                <img src="{{asset("assets/images/logos/3.jpg")}}" alt="logo Engineering" width="80%">
+                                <img src="{{asset("assets/images/logos/3.jpg")}}" alt="logo Engineering" width="130px" height="40px">
                             </div>
                         </div>
                         <div class="content">

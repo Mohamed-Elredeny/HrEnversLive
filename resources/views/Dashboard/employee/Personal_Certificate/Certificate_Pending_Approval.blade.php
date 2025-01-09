@@ -457,7 +457,7 @@
         </div>
         <div class="buttonReason buttonCertificate">
             <button  class="btn ReasonBtn Return active BtnFirstReturn submitCertificate BtnFirstCertificate" type="submit">
-                Yes
+                Confirm
             </button>
         </div>
     </div>
