@@ -211,10 +211,11 @@
                             </svg></div>
 
                         <div class="image">
+
                             <div class="img-fluid">
-                                <div class="med">
+
                                 <img  src="{{asset("assets/images/logos/MEDGULF-logo.png")}}" width="70px" height="40px" alt="logo medgulf">
-                                </div>
+
                             </div>
                         </div>
 
@@ -522,8 +523,10 @@
                                     <!-- Card 2 -->
                                     <label for="radio-card-2"  style="cursor: pointer;">
                                         <input type="radio" name="company_id" value="medgulf" id="radio-card-2" hidden>
-                                        <div class="image logoscom" style="display: flex; justify-content: center; align-items: center;">
+                                        <div class="image active logoscom logoscomMedgulf" style="display: flex; justify-content: center; align-items: center;">
+                                            <div class="img-fluid">
                                             <img src="{{asset('assets/images/logos/MEDGULF-logo.png')}}" alt="logo medgulf" class="img-fluid" style="max-width: 100%; height: auto;">
+                                            </div>
                                         </div>
                                     </label>
 

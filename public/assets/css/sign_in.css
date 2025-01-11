@@ -831,10 +831,16 @@ header .img-fluid img{
     border: 1px solid var(--gray-color);
 }
 .popup .signin .signup .second .logos .image .img-fluid{
-    margin: 10px;
+    margin: 1px;
 }
 .popup .signin .signup .second .logos .image img{
-    width: 60px;
+    width: 100px;
+}
+.popup .signin .signup .second .logos .image.logoscomMedgulf .img-fluid{
+    margin: 6px;
+}
+.popup .signin .signup .second .logos .image.logoscomMedgulf img{
+    width: 70px;
 }
 .popup .signin .signup .second form input{
     margin-block: 8px;
@@ -1577,7 +1583,11 @@ header .img-fluid img{
         height: 67px;
     }
     .popup .signin .signup .second .logos .image img {
-        width: 45px;
+        /*width: 45px;*/
+        width: 70px;
+    }
+    .popup .signin .signup .second .logos .image.logoscomMedgulf img {
+        width: 50px;
     }
     .popup .signin .signup .second .butt .btnup .custom-file-label {
         font-size: 12px;
@@ -1597,6 +1607,7 @@ header .img-fluid img{
         width: 90%;
     }
 }
+
 .testmenna{
     color:red;
 }
