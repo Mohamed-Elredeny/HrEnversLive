@@ -46,6 +46,14 @@ class CertificateController extends Controller
 
     public function storeEnglishcertificate(Request $request)
     {
+        $request->validate([
+            'item_id' => 'required|string', // Ensure item_id (ref) is present and is a string
+            'TextareaRemarkCertificateen' => 'nullable|string|max:500', // Optional remark field with a maximum length
+            'Embassy' => 'nullable|string|max:255', // Optional embassy field
+        ], [
+            'item_id.required' => 'Certificate Type is required.',
+            'item_id.string' => 'Certificate Type must be a valid string.',
+        ]);
 //        CertificatesType::create([
 //            'type'=>'EnglishCertificate'
 //        ]);
@@ -66,7 +74,7 @@ class CertificateController extends Controller
                 'approval_remark' => null,
                 'approval_status'=> null,
                 'certificateType_id'=>1,
-                'remark' => $request->input('TextareaRemarkCertificateen')??"" ,
+                'remark' => $request->input('TextareaRemarkCertificateen') ,
                 'Emp_id' => $id,
                 'embassy'=>$request->input('Embassy')??null,
                 'returnReasons' => null,
@@ -83,7 +91,14 @@ class CertificateController extends Controller
     public function storeArabicCertificate(Request $request)
     {
         $id= Auth::guard('employee')->user()->id??null;
-
+        $request->validate([
+            'item_id_arabic' => 'required|string', // Ensure item_id_arabic (ref) is present and is a string
+            'TextareaRemarkCertificate' => 'nullable|string|max:500', // Optional remark field with a maximum length
+            'Embassy' => 'nullable|string|max:255', // Optional embassy field
+        ], [
+            'item_id_arabic.required' => 'Certificate Type is required.',
+            'item_id_arabic.string' => 'Certificate Type must be a valid string.',
+        ]);
 //        CertificatesType::create([
 //            'type'=>'ArabicCertificate'
 //        ]);
@@ -102,7 +117,7 @@ class CertificateController extends Controller
                 'approval_remark' => null,
                 'approval_status'=> null,
                 'certificateType_id'=>2,
-                'remark' => $request->input('TextareaRemarkCertificate')??"" ,
+                'remark' => $request->input('TextareaRemarkCertificate') ,
                 'Emp_id' => $id,
                 'embassy'=>$request->input('Embassy'),
                 'returnReasons' => null,
